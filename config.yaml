@@ -1,0 +1,94 @@
+# Paper 11: Code Execution Failures - Master Configuration
+
+# Project Metadata
+project:
+  name: "code_execution_failures"
+  version: "0.1.0"
+  paper_title: "Why Code Generation Actually Fails: Execution-Aware Analysis"
+  
+# Paths
+paths:
+  data_dir: "data"
+  raw_data: "data/raw"
+  processed_data: "data/processed"
+  results_dir: "data/results"
+  models_dir: "models"
+  checkpoints_dir: "models/checkpoints"
+  outputs_dir: "outputs"
+  figures_dir: "outputs/figures"
+  tables_dir: "outputs/tables"
+  logs_dir: "outputs/logs"
+
+# Hardware Configuration
+hardware:
+  device: "cuda"  # cuda or cpu
+  max_memory_gb: 12
+  num_workers: 4
+  pin_memory: true
+
+# Model Configuration
+model:
+  name: "gpt2"  # gpt2, gpt2-medium, codegen-350M
+  pretrained_path: "gpt2"
+  max_length: 512
+  temperature: 0.8
+  top_p: 0.95
+  num_return_sequences: 100  # Generate 100 samples per problem
+
+# Dataset Configuration
+dataset:
+  name: "humaneval"  # humaneval or mbpp
+  split: "test"
+  num_problems: 164  # Full HumanEval (164), or subset for testing
+  subset_size: 50  # For feasibility check (Phase 1-2)
+  seed: 42
+
+# Generation Configuration
+generation:
+  batch_size: 4  # Adjust based on 12GB GPU
+  max_new_tokens: 256
+  do_sample: true
+  num_beams: 1  # Sampling, not beam search
+  early_stopping: false
+
+# Execution Configuration
+execution:
+  timeout_seconds: 5  # Per test case
+  max_memory_mb: 512  # Per execution
+  sandbox: true  # Use sandboxed execution
+  capture_output: true
+
+# Failure Taxonomy Categories
+failure_categories:
+  - "syntax_error"
+  - "runtime_error"
+  - "wrong_output"
+  - "partial_correctness"
+  - "semantic_hallucination"
+  - "timeout"
+  - "memory_error"
+
+# Analysis Configuration
+analysis:
+  extract_activations: true
+  activation_layers: [0, 3, 6, 9, 11]  # GPT-2 has 12 layers
+  similarity_metric: "cosine"  # cosine, cka, rsa
+  
+# Experiment Tracking
+tracking:
+  use_wandb: false  # Set to true if using Weights & Biases
+  wandb_project: "paper11_code_failures"
+  log_interval: 10
+
+# Reproducibility
+reproducibility:
+  seed: 42
+  deterministic: true
+  benchmark: false  # Set true for faster training (less reproducible)
+
+# Feasibility Check (Phase 1-2)
+feasibility_check:
+  num_problems: 50
+  num_samples_per_problem: 100
+  manual_annotation_size: 50
+  decision_threshold: 0.7  # If we can categorize >70% of failures clearly, proceed

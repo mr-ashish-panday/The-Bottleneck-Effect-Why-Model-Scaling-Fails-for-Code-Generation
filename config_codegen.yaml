@@ -1,0 +1,38 @@
+project:
+  name: "code_execution_failures"
+  version: "0.1.0"
+
+paths:
+  data_dir: "data"
+  raw_data: "data/raw"
+  results_dir: "data/results_codegen"
+  models_dir: "models"
+  outputs_dir: "outputs"
+
+hardware:
+  device: "cuda"
+  max_memory_gb: 12
+
+model:
+  name: "Salesforce/codegen-350M-mono"
+  pretrained_path: "Salesforce/codegen-350M-mono"
+  max_length: 512
+  temperature: 0.8
+  top_p: 0.95
+
+dataset:
+  name: "humaneval"
+  seed: 42
+
+generation:
+  batch_size: 1
+  max_new_tokens: 128
+  do_sample: true
+
+execution:
+  timeout_seconds: 5
+
+feasibility_check:
+  num_problems: 164
+  num_samples_per_problem: 100
+  decision_threshold: 0.7

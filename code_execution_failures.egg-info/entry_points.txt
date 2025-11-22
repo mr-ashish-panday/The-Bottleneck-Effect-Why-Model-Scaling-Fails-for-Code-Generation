@@ -1,0 +1,4 @@
+[console_scripts]
+analyze-failures = scripts.analyze_failures:main
+generate-samples = scripts.generate_samples:main
+run-evaluation = scripts.run_evaluation:main
