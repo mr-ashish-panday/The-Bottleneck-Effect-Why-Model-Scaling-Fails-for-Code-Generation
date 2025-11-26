@@ -151,9 +151,9 @@ If you use this code, please cite:
 
 ## 📧 Contact
 
-- **Author**: Your Name
-- **Email**: your.email@university.edu
-- **Institution**: Your University
+- **Author**: Ashish Pandey
+- **Email**: ashishpandey9818@gmail.com
+- **Institution**: Khwopa College Of Engineering
 
 ---
 
