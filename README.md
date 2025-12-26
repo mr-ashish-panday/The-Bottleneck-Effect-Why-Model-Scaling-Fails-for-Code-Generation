@@ -59,19 +59,6 @@ pip install -e .
 
 python scripts/download_data.py --dataset all
 
-### 3. Run Feasibility Check (Week 1-2)
-
-```bash
-# Generate samples for 50 problems
-python scripts/generate_samples.py --config config.yaml --num_problems 50
-
-# Evaluate and categorize failures
-python scripts/run_evaluation.py --config config.yaml
-
-# Analyze failure patterns
-python scripts/analyze_failures.py --config config.yaml --output outputs/feasibility_report.json
-```
-
 ---
 
 🧪 Reproduction
