@@ -1,53 +1,44 @@
-```markdown
-# The Bottleneck Effect: Why Model Scaling Fails for Code Generation
+# Paper 11: Why Code Generation Actually Fails
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![Paper Status](https://img.shields.io/badge/Status-Research_Preview-green.svg)]()
-
-> **"Does making an LLM bigger always make it smarter? Our execution-aware analysis says no."**
-
-This repository contains the official implementation and experimental data for the paper **"The Bottleneck Effect: Why Model Scaling Fails for Code Generation"**. unlike prior work that treats code generation as simple text prediction, we analyze failures through the lens of **execution semantics** and **internal activation geometry**.
+**Execution-Aware Analysis of Code Generation Model Failures**
 
 ---
 
-## 📉 Key Findings
+## 🎯 Project Overview
 
-After running **16,400+ execution-based experiments** across HumanEval and MBPP, we uncovered two critical anomalies:
+This repository contains research code for studying **why code generation models fail** through execution-aware analysis. Unlike prior work that treats code generation as a text generation problem, we analyze failures through the lens of **execution semantics**.
 
-### 1. The Negative Scaling Phenomenon
-Contrary to standard scaling laws, **GPT-2 Medium (355M)** consistently underperforms **GPT-2 Small (124M)** on syntax-heavy tasks.
-- **Small (124M):** Higher pass@1 rate on structural code.
-- **Medium (355M):** Frequently collapses into repetitive failure modes.
-
-### 2. The Geometric Bottleneck
-By projecting layer-wise activations, we identified a **"Single Point of Failure"** in Layer 12 of the medium model.
-- **Linear Separability:** Successful vs. Failed generations are linearly separable along just two dimensions (Dim 810 & 457).
-- **The "Rigid" Trap:** A deviation of just **4.5 units** in this bottleneck layer causes catastrophic syntax failure, proving that larger models can form more brittle decision boundaries.
+### Research Questions
+1. How do code generation failures differ from NLP failures?
+2. Can we predict failure types from model internals?
+3. Can execution-aware decoding reduce crashes without retraining?
 
 ---
 
-## 📁 Repository Structure
-
+## 📁 Project Structure
 
 ```
-
-paper11_bottleneck_effect/
-├── data/                 # Raw execution logs and activation dumps
-├── src/                  # Core research code
-│   ├── models/           # Wrappers for GPT-2/CodeGen with hooks
-│   ├── execution/        # Sandbox for running generated code
-│   └── analysis/         # PCA & Linear Probe tools (Figure 4)
-├── scripts/              # Reproduction scripts
-├── notebooks/            # Visualization notebooks (Heatmaps & Scatter plots)
-└── outputs/              # Saved figures and failure taxonomy
-
+paper11_code_execution_failures/
+├── data/                 # Datasets and results
+├── models/               # Model checkpoints and configs
+├── src/                  # Source code
+│   ├── data/            # Data loading
+│   ├── models/          # Model wrappers
+│   ├── evaluation/      # Execution engine
+│   └── analysis/        # Failure analysis
+├── scripts/              # Executable scripts
+├── notebooks/            # Jupyter notebooks
+├── outputs/              # Figures, tables, logs
+└── tests/                # Unit tests
 ```
 
 ---
 
 ## 🚀 Quick Start
 
+### 1. Environment Setup
+
+```bash
 ### 1. Environment Setup
 
 ```bash
@@ -62,72 +53,82 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 # Install dependencies
 pip install -r requirements.txt
 pip install -e .
-
 ```
 
-### 2. Download Datasets
+### 2. Download Data
 
-We use HuggingFace datasets for HumanEval and MBPP.
-
-```bash
 python scripts/download_data.py --dataset all
 
+### 3. Run Feasibility Check (Week 1-2)
+
+```bash
+# Generate samples for 50 problems
+python scripts/generate_samples.py --config config.yaml --num_problems 50
+
+# Evaluate and categorize failures
+python scripts/run_evaluation.py --config config.yaml
+
+# Analyze failure patterns
+python scripts/analyze_failures.py --config config.yaml --output outputs/feasibility_report.json
 ```
 
 ---
 
-## 🧪 Reproduction
+🧪 Reproduction
 
 To replicate the results from the paper, follow these steps:
 
-### Step 1: Run the Generation Loop (The "16k Experiments")
-
+Step 1: Run the Generation Loop (The "16k Experiments")
 This script generates solutions and immediately executes them to label "Success" vs "Failure".
 
-```bash
-python scripts/run_experiment.py \
-    --model gpt2-medium \
-    --num_samples 100 \
-    --output_dir outputs/raw_logs
+To replicate the results from the paper, follow these steps:
 
-```
+Step 1: Run the Generation Loop (The "16k Experiments")
+This script generates solutions and immediately executes them to label "Success" vs "Failure".
 
-### Step 2: Extract Activations (The "Bottleneck" Analysis)
 
-This hooks into Layer 12 to capture the hidden states during generation.
-
-```bash
-python scripts/extract_activations.py \
-    --checkpoint gpt2-medium \
-    --layer 11 \
-    --target_dim 2
-
-```
-
-### Step 3: Visualize the Geometric Trap (Figure 4)
-
-Generate the scatter plot showing the linear separability of failures.
-
-```bash
-jupyter notebook notebooks/visualize_bottleneck.ipynb
-
-```
 
 ---
 
 ## 🔧 Configuration
 
-All experimental parameters are controlled via `config.yaml`:
+Edit `config.yaml` to customize:
+- Model selection (`gpt2`, `gpt2-medium`)
+- Generation parameters (temperature, top_p)
+- Hardware constraints (GPU memory)
+- Failure categories
 
-* **Model:** `gpt2`, `gpt2-medium`, `codegen-350M`
-* **Decoding:** `temperature=0.8`, `top_p=0.95`
-* **Execution:** `timeout=5.0s`, `sandbox=True`
+---
+
+## 📈 Experiment Tracking
+
+```bash
+# Optional: Use Weights & Biases
+pip install wandb
+wandb login
+
+# Enable in config.yaml
+tracking:
+  use_wandb: true
+```
+
+---
+
+## 🧪 Testing
+
+```bash
+# Run all tests
+pytest tests/
+
+# Run with coverage
+pytest tests/ --cov=src --cov-report=html
+```
 
 ---
 
 ## 📝 Citation
 
-If you use this code or findings in your research, please cite:
+If you use this code, please cite:
 
 ```bibtex
 @article{pandey2025bottleneck,
@@ -136,23 +137,29 @@ If you use this code or findings in your research, please cite:
   journal={arXiv preprint},
   year={2025}
 }
-
 ```
 
 ---
 
 ## 📧 Contact
 
-**Ashish Pandey** Research Lead | Undergrad Researcher
-
-Email: ashishpandey9818@gmail.com
+- **Author**: Ashish Pandey
+- **Email**: ashishpandey9818@gmail.com
+- **Institution**: Khwopa College Of Engineering
 
 ---
 
 ## 🔒 License
 
-MIT License. See `LICENSE` for details.
+MIT License - see LICENSE file for details
 
-```
+---
 
---
+## ⚠️ Hardware Requirements
+
+- **GPU**: 8-12 GB VRAM (tested on RTX 3060/4070 Ti)
+- **RAM**: 16 GB minimum
+- **Storage**: 50 GB for data + checkpoints
+- **Time**: ~95 GPU hours total (spread over 8 weeks)
+
+---
