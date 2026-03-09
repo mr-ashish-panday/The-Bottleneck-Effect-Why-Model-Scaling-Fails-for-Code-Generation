@@ -104,17 +104,20 @@ def _load_livecodebench_dataset(version_tag: str):
             "livecodebench/code_generation_lite",
             version_tag=version_tag,
             split="test",
+            trust_remote_code=True,
         )
     except TypeError:
         return load_dataset(
             "livecodebench/code_generation_lite",
             version_tag,
             split="test",
+            trust_remote_code=True,
         )
     except ValueError:
         dataset = load_dataset(
             "livecodebench/code_generation_lite",
             version_tag=version_tag,
+            trust_remote_code=True,
         )
         if "test" in dataset:
             return dataset["test"]

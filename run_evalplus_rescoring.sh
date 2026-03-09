@@ -8,7 +8,7 @@ source venv/bin/activate
 mkdir -p outputs/logs outputs/tables outputs/evalplus
 
 if ! python -c "import importlib.util; raise SystemExit(0 if importlib.util.find_spec('evalplus') else 1)"; then
-  python -m pip install "evalplus==0.2.1"
+  python -m pip install "evalplus==0.3.1"
 fi
 
 export EVALPLUS_TIMEOUT_PER_TASK="${EVALPLUS_TIMEOUT_PER_TASK:-20}"
@@ -32,7 +32,7 @@ run_case() {
   echo "[$(date '+%F %T')] Running EvalPlus for ${label} ${dataset}"
   (
     cd "$case_dir"
-    evalplus.evaluate --dataset "$dataset" --samples "samples.jsonl"
+    evalplus.evaluate "$dataset" --samples "samples.jsonl"
   ) | tee "$log_file"
 
   python scripts/analyze_evalplus_results.py \

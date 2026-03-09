@@ -22,20 +22,9 @@ if [ ! -d "$LCB_DIR/.git" ]; then
   git clone https://github.com/LiveCodeBench/LiveCodeBench.git "$LCB_DIR"
 fi
 
-if [ ! -x "$LCB_DIR/.venv/bin/python" ]; then
-  echo "[$(date '+%F %T')] Creating LiveCodeBench environment"
-  if command -v uv >/dev/null 2>&1; then
-    (
-      cd "$LCB_DIR"
-      uv venv --python 3.11
-      source .venv/bin/activate
-      uv pip install -e .
-    )
-  else
-    python3 -m venv "$LCB_DIR/.venv"
-    "$LCB_DIR/.venv/bin/python" -m pip install --upgrade pip
-    "$LCB_DIR/.venv/bin/pip" install -e "$LCB_DIR"
-  fi
+if [ -d "$LCB_DIR/.venv" ]; then
+  echo "[$(date '+%F %T')] Removing stale LiveCodeBench virtualenv"
+  rm -rf "$LCB_DIR/.venv"
 fi
 
 run_case() {
@@ -60,8 +49,7 @@ run_case() {
   echo "[$(date '+%F %T')] Evaluating LiveCodeBench outputs for ${label}"
   (
     cd "$LCB_DIR"
-    source .venv/bin/activate
-    python -m lcb_runner.runner.custom_evaluator \
+    PYTHONPATH="$LCB_DIR:${PYTHONPATH:-}" python -m lcb_runner.runner.custom_evaluator \
       --custom_output_file "$output_json" \
       --release_version "$RELEASE_VERSION"
   ) | tee "$log_file"
@@ -70,8 +58,7 @@ run_case() {
   if [ -n "$eval_all_file" ]; then
     (
       cd "$LCB_DIR"
-      source .venv/bin/activate
-      python -m lcb_runner.evaluation.compute_scores --eval_all_file "$eval_all_file"
+      PYTHONPATH="$LCB_DIR:${PYTHONPATH:-}" python -m lcb_runner.evaluation.compute_scores --eval_all_file "$eval_all_file"
     ) | tee -a "$log_file" || true
   fi
 
