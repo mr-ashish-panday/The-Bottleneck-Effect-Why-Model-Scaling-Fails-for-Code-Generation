@@ -90,7 +90,13 @@ def execute_code(code: str, test_code: str, timeout: int = 5) -> Dict:
     except AssertionError as e:
         result["error_type"] = "assertion_error"
         result["error_message"] = str(e) or "Test case failed"
-        
+
+    except SystemExit as e:
+        # Generated programs occasionally call exit()/quit(); record that as a runtime failure
+        # instead of terminating the whole evaluator.
+        result["error_type"] = "runtime_error"
+        result["error_message"] = f"SystemExit: {str(e)}"
+
     except Exception as e:
         result["error_type"] = "runtime_error"
         result["error_message"] = f"{type(e).__name__}: {str(e)}"
