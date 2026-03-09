@@ -1,0 +1,42 @@
+project:
+  name: "code_execution_failures"
+  version: "0.1.0"
+
+paths:
+  data_dir: "data"
+  raw_data: "data/raw"
+  results_dir: "data/results_livecodebench_gpt2_medium"
+  models_dir: "models"
+  outputs_dir: "outputs"
+
+hardware:
+  device: "cuda"
+  max_memory_gb: 12
+
+model:
+  name: "gpt2-medium"
+  pretrained_path: "gpt2-medium"
+  max_length: 1024
+  temperature: 0.2
+  top_p: 0.95
+
+dataset:
+  name: "livecodebench"
+  seed: 42
+  version_tag: "release_v2"
+  livecodebench_prompt_style: "comment_plus_starter"
+
+generation:
+  batch_size: 1
+  max_new_tokens: 256
+  do_sample: true
+  max_time_seconds: 45
+  repetition_penalty: 1.05
+
+execution:
+  timeout_seconds: 8
+
+feasibility_check:
+  num_problems: 511
+  num_samples_per_problem: 10
+  decision_threshold: 0.7
