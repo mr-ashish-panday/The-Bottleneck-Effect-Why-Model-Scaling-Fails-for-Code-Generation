@@ -497,3 +497,39 @@ Last updated: 2026-03-13 16:55:01 +05:45
 - Synced finished server tables/logs into the local repo and pushed the full paper/artifact snapshot to GitHub.
 - Pushed commit:
   - `222a7cd` (`Add final benchmarks, manuscript updates, and research artifacts`)
+
+## 2026-03-17 final scaled follow-up completed
+
+- Remote run `codegen_ladder_scaled_followups.log` completed successfully.
+- Finished outputs on server:
+  - `data/results_codegen_nl/ablation/scaled_layer11_20x10.json`
+  - `data/results_codegen_multi/ablation/scaled_layer7_20x10.json`
+  - `data/results_codegen_mono/ablation/scaled_layer13_20x10.json`
+- Clean takeaways:
+  - `CodeGen-NL` layer `11` shows graded degradation:
+    - baseline `25.5%`
+    - `0.75 -> 22.5%`
+    - `0.5 -> 16.0%`
+    - `0.25 -> 8.5%`
+    - `0.0 -> 17.0%`
+  - `CodeGen-Mono` layer `13` again shows the mixed runtime regime under full zeroing:
+    - baseline `31.0%`
+    - `0.75 -> 33.5%`
+    - `0.5 -> 25.5%`
+    - `0.25 -> 2.0%`
+    - `0.0 -> 29.0%`, runtime `22.5%`
+- Caution:
+  - `CodeGen-Multi` layer `7` is anomalous:
+    - baseline `41.0%`
+    - `0.25 -> 1.0%`
+    - `0.0 -> 61.5%`
+  - Treat this leg as inconclusive; do not use it as primary mechanistic evidence.
+
+## 2026-03-17 manuscript correction + final follow-up integration
+
+- Updated `bottleneck.tex` to integrate the final CodeGen ladder scaled follow-up.
+- Added a new subsection for the ladder signature-layer follow-up.
+- Folded in the new review-safe caveats:
+  - HumanEval main uses `163` scored CodeGen tasks, not a clean `164`.
+  - HumanEval CodeGen ladder is partial (`142 / 147 / 147` tasks), not a clean 164-task control.
+  - `CodeGen-Multi` ladder follow-up is anomalous and excluded from the mechanistic claim.

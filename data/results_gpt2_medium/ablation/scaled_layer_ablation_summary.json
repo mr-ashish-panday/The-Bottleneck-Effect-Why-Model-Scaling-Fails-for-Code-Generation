@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "model_config": "config_gpt2_medium.yaml",
+    "dataset_config": "config.yaml",
+    "model_name": "gpt2-medium",
+    "num_layers": 24,
+    "target_layers": [
+      12
+    ],
+    "scales": [
+      0.5
+    ],
+    "num_problems": 2,
+    "samples_per_problem": 2,
+    "seed": 42
+  },
+  "baseline": {
+    "success_pct": 0.0,
+    "syntax_error_pct": 100.0,
+    "runtime_error_pct": 0.0
+  },
+  "layer_summaries": [
+    {
+      "layer": 12,
+      "num_conditions": 1,
+      "max_runtime_shift": 0.0,
+      "max_syntax_shift": 0.0,
+      "max_success_drop": 0.0,
+      "conditions": [
+        {
+          "scale": 0.5,
+          "success_pct": 0.0,
+          "syntax_error_pct": 100.0,
+          "runtime_error_pct": 0.0
+        }
+      ]
+    }
+  ]
+}

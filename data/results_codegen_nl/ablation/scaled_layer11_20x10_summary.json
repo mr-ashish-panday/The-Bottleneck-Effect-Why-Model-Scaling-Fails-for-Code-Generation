@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "model_config": "config_codegen_nl.yaml",
+    "dataset_config": "config_codegen_nl.yaml",
+    "model_name": "Salesforce/codegen-350M-nl",
+    "num_layers": 20,
+    "target_layers": [
+      11
+    ],
+    "scales": [
+      0.75,
+      0.5,
+      0.25,
+      0.0
+    ],
+    "num_problems": 20,
+    "samples_per_problem": 10,
+    "seed": 42
+  },
+  "baseline": {
+    "success_pct": 25.5,
+    "syntax_error_pct": 73.5,
+    "runtime_error_pct": 1.0
+  },
+  "layer_summaries": [
+    {
+      "layer": 11,
+      "num_conditions": 4,
+      "max_runtime_shift": 0.0,
+      "max_syntax_shift": 17.5,
+      "max_success_drop": 17.0,
+      "conditions": [
+        {
+          "scale": 0.75,
+          "success_pct": 22.5,
+          "syntax_error_pct": 76.5,
+          "runtime_error_pct": 1.0
+        },
+        {
+          "scale": 0.5,
+          "success_pct": 16.0,
+          "syntax_error_pct": 83.0,
+          "runtime_error_pct": 1.0
+        },
+        {
+          "scale": 0.25,
+          "success_pct": 8.5,
+          "syntax_error_pct": 91.0,
+          "runtime_error_pct": 0.5
+        },
+        {
+          "scale": 0.0,
+          "success_pct": 17.0,
+          "syntax_error_pct": 83.0,
+          "runtime_error_pct": 0.0
+        }
+      ]
+    }
+  ]
+}

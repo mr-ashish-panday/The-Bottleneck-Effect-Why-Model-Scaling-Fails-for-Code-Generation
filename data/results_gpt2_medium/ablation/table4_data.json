@@ -1,0 +1,42 @@
+{
+  "table_data": [
+    {
+      "dimension": 810,
+      "mean_success": -2.51171875,
+      "mean_failure": 0.67236328125,
+      "difference": 3.18408203125,
+      "pct_signal": 0.28953235208239575
+    },
+    {
+      "dimension": 457,
+      "mean_success": 2.275390625,
+      "mean_failure": -0.9228515625,
+      "difference": 3.1982421875,
+      "pct_signal": 0.290819951869298
+    },
+    {
+      "dimension": 182,
+      "mean_success": 1.109375,
+      "mean_failure": -2.123046875,
+      "difference": 3.232421875,
+      "pct_signal": 0.29392795135492406
+    },
+    {
+      "dimension": 802,
+      "mean_success": -1.8525390625,
+      "mean_failure": 1.396484375,
+      "difference": 3.2490234375,
+      "pct_signal": 0.2954375511050853
+    },
+    {
+      "dimension": 169,
+      "mean_success": -4.0234375,
+      "mean_failure": -0.6474609375,
+      "difference": 3.3759765625,
+      "pct_signal": 0.3069815491945536
+    }
+  ],
+  "top5_signal_pct": 1.4766993556062566,
+  "total_dimensions": 1024,
+  "discriminative_dimensions": 5
+}

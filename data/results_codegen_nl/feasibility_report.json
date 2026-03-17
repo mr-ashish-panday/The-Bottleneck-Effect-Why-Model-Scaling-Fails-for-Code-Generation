@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "total_problems": 164,
+    "total_samples": 16400,
+    "samples_per_problem": 100
+  },
+  "category_distribution": {
+    "success": 5182,
+    "syntax_error": 11161,
+    "runtime_error": 57
+  },
+  "complexity_analysis": {
+    "complex": {
+      "success": 4335,
+      "syntax_error": 9114,
+      "runtime_error": 51
+    },
+    "medium": {
+      "syntax_error": 2047,
+      "success": 847,
+      "runtime_error": 6
+    }
+  },
+  "error_patterns": {
+    "expected '": 679,
+    "NameError": 46,
+    "TypeError": 9,
+    "invalid syntax. Maybe you meant '==' or '": 8,
+    "(unicode error) 'unicodeescape' codec can't decode bytes in position 0-1": 3,
+    "f-string": 2,
+    "(unicode error) 'unicodeescape' codec can't decode bytes in position 0-3": 1,
+    "AttributeError": 1,
+    "RuntimeError": 1
+  },
+  "feasibility_decision": {
+    "can_proceed": true,
+    "categorization_rate": 1.0,
+    "threshold": 0.7,
+    "total_samples": 16400,
+    "clear_categories": 16400,
+    "unclear_categories": 0
+  }
+}

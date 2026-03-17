@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "model_config": "config_gpt2_medium.yaml",
+    "dataset_config": "config.yaml",
+    "model_name": "gpt2-medium",
+    "num_layers": 24,
+    "target_layers": [
+      12
+    ],
+    "scales": [
+      0.75,
+      0.5,
+      0.25,
+      0.0
+    ],
+    "num_problems": 10,
+    "samples_per_problem": 5,
+    "seed": 42
+  },
+  "baseline": {
+    "success_pct": 6.0,
+    "syntax_error_pct": 94.0,
+    "runtime_error_pct": 0.0
+  },
+  "layer_summaries": [
+    {
+      "layer": 12,
+      "num_conditions": 4,
+      "max_runtime_shift": 28.000000000000004,
+      "max_syntax_shift": 6.0,
+      "max_success_drop": 6.0,
+      "conditions": [
+        {
+          "scale": 0.75,
+          "success_pct": 8.0,
+          "syntax_error_pct": 92.0,
+          "runtime_error_pct": 0.0
+        },
+        {
+          "scale": 0.5,
+          "success_pct": 2.0,
+          "syntax_error_pct": 98.0,
+          "runtime_error_pct": 0.0
+        },
+        {
+          "scale": 0.25,
+          "success_pct": 0.0,
+          "syntax_error_pct": 100.0,
+          "runtime_error_pct": 0.0
+        },
+        {
+          "scale": 0.0,
+          "success_pct": 0.0,
+          "syntax_error_pct": 72.0,
+          "runtime_error_pct": 28.000000000000004
+        }
+      ]
+    }
+  ]
+}

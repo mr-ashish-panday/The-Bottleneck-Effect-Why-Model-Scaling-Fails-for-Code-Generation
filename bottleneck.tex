@@ -158,12 +158,12 @@ To partially separate pretraining-distribution effects from family differences, 
 \toprule
 \textbf{Setting} & \textbf{Tasks} & \textbf{Samples / Task} & \textbf{Primary Role} \\
 \midrule
-HumanEval main & 164 & 100 & core comparison / pass@k \\
+HumanEval main & 164 (GPT-2), 163 (CodeGen) & 100 & core comparison / pass@k \\
 HumanEval+ strict & 164 & 5 & stronger test-suite check \\
 MBPP full & 257 & 20 & external validation \\
 MBPP+ strict & 378 & 20 & versioned strict validation \\
 LiveCodeBench v2 & 511 & 10 & contamination-aware stress test \\
-CodeGen ladder (HumanEval) & 164 & 100 & within-family control \\
+CodeGen ladder (HumanEval) & 142--147 & 100 & partial within-family control \\
 CodeGen ladder (MBPP) & 257 & 20 & within-family control \\
 Mechanistic pilots & 10 & 5 & causal intervention tests \\
 \bottomrule
@@ -289,7 +289,7 @@ Table~\ref{tab:performance} presents full results across all error categories:
 
 \begin{table*}[t]
 \centering
-\caption{Model Performance on HumanEval (100 samples per problem, 16,300-16,400 total attempts)}
+\caption{Model Performance on HumanEval (100 samples per problem, 16,300--16,400 total attempts; CodeGen scored on 163 tasks)}
 \label{tab:performance}
 \begin{tabular}{@{}lccccc@{}}
 \toprule
@@ -450,27 +450,58 @@ To reduce the objection that GPT-2 versus CodeGen is ``just a family difference,
 
 \begin{table}[h]
 \centering
-\caption{CodeGen-350M Continued-Pretraining Ladder}
+\caption{CodeGen-350M Continued-Pretraining Ladder (partial HumanEval coverage)}
 \label{tab:codegen_ladder}
 \scriptsize
 \resizebox{\columnwidth}{!}{%
-\begin{tabular}{@{}lcc@{}}
+\begin{tabular}{@{}lccc@{}}
 \toprule
-\textbf{Checkpoint} & \textbf{HumanEval success \%} & \textbf{MBPP success \%} \\
+\textbf{Checkpoint} & \textbf{HumanEval tasks} & \textbf{HumanEval success \%} & \textbf{MBPP success \%} \\
 \midrule
-CodeGen-NL & 30.60 & 0.02 \\
-CodeGen-Multi & 28.46 & 1.23 \\
-CodeGen-Mono & 37.76 & 2.76 \\
+CodeGen-NL & 142 & 30.60 & 0.02 \\
+CodeGen-Multi & 147 & 28.46 & 1.23 \\
+CodeGen-Mono & 147 & 37.76 & 2.76 \\
 \bottomrule
 \end{tabular}
 }
 \end{table}
 
-\textbf{Finding}: Mono is strongest on both benchmarks, but the ladder behaves differently across them. On HumanEval, Mono significantly exceeds both NL (37.76\% vs.\ 30.60\%, $p=0.0001$) and Multi (37.76\% vs.\ 28.46\%, $p=0.0001$), while Multi trails NL slightly (28.46\% vs.\ 30.60\%, $p=0.0443$). On MBPP, the ladder becomes cleanly monotone: NL reaches 0.02\%, Multi 1.23\%, and Mono 2.76\%, with significant improvements from NL to Multi ($p=0.0001$) and Multi to Mono ($p=0.0157$).
+\textbf{Finding}: Mono is strongest on both benchmarks, but the ladder behaves differently across them. On HumanEval, the comparison is only partial because the committed runs score 142 tasks for NL and 147 for Multi and Mono. Over the shared scored subsets, Mono significantly exceeds both NL (37.76\% vs.\ 30.60\%, $p=0.0001$) and Multi (37.76\% vs.\ 28.46\%, $p=0.0001$), while Multi trails NL slightly (28.46\% vs.\ 30.60\%, $p=0.0443$). On MBPP, the ladder becomes cleanly monotone: NL reaches 0.02\%, Multi 1.23\%, and Mono 2.76\%, with significant improvements from NL to Multi ($p=0.0001$) and Multi to Mono ($p=0.0157$).
 
-\textbf{Interpretation}: This is the strongest evidence in the paper against a pure family-comparison objection. Even within a single 350M architecture family, additional code- and Python-specific continued pretraining changes performance substantially. The HumanEval ladder is mixed because Multi underperforms NL, so we do not treat the ladder as a matched-compute law. The MBPP result is cleaner and supports the narrower claim that continued-pretraining plus curriculum effects materially improve small-model code generation within a single family.
+\textbf{Interpretation}: This is still strong evidence against a pure family-comparison objection, but the HumanEval portion should be read conservatively because it is not a clean 164-task within-family sweep. Even within a single 350M architecture family, additional code- and Python-specific continued pretraining changes performance substantially. The HumanEval ladder is both partial and mixed because Multi underperforms NL, so we do not treat the ladder as a matched-compute law. The MBPP result is cleaner and supports the narrower claim that continued-pretraining plus curriculum effects materially improve small-model code generation within a single family.
 
 As an auxiliary diagnostic, prompt perplexity on the ladder prompts is lowest for Mono on both HumanEval (4.87) and MBPP (4.46), intermediate for NL (4.93 and 4.64), and highest for Multi (5.54 and 5.23). Following CodeGen, we interpret these numbers only as prompt--checkpoint compatibility diagnostics, not as direct explanations of functional gains, so they remain secondary evidence rather than a main result.
+
+\subsection{Scaled Follow-Ups on CodeGen Ladder Signature Layers}
+
+To test whether the ladder's signature layers also show graded behavior, we ran a final 20-problem / 10-sample scaled-ablation follow-up on CodeGen-NL layer 11, CodeGen-Multi layer 7, and CodeGen-Mono layer 13 using scales $\{0.75, 0.5, 0.25, 0.0\}$.
+
+\begin{table}[h]
+\centering
+\caption{Scaled Follow-Ups on CodeGen Ladder Signature Layers}
+\label{tab:codegen_ladder_scaled}
+\scriptsize
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Checkpoint} & \textbf{Layer} & \textbf{Baseline} & \textbf{0.25 scale} & \textbf{0.0 scale} \\
+\midrule
+CodeGen-NL & 11 & 25.5 & 8.5 & 17.0 \\
+CodeGen-Multi & 7 & 41.0 & 1.0 & 61.5 \\
+CodeGen-Mono & 13 & 31.0 & 2.0 & 29.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Finding}: Two of the three ladder follow-ups are mechanistically useful. In CodeGen-NL, layer 11 degrades in the expected direction under attenuation (25.5\% $\rightarrow$ 22.5\% $\rightarrow$ 16.0\% $\rightarrow$ 8.5\%), indicating that the earlier checkpoint relies on a comparatively brittle syntactic support layer. In CodeGen-Mono, layer 13 preserves 33.5\% success at scale 0.75, falls to 2.0\% at scale 0.25, and still retains 29.0\% success under full zeroing while shifting 22.5\% of outputs into runtime errors, reinforcing the main claim that later code-pretrained checkpoints retain a broader executable-code regime. CodeGen-Multi is less clean: layer 7 behaves plausibly under partial attenuation, but full zeroing unexpectedly improves success to 61.5\%, so we treat that leg as anomalous and exclude it from the mechanistic claim.
+
+\textbf{Interpretation}: These follow-ups strengthen the ladder story without making it artificially cleaner than the evidence. The NL checkpoint looks more like a syntax-dependent intermediate stage, while the Mono checkpoint again shows the mixed residual/runtime behavior that marks distributed executable-code support in the main CodeGen analysis. The anomalous Multi zero-ablation result prevents us from claiming a simple monotone mechanistic progression across the whole ladder, but it does not erase the broader pattern that later continued-pretraining stages can change both benchmark performance and the layerwise failure geometry of code generation.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figure8_codegen_ladder_followups.pdf}
+\caption{Scaled follow-up interventions on signature layers from the CodeGen continued-pretraining ladder. CodeGen-NL layer 11 degrades toward syntax collapse under attenuation, CodeGen-Mono layer 13 preserves a mixed executable/runtime regime under full zeroing, and CodeGen-Multi layer 7 behaves anomalously at 0.0 scale. We therefore treat the NL and Mono legs as the clean mechanistic evidence and the Multi leg as exploratory.}
+\label{fig:codegen_ladder_followups}
+\end{figure*}
 
 \subsection{Layer Ablation Reveals Distinct Failure Profiles}
 
@@ -513,6 +544,13 @@ CodeGen-350M & 20 & Layers 5, 7, 13, 18 & 11.7\%, 4.6\%, 29.5\%, 0.1\% & Mostly 
 
 \item \textbf{Residual robustness and signature depth move together in this three-model snapshot}: GPT-2 Small's only surviving layer appears early (17\%), GPT-2 Medium's distinctive runtime-shift layer appears at mid depth (50\%), and CodeGen's strongest residual layer appears later (65\%). We treat this as descriptive evidence rather than a general law.
 \end{enumerate}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figure9_ablation_depth_profiles.pdf}
+\caption{Normalized-depth ablation profiles across GPT-2 Small, GPT-2 Medium, and CodeGen. Left: residual success under full-layer zeroing. Right: runtime-error shift under the same intervention. The comparison makes the core mechanistic contrast clearer than the heatmap alone: GPT-2 Medium collapses to zero success everywhere but shows a narrow runtime-shift spike at layer 12, while CodeGen retains broader residual support and a later mixed executable regime centered on layer 13.}
+\label{fig:ablation_depth_profiles}
+\end{figure*}
 
 \subsection{Syntax Error Breakdown Reveals Different Learned Representations}
 
@@ -694,6 +732,13 @@ Random max & 14.0 & --- & --- \\
 \label{fig:steering_response}
 \end{figure}
 
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figure6_steering_controls.pdf}
+\caption{Constructive steering with matched-control context. Left: GPT-2 Medium layer-12 steering response across target intervention strengths. Right: distribution over 20 matched sparse random controls, with the learned target conditions overlaid. The learned vector improves over baseline and exceeds the control mean, but one random control attains a slightly higher success rate, so the result is best read as a useful local intervention rather than definitive subspace specificity.}
+\label{fig:steering_controls_distribution}
+\end{figure*}
+
 \subsection{Scaled Layer-13 Ablation in CodeGen}
 
 To test whether the more robust code-specialized model also shows a graded signature, we ran the same 10-problem / 5-sample attenuation study on CodeGen's strongest residual layer (layer 13).
@@ -719,6 +764,13 @@ Baseline & 40.0 & 60.0 & 0.0 \\
 \textbf{Finding}: Unlike GPT-2 Medium, CodeGen does not collapse immediately under partial attenuation. Layer 13 retains 28-30\% success at scales 0.75 and 0.5, collapses to 2.0\% success only at scale 0.25, and still preserves 24.0\% success under full zeroing while shifting 24.0\% of completions into runtime errors.
 
 \textbf{Interpretation}: This is the paper's clearest graded cross-model contrast. GPT-2 Medium layer 12 acts like a brittle thresholded checkpoint, whereas CodeGen layer 13 behaves like a partially redundant execution stage. Even when layer 13 is fully removed, surrounding layers still support a meaningful fraction of executable completions. That is stronger evidence for distributed code-relevant computation than the full-zero ablation table alone.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figure7_scaled_ablation_comparison.pdf}
+\caption{Direct graded-ablation comparison between GPT-2 Medium layer 12 and CodeGen layer 13 on matched pilot subsets. GPT-2 Medium collapses toward syntax failure under moderate attenuation and only reopens a runtime regime after full zeroing, whereas CodeGen retains substantial success at 0.75 and 0.5 scale and still preserves a mixed executable/runtime regime at 0.0. This is the sharpest visual contrast between a brittle checkpoint and a more distributed execution stage in the paper.}
+\label{fig:scaled_ablation_comparison}
+\end{figure*}
 \section{Analysis and Discussion}
 
 \subsection{Why Does Scaling Fail for GPT-2?}
@@ -753,7 +805,7 @@ The within-family CodeGen ladder tightens the paper's central comparative claim.
 
 The ladder does \emph{not} support an overclean story. On HumanEval, Multi is slightly worse than NL, so the result is not a perfectly monotone progression. We therefore avoid claiming that pretraining distribution alone, under matched compute, is sufficient to explain every improvement. What the ladder does support is a narrower and stronger statement: once a fixed 350M architecture receives additional code-focused and then Python-focused continued pretraining, the best checkpoint (Mono) is clearly stronger than the earlier ones, and MBPP shows a fully monotone NL$<$Multi$<$Mono trend.
 
-An exploratory reduced ablation sweep across the ladder also suggests that the signature layer shifts with continued pretraining: NL's strongest surviving layer is 11, Multi's is 7, and Mono's is 13. We treat these layer assignments cautiously because the ladder sweep is smaller than the main HumanEval ablation study, but they are consistent with the broader claim that continued pretraining changes not only accuracy but also where executable-code computation is supported.
+An exploratory reduced ablation sweep across the ladder also suggests that the signature layer shifts with continued pretraining: NL's strongest surviving layer is 11, Multi's is 7, and Mono's is 13. The final scaled follow-up makes this more concrete for NL and Mono: NL layer 11 weakens roughly monotonically into syntax collapse, while Mono layer 13 again reopens a mixed runtime regime under full zeroing. We treat the Multi follow-up as inconclusive because its zero-ablation condition behaves anomalously. So the safest claim is not that the ladder yields a clean mechanistic law, but that continued pretraining changes both where residual support appears and how that support fails under intervention.
 
 \subsection{Implications for Model Design}
 
@@ -791,7 +843,7 @@ Our study has several limitations that future work should address:
 
 \textbf{3. The CodeGen ladder is controlled but not matched-compute}: NL, Multi, and Mono hold architecture and parameter count fixed, but they also differ in additional tokens, optimization steps, and curriculum. The ladder therefore supports a strong within-family continued-pretraining claim, not a perfectly factorized causal isolation of data distribution alone.
 
-\textbf{4. Graded interventions remain limited}: We now include scaled-ablation pilots for GPT-2 Medium layer 12 and CodeGen layer 13, but both cover only one layer at a time on 10-problem / 5-sample subsets. Broader graded sweeps remain necessary before claiming a general law of thresholded behavior.
+\textbf{4. Graded interventions remain limited}: We now include scaled-ablation pilots for GPT-2 Medium layer 12, CodeGen layer 13, and a final ladder follow-up on CodeGen-NL / Multi / Mono signature layers. Even so, these remain small targeted subsets rather than full benchmark sweeps, and one ladder leg (CodeGen-Multi layer 7) behaved anomalously under full zeroing. Broader graded sweeps remain necessary before claiming a general law of thresholded behavior.
 
 \textbf{5. Limited semantic analysis}: We identify which layers validate syntax but do not deeply analyze which layers perform semantic reasoning (variable scoping, type consistency, algorithm correctness). Future work should extend our methods to semantic error detection.
 
@@ -813,13 +865,13 @@ The same conclusion survives a separate strict MBPP+ evaluation with EvalPlus. O
 
 The contamination-aware LiveCodeBench result narrows and strengthens the paper at the same time. GPT-2 Small and GPT-2 Medium remain at 0.0\% pass@1/pass@5/pass@10, while CodeGen-350M remains only marginally above zero (0.02\%/0.10\%/0.20\%). So the paper's strongest positive comparative result remains concentrated on HumanEval and MBPP, but the negative conclusion that scale alone is insufficient survives even under a much harder modern benchmark.
 
-The within-family CodeGen ladder sharpens the paper further. At fixed 350M scale, CodeGen-Mono is strongest on both HumanEval and MBPP, while the MBPP ladder is cleanly monotone from NL to Multi to Mono. Because HumanEval is mixed and the checkpoints receive additional compute and curriculum, we interpret this not as a pure data-only law but as strong within-family evidence that later code- and Python-focused continued pretraining materially improves small-model code generation.
+The within-family CodeGen ladder sharpens the paper further. At fixed 350M scale, CodeGen-Mono is strongest on both HumanEval and MBPP, while the MBPP ladder is cleanly monotone from NL to Multi to Mono. Because the HumanEval ladder is partial and mixed, and because the checkpoints receive additional compute and curriculum, we interpret this not as a pure data-only law but as strong within-family evidence that later code- and Python-focused continued pretraining materially improves small-model code generation.
 
 Under full-layer ablation, GPT-2 Medium never preserves success; instead, layer 12 stands out because its removal uniquely shifts 23.9\% of failures into runtime errors while every other layer collapses almost entirely to syntax errors.
 
 A graded layer-12 pilot strengthens this interpretation. Partial attenuation first pushes GPT-2 Medium toward complete syntax collapse, while only full zeroing reopens a 28.0\% runtime-error regime. This suggests that layer 12 marks a thresholded execution-relevant stage rather than a smoothly redundant computation.
 
-In contrast, CodeGen-350M~\cite{nijkamp2022codegen} still shows severe sensitivity to hard ablation, but it exhibits broader residual robustness than either GPT-2 variant. Four layers retain nonzero success, and the graded layer-13 pilot preserves 28-30\% success under partial attenuation and 24.0\% success even under full zeroing, indicating that code-relevant computation is less concentrated than in GPT-2.
+In contrast, CodeGen-350M~\cite{nijkamp2022codegen} still shows severe sensitivity to hard ablation, but it exhibits broader residual robustness than either GPT-2 variant. Four layers retain nonzero success, and the graded layer-13 pilot preserves 28-30\% success under partial attenuation and 24.0\% success even under full zeroing, indicating that code-relevant computation is less concentrated than in GPT-2. The final ladder follow-up is consistent with that picture at the two clean checkpoints: CodeGen-NL layer 11 degrades toward syntax collapse under attenuation, whereas CodeGen-Mono layer 13 again preserves a mixed executable/runtime regime under full zeroing.
 
 Our activation analysis shows that a compact probe on five layer-12 dimensions (121, 346, 615, 820, 169) reaches 72.5\% held-out accuracy, close to the 75.0\% achieved by a full-layer linear probe. More importantly, constructive steering along this same sparse direction doubles subset success from 6.0\% to 12.0\%. The expanded random-control comparison is favorable but not decisive, so the safest conclusion is that this direction is a usable local control subspace rather than a purely descriptive probe.
 

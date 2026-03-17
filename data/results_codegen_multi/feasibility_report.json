@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "total_problems": 164,
+    "total_samples": 16400,
+    "samples_per_problem": 100
+  },
+  "category_distribution": {
+    "success": 5029,
+    "syntax_error": 11329,
+    "runtime_error": 42
+  },
+  "complexity_analysis": {
+    "complex": {
+      "success": 4351,
+      "syntax_error": 9108,
+      "runtime_error": 41
+    },
+    "medium": {
+      "success": 678,
+      "syntax_error": 2221,
+      "runtime_error": 1
+    }
+  },
+  "error_patterns": {
+    "expected '": 931,
+    "NameError": 38,
+    "invalid syntax. Maybe you meant '==' or '": 3,
+    "ZeroDivisionError": 1,
+    "TypeError": 1,
+    "ValueError": 1,
+    "EOFError": 1
+  },
+  "feasibility_decision": {
+    "can_proceed": true,
+    "categorization_rate": 1.0,
+    "threshold": 0.7,
+    "total_samples": 16400,
+    "clear_categories": 16400,
+    "unclear_categories": 0
+  }
+}

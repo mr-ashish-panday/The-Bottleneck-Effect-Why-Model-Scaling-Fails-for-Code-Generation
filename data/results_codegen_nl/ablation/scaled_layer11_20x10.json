@@ -1,0 +1,983 @@
+{
+  "metadata": {
+    "model_config": "config_codegen_nl.yaml",
+    "dataset_config": "config_codegen_nl.yaml",
+    "model_name": "Salesforce/codegen-350M-nl",
+    "num_layers": 20,
+    "target_layers": [
+      11
+    ],
+    "scales": [
+      0.75,
+      0.5,
+      0.25,
+      0.0
+    ],
+    "num_problems": 20,
+    "samples_per_problem": 10,
+    "seed": 42
+  },
+  "baseline": {
+    "layer": null,
+    "scale": 1.0,
+    "total_samples": 200,
+    "category_counts": {
+      "success": 51,
+      "syntax_error": 147,
+      "runtime_error": 2
+    },
+    "category_percentages": {
+      "success_pct": 25.5,
+      "syntax_error_pct": 73.5,
+      "runtime_error_pct": 1.0
+    },
+    "problems": [
+      {
+        "task_id": "HumanEval/0",
+        "category_counts": {
+          "success": 3,
+          "syntax_error": 7
+        },
+        "success_pct": 30.0,
+        "syntax_error_pct": 70.0
+      },
+      {
+        "task_id": "HumanEval/1",
+        "category_counts": {
+          "syntax_error": 9,
+          "success": 1
+        },
+        "syntax_error_pct": 90.0,
+        "success_pct": 10.0
+      },
+      {
+        "task_id": "HumanEval/2",
+        "category_counts": {
+          "syntax_error": 5,
+          "success": 5
+        },
+        "syntax_error_pct": 50.0,
+        "success_pct": 50.0
+      },
+      {
+        "task_id": "HumanEval/3",
+        "category_counts": {
+          "syntax_error": 7,
+          "success": 3
+        },
+        "syntax_error_pct": 70.0,
+        "success_pct": 30.0
+      },
+      {
+        "task_id": "HumanEval/4",
+        "category_counts": {
+          "syntax_error": 6,
+          "success": 4
+        },
+        "syntax_error_pct": 60.0,
+        "success_pct": 40.0
+      },
+      {
+        "task_id": "HumanEval/5",
+        "category_counts": {
+          "syntax_error": 9,
+          "success": 1
+        },
+        "syntax_error_pct": 90.0,
+        "success_pct": 10.0
+      },
+      {
+        "task_id": "HumanEval/6",
+        "category_counts": {
+          "success": 5,
+          "syntax_error": 5
+        },
+        "success_pct": 50.0,
+        "syntax_error_pct": 50.0
+      },
+      {
+        "task_id": "HumanEval/7",
+        "category_counts": {
+          "syntax_error": 9,
+          "success": 1
+        },
+        "syntax_error_pct": 90.0,
+        "success_pct": 10.0
+      },
+      {
+        "task_id": "HumanEval/8",
+        "category_counts": {
+          "syntax_error": 8,
+          "success": 2
+        },
+        "syntax_error_pct": 80.0,
+        "success_pct": 20.0
+      },
+      {
+        "task_id": "HumanEval/9",
+        "category_counts": {
+          "syntax_error": 8,
+          "success": 2
+        },
+        "syntax_error_pct": 80.0,
+        "success_pct": 20.0
+      },
+      {
+        "task_id": "HumanEval/10",
+        "category_counts": {
+          "success": 5,
+          "syntax_error": 5
+        },
+        "success_pct": 50.0,
+        "syntax_error_pct": 50.0
+      },
+      {
+        "task_id": "HumanEval/11",
+        "category_counts": {
+          "syntax_error": 8,
+          "success": 2
+        },
+        "syntax_error_pct": 80.0,
+        "success_pct": 20.0
+      },
+      {
+        "task_id": "HumanEval/12",
+        "category_counts": {
+          "syntax_error": 7,
+          "runtime_error": 2,
+          "success": 1
+        },
+        "syntax_error_pct": 70.0,
+        "runtime_error_pct": 20.0,
+        "success_pct": 10.0
+      },
+      {
+        "task_id": "HumanEval/13",
+        "category_counts": {
+          "syntax_error": 7,
+          "success": 3
+        },
+        "syntax_error_pct": 70.0,
+        "success_pct": 30.0
+      },
+      {
+        "task_id": "HumanEval/14",
+        "category_counts": {
+          "syntax_error": 9,
+          "success": 1
+        },
+        "syntax_error_pct": 90.0,
+        "success_pct": 10.0
+      },
+      {
+        "task_id": "HumanEval/15",
+        "category_counts": {
+          "syntax_error": 9,
+          "success": 1
+        },
+        "syntax_error_pct": 90.0,
+        "success_pct": 10.0
+      },
+      {
+        "task_id": "HumanEval/16",
+        "category_counts": {
+          "syntax_error": 8,
+          "success": 2
+        },
+        "syntax_error_pct": 80.0,
+        "success_pct": 20.0
+      },
+      {
+        "task_id": "HumanEval/17",
+        "category_counts": {
+          "syntax_error": 8,
+          "success": 2
+        },
+        "syntax_error_pct": 80.0,
+        "success_pct": 20.0
+      },
+      {
+        "task_id": "HumanEval/18",
+        "category_counts": {
+          "syntax_error": 7,
+          "success": 3
+        },
+        "syntax_error_pct": 70.0,
+        "success_pct": 30.0
+      },
+      {
+        "task_id": "HumanEval/19",
+        "category_counts": {
+          "syntax_error": 6,
+          "success": 4
+        },
+        "syntax_error_pct": 60.0,
+        "success_pct": 40.0
+      }
+    ]
+  },
+  "results": [
+    {
+      "layer": 11,
+      "scale": 0.75,
+      "total_samples": 200,
+      "category_counts": {
+        "syntax_error": 153,
+        "success": 45,
+        "runtime_error": 2
+      },
+      "category_percentages": {
+        "syntax_error_pct": 76.5,
+        "success_pct": 22.5,
+        "runtime_error_pct": 1.0
+      },
+      "problems": [
+        {
+          "task_id": "HumanEval/0",
+          "category_counts": {
+            "syntax_error": 9,
+            "success": 1
+          },
+          "syntax_error_pct": 90.0,
+          "success_pct": 10.0
+        },
+        {
+          "task_id": "HumanEval/1",
+          "category_counts": {
+            "syntax_error": 10
+          },
+          "syntax_error_pct": 100.0
+        },
+        {
+          "task_id": "HumanEval/2",
+          "category_counts": {
+            "syntax_error": 4,
+            "success": 6
+          },
+          "syntax_error_pct": 40.0,
+          "success_pct": 60.0
+        },
+        {
+          "task_id": "HumanEval/3",
+          "category_counts": {
+            "syntax_error": 10
+          },
+          "syntax_error_pct": 100.0
+        },
+        {
+          "task_id": "HumanEval/4",
+          "category_counts": {
+            "syntax_error": 8,
+            "success": 2
+          },
+          "syntax_error_pct": 80.0,
+          "success_pct": 20.0
+        },
+        {
+          "task_id": "HumanEval/5",
+          "category_counts": {
+            "syntax_error": 7,
+            "success": 3
+          },
+          "syntax_error_pct": 70.0,
+          "success_pct": 30.0
+        },
+        {
+          "task_id": "HumanEval/6",
+          "category_counts": {
+            "success": 3,
+            "syntax_error": 7
+          },
+          "success_pct": 30.0,
+          "syntax_error_pct": 70.0
+        },
+        {
+          "task_id": "HumanEval/7",
+          "category_counts": {
+            "syntax_error": 10
+          },
+          "syntax_error_pct": 100.0
+        },
+        {
+          "task_id": "HumanEval/8",
+          "category_counts": {
+            "syntax_error": 7,
+            "success": 2,
+            "runtime_error": 1
+          },
+          "syntax_error_pct": 70.0,
+          "success_pct": 20.0,
+          "runtime_error_pct": 10.0
+        },
+        {
+          "task_id": "HumanEval/9",
+          "category_counts": {
+            "syntax_error": 6,
+            "success": 4
+          },
+          "syntax_error_pct": 60.0,
+          "success_pct": 40.0
+        },
+        {
+          "task_id": "HumanEval/10",
+          "category_counts": {
+            "success": 2,
+            "syntax_error": 8
+          },
+          "success_pct": 20.0,
+          "syntax_error_pct": 80.0
+        },
+        {
+          "task_id": "HumanEval/11",
+          "category_counts": {
+            "syntax_error": 9,
+            "success": 1
+          },
+          "syntax_error_pct": 90.0,
+          "success_pct": 10.0
+        },
+        {
+          "task_id": "HumanEval/12",
+          "category_counts": {
+            "success": 4,
+            "syntax_error": 5,
+            "runtime_error": 1
+          },
+          "success_pct": 40.0,
+          "syntax_error_pct": 50.0,
+          "runtime_error_pct": 10.0
+        },
+        {
+          "task_id": "HumanEval/13",
+          "category_counts": {
+            "syntax_error": 7,
+            "success": 3
+          },
+          "syntax_error_pct": 70.0,
+          "success_pct": 30.0
+        },
+        {
+          "task_id": "HumanEval/14",
+          "category_counts": {
+            "syntax_error": 8,
+            "success": 2
+          },
+          "syntax_error_pct": 80.0,
+          "success_pct": 20.0
+        },
+        {
+          "task_id": "HumanEval/15",
+          "category_counts": {
+            "syntax_error": 7,
+            "success": 3
+          },
+          "syntax_error_pct": 70.0,
+          "success_pct": 30.0
+        },
+        {
+          "task_id": "HumanEval/16",
+          "category_counts": {
+            "syntax_error": 9,
+            "success": 1
+          },
+          "syntax_error_pct": 90.0,
+          "success_pct": 10.0
+        },
+        {
+          "task_id": "HumanEval/17",
+          "category_counts": {
+            "success": 5,
+            "syntax_error": 5
+          },
+          "success_pct": 50.0,
+          "syntax_error_pct": 50.0
+        },
+        {
+          "task_id": "HumanEval/18",
+          "category_counts": {
+            "syntax_error": 9,
+            "success": 1
+          },
+          "syntax_error_pct": 90.0,
+          "success_pct": 10.0
+        },
+        {
+          "task_id": "HumanEval/19",
+          "category_counts": {
+            "syntax_error": 8,
+            "success": 2
+          },
+          "syntax_error_pct": 80.0,
+          "success_pct": 20.0
+        }
+      ]
+    },
+    {
+      "layer": 11,
+      "scale": 0.5,
+      "total_samples": 200,
+      "category_counts": {
+        "syntax_error": 166,
+        "success": 32,
+        "runtime_error": 2
+      },
+      "category_percentages": {
+        "syntax_error_pct": 83.0,
+        "success_pct": 16.0,
+        "runtime_error_pct": 1.0
+      },
+      "problems": [
+        {
+          "task_id": "HumanEval/0",
+          "category_counts": {
+            "syntax_error": 9,
+            "success": 1
+          },
+          "syntax_error_pct": 90.0,
+          "success_pct": 10.0
+        },
+        {
+          "task_id": "HumanEval/1",
+          "category_counts": {
+            "syntax_error": 9,
+            "success": 1
+          },
+          "syntax_error_pct": 90.0,
+          "success_pct": 10.0
+        },
+        {
+          "task_id": "HumanEval/2",
+          "category_counts": {
+            "syntax_error": 9,
+            "success": 1
+          },
+          "syntax_error_pct": 90.0,
+          "success_pct": 10.0
+        },
+        {
+          "task_id": "HumanEval/3",
+          "category_counts": {
+            "syntax_error": 8,
+            "success": 2
+          },
+          "syntax_error_pct": 80.0,
+          "success_pct": 20.0
+        },
+        {
+          "task_id": "HumanEval/4",
+          "category_counts": {
+            "success": 4,
+            "syntax_error": 6
+          },
+          "success_pct": 40.0,
+          "syntax_error_pct": 60.0
+        },
+        {
+          "task_id": "HumanEval/5",
+          "category_counts": {
+            "syntax_error": 9,
+            "success": 1
+          },
+          "syntax_error_pct": 90.0,
+          "success_pct": 10.0
+        },
+        {
+          "task_id": "HumanEval/6",
+          "category_counts": {
+            "syntax_error": 8,
+            "success": 2
+          },
+          "syntax_error_pct": 80.0,
+          "success_pct": 20.0
+        },
+        {
+          "task_id": "HumanEval/7",
+          "category_counts": {
+            "syntax_error": 9,
+            "success": 1
+          },
+          "syntax_error_pct": 90.0,
+          "success_pct": 10.0
+        },
+        {
+          "task_id": "HumanEval/8",
+          "category_counts": {
+            "syntax_error": 10
+          },
+          "syntax_error_pct": 100.0
+        },
+        {
+          "task_id": "HumanEval/9",
+          "category_counts": {
+            "syntax_error": 7,
+            "success": 3
+          },
+          "syntax_error_pct": 70.0,
+          "success_pct": 30.0
+        },
+        {
+          "task_id": "HumanEval/10",
+          "category_counts": {
+            "syntax_error": 8,
+            "success": 2
+          },
+          "syntax_error_pct": 80.0,
+          "success_pct": 20.0
+        },
+        {
+          "task_id": "HumanEval/11",
+          "category_counts": {
+            "success": 2,
+            "syntax_error": 7,
+            "runtime_error": 1
+          },
+          "success_pct": 20.0,
+          "syntax_error_pct": 70.0,
+          "runtime_error_pct": 10.0
+        },
+        {
+          "task_id": "HumanEval/12",
+          "category_counts": {
+            "syntax_error": 9,
+            "success": 1
+          },
+          "syntax_error_pct": 90.0,
+          "success_pct": 10.0
+        },
+        {
+          "task_id": "HumanEval/13",
+          "category_counts": {
+            "syntax_error": 8,
+            "success": 2
+          },
+          "syntax_error_pct": 80.0,
+          "success_pct": 20.0
+        },
+        {
+          "task_id": "HumanEval/14",
+          "category_counts": {
+            "syntax_error": 8,
+            "success": 2
+          },
+          "syntax_error_pct": 80.0,
+          "success_pct": 20.0
+        },
+        {
+          "task_id": "HumanEval/15",
+          "category_counts": {
+            "syntax_error": 8,
+            "success": 2
+          },
+          "syntax_error_pct": 80.0,
+          "success_pct": 20.0
+        },
+        {
+          "task_id": "HumanEval/16",
+          "category_counts": {
+            "syntax_error": 9,
+            "success": 1
+          },
+          "syntax_error_pct": 90.0,
+          "success_pct": 10.0
+        },
+        {
+          "task_id": "HumanEval/17",
+          "category_counts": {
+            "syntax_error": 7,
+            "success": 3
+          },
+          "syntax_error_pct": 70.0,
+          "success_pct": 30.0
+        },
+        {
+          "task_id": "HumanEval/18",
+          "category_counts": {
+            "syntax_error": 10
+          },
+          "syntax_error_pct": 100.0
+        },
+        {
+          "task_id": "HumanEval/19",
+          "category_counts": {
+            "syntax_error": 8,
+            "runtime_error": 1,
+            "success": 1
+          },
+          "syntax_error_pct": 80.0,
+          "runtime_error_pct": 10.0,
+          "success_pct": 10.0
+        }
+      ]
+    },
+    {
+      "layer": 11,
+      "scale": 0.25,
+      "total_samples": 200,
+      "category_counts": {
+        "syntax_error": 182,
+        "success": 17,
+        "runtime_error": 1
+      },
+      "category_percentages": {
+        "syntax_error_pct": 91.0,
+        "success_pct": 8.5,
+        "runtime_error_pct": 0.5
+      },
+      "problems": [
+        {
+          "task_id": "HumanEval/0",
+          "category_counts": {
+            "syntax_error": 9,
+            "success": 1
+          },
+          "syntax_error_pct": 90.0,
+          "success_pct": 10.0
+        },
+        {
+          "task_id": "HumanEval/1",
+          "category_counts": {
+            "success": 2,
+            "syntax_error": 8
+          },
+          "success_pct": 20.0,
+          "syntax_error_pct": 80.0
+        },
+        {
+          "task_id": "HumanEval/2",
+          "category_counts": {
+            "syntax_error": 10
+          },
+          "syntax_error_pct": 100.0
+        },
+        {
+          "task_id": "HumanEval/3",
+          "category_counts": {
+            "syntax_error": 9,
+            "success": 1
+          },
+          "syntax_error_pct": 90.0,
+          "success_pct": 10.0
+        },
+        {
+          "task_id": "HumanEval/4",
+          "category_counts": {
+            "syntax_error": 9,
+            "success": 1
+          },
+          "syntax_error_pct": 90.0,
+          "success_pct": 10.0
+        },
+        {
+          "task_id": "HumanEval/5",
+          "category_counts": {
+            "syntax_error": 8,
+            "success": 2
+          },
+          "syntax_error_pct": 80.0,
+          "success_pct": 20.0
+        },
+        {
+          "task_id": "HumanEval/6",
+          "category_counts": {
+            "success": 3,
+            "syntax_error": 7
+          },
+          "success_pct": 30.0,
+          "syntax_error_pct": 70.0
+        },
+        {
+          "task_id": "HumanEval/7",
+          "category_counts": {
+            "syntax_error": 10
+          },
+          "syntax_error_pct": 100.0
+        },
+        {
+          "task_id": "HumanEval/8",
+          "category_counts": {
+            "syntax_error": 10
+          },
+          "syntax_error_pct": 100.0
+        },
+        {
+          "task_id": "HumanEval/9",
+          "category_counts": {
+            "syntax_error": 10
+          },
+          "syntax_error_pct": 100.0
+        },
+        {
+          "task_id": "HumanEval/10",
+          "category_counts": {
+            "syntax_error": 10
+          },
+          "syntax_error_pct": 100.0
+        },
+        {
+          "task_id": "HumanEval/11",
+          "category_counts": {
+            "success": 1,
+            "syntax_error": 8,
+            "runtime_error": 1
+          },
+          "success_pct": 10.0,
+          "syntax_error_pct": 80.0,
+          "runtime_error_pct": 10.0
+        },
+        {
+          "task_id": "HumanEval/12",
+          "category_counts": {
+            "syntax_error": 9,
+            "success": 1
+          },
+          "syntax_error_pct": 90.0,
+          "success_pct": 10.0
+        },
+        {
+          "task_id": "HumanEval/13",
+          "category_counts": {
+            "syntax_error": 10
+          },
+          "syntax_error_pct": 100.0
+        },
+        {
+          "task_id": "HumanEval/14",
+          "category_counts": {
+            "syntax_error": 8,
+            "success": 2
+          },
+          "syntax_error_pct": 80.0,
+          "success_pct": 20.0
+        },
+        {
+          "task_id": "HumanEval/15",
+          "category_counts": {
+            "syntax_error": 9,
+            "success": 1
+          },
+          "syntax_error_pct": 90.0,
+          "success_pct": 10.0
+        },
+        {
+          "task_id": "HumanEval/16",
+          "category_counts": {
+            "syntax_error": 9,
+            "success": 1
+          },
+          "syntax_error_pct": 90.0,
+          "success_pct": 10.0
+        },
+        {
+          "task_id": "HumanEval/17",
+          "category_counts": {
+            "syntax_error": 10
+          },
+          "syntax_error_pct": 100.0
+        },
+        {
+          "task_id": "HumanEval/18",
+          "category_counts": {
+            "syntax_error": 10
+          },
+          "syntax_error_pct": 100.0
+        },
+        {
+          "task_id": "HumanEval/19",
+          "category_counts": {
+            "syntax_error": 9,
+            "success": 1
+          },
+          "syntax_error_pct": 90.0,
+          "success_pct": 10.0
+        }
+      ]
+    },
+    {
+      "layer": 11,
+      "scale": 0.0,
+      "total_samples": 200,
+      "category_counts": {
+        "success": 34,
+        "syntax_error": 166
+      },
+      "category_percentages": {
+        "success_pct": 17.0,
+        "syntax_error_pct": 83.0
+      },
+      "problems": [
+        {
+          "task_id": "HumanEval/0",
+          "category_counts": {
+            "success": 4,
+            "syntax_error": 6
+          },
+          "success_pct": 40.0,
+          "syntax_error_pct": 60.0
+        },
+        {
+          "task_id": "HumanEval/1",
+          "category_counts": {
+            "syntax_error": 8,
+            "success": 2
+          },
+          "syntax_error_pct": 80.0,
+          "success_pct": 20.0
+        },
+        {
+          "task_id": "HumanEval/2",
+          "category_counts": {
+            "syntax_error": 9,
+            "success": 1
+          },
+          "syntax_error_pct": 90.0,
+          "success_pct": 10.0
+        },
+        {
+          "task_id": "HumanEval/3",
+          "category_counts": {
+            "success": 3,
+            "syntax_error": 7
+          },
+          "success_pct": 30.0,
+          "syntax_error_pct": 70.0
+        },
+        {
+          "task_id": "HumanEval/4",
+          "category_counts": {
+            "syntax_error": 10
+          },
+          "syntax_error_pct": 100.0
+        },
+        {
+          "task_id": "HumanEval/5",
+          "category_counts": {
+            "success": 1,
+            "syntax_error": 9
+          },
+          "success_pct": 10.0,
+          "syntax_error_pct": 90.0
+        },
+        {
+          "task_id": "HumanEval/6",
+          "category_counts": {
+            "syntax_error": 8,
+            "success": 2
+          },
+          "syntax_error_pct": 80.0,
+          "success_pct": 20.0
+        },
+        {
+          "task_id": "HumanEval/7",
+          "category_counts": {
+            "syntax_error": 10
+          },
+          "syntax_error_pct": 100.0
+        },
+        {
+          "task_id": "HumanEval/8",
+          "category_counts": {
+            "success": 2,
+            "syntax_error": 8
+          },
+          "success_pct": 20.0,
+          "syntax_error_pct": 80.0
+        },
+        {
+          "task_id": "HumanEval/9",
+          "category_counts": {
+            "syntax_error": 10
+          },
+          "syntax_error_pct": 100.0
+        },
+        {
+          "task_id": "HumanEval/10",
+          "category_counts": {
+            "syntax_error": 10
+          },
+          "syntax_error_pct": 100.0
+        },
+        {
+          "task_id": "HumanEval/11",
+          "category_counts": {
+            "syntax_error": 7,
+            "success": 3
+          },
+          "syntax_error_pct": 70.0,
+          "success_pct": 30.0
+        },
+        {
+          "task_id": "HumanEval/12",
+          "category_counts": {
+            "syntax_error": 8,
+            "success": 2
+          },
+          "syntax_error_pct": 80.0,
+          "success_pct": 20.0
+        },
+        {
+          "task_id": "HumanEval/13",
+          "category_counts": {
+            "success": 2,
+            "syntax_error": 8
+          },
+          "success_pct": 20.0,
+          "syntax_error_pct": 80.0
+        },
+        {
+          "task_id": "HumanEval/14",
+          "category_counts": {
+            "syntax_error": 8,
+            "success": 2
+          },
+          "syntax_error_pct": 80.0,
+          "success_pct": 20.0
+        },
+        {
+          "task_id": "HumanEval/15",
+          "category_counts": {
+            "success": 2,
+            "syntax_error": 8
+          },
+          "success_pct": 20.0,
+          "syntax_error_pct": 80.0
+        },
+        {
+          "task_id": "HumanEval/16",
+          "category_counts": {
+            "syntax_error": 9,
+            "success": 1
+          },
+          "syntax_error_pct": 90.0,
+          "success_pct": 10.0
+        },
+        {
+          "task_id": "HumanEval/17",
+          "category_counts": {
+            "syntax_error": 8,
+            "success": 2
+          },
+          "syntax_error_pct": 80.0,
+          "success_pct": 20.0
+        },
+        {
+          "task_id": "HumanEval/18",
+          "category_counts": {
+            "syntax_error": 8,
+            "success": 2
+          },
+          "syntax_error_pct": 80.0,
+          "success_pct": 20.0
+        },
+        {
+          "task_id": "HumanEval/19",
+          "category_counts": {
+            "syntax_error": 7,
+            "success": 3
+          },
+          "syntax_error_pct": 70.0,
+          "success_pct": 30.0
+        }
+      ]
+    }
+  ]
+}

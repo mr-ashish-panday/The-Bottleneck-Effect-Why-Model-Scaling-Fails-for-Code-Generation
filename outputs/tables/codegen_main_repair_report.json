@@ -1,0 +1,16 @@
+{
+  "input_file": "data/results_codegen/generated_samples.json",
+  "expected_num_problems": 164,
+  "expected_samples_per_task": 100,
+  "found_num_tasks": 164,
+  "missing_task_ids": [],
+  "short_task_ids": [
+    "HumanEval/129"
+  ],
+  "extra_task_ids": [],
+  "repair_task_ids": [
+    "HumanEval/129"
+  ]
+}
+
+Wrote repair task list to: outputs/tables/codegen_main_repair_tasks.txt

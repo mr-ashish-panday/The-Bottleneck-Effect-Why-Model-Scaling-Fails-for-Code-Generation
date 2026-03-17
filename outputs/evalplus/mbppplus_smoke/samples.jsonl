@@ -1,0 +1,1 @@
+{"task_id": "Mbpp/2", "solution": "\"\"\"\nWrite a function to find the shared elements from the given two lists.\nassert set(similar_elements((3, 4, 5, 6),(5, 7, 4, 10))) == set((4, 5))\n\"\"\"\nIf you don't know what your app does - check out this code! \"\"\"\ndef parse_shared_element ("}

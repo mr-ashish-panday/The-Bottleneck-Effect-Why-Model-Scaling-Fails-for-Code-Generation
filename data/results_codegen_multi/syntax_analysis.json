@@ -1,0 +1,1729 @@
+{
+  "total_syntax_errors": 11329,
+  "category_distribution": {
+    "other": 1534,
+    "colon_missing": 933,
+    "bracket_mismatch": 6025,
+    "quote_mismatch": 831,
+    "indentation": 1574,
+    "keyword_error": 429,
+    "operator_error": 3
+  },
+  "subcategory_distribution": {
+    "bracket_mismatch:parenthesis": 4533,
+    "indentation:unexpected_indent": 1574,
+    "other:unknown": 1534,
+    "bracket_mismatch:square_bracket": 1474,
+    "colon_missing:missing_colon": 933,
+    "quote_mismatch:unclosed_string": 831,
+    "keyword_error:misspelled_keyword": 429,
+    "bracket_mismatch:curly_brace": 18,
+    "operator_error:assignment_vs_comparison": 3
+  },
+  "position_distribution": {
+    "late": 11323,
+    "middle": 6
+  },
+  "detailed_errors": [
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 4,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 7,
+      "classification": {
+        "category": "colon_missing",
+        "subcategory": "missing_colon",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "expected ':' (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 19,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 358
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 22,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 29,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 30,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 33,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 40,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 46,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 47,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 54,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 55,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 59,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 61,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 62,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 64,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 71,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 73,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 78,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 84,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 87,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 95,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 1,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 14,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 14,
+        "error_line": 14,
+        "error_position": "late",
+        "code_prefix_length": 552
+      },
+      "error_message": "invalid syntax (<string>, line 14)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 2,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 551
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 3,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 548
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 5,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 547
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 6,
+      "classification": {
+        "category": "quote_mismatch",
+        "subcategory": "unclosed_string",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 554
+      },
+      "error_message": "unterminated string literal (detected at line 12) (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 7,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 549
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 8,
+      "classification": {
+        "category": "quote_mismatch",
+        "subcategory": "unclosed_string",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 555
+      },
+      "error_message": "unterminated string literal (detected at line 12) (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 9,
+      "classification": {
+        "category": "quote_mismatch",
+        "subcategory": "unclosed_string",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 538
+      },
+      "error_message": "unterminated string literal (detected at line 12) (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 10,
+      "classification": {
+        "category": "quote_mismatch",
+        "subcategory": "unclosed_string",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 549
+      },
+      "error_message": "unterminated string literal (detected at line 12) (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 12,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 547
+      },
+      "error_message": "'[' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 13,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 548
+      },
+      "error_message": "'[' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 14,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 548
+      },
+      "error_message": "'[' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 15,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 545
+      },
+      "error_message": "'[' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 16,
+      "classification": {
+        "category": "quote_mismatch",
+        "subcategory": "unclosed_string",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 549
+      },
+      "error_message": "unterminated string literal (detected at line 12) (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 17,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 14,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 14,
+        "error_line": 14,
+        "error_position": "late",
+        "code_prefix_length": 544
+      },
+      "error_message": "invalid syntax (<string>, line 14)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 18,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 555
+      },
+      "error_message": "'[' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 19,
+      "classification": {
+        "category": "quote_mismatch",
+        "subcategory": "unclosed_string",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 549
+      },
+      "error_message": "unterminated string literal (detected at line 12) (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 20,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 546
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 21,
+      "classification": {
+        "category": "indentation",
+        "subcategory": "unexpected_indent",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 546
+      },
+      "error_message": "expected an indented block after 'if' statement on line 12 (<string>, line 16)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 22,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 13,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 518
+      },
+      "error_message": "'[' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 25,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 13,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 13,
+        "error_line": 13,
+        "error_position": "late",
+        "code_prefix_length": 551
+      },
+      "error_message": "'(' was never closed (<string>, line 13)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 26,
+      "classification": {
+        "category": "quote_mismatch",
+        "subcategory": "unclosed_string",
+        "line_number": 13,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 13,
+        "error_position": "late",
+        "code_prefix_length": 541
+      },
+      "error_message": "unterminated string literal (detected at line 13) (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 27,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 13,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 518
+      },
+      "error_message": "'[' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 28,
+      "classification": {
+        "category": "quote_mismatch",
+        "subcategory": "unclosed_string",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 557
+      },
+      "error_message": "unterminated string literal (detected at line 12) (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 29,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 13,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 13,
+        "error_line": 13,
+        "error_position": "late",
+        "code_prefix_length": 554
+      },
+      "error_message": "invalid syntax (<string>, line 13)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 30,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 14,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 14,
+        "error_line": 14,
+        "error_position": "late",
+        "code_prefix_length": 545
+      },
+      "error_message": "invalid syntax (<string>, line 14)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 32,
+      "classification": {
+        "category": "quote_mismatch",
+        "subcategory": "unclosed_string",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 535
+      },
+      "error_message": "unterminated string literal (detected at line 12) (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 33,
+      "classification": {
+        "category": "quote_mismatch",
+        "subcategory": "unclosed_string",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 543
+      },
+      "error_message": "unterminated string literal (detected at line 12) (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 34,
+      "classification": {
+        "category": "quote_mismatch",
+        "subcategory": "unclosed_string",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 549
+      },
+      "error_message": "unterminated string literal (detected at line 12) (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 35,
+      "classification": {
+        "category": "indentation",
+        "subcategory": "unexpected_indent",
+        "line_number": 13,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 13,
+        "error_line": 13,
+        "error_position": "late",
+        "code_prefix_length": 551
+      },
+      "error_message": "expected an indented block after 'for' statement on line 13 (<string>, line 17)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 36,
+      "classification": {
+        "category": "quote_mismatch",
+        "subcategory": "unclosed_string",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 555
+      },
+      "error_message": "unterminated string literal (detected at line 12) (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 37,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 548
+      },
+      "error_message": "'[' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 38,
+      "classification": {
+        "category": "quote_mismatch",
+        "subcategory": "unclosed_string",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 549
+      },
+      "error_message": "unterminated string literal (detected at line 12) (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 40,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 13,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 13,
+        "error_line": 13,
+        "error_position": "late",
+        "code_prefix_length": 551
+      },
+      "error_message": "invalid syntax (<string>, line 13)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 41,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 547
+      },
+      "error_message": "'[' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 42,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 13,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 13,
+        "error_line": 13,
+        "error_position": "late",
+        "code_prefix_length": 548
+      },
+      "error_message": "invalid syntax (<string>, line 13)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 43,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 547
+      },
+      "error_message": "'[' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 45,
+      "classification": {
+        "category": "colon_missing",
+        "subcategory": "missing_colon",
+        "line_number": 13,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 13,
+        "error_line": 13,
+        "error_position": "late",
+        "code_prefix_length": 555
+      },
+      "error_message": "expected ':' (<string>, line 13)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 46,
+      "classification": {
+        "category": "indentation",
+        "subcategory": "unexpected_indent",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 542
+      },
+      "error_message": "expected an indented block after 'if' statement on line 12 (<string>, line 16)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 47,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 13,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 13,
+        "error_line": 13,
+        "error_position": "late",
+        "code_prefix_length": 549
+      },
+      "error_message": "invalid syntax (<string>, line 13)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 48,
+      "classification": {
+        "category": "colon_missing",
+        "subcategory": "missing_colon",
+        "line_number": 13,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 13,
+        "error_line": 13,
+        "error_position": "late",
+        "code_prefix_length": 550
+      },
+      "error_message": "expected ':' (<string>, line 13)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 49,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 550
+      },
+      "error_message": "'[' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 50,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 549
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 51,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 15,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 15,
+        "error_line": 15,
+        "error_position": "late",
+        "code_prefix_length": 548
+      },
+      "error_message": "invalid syntax (<string>, line 15)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 52,
+      "classification": {
+        "category": "quote_mismatch",
+        "subcategory": "unclosed_string",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 549
+      },
+      "error_message": "unterminated string literal (detected at line 12) (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 53,
+      "classification": {
+        "category": "quote_mismatch",
+        "subcategory": "unclosed_string",
+        "line_number": 13,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 13,
+        "error_line": 13,
+        "error_position": "late",
+        "code_prefix_length": 547
+      },
+      "error_message": "unterminated string literal (detected at line 13) (<string>, line 13)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 55,
+      "classification": {
+        "category": "indentation",
+        "subcategory": "unexpected_indent",
+        "line_number": 13,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 14,
+        "error_line": 13,
+        "error_position": "late",
+        "code_prefix_length": 547
+      },
+      "error_message": "expected an indented block after 'while' statement on line 13 (<string>, line 18)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 57,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 14,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 14,
+        "error_line": 14,
+        "error_position": "late",
+        "code_prefix_length": 555
+      },
+      "error_message": "invalid syntax (<string>, line 14)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 58,
+      "classification": {
+        "category": "colon_missing",
+        "subcategory": "missing_colon",
+        "line_number": 14,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 14,
+        "error_line": 14,
+        "error_position": "late",
+        "code_prefix_length": 552
+      },
+      "error_message": "expected ':' (<string>, line 14)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 59,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 13,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 13,
+        "error_line": 13,
+        "error_position": "late",
+        "code_prefix_length": 552
+      },
+      "error_message": "invalid syntax (<string>, line 13)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 60,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 542
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 62,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 548
+      },
+      "error_message": "'[' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 63,
+      "classification": {
+        "category": "quote_mismatch",
+        "subcategory": "unclosed_string",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 549
+      },
+      "error_message": "unterminated string literal (detected at line 12) (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 68,
+      "classification": {
+        "category": "quote_mismatch",
+        "subcategory": "unclosed_string",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 536
+      },
+      "error_message": "unterminated string literal (detected at line 12) (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 69,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 549
+      },
+      "error_message": "'[' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 70,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 14,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 14,
+        "error_line": 14,
+        "error_position": "late",
+        "code_prefix_length": 549
+      },
+      "error_message": "invalid syntax (<string>, line 14)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 73,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 13,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 528
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 75,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 550
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 76,
+      "classification": {
+        "category": "quote_mismatch",
+        "subcategory": "unclosed_string",
+        "line_number": 14,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 13,
+        "error_line": 14,
+        "error_position": "late",
+        "code_prefix_length": 540
+      },
+      "error_message": "unterminated string literal (detected at line 14) (<string>, line 13)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 77,
+      "classification": {
+        "category": "quote_mismatch",
+        "subcategory": "unclosed_string",
+        "line_number": 13,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 13,
+        "error_position": "late",
+        "code_prefix_length": 538
+      },
+      "error_message": "unterminated string literal (detected at line 13) (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 79,
+      "classification": {
+        "category": "colon_missing",
+        "subcategory": "missing_colon",
+        "line_number": 13,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 13,
+        "error_line": 13,
+        "error_position": "late",
+        "code_prefix_length": 537
+      },
+      "error_message": "expected ':' (<string>, line 13)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 81,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 547
+      },
+      "error_message": "'[' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 82,
+      "classification": {
+        "category": "quote_mismatch",
+        "subcategory": "unclosed_string",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 549
+      },
+      "error_message": "unterminated string literal (detected at line 12) (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 83,
+      "classification": {
+        "category": "colon_missing",
+        "subcategory": "missing_colon",
+        "line_number": 13,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 13,
+        "error_line": 13,
+        "error_position": "late",
+        "code_prefix_length": 559
+      },
+      "error_message": "expected ':' (<string>, line 13)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 84,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 14,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 14,
+        "error_line": 14,
+        "error_position": "late",
+        "code_prefix_length": 545
+      },
+      "error_message": "invalid syntax (<string>, line 14)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 85,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 14,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 14,
+        "error_line": 14,
+        "error_position": "late",
+        "code_prefix_length": 555
+      },
+      "error_message": "invalid syntax (<string>, line 14)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 86,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 551
+      },
+      "error_message": "'[' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 88,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 13,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 13,
+        "error_line": 13,
+        "error_position": "late",
+        "code_prefix_length": 555
+      },
+      "error_message": "'(' was never closed (<string>, line 13)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 89,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 548
+      },
+      "error_message": "'[' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 90,
+      "classification": {
+        "category": "quote_mismatch",
+        "subcategory": "unclosed_string",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 549
+      },
+      "error_message": "unterminated string literal (detected at line 12) (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 91,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 13,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 13,
+        "error_line": 13,
+        "error_position": "late",
+        "code_prefix_length": 545
+      },
+      "error_message": "invalid syntax (<string>, line 13)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 92,
+      "classification": {
+        "category": "colon_missing",
+        "subcategory": "missing_colon",
+        "line_number": 13,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 13,
+        "error_line": 13,
+        "error_position": "late",
+        "code_prefix_length": 544
+      },
+      "error_message": "expected ':' (<string>, line 13)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 93,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 14,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 14,
+        "error_line": 14,
+        "error_position": "late",
+        "code_prefix_length": 551
+      },
+      "error_message": "invalid syntax (<string>, line 14)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 94,
+      "classification": {
+        "category": "quote_mismatch",
+        "subcategory": "unclosed_string",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 555
+      },
+      "error_message": "unterminated string literal (detected at line 12) (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 95,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 547
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 96,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 13,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 13,
+        "error_line": 13,
+        "error_position": "late",
+        "code_prefix_length": 553
+      },
+      "error_message": "invalid syntax (<string>, line 13)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 98,
+      "classification": {
+        "category": "quote_mismatch",
+        "subcategory": "unclosed_string",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 549
+      },
+      "error_message": "unterminated string literal (detected at line 12) (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 0,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 612
+      },
+      "error_message": "'(' was never closed (<string>, line 20)"
+    }
+  ]
+}

@@ -1,0 +1,328 @@
+{
+  "metadata": {
+    "config": "config_gpt2_medium.yaml",
+    "analysis_file": "data/results_gpt2_medium/ablation/layer12_analysis_real.json",
+    "dimensions_file": "data/results_gpt2_medium/ablation/activation_classification_real.json",
+    "layer_index": 12,
+    "vector_mode": "top_dims",
+    "num_dims": 5,
+    "selected_dims": [
+      121,
+      346,
+      615,
+      820,
+      169
+    ],
+    "normalization": "none",
+    "target_alphas": [
+      -2.0,
+      2.0
+    ],
+    "control_alpha": 2.0,
+    "num_random_controls": 20,
+    "allow_target_dims": false,
+    "num_problems": 10,
+    "samples_per_problem": 5,
+    "seed": 42,
+    "target_vector_l2_norm": 7.720741271972656
+  },
+  "baseline": {
+    "success_pct": 6.0,
+    "syntax_error_pct": 94.0,
+    "runtime_error_pct": 0.0
+  },
+  "target_conditions": [
+    {
+      "alpha": -2.0,
+      "success_pct": 10.0,
+      "syntax_error_pct": 90.0,
+      "runtime_error_pct": 0.0
+    },
+    {
+      "alpha": 2.0,
+      "success_pct": 12.0,
+      "syntax_error_pct": 88.0,
+      "runtime_error_pct": 0.0
+    }
+  ],
+  "random_controls": [
+    {
+      "control_id": 0,
+      "success_pct": 8.0,
+      "syntax_error_pct": 92.0,
+      "runtime_error_pct": 0.0,
+      "selected_dims": [
+        768,
+        381,
+        138,
+        366,
+        7
+      ]
+    },
+    {
+      "control_id": 1,
+      "success_pct": 6.0,
+      "syntax_error_pct": 94.0,
+      "runtime_error_pct": 0.0,
+      "selected_dims": [
+        759,
+        270,
+        691,
+        616,
+        91
+      ]
+    },
+    {
+      "control_id": 2,
+      "success_pct": 8.0,
+      "syntax_error_pct": 92.0,
+      "runtime_error_pct": 0.0,
+      "selected_dims": [
+        69,
+        870,
+        816,
+        40,
+        413
+      ]
+    },
+    {
+      "control_id": 3,
+      "success_pct": 8.0,
+      "syntax_error_pct": 92.0,
+      "runtime_error_pct": 0.0,
+      "selected_dims": [
+        199,
+        172,
+        248,
+        689,
+        848
+      ]
+    },
+    {
+      "control_id": 4,
+      "success_pct": 0.0,
+      "syntax_error_pct": 96.0,
+      "runtime_error_pct": 4.0,
+      "selected_dims": [
+        316,
+        273,
+        925,
+        694,
+        563
+      ]
+    },
+    {
+      "control_id": 5,
+      "success_pct": 4.0,
+      "syntax_error_pct": 96.0,
+      "runtime_error_pct": 0.0,
+      "selected_dims": [
+        973,
+        793,
+        157,
+        869,
+        411
+      ]
+    },
+    {
+      "control_id": 6,
+      "success_pct": 6.0,
+      "syntax_error_pct": 94.0,
+      "runtime_error_pct": 0.0,
+      "selected_dims": [
+        818,
+        10,
+        809,
+        332,
+        734
+      ]
+    },
+    {
+      "control_id": 7,
+      "success_pct": 4.0,
+      "syntax_error_pct": 92.0,
+      "runtime_error_pct": 4.0,
+      "selected_dims": [
+        517,
+        309,
+        282,
+        408,
+        398
+      ]
+    },
+    {
+      "control_id": 8,
+      "success_pct": 10.0,
+      "syntax_error_pct": 90.0,
+      "runtime_error_pct": 0.0,
+      "selected_dims": [
+        950,
+        178,
+        639,
+        974,
+        202
+      ]
+    },
+    {
+      "control_id": 9,
+      "success_pct": 14.000000000000002,
+      "syntax_error_pct": 86.0,
+      "runtime_error_pct": 0.0,
+      "selected_dims": [
+        671,
+        764,
+        452,
+        37,
+        897
+      ]
+    },
+    {
+      "control_id": 10,
+      "success_pct": 4.0,
+      "syntax_error_pct": 94.0,
+      "runtime_error_pct": 2.0,
+      "selected_dims": [
+        901,
+        116,
+        15,
+        1012,
+        226
+      ]
+    },
+    {
+      "control_id": 11,
+      "success_pct": 6.0,
+      "syntax_error_pct": 94.0,
+      "runtime_error_pct": 0.0,
+      "selected_dims": [
+        288,
+        244,
+        886,
+        67,
+        830
+      ]
+    },
+    {
+      "control_id": 12,
+      "success_pct": 8.0,
+      "syntax_error_pct": 92.0,
+      "runtime_error_pct": 0.0,
+      "selected_dims": [
+        959,
+        548,
+        657,
+        899,
+        616
+      ]
+    },
+    {
+      "control_id": 13,
+      "success_pct": 6.0,
+      "syntax_error_pct": 94.0,
+      "runtime_error_pct": 0.0,
+      "selected_dims": [
+        719,
+        512,
+        227,
+        846,
+        627
+      ]
+    },
+    {
+      "control_id": 14,
+      "success_pct": 4.0,
+      "syntax_error_pct": 96.0,
+      "runtime_error_pct": 0.0,
+      "selected_dims": [
+        620,
+        401,
+        765,
+        851,
+        464
+      ]
+    },
+    {
+      "control_id": 15,
+      "success_pct": 4.0,
+      "syntax_error_pct": 92.0,
+      "runtime_error_pct": 0.0,
+      "selected_dims": [
+        948,
+        638,
+        360,
+        836,
+        29
+      ]
+    },
+    {
+      "control_id": 16,
+      "success_pct": 6.0,
+      "syntax_error_pct": 94.0,
+      "runtime_error_pct": 0.0,
+      "selected_dims": [
+        577,
+        787,
+        261,
+        549,
+        60
+      ]
+    },
+    {
+      "control_id": 17,
+      "success_pct": 6.0,
+      "syntax_error_pct": 94.0,
+      "runtime_error_pct": 0.0,
+      "selected_dims": [
+        545,
+        509,
+        70,
+        150,
+        838
+      ]
+    },
+    {
+      "control_id": 18,
+      "success_pct": 2.0,
+      "syntax_error_pct": 96.0,
+      "runtime_error_pct": 2.0,
+      "selected_dims": [
+        595,
+        55,
+        894,
+        192,
+        821
+      ]
+    },
+    {
+      "control_id": 19,
+      "success_pct": 10.0,
+      "syntax_error_pct": 88.0,
+      "runtime_error_pct": 2.0,
+      "selected_dims": [
+        910,
+        225,
+        731,
+        947,
+        530
+      ]
+    }
+  ],
+  "random_control_summary": {
+    "num_controls": 20,
+    "success_mean": 6.2,
+    "success_std": 3.0265491900843116,
+    "syntax_mean": 92.9,
+    "runtime_mean": 0.7
+  },
+  "specificity_test": {
+    "target_alpha": 2.0,
+    "target_success_pct": 12.0,
+    "baseline_success_pct": 6.0,
+    "target_success_shift": 6.0,
+    "random_control_success_mean": 6.2,
+    "random_control_success_max": 14.000000000000002,
+    "num_controls_beaten": 19,
+    "num_controls": 20,
+    "empirical_p_upper_bound": 0.09523809523809523
+  }
+}

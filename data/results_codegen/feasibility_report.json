@@ -1,0 +1,53 @@
+{
+  "summary": {
+    "total_problems": 164,
+    "total_samples": 16400,
+    "samples_per_problem": 100
+  },
+  "category_distribution": {
+    "syntax_error": 10020,
+    "success": 6137,
+    "wrong_output": 15,
+    "runtime_error": 221,
+    "timeout": 7
+  },
+  "complexity_analysis": {
+    "complex": {
+      "syntax_error": 8229,
+      "success": 5061,
+      "wrong_output": 13,
+      "runtime_error": 191,
+      "timeout": 6
+    },
+    "medium": {
+      "syntax_error": 1791,
+      "success": 1076,
+      "runtime_error": 30,
+      "wrong_output": 2,
+      "timeout": 1
+    }
+  },
+  "error_patterns": {
+    "expected '": 463,
+    "NameError": 80,
+    "EOFError": 40,
+    "TypeError": 33,
+    "IndexError": 23,
+    "RecursionError": 18,
+    "ValueError": 16,
+    "f-string": 11,
+    "ModuleNotFoundError": 8,
+    "AttributeError": 1,
+    "invalid syntax. Maybe you meant '==' or '": 1,
+    "FileNotFoundError": 1,
+    "UnboundLocalError": 1
+  },
+  "feasibility_decision": {
+    "can_proceed": true,
+    "categorization_rate": 1.0,
+    "threshold": 0.7,
+    "total_samples": 16400,
+    "clear_categories": 16400,
+    "unclear_categories": 0
+  }
+}

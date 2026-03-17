@@ -1,0 +1,12 @@
+{
+  "top_dimensions": [
+    810,
+    457,
+    182,
+    802,
+    169
+  ],
+  "mean_difference": 1.07421875,
+  "estimated_accuracy": 0.71484375,
+  "interpretation": "Linear classifier on 5 dimensions: ~71.5% accuracy"
+}

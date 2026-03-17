@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "config": "config_gpt2_medium.yaml",
+    "analysis_file": "data/results_gpt2_medium/ablation/layer12_analysis_real.json",
+    "dimensions_file": "data/results_gpt2_medium/ablation/activation_classification_real.json",
+    "layer_index": 12,
+    "vector_mode": "top_dims",
+    "num_dims": 5,
+    "selected_dims": [
+      121,
+      346,
+      615,
+      820,
+      169
+    ],
+    "normalization": "none",
+    "vector_l2_norm": 7.720741271972656,
+    "vector_mean_abs": 0.01566624641418457,
+    "alphas": [
+      -2.0,
+      -1.0,
+      1.0,
+      2.0
+    ],
+    "num_problems": 10,
+    "samples_per_problem": 5,
+    "seed": 42
+  },
+  "baseline": {
+    "success_pct": 6.0,
+    "syntax_error_pct": 94.0,
+    "runtime_error_pct": 0.0
+  },
+  "best_condition": {
+    "alpha": 2.0,
+    "success_pct": 12.0,
+    "syntax_error_pct": 88.0,
+    "runtime_error_pct": 0.0,
+    "success_shift": 6.0,
+    "syntax_shift": -6.0,
+    "runtime_shift": 0.0
+  },
+  "conditions": [
+    {
+      "alpha": -2.0,
+      "success_pct": 10.0,
+      "syntax_error_pct": 90.0,
+      "runtime_error_pct": 0.0,
+      "success_shift": 4.0,
+      "syntax_shift": -4.0,
+      "runtime_shift": 0.0
+    },
+    {
+      "alpha": -1.0,
+      "success_pct": 2.0,
+      "syntax_error_pct": 94.0,
+      "runtime_error_pct": 4.0,
+      "success_shift": -4.0,
+      "syntax_shift": 0.0,
+      "runtime_shift": 4.0
+    },
+    {
+      "alpha": 1.0,
+      "success_pct": 4.0,
+      "syntax_error_pct": 96.0,
+      "runtime_error_pct": 0.0,
+      "success_shift": -2.0,
+      "syntax_shift": 2.0,
+      "runtime_shift": 0.0
+    },
+    {
+      "alpha": 2.0,
+      "success_pct": 12.0,
+      "syntax_error_pct": 88.0,
+      "runtime_error_pct": 0.0,
+      "success_shift": 6.0,
+      "syntax_shift": -6.0,
+      "runtime_shift": 0.0
+    }
+  ]
+}

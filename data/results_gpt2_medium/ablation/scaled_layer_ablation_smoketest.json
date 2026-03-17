@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "model_config": "config_gpt2_medium.yaml",
+    "dataset_config": "config.yaml",
+    "model_name": "gpt2-medium",
+    "num_layers": 24,
+    "target_layers": [
+      12
+    ],
+    "scales": [
+      0.5
+    ],
+    "num_problems": 2,
+    "samples_per_problem": 2,
+    "seed": 42
+  },
+  "baseline": {
+    "layer": null,
+    "scale": 1.0,
+    "total_samples": 4,
+    "category_counts": {
+      "syntax_error": 4
+    },
+    "category_percentages": {
+      "syntax_error_pct": 100.0
+    },
+    "problems": [
+      {
+        "task_id": "HumanEval/0",
+        "category_counts": {
+          "syntax_error": 2
+        },
+        "syntax_error_pct": 100.0
+      },
+      {
+        "task_id": "HumanEval/1",
+        "category_counts": {
+          "syntax_error": 2
+        },
+        "syntax_error_pct": 100.0
+      }
+    ]
+  },
+  "results": [
+    {
+      "layer": 12,
+      "scale": 0.5,
+      "total_samples": 4,
+      "category_counts": {
+        "syntax_error": 4
+      },
+      "category_percentages": {
+        "syntax_error_pct": 100.0
+      },
+      "problems": [
+        {
+          "task_id": "HumanEval/0",
+          "category_counts": {
+            "syntax_error": 2
+          },
+          "syntax_error_pct": 100.0
+        },
+        {
+          "task_id": "HumanEval/1",
+          "category_counts": {
+            "syntax_error": 2
+          },
+          "syntax_error_pct": 100.0
+        }
+      ]
+    }
+  ]
+}

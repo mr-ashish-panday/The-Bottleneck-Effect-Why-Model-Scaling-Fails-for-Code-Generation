@@ -1,0 +1,1729 @@
+{
+  "total_syntax_errors": 11161,
+  "category_distribution": {
+    "other": 1552,
+    "bracket_mismatch": 3970,
+    "quote_mismatch": 495,
+    "colon_missing": 690,
+    "indentation": 3900,
+    "keyword_error": 544,
+    "operator_error": 10
+  },
+  "subcategory_distribution": {
+    "indentation:unexpected_indent": 3900,
+    "bracket_mismatch:parenthesis": 3085,
+    "other:unknown": 1552,
+    "bracket_mismatch:square_bracket": 865,
+    "colon_missing:missing_colon": 690,
+    "keyword_error:misspelled_keyword": 544,
+    "quote_mismatch:unclosed_string": 495,
+    "bracket_mismatch:curly_brace": 20,
+    "operator_error:assignment_vs_comparison": 10
+  },
+  "position_distribution": {
+    "late": 11145,
+    "middle": 16
+  },
+  "detailed_errors": [
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 3,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 529
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 4,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 529
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 5,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 525
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 9,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 524
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 11,
+      "classification": {
+        "category": "quote_mismatch",
+        "subcategory": "unclosed_string",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 522
+      },
+      "error_message": "unterminated string literal (detected at line 12) (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 15,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 33,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 13,
+        "error_line": 33,
+        "error_position": "late",
+        "code_prefix_length": 518
+      },
+      "error_message": "unterminated triple-quoted string literal (detected at line 33) (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 17,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 529
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 19,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 529
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 20,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 529
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 22,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 527
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 24,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 529
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 27,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 529
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 28,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 529
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 29,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 529
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 30,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 529
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 31,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 521
+      },
+      "error_message": "'[' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 35,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 529
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 36,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 13,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 520
+      },
+      "error_message": "'[' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 38,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 524
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 42,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 526
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 47,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 529
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 48,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 528
+      },
+      "error_message": "'[' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 50,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 529
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 52,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 529
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 53,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 529
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 54,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 529
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 56,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 529
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 60,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 529
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 61,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 528
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 64,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 32,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 32,
+        "error_position": "late",
+        "code_prefix_length": 534
+      },
+      "error_message": "unterminated triple-quoted string literal (detected at line 32) (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 65,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 529
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 66,
+      "classification": {
+        "category": "colon_missing",
+        "subcategory": "missing_colon",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 528
+      },
+      "error_message": "expected ':' (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 67,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 528
+      },
+      "error_message": "'[' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 69,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 529
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 70,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 529
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 71,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 529
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 76,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 531
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 82,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 532
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 84,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 523
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 86,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 529
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 90,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 522
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 93,
+      "classification": {
+        "category": "colon_missing",
+        "subcategory": "missing_colon",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 535
+      },
+      "error_message": "expected ':' (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 95,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 529
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 98,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 529
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 99,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 529
+      },
+      "error_message": "'(' was never closed (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 0,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 605
+      },
+      "error_message": "'(' was never closed (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 3,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 603
+      },
+      "error_message": "'[' was never closed (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 4,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 602
+      },
+      "error_message": "'(' was never closed (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 6,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 602
+      },
+      "error_message": "'(' was never closed (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 7,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 603
+      },
+      "error_message": "'(' was never closed (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 8,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 604
+      },
+      "error_message": "'[' was never closed (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 14,
+      "classification": {
+        "category": "quote_mismatch",
+        "subcategory": "unclosed_string",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 606
+      },
+      "error_message": "unterminated string literal (detected at line 20) (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 16,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 602
+      },
+      "error_message": "'[' was never closed (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 19,
+      "classification": {
+        "category": "indentation",
+        "subcategory": "unexpected_indent",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 21,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 588
+      },
+      "error_message": "expected an indented block after 'try' statement on line 20 (<string>, line 25)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 20,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 599
+      },
+      "error_message": "'(' was never closed (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 22,
+      "classification": {
+        "category": "keyword_error",
+        "subcategory": "misspelled_keyword",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 603
+      },
+      "error_message": "invalid syntax (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 25,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 600
+      },
+      "error_message": "'(' was never closed (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 26,
+      "classification": {
+        "category": "keyword_error",
+        "subcategory": "misspelled_keyword",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 603
+      },
+      "error_message": "invalid syntax (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 27,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 600
+      },
+      "error_message": "'(' was never closed (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 30,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 608
+      },
+      "error_message": "'(' was never closed (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 35,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 601
+      },
+      "error_message": "'[' was never closed (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 39,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 608
+      },
+      "error_message": "'(' was never closed (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 40,
+      "classification": {
+        "category": "keyword_error",
+        "subcategory": "misspelled_keyword",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 600
+      },
+      "error_message": "invalid syntax (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 41,
+      "classification": {
+        "category": "keyword_error",
+        "subcategory": "misspelled_keyword",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 598
+      },
+      "error_message": "invalid syntax (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 43,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 601
+      },
+      "error_message": "'(' was never closed (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 47,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 605
+      },
+      "error_message": "'[' was never closed (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 48,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 603
+      },
+      "error_message": "'[' was never closed (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 53,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 600
+      },
+      "error_message": "'(' was never closed (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 56,
+      "classification": {
+        "category": "colon_missing",
+        "subcategory": "missing_colon",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 598
+      },
+      "error_message": "expected ':' (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 57,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 600
+      },
+      "error_message": "'(' was never closed (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 59,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 602
+      },
+      "error_message": "'(' was never closed (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 63,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 602
+      },
+      "error_message": "'(' was never closed (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 65,
+      "classification": {
+        "category": "indentation",
+        "subcategory": "unexpected_indent",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 21,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 600
+      },
+      "error_message": "expected an indented block after 'for' statement on line 20 (<string>, line 25)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 70,
+      "classification": {
+        "category": "keyword_error",
+        "subcategory": "misspelled_keyword",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 600
+      },
+      "error_message": "invalid syntax (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 73,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 602
+      },
+      "error_message": "'(' was never closed (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 74,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 602
+      },
+      "error_message": "'(' was never closed (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 75,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 600
+      },
+      "error_message": "'(' was never closed (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 76,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 603
+      },
+      "error_message": "'[' was never closed (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 82,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 603
+      },
+      "error_message": "'[' was never closed (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 83,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 606
+      },
+      "error_message": "'(' was never closed (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 84,
+      "classification": {
+        "category": "quote_mismatch",
+        "subcategory": "unclosed_string",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 606
+      },
+      "error_message": "unterminated string literal (detected at line 20) (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 86,
+      "classification": {
+        "category": "keyword_error",
+        "subcategory": "misspelled_keyword",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 605
+      },
+      "error_message": "invalid syntax (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 88,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 602
+      },
+      "error_message": "'[' was never closed (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 90,
+      "classification": {
+        "category": "colon_missing",
+        "subcategory": "missing_colon",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 601
+      },
+      "error_message": "expected ':' (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample_id": 95,
+      "classification": {
+        "category": "keyword_error",
+        "subcategory": "misspelled_keyword",
+        "line_number": 20,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 20,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 600
+      },
+      "error_message": "invalid syntax (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/100",
+      "sample_id": 1,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 17,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 17,
+        "error_line": 17,
+        "error_position": "late",
+        "code_prefix_length": 509
+      },
+      "error_message": "'(' was never closed (<string>, line 17)"
+    },
+    {
+      "task_id": "HumanEval/100",
+      "sample_id": 2,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 17,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 17,
+        "error_line": 17,
+        "error_position": "late",
+        "code_prefix_length": 508
+      },
+      "error_message": "'(' was never closed (<string>, line 17)"
+    },
+    {
+      "task_id": "HumanEval/100",
+      "sample_id": 3,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 16,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 16,
+        "error_line": 16,
+        "error_position": "late",
+        "code_prefix_length": 509
+      },
+      "error_message": "'(' was never closed (<string>, line 16)"
+    },
+    {
+      "task_id": "HumanEval/100",
+      "sample_id": 4,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 16,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 16,
+        "error_line": 16,
+        "error_position": "late",
+        "code_prefix_length": 514
+      },
+      "error_message": "'[' was never closed (<string>, line 16)"
+    },
+    {
+      "task_id": "HumanEval/100",
+      "sample_id": 5,
+      "classification": {
+        "category": "indentation",
+        "subcategory": "unexpected_indent",
+        "line_number": 16,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 17,
+        "error_line": 16,
+        "error_position": "late",
+        "code_prefix_length": 505
+      },
+      "error_message": "expected an indented block after 'for' statement on line 16 (<string>, line 19)"
+    },
+    {
+      "task_id": "HumanEval/100",
+      "sample_id": 11,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 17,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 17,
+        "error_line": 17,
+        "error_position": "late",
+        "code_prefix_length": 508
+      },
+      "error_message": "'(' was never closed (<string>, line 17)"
+    },
+    {
+      "task_id": "HumanEval/100",
+      "sample_id": 12,
+      "classification": {
+        "category": "indentation",
+        "subcategory": "unexpected_indent",
+        "line_number": 17,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 18,
+        "error_line": 17,
+        "error_position": "late",
+        "code_prefix_length": 506
+      },
+      "error_message": "expected an indented block after 'while' statement on line 17 (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/100",
+      "sample_id": 14,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 16,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 16,
+        "error_line": 16,
+        "error_position": "late",
+        "code_prefix_length": 530
+      },
+      "error_message": "'(' was never closed (<string>, line 16)"
+    },
+    {
+      "task_id": "HumanEval/100",
+      "sample_id": 16,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 16,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 16,
+        "error_line": 16,
+        "error_position": "late",
+        "code_prefix_length": 515
+      },
+      "error_message": "'(' was never closed (<string>, line 16)"
+    },
+    {
+      "task_id": "HumanEval/100",
+      "sample_id": 17,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 16,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 16,
+        "error_line": 16,
+        "error_position": "late",
+        "code_prefix_length": 524
+      },
+      "error_message": "'[' was never closed (<string>, line 16)"
+    },
+    {
+      "task_id": "HumanEval/100",
+      "sample_id": 18,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 16,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 16,
+        "error_line": 16,
+        "error_position": "late",
+        "code_prefix_length": 518
+      },
+      "error_message": "'[' was never closed (<string>, line 16)"
+    },
+    {
+      "task_id": "HumanEval/100",
+      "sample_id": 20,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 16,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 16,
+        "error_line": 16,
+        "error_position": "late",
+        "code_prefix_length": 518
+      },
+      "error_message": "'(' was never closed (<string>, line 16)"
+    },
+    {
+      "task_id": "HumanEval/100",
+      "sample_id": 22,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "parenthesis",
+        "line_number": 17,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 17,
+        "error_line": 17,
+        "error_position": "late",
+        "code_prefix_length": 514
+      },
+      "error_message": "'(' was never closed (<string>, line 17)"
+    },
+    {
+      "task_id": "HumanEval/100",
+      "sample_id": 25,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 20,
+        "error_token": "except"
+      },
+      "position": {
+        "total_lines": 18,
+        "error_line": 20,
+        "error_position": "late",
+        "code_prefix_length": 500
+      },
+      "error_message": "expected 'except' or 'finally' block (<string>, line 20)"
+    },
+    {
+      "task_id": "HumanEval/100",
+      "sample_id": 26,
+      "classification": {
+        "category": "bracket_mismatch",
+        "subcategory": "square_bracket",
+        "line_number": 16,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 16,
+        "error_line": 16,
+        "error_position": "late",
+        "code_prefix_length": 516
+      },
+      "error_message": "'[' was never closed (<string>, line 16)"
+    }
+  ]
+}

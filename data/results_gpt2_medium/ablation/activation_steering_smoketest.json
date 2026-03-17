@@ -1,0 +1,110 @@
+{
+  "metadata": {
+    "config": "config_gpt2_medium.yaml",
+    "analysis_file": "data/results_gpt2_medium/ablation/layer12_analysis_real.json",
+    "dimensions_file": "data/results_gpt2_medium/ablation/activation_classification_real.json",
+    "layer_index": 12,
+    "vector_mode": "top_dims",
+    "num_dims": 5,
+    "selected_dims": [
+      121,
+      346,
+      615,
+      820,
+      169
+    ],
+    "normalization": "none",
+    "vector_l2_norm": 7.720741271972656,
+    "vector_mean_abs": 0.01566624641418457,
+    "alphas": [
+      -1.0,
+      1.0
+    ],
+    "num_problems": 2,
+    "samples_per_problem": 2,
+    "seed": 42
+  },
+  "baseline": {
+    "alpha": 0.0,
+    "layer": null,
+    "total_samples": 4,
+    "category_counts": {
+      "syntax_error": 4
+    },
+    "category_percentages": {
+      "syntax_error_pct": 100.0
+    },
+    "problems": [
+      {
+        "task_id": "HumanEval/0",
+        "category_counts": {
+          "syntax_error": 2
+        },
+        "syntax_error_pct": 100.0
+      },
+      {
+        "task_id": "HumanEval/1",
+        "category_counts": {
+          "syntax_error": 2
+        },
+        "syntax_error_pct": 100.0
+      }
+    ]
+  },
+  "results": [
+    {
+      "alpha": -1.0,
+      "layer": 12,
+      "total_samples": 4,
+      "category_counts": {
+        "syntax_error": 4
+      },
+      "category_percentages": {
+        "syntax_error_pct": 100.0
+      },
+      "problems": [
+        {
+          "task_id": "HumanEval/0",
+          "category_counts": {
+            "syntax_error": 2
+          },
+          "syntax_error_pct": 100.0
+        },
+        {
+          "task_id": "HumanEval/1",
+          "category_counts": {
+            "syntax_error": 2
+          },
+          "syntax_error_pct": 100.0
+        }
+      ]
+    },
+    {
+      "alpha": 1.0,
+      "layer": 12,
+      "total_samples": 4,
+      "category_counts": {
+        "syntax_error": 4
+      },
+      "category_percentages": {
+        "syntax_error_pct": 100.0
+      },
+      "problems": [
+        {
+          "task_id": "HumanEval/0",
+          "category_counts": {
+            "syntax_error": 2
+          },
+          "syntax_error_pct": 100.0
+        },
+        {
+          "task_id": "HumanEval/1",
+          "category_counts": {
+            "syntax_error": 2
+          },
+          "syntax_error_pct": 100.0
+        }
+      ]
+    }
+  ]
+}

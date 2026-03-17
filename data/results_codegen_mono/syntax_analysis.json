@@ -1,0 +1,1726 @@
+{
+  "total_syntax_errors": 9953,
+  "category_distribution": {
+    "other": 1724,
+    "colon_missing": 1173,
+    "indentation": 1699,
+    "quote_mismatch": 504,
+    "bracket_mismatch": 4322,
+    "keyword_error": 531
+  },
+  "subcategory_distribution": {
+    "bracket_mismatch:parenthesis": 3189,
+    "other:unknown": 1724,
+    "indentation:unexpected_indent": 1699,
+    "colon_missing:missing_colon": 1173,
+    "bracket_mismatch:square_bracket": 1085,
+    "keyword_error:misspelled_keyword": 531,
+    "quote_mismatch:unclosed_string": 504,
+    "bracket_mismatch:curly_brace": 48
+  },
+  "position_distribution": {
+    "late": 9953
+  },
+  "detailed_errors": [
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 0,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 1,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 2,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 3,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 4,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 6,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 8,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 9,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 10,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 12,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 13,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 14,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 15,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 17,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 19,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 20,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 21,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 22,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 23,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 25,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 26,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 27,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 29,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 31,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 32,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 33,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 34,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 36,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 37,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 38,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 39,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 40,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 41,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 42,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 43,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 44,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 46,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 47,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 48,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 49,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 51,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 52,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 53,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 54,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 55,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 57,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 58,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 59,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 60,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 61,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 62,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 64,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 65,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 70,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 71,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 72,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 73,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 74,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 75,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 77,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 80,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 81,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 82,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 84,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 86,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 87,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 88,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 90,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 92,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 354
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 95,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 96,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 97,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/0",
+      "sample_id": 98,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 355
+      },
+      "error_message": "invalid syntax (<string>, line 12)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 3,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 15,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 15,
+        "error_line": 15,
+        "error_position": "late",
+        "code_prefix_length": 566
+      },
+      "error_message": "invalid syntax (<string>, line 15)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 4,
+      "classification": {
+        "category": "colon_missing",
+        "subcategory": "missing_colon",
+        "line_number": 14,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 14,
+        "error_line": 14,
+        "error_position": "late",
+        "code_prefix_length": 561
+      },
+      "error_message": "expected ':' (<string>, line 14)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 5,
+      "classification": {
+        "category": "indentation",
+        "subcategory": "unexpected_indent",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 13,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 558
+      },
+      "error_message": "expected an indented block after 'if' statement on line 12 (<string>, line 17)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 7,
+      "classification": {
+        "category": "indentation",
+        "subcategory": "unexpected_indent",
+        "line_number": 13,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 14,
+        "error_line": 13,
+        "error_position": "late",
+        "code_prefix_length": 565
+      },
+      "error_message": "expected an indented block after 'for' statement on line 13 (<string>, line 18)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 9,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 14,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 14,
+        "error_line": 14,
+        "error_position": "late",
+        "code_prefix_length": 566
+      },
+      "error_message": "invalid syntax (<string>, line 14)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 11,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 15,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 15,
+        "error_line": 15,
+        "error_position": "late",
+        "code_prefix_length": 565
+      },
+      "error_message": "invalid syntax (<string>, line 15)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 12,
+      "classification": {
+        "category": "colon_missing",
+        "subcategory": "missing_colon",
+        "line_number": 14,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 14,
+        "error_line": 14,
+        "error_position": "late",
+        "code_prefix_length": 563
+      },
+      "error_message": "expected ':' (<string>, line 14)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 13,
+      "classification": {
+        "category": "colon_missing",
+        "subcategory": "missing_colon",
+        "line_number": 15,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 15,
+        "error_line": 15,
+        "error_position": "late",
+        "code_prefix_length": 563
+      },
+      "error_message": "expected ':' (<string>, line 15)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 14,
+      "classification": {
+        "category": "indentation",
+        "subcategory": "unexpected_indent",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 12,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 570
+      },
+      "error_message": "expected an indented block after 'if' statement on line 12 (<string>, line 16)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 15,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 34,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 14,
+        "error_line": 34,
+        "error_position": "late",
+        "code_prefix_length": 573
+      },
+      "error_message": "unterminated triple-quoted string literal (detected at line 34) (<string>, line 13)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 16,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 13,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 13,
+        "error_line": 13,
+        "error_position": "late",
+        "code_prefix_length": 557
+      },
+      "error_message": "invalid syntax (<string>, line 13)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 19,
+      "classification": {
+        "category": "indentation",
+        "subcategory": "unexpected_indent",
+        "line_number": 12,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 13,
+        "error_line": 12,
+        "error_position": "late",
+        "code_prefix_length": 555
+      },
+      "error_message": "expected an indented block after 'if' statement on line 12 (<string>, line 17)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 20,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 14,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 14,
+        "error_line": 14,
+        "error_position": "late",
+        "code_prefix_length": 562
+      },
+      "error_message": "invalid syntax (<string>, line 14)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 21,
+      "classification": {
+        "category": "colon_missing",
+        "subcategory": "missing_colon",
+        "line_number": 14,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 14,
+        "error_line": 14,
+        "error_position": "late",
+        "code_prefix_length": 565
+      },
+      "error_message": "expected ':' (<string>, line 14)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 22,
+      "classification": {
+        "category": "quote_mismatch",
+        "subcategory": "unclosed_string",
+        "line_number": 13,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 13,
+        "error_line": 13,
+        "error_position": "late",
+        "code_prefix_length": 562
+      },
+      "error_message": "unterminated string literal (detected at line 13) (<string>, line 13)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 23,
+      "classification": {
+        "category": "colon_missing",
+        "subcategory": "missing_colon",
+        "line_number": 14,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 14,
+        "error_line": 14,
+        "error_position": "late",
+        "code_prefix_length": 564
+      },
+      "error_message": "expected ':' (<string>, line 14)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 24,
+      "classification": {
+        "category": "indentation",
+        "subcategory": "unexpected_indent",
+        "line_number": 14,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 15,
+        "error_line": 14,
+        "error_position": "late",
+        "code_prefix_length": 561
+      },
+      "error_message": "expected an indented block after 'for' statement on line 14 (<string>, line 19)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 25,
+      "classification": {
+        "category": "indentation",
+        "subcategory": "unexpected_indent",
+        "line_number": 14,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 14,
+        "error_line": 14,
+        "error_position": "late",
+        "code_prefix_length": 563
+      },
+      "error_message": "expected an indented block after 'for' statement on line 14 (<string>, line 18)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 27,
+      "classification": {
+        "category": "indentation",
+        "subcategory": "unexpected_indent",
+        "line_number": 14,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 14,
+        "error_line": 14,
+        "error_position": "late",
+        "code_prefix_length": 567
+      },
+      "error_message": "expected an indented block after 'while' statement on line 14 (<string>, line 18)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 28,
+      "classification": {
+        "category": "quote_mismatch",
+        "subcategory": "unclosed_string",
+        "line_number": 13,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 13,
+        "error_line": 13,
+        "error_position": "late",
+        "code_prefix_length": 567
+      },
+      "error_message": "unterminated string literal (detected at line 13) (<string>, line 13)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 30,
+      "classification": {
+        "category": "indentation",
+        "subcategory": "unexpected_indent",
+        "line_number": 13,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 14,
+        "error_line": 13,
+        "error_position": "late",
+        "code_prefix_length": 560
+      },
+      "error_message": "expected an indented block after 'for' statement on line 13 (<string>, line 18)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 31,
+      "classification": {
+        "category": "colon_missing",
+        "subcategory": "missing_colon",
+        "line_number": 14,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 14,
+        "error_line": 14,
+        "error_position": "late",
+        "code_prefix_length": 561
+      },
+      "error_message": "expected ':' (<string>, line 14)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 33,
+      "classification": {
+        "category": "colon_missing",
+        "subcategory": "missing_colon",
+        "line_number": 14,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 14,
+        "error_line": 14,
+        "error_position": "late",
+        "code_prefix_length": 564
+      },
+      "error_message": "expected ':' (<string>, line 14)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 36,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 14,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 14,
+        "error_line": 14,
+        "error_position": "late",
+        "code_prefix_length": 581
+      },
+      "error_message": "invalid syntax (<string>, line 14)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 37,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 14,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 14,
+        "error_line": 14,
+        "error_position": "late",
+        "code_prefix_length": 567
+      },
+      "error_message": "invalid syntax (<string>, line 14)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 38,
+      "classification": {
+        "category": "other",
+        "subcategory": "unknown",
+        "line_number": 14,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 14,
+        "error_line": 14,
+        "error_position": "late",
+        "code_prefix_length": 559
+      },
+      "error_message": "invalid syntax (<string>, line 14)"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample_id": 39,
+      "classification": {
+        "category": "colon_missing",
+        "subcategory": "missing_colon",
+        "line_number": 13,
+        "error_token": null
+      },
+      "position": {
+        "total_lines": 13,
+        "error_line": 13,
+        "error_position": "late",
+        "code_prefix_length": 557
+      },
+      "error_message": "expected ':' (<string>, line 13)"
+    }
+  ]
+}

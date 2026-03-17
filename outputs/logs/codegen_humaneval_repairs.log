@@ -1,0 +1,596 @@
+[2026-03-17 15:37:05] Auditing gaps for config_codegen.yaml
+[2026-03-17 15:37:05] Repairing 1 task(s) for config_codegen.yaml
+Some weights of the model checkpoint at Salesforce/codegen-350M-mono were not used when initializing CodeGenForCausalLM: ['transformer.h.0.attn.causal_mask', 'transformer.h.1.attn.causal_mask', 'transformer.h.10.attn.causal_mask', 'transformer.h.11.attn.causal_mask', 'transformer.h.12.attn.causal_mask', 'transformer.h.13.attn.causal_mask', 'transformer.h.14.attn.causal_mask', 'transformer.h.15.attn.causal_mask', 'transformer.h.16.attn.causal_mask', 'transformer.h.17.attn.causal_mask', 'transformer.h.18.attn.causal_mask', 'transformer.h.19.attn.causal_mask', 'transformer.h.2.attn.causal_mask', 'transformer.h.3.attn.causal_mask', 'transformer.h.4.attn.causal_mask', 'transformer.h.5.attn.causal_mask', 'transformer.h.6.attn.causal_mask', 'transformer.h.7.attn.causal_mask', 'transformer.h.8.attn.causal_mask', 'transformer.h.9.attn.causal_mask']
+- This IS expected if you are initializing CodeGenForCausalLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing CodeGenForCausalLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Resuming: Found 164 existing problems
+Selected tasks: 1
+Need to generate: 1 problems
+Loading model: Salesforce/codegen-350M-mono
+✅ Model loaded on cuda
+Problems:   0%|          | 0/1 [00:00<?, ?it/s]Problems: 100%|██████████| 1/1 [00:30<00:00, 30.25s/it]Problems: 100%|██████████| 1/1 [00:30<00:00, 30.25s/it]
+
+✅ Complete: 164 problems
+============================================================
+PHASE 1-2: FEASIBILITY CHECK - EVALUATION
+============================================================
+Input file: data/results_codegen/generated_samples.json
+Output file: data/results_codegen/evaluation_results.json
+
+Loading generated samples...
+✅ Loaded 164 problems
+
+Evaluating samples...
+Problems:   0%|          | 0/164 [00:00<?, ?it/s]Problems:   3%|▎         | 5/164 [00:00<00:03, 42.45it/s]Problems:   6%|▌         | 10/164 [00:04<01:19,  1.94it/s]Problems:   9%|▉         | 15/164 [00:04<00:43,  3.43it/s]Problems:  12%|█▏        | 19/164 [00:04<00:29,  4.99it/s]Problems:  14%|█▍        | 23/164 [00:04<00:20,  6.95it/s]Problems:  16%|█▋        | 27/164 [00:04<00:14,  9.37it/s]Problems:  19%|█▉        | 31/164 [00:10<01:03,  2.09it/s]Problems:  21%|██▏       | 35/164 [00:10<00:44,  2.93it/s]Problems:  23%|██▎       | 38/164 [00:15<01:28,  1.43it/s]Problems:  26%|██▌       | 43/164 [00:15<00:54,  2.23it/s]Problems:  29%|██▉       | 48/164 [00:15<00:34,  3.33it/s]Problems:  32%|███▏      | 52/164 [00:15<00:24,  4.50it/s]Problems:  35%|███▍      | 57/164 [00:15<00:16,  6.43it/s]Problems:  37%|███▋      | 61/164 [00:21<00:48,  2.14it/s]Problems:  40%|███▉      | 65/164 [00:21<00:33,  2.92it/s]Problems:  43%|████▎     | 70/164 [00:21<00:22,  4.25it/s]Problems:  45%|████▌     | 74/164 [00:21<00:15,  5.63it/s]Problems:  49%|████▉     | 80/164 [00:21<00:09,  8.41it/s]Problems:  52%|█████▏    | 85/164 [00:21<00:07, 11.27it/s]Problems:  55%|█████▌    | 91/164 [00:21<00:04, 15.49it/s]Problems:  59%|█████▊    | 96/164 [00:28<00:28,  2.42it/s]Problems:  61%|██████    | 100/164 [00:38<01:00,  1.06it/s]Problems:  65%|██████▍   | 106/164 [00:38<00:35,  1.61it/s]Problems:  68%|██████▊   | 111/164 [00:38<00:23,  2.25it/s]Problems:  71%|███████   | 116/164 [00:38<00:15,  3.12it/s]Problems:  74%|███████▍  | 121/164 [00:38<00:09,  4.31it/s]Problems:  77%|███████▋  | 127/164 [00:38<00:05,  6.24it/s]Problems:  80%|████████  | 132/164 [00:38<00:03,  8.15it/s]Problems:  84%|████████▎ | 137/164 [00:39<00:02, 10.36it/s]Problems:  86%|████████▌ | 141/164 [00:39<00:01, 12.45it/s]Problems:  89%|████████▉ | 146/164 [00:39<00:01, 16.09it/s]Problems:  91%|█████████▏| 150/164 [00:44<00:05,  2.54it/s]Problems:  95%|█████████▍| 155/164 [00:44<00:02,  3.61it/s]Problems:  97%|█████████▋| 159/164 [00:44<00:01,  4.75it/s]Problems:  99%|█████████▉| 163/164 [00:45<00:00,  6.25it/s]Problems: 100%|██████████| 164/164 [00:45<00:00,  3.64it/s]
+
+============================================================
+EVALUATION COMPLETE
+============================================================
+✅ Evaluated 16400 samples
+✅ Results saved to: data/results_codegen/evaluation_results.json
+
+CATEGORY DISTRIBUTION:
+------------------------------------------------------------
+  syntax_error        : 10020 ( 61.1%)
+  success             :  6137 ( 37.4%)
+  runtime_error       :   221 (  1.3%)
+  wrong_output        :    15 (  0.1%)
+  timeout             :     7 (  0.0%)
+
+NEXT STEP: Analyze failures
+  python scripts/analyze_failures.py --config config.yaml
+============================================================
+PHASE 1-2: FEASIBILITY CHECK - ANALYSIS
+============================================================
+Input file: data/results_codegen/evaluation_results.json
+
+FEASIBILITY REPORT
+============================================================
+Total problems: 164
+Total samples: 16400
+
+CATEGORY DISTRIBUTION:
+------------------------------------------------------------
+  syntax_error        : 10020 ( 61.1%)
+  success             :  6137 ( 37.4%)
+  runtime_error       :   221 (  1.3%)
+  wrong_output        :    15 (  0.1%)
+  timeout             :     7 (  0.0%)
+
+COMPLEXITY ANALYSIS:
+------------------------------------------------------------
+
+  MEDIUM problems:
+    syntax_error        : 1791 ( 61.8%)
+    success             : 1076 ( 37.1%)
+    runtime_error       :   30 (  1.0%)
+
+  COMPLEX problems:
+    syntax_error        : 8229 ( 61.0%)
+    success             : 5061 ( 37.5%)
+    runtime_error       :  191 (  1.4%)
+
+============================================================
+FEASIBILITY DECISION
+============================================================
+Categorization rate: 100.0%
+Threshold: 70.0%
+Clear categories: 16400 / 16400
+
+✅ DECISION: PROCEED TO FULL PAPER
+
+We can clearly categorize failure patterns.
+There are interesting differences across complexity levels.
+The error taxonomy is well-defined.
+
+NEXT STEPS:
+1. Expand to all 164 HumanEval problems
+2. Generate 100 samples × 164 = 16,400 total samples
+3. Deep dive into error patterns
+4. Extract activation patterns
+5. Build execution-aware decoding
+
+✅ Full report saved to: data/results_codegen/feasibility_report.json
+============================================================
+DEEP SYNTAX ERROR ANALYSIS
+============================================================
+Input: data/results_codegen/evaluation_results.json
+
+Analyzing syntax errors in detail...
+Problems:   0%|          | 0/164 [00:00<?, ?it/s]Problems:  86%|████████▌ | 141/164 [00:00<00:00, 1407.73it/s]Problems: 100%|██████████| 164/164 [00:00<00:00, 1411.23it/s]
+
+============================================================
+SYNTAX ERROR BREAKDOWN
+============================================================
+Total syntax errors: 10020
+
+MAIN CATEGORIES:
+  other               :  5716 ( 57.0%)
+  bracket_mismatch    :  2319 ( 23.1%)
+  indentation         :   741 (  7.4%)
+  quote_mismatch      :   528 (  5.3%)
+  colon_missing       :   470 (  4.7%)
+  keyword_error       :   245 (  2.4%)
+  operator_error      :     1 (  0.0%)
+
+TOP SUBCATEGORIES:
+  other:unknown                      :  5716 ( 57.0%)
+  bracket_mismatch:parenthesis       :  1591 ( 15.9%)
+  indentation:unexpected_indent      :   741 (  7.4%)
+  bracket_mismatch:square_bracket    :   692 (  6.9%)
+  quote_mismatch:unclosed_string     :   528 (  5.3%)
+  colon_missing:missing_colon        :   470 (  4.7%)
+  keyword_error:misspelled_keyword   :   245 (  2.4%)
+  bracket_mismatch:curly_brace       :    36 (  0.4%)
+  operator_error:assignment_vs_comparison:     1 (  0.0%)
+
+ERROR POSITIONS:
+  late      :  9994 ( 99.7%)
+  middle    :    25 (  0.2%)
+  early     :     1 (  0.0%)
+
+✅ Saved to: data/results_codegen/syntax_analysis.json
+[2026-03-17 15:38:31] Auditing gaps for config_codegen_nl.yaml
+[2026-03-17 15:38:31] Repairing 22 task(s) for config_codegen_nl.yaml
+Some weights of the model checkpoint at Salesforce/codegen-350M-nl were not used when initializing CodeGenForCausalLM: ['transformer.h.0.attn.causal_mask', 'transformer.h.1.attn.causal_mask', 'transformer.h.10.attn.causal_mask', 'transformer.h.11.attn.causal_mask', 'transformer.h.12.attn.causal_mask', 'transformer.h.13.attn.causal_mask', 'transformer.h.14.attn.causal_mask', 'transformer.h.15.attn.causal_mask', 'transformer.h.16.attn.causal_mask', 'transformer.h.17.attn.causal_mask', 'transformer.h.18.attn.causal_mask', 'transformer.h.19.attn.causal_mask', 'transformer.h.2.attn.causal_mask', 'transformer.h.3.attn.causal_mask', 'transformer.h.4.attn.causal_mask', 'transformer.h.5.attn.causal_mask', 'transformer.h.6.attn.causal_mask', 'transformer.h.7.attn.causal_mask', 'transformer.h.8.attn.causal_mask', 'transformer.h.9.attn.causal_mask']
+- This IS expected if you are initializing CodeGenForCausalLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing CodeGenForCausalLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Resuming: Found 164 existing problems
+Selected tasks: 22
+Need to generate: 22 problems
+Loading model: Salesforce/codegen-350M-nl
+✅ Model loaded on cuda
+Problems:   0%|          | 0/22 [00:00<?, ?it/s]Problems:   5%|▍         | 1/22 [00:27<09:47, 27.97s/it]Problems:   9%|▉         | 2/22 [00:57<09:35, 28.79s/it]Problems:  14%|█▎        | 3/22 [01:23<08:45, 27.67s/it]Problems:  18%|█▊        | 4/22 [01:53<08:30, 28.34s/it]Problems:  23%|██▎       | 5/22 [02:24<08:20, 29.42s/it]Problems:  27%|██▋       | 6/22 [03:39<12:00, 45.00s/it]Problems:  32%|███▏      | 7/22 [03:48<08:17, 33.14s/it]Problems:  36%|███▋      | 8/22 [04:23<07:53, 33.83s/it]Problems:  41%|████      | 9/22 [04:55<07:11, 33.22s/it]Problems:  45%|████▌     | 10/22 [05:25<06:25, 32.14s/it]Problems:  50%|█████     | 11/22 [05:57<05:52, 32.04s/it]Problems:  55%|█████▍    | 12/22 [06:49<06:22, 38.22s/it]Problems:  59%|█████▉    | 13/22 [07:16<05:14, 34.93s/it]Problems:  64%|██████▎   | 14/22 [08:09<05:23, 40.43s/it]Problems:  68%|██████▊   | 15/22 [08:44<04:30, 38.63s/it]Problems:  73%|███████▎  | 16/22 [09:11<03:31, 35.18s/it]Problems:  77%|███████▋  | 17/22 [09:39<02:45, 33.08s/it]Problems:  82%|████████▏ | 18/22 [10:09<02:07, 31.94s/it]Problems:  86%|████████▋ | 19/22 [10:38<01:34, 31.34s/it]Problems:  91%|█████████ | 20/22 [11:04<00:59, 29.74s/it]Problems:  95%|█████████▌| 21/22 [11:34<00:29, 29.74s/it]Problems: 100%|██████████| 22/22 [12:03<00:00, 29.39s/it]Problems: 100%|██████████| 22/22 [12:03<00:00, 32.88s/it]
+
+✅ Complete: 164 problems
+============================================================
+PHASE 1-2: FEASIBILITY CHECK - EVALUATION
+============================================================
+Input file: data/results_codegen_nl/generated_samples.json
+Output file: data/results_codegen_nl/evaluation_results.json
+
+Loading generated samples...
+✅ Loaded 164 problems
+
+Evaluating samples...
+Problems:   0%|          | 0/164 [00:00<?, ?it/s]Problems:   2%|▏         | 4/164 [00:00<00:04, 38.87it/s]Problems:   6%|▌         | 10/164 [00:00<00:03, 49.15it/s]Problems:   9%|▉         | 15/164 [00:00<00:03, 43.51it/s]Problems:  12%|█▏        | 20/164 [00:00<00:03, 38.93it/s]Problems:  16%|█▌        | 26/164 [00:00<00:03, 42.96it/s]Problems:  20%|█▉        | 32/164 [00:00<00:03, 43.97it/s]Problems:  23%|██▎       | 37/164 [00:00<00:02, 43.22it/s]Problems:  27%|██▋       | 44/164 [00:00<00:02, 48.46it/s]Problems:  31%|███       | 51/164 [00:01<00:02, 53.01it/s]Problems:  35%|███▍      | 57/164 [00:01<00:02, 49.73it/s]Problems:  38%|███▊      | 63/164 [00:01<00:02, 49.68it/s]Problems:  42%|████▏     | 69/164 [00:01<00:01, 52.13it/s]Problems:  47%|████▋     | 77/164 [00:01<00:01, 57.49it/s]Problems:  51%|█████     | 83/164 [00:01<00:01, 57.50it/s]Problems:  54%|█████▍    | 89/164 [00:01<00:01, 51.02it/s]Problems:  58%|█████▊    | 95/164 [00:02<00:01, 43.67it/s]Problems:  61%|██████    | 100/164 [00:02<00:01, 41.22it/s]Problems:  64%|██████▍   | 105/164 [00:02<00:01, 42.77it/s]Problems:  68%|██████▊   | 111/164 [00:02<00:01, 45.17it/s]Problems:  73%|███████▎  | 119/164 [00:02<00:00, 51.72it/s]Problems:  77%|███████▋  | 127/164 [00:02<00:00, 57.59it/s]Problems:  81%|████████  | 133/164 [00:02<00:00, 55.99it/s]Problems:  85%|████████▍ | 139/164 [00:02<00:00, 54.34it/s]Problems:  89%|████████▉ | 146/164 [00:02<00:00, 57.35it/s]Problems:  93%|█████████▎| 153/164 [00:03<00:00, 58.86it/s]Problems:  97%|█████████▋| 159/164 [00:03<00:00, 56.94it/s]Problems: 100%|██████████| 164/164 [00:03<00:00, 50.35it/s]
+
+============================================================
+EVALUATION COMPLETE
+============================================================
+✅ Evaluated 16400 samples
+✅ Results saved to: data/results_codegen_nl/evaluation_results.json
+
+CATEGORY DISTRIBUTION:
+------------------------------------------------------------
+  syntax_error        : 11161 ( 68.1%)
+  success             :  5182 ( 31.6%)
+  runtime_error       :    57 (  0.3%)
+
+NEXT STEP: Analyze failures
+  python scripts/analyze_failures.py --config config.yaml
+============================================================
+PHASE 1-2: FEASIBILITY CHECK - ANALYSIS
+============================================================
+Input file: data/results_codegen_nl/evaluation_results.json
+
+FEASIBILITY REPORT
+============================================================
+Total problems: 164
+Total samples: 16400
+
+CATEGORY DISTRIBUTION:
+------------------------------------------------------------
+  syntax_error        : 11161 ( 68.1%)
+  success             :  5182 ( 31.6%)
+  runtime_error       :    57 (  0.3%)
+
+COMPLEXITY ANALYSIS:
+------------------------------------------------------------
+
+  MEDIUM problems:
+    syntax_error        : 2047 ( 70.6%)
+    success             :  847 ( 29.2%)
+    runtime_error       :    6 (  0.2%)
+
+  COMPLEX problems:
+    syntax_error        : 9114 ( 67.5%)
+    success             : 4335 ( 32.1%)
+    runtime_error       :   51 (  0.4%)
+
+============================================================
+FEASIBILITY DECISION
+============================================================
+Categorization rate: 100.0%
+Threshold: 70.0%
+Clear categories: 16400 / 16400
+
+✅ DECISION: PROCEED TO FULL PAPER
+
+We can clearly categorize failure patterns.
+There are interesting differences across complexity levels.
+The error taxonomy is well-defined.
+
+NEXT STEPS:
+1. Expand to all 164 HumanEval problems
+2. Generate 100 samples × 164 = 16,400 total samples
+3. Deep dive into error patterns
+4. Extract activation patterns
+5. Build execution-aware decoding
+
+✅ Full report saved to: data/results_codegen_nl/feasibility_report.json
+============================================================
+DEEP SYNTAX ERROR ANALYSIS
+============================================================
+Input: data/results_codegen_nl/evaluation_results.json
+
+Analyzing syntax errors in detail...
+Problems:   0%|          | 0/164 [00:00<?, ?it/s]Problems:  93%|█████████▎| 152/164 [00:00<00:00, 1514.63it/s]Problems: 100%|██████████| 164/164 [00:00<00:00, 1518.85it/s]
+
+============================================================
+SYNTAX ERROR BREAKDOWN
+============================================================
+Total syntax errors: 11161
+
+MAIN CATEGORIES:
+  bracket_mismatch    :  3970 ( 35.6%)
+  indentation         :  3900 ( 34.9%)
+  other               :  1552 ( 13.9%)
+  colon_missing       :   690 (  6.2%)
+  keyword_error       :   544 (  4.9%)
+  quote_mismatch      :   495 (  4.4%)
+  operator_error      :    10 (  0.1%)
+
+TOP SUBCATEGORIES:
+  indentation:unexpected_indent      :  3900 ( 34.9%)
+  bracket_mismatch:parenthesis       :  3085 ( 27.6%)
+  other:unknown                      :  1552 ( 13.9%)
+  bracket_mismatch:square_bracket    :   865 (  7.8%)
+  colon_missing:missing_colon        :   690 (  6.2%)
+  keyword_error:misspelled_keyword   :   544 (  4.9%)
+  quote_mismatch:unclosed_string     :   495 (  4.4%)
+  bracket_mismatch:curly_brace       :    20 (  0.2%)
+  operator_error:assignment_vs_comparison:    10 (  0.1%)
+
+ERROR POSITIONS:
+  late      : 11145 ( 99.9%)
+  middle    :    16 (  0.1%)
+
+✅ Saved to: data/results_codegen_nl/syntax_analysis.json
+[2026-03-17 15:50:47] Auditing gaps for config_codegen_multi.yaml
+[2026-03-17 15:50:47] Repairing 17 task(s) for config_codegen_multi.yaml
+Some weights of the model checkpoint at Salesforce/codegen-350M-multi were not used when initializing CodeGenForCausalLM: ['transformer.h.0.attn.causal_mask', 'transformer.h.1.attn.causal_mask', 'transformer.h.10.attn.causal_mask', 'transformer.h.11.attn.causal_mask', 'transformer.h.12.attn.causal_mask', 'transformer.h.13.attn.causal_mask', 'transformer.h.14.attn.causal_mask', 'transformer.h.15.attn.causal_mask', 'transformer.h.16.attn.causal_mask', 'transformer.h.17.attn.causal_mask', 'transformer.h.18.attn.causal_mask', 'transformer.h.19.attn.causal_mask', 'transformer.h.2.attn.causal_mask', 'transformer.h.3.attn.causal_mask', 'transformer.h.4.attn.causal_mask', 'transformer.h.5.attn.causal_mask', 'transformer.h.6.attn.causal_mask', 'transformer.h.7.attn.causal_mask', 'transformer.h.8.attn.causal_mask', 'transformer.h.9.attn.causal_mask']
+- This IS expected if you are initializing CodeGenForCausalLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing CodeGenForCausalLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Resuming: Found 164 existing problems
+Selected tasks: 17
+Need to generate: 17 problems
+Loading model: Salesforce/codegen-350M-multi
+✅ Model loaded on cuda
+Problems:   0%|          | 0/17 [00:00<?, ?it/s]Problems:   6%|▌         | 1/17 [00:34<09:09, 34.37s/it]Problems:  12%|█▏        | 2/17 [01:00<07:26, 29.76s/it]Problems:  18%|█▊        | 3/17 [01:26<06:29, 27.85s/it]Problems:  24%|██▎       | 4/17 [02:21<08:23, 38.73s/it]Problems:  29%|██▉       | 5/17 [03:15<08:49, 44.13s/it]Problems:  35%|███▌      | 6/17 [03:41<06:58, 38.04s/it]Problems:  41%|████      | 7/17 [04:08<05:44, 34.48s/it]Problems:  47%|████▋     | 8/17 [04:36<04:50, 32.29s/it]Problems:  53%|█████▎    | 9/17 [05:05<04:09, 31.16s/it]Problems:  59%|█████▉    | 10/17 [05:32<03:29, 29.99s/it]Problems:  65%|██████▍   | 11/17 [06:31<03:53, 38.88s/it]Problems:  71%|███████   | 12/17 [07:05<03:07, 37.42s/it]Problems:  76%|███████▋  | 13/17 [07:35<02:20, 35.08s/it]Problems:  82%|████████▏ | 14/17 [08:01<01:37, 32.44s/it]Problems:  88%|████████▊ | 15/17 [08:25<00:59, 29.93s/it]Problems:  94%|█████████▍| 16/17 [08:55<00:29, 29.96s/it]Problems: 100%|██████████| 17/17 [09:26<00:00, 30.09s/it]Problems: 100%|██████████| 17/17 [09:26<00:00, 33.31s/it]
+
+✅ Complete: 164 problems
+============================================================
+PHASE 1-2: FEASIBILITY CHECK - EVALUATION
+============================================================
+Input file: data/results_codegen_multi/generated_samples.json
+Output file: data/results_codegen_multi/evaluation_results.json
+
+Loading generated samples...
+✅ Loaded 164 problems
+
+Evaluating samples...
+Problems:   0%|          | 0/164 [00:00<?, ?it/s]Problems:   4%|▎         | 6/164 [00:00<00:02, 54.12it/s]Problems:   7%|▋         | 12/164 [00:00<00:03, 46.05it/s]Problems:  10%|█         | 17/164 [00:00<00:03, 47.03it/s]Problems:  13%|█▎        | 22/164 [00:00<00:03, 42.07it/s]Problems:  16%|█▋        | 27/164 [00:00<00:03, 43.96it/s]Problems:  20%|█▉        | 32/164 [00:00<00:03, 41.44it/s]Problems:  23%|██▎       | 37/164 [00:00<00:03, 37.61it/s]Problems:  26%|██▌       | 43/164 [00:01<00:02, 42.63it/s]Problems:  30%|██▉       | 49/164 [00:01<00:02, 46.22it/s]Problems:  34%|███▎      | 55/164 [00:01<00:02, 48.55it/s]Problems:  37%|███▋      | 61/164 [00:01<00:02, 47.29it/s]Problems:  41%|████      | 67/164 [00:01<00:01, 50.61it/s]Problems:  45%|████▍     | 73/164 [00:01<00:01, 50.36it/s]Problems:  48%|████▊     | 79/164 [00:01<00:01, 47.36it/s]Problems:  52%|█████▏    | 85/164 [00:01<00:01, 49.07it/s]Problems:  55%|█████▌    | 91/164 [00:01<00:01, 51.52it/s]Problems:  59%|█████▉    | 97/164 [00:02<00:01, 53.16it/s]Problems:  63%|██████▎   | 103/164 [00:02<00:01, 54.14it/s]Problems:  68%|██████▊   | 111/164 [00:02<00:00, 59.49it/s]Problems:  73%|███████▎  | 119/164 [00:02<00:00, 62.57it/s]Problems:  77%|███████▋  | 127/164 [00:02<00:00, 65.56it/s]Problems:  82%|████████▏ | 134/164 [00:02<00:00, 55.84it/s]Problems:  85%|████████▌ | 140/164 [00:02<00:00, 50.94it/s]Problems:  89%|████████▉ | 146/164 [00:02<00:00, 51.35it/s]Problems:  93%|█████████▎| 152/164 [00:03<00:00, 50.31it/s]Problems:  96%|█████████▋| 158/164 [00:03<00:00, 52.61it/s]Problems: 100%|██████████| 164/164 [00:03<00:00, 53.43it/s]Problems: 100%|██████████| 164/164 [00:03<00:00, 50.48it/s]
+
+============================================================
+EVALUATION COMPLETE
+============================================================
+✅ Evaluated 16400 samples
+✅ Results saved to: data/results_codegen_multi/evaluation_results.json
+
+CATEGORY DISTRIBUTION:
+------------------------------------------------------------
+  syntax_error        : 11329 ( 69.1%)
+  success             :  5029 ( 30.7%)
+  runtime_error       :    42 (  0.3%)
+
+NEXT STEP: Analyze failures
+  python scripts/analyze_failures.py --config config.yaml
+============================================================
+PHASE 1-2: FEASIBILITY CHECK - ANALYSIS
+============================================================
+Input file: data/results_codegen_multi/evaluation_results.json
+
+FEASIBILITY REPORT
+============================================================
+Total problems: 164
+Total samples: 16400
+
+CATEGORY DISTRIBUTION:
+------------------------------------------------------------
+  syntax_error        : 11329 ( 69.1%)
+  success             :  5029 ( 30.7%)
+  runtime_error       :    42 (  0.3%)
+
+COMPLEXITY ANALYSIS:
+------------------------------------------------------------
+
+  MEDIUM problems:
+    syntax_error        : 2221 ( 76.6%)
+    success             :  678 ( 23.4%)
+    runtime_error       :    1 (  0.0%)
+
+  COMPLEX problems:
+    syntax_error        : 9108 ( 67.5%)
+    success             : 4351 ( 32.2%)
+    runtime_error       :   41 (  0.3%)
+
+============================================================
+FEASIBILITY DECISION
+============================================================
+Categorization rate: 100.0%
+Threshold: 70.0%
+Clear categories: 16400 / 16400
+
+✅ DECISION: PROCEED TO FULL PAPER
+
+We can clearly categorize failure patterns.
+There are interesting differences across complexity levels.
+The error taxonomy is well-defined.
+
+NEXT STEPS:
+1. Expand to all 164 HumanEval problems
+2. Generate 100 samples × 164 = 16,400 total samples
+3. Deep dive into error patterns
+4. Extract activation patterns
+5. Build execution-aware decoding
+
+✅ Full report saved to: data/results_codegen_multi/feasibility_report.json
+============================================================
+DEEP SYNTAX ERROR ANALYSIS
+============================================================
+Input: data/results_codegen_multi/evaluation_results.json
+
+Analyzing syntax errors in detail...
+Problems:   0%|          | 0/164 [00:00<?, ?it/s]Problems:  95%|█████████▌| 156/164 [00:00<00:00, 1553.17it/s]Problems: 100%|██████████| 164/164 [00:00<00:00, 1543.17it/s]
+
+============================================================
+SYNTAX ERROR BREAKDOWN
+============================================================
+Total syntax errors: 11329
+
+MAIN CATEGORIES:
+  bracket_mismatch    :  6025 ( 53.2%)
+  indentation         :  1574 ( 13.9%)
+  other               :  1534 ( 13.5%)
+  colon_missing       :   933 (  8.2%)
+  quote_mismatch      :   831 (  7.3%)
+  keyword_error       :   429 (  3.8%)
+  operator_error      :     3 (  0.0%)
+
+TOP SUBCATEGORIES:
+  bracket_mismatch:parenthesis       :  4533 ( 40.0%)
+  indentation:unexpected_indent      :  1574 ( 13.9%)
+  other:unknown                      :  1534 ( 13.5%)
+  bracket_mismatch:square_bracket    :  1474 ( 13.0%)
+  colon_missing:missing_colon        :   933 (  8.2%)
+  quote_mismatch:unclosed_string     :   831 (  7.3%)
+  keyword_error:misspelled_keyword   :   429 (  3.8%)
+  bracket_mismatch:curly_brace       :    18 (  0.2%)
+  operator_error:assignment_vs_comparison:     3 (  0.0%)
+
+ERROR POSITIONS:
+  late      : 11323 ( 99.9%)
+  middle    :     6 (  0.1%)
+
+✅ Saved to: data/results_codegen_multi/syntax_analysis.json
+[2026-03-17 16:00:26] Auditing gaps for config_codegen_mono.yaml
+[2026-03-17 16:00:26] Repairing 17 task(s) for config_codegen_mono.yaml
+Some weights of the model checkpoint at Salesforce/codegen-350M-mono were not used when initializing CodeGenForCausalLM: ['transformer.h.0.attn.causal_mask', 'transformer.h.1.attn.causal_mask', 'transformer.h.10.attn.causal_mask', 'transformer.h.11.attn.causal_mask', 'transformer.h.12.attn.causal_mask', 'transformer.h.13.attn.causal_mask', 'transformer.h.14.attn.causal_mask', 'transformer.h.15.attn.causal_mask', 'transformer.h.16.attn.causal_mask', 'transformer.h.17.attn.causal_mask', 'transformer.h.18.attn.causal_mask', 'transformer.h.19.attn.causal_mask', 'transformer.h.2.attn.causal_mask', 'transformer.h.3.attn.causal_mask', 'transformer.h.4.attn.causal_mask', 'transformer.h.5.attn.causal_mask', 'transformer.h.6.attn.causal_mask', 'transformer.h.7.attn.causal_mask', 'transformer.h.8.attn.causal_mask', 'transformer.h.9.attn.causal_mask']
+- This IS expected if you are initializing CodeGenForCausalLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing CodeGenForCausalLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Resuming: Found 164 existing problems
+Selected tasks: 17
+Need to generate: 17 problems
+Loading model: Salesforce/codegen-350M-mono
+✅ Model loaded on cuda
+Problems:   0%|          | 0/17 [00:00<?, ?it/s]Problems:   6%|▌         | 1/17 [00:34<09:07, 34.22s/it]Problems:  12%|█▏        | 2/17 [00:59<07:16, 29.11s/it]Problems:  18%|█▊        | 3/17 [01:24<06:20, 27.16s/it]Problems:  24%|██▎       | 4/17 [02:28<09:03, 41.83s/it]Problems:  29%|██▉       | 5/17 [03:36<10:11, 50.98s/it]Problems:  35%|███▌      | 6/17 [04:03<07:53, 43.00s/it]Problems:  41%|████      | 7/17 [04:40<06:49, 40.99s/it]Problems:  47%|████▋     | 8/17 [05:50<07:31, 50.17s/it]Problems:  53%|█████▎    | 9/17 [07:24<08:31, 63.98s/it]Problems:  59%|█████▉    | 10/17 [08:52<08:20, 71.49s/it]Problems:  65%|██████▍   | 11/17 [11:37<10:00, 100.06s/it]Problems:  71%|███████   | 12/17 [13:04<08:00, 96.12s/it] Problems:  76%|███████▋  | 13/17 [14:45<06:29, 97.33s/it]Problems:  82%|████████▏ | 14/17 [16:18<04:48, 96.28s/it]Problems:  88%|████████▊ | 15/17 [17:39<03:03, 91.61s/it]Problems:  94%|█████████▍| 16/17 [19:40<01:40, 100.44s/it]Problems: 100%|██████████| 17/17 [21:21<00:00, 100.46s/it]Problems: 100%|██████████| 17/17 [21:21<00:00, 75.36s/it] 
+
+✅ Complete: 164 problems
+============================================================
+PHASE 1-2: FEASIBILITY CHECK - EVALUATION
+============================================================
+Input file: data/results_codegen_mono/generated_samples.json
+Output file: data/results_codegen_mono/evaluation_results.json
+
+Loading generated samples...
+✅ Loaded 164 problems
+
+Evaluating samples...
+Problems:   0%|          | 0/164 [00:00<?, ?it/s]Problems:   1%|          | 2/164 [00:00<00:11, 13.75it/s]Problems:   3%|▎         | 5/164 [00:00<00:08, 18.22it/s]Problems:   5%|▍         | 8/164 [00:00<00:06, 22.40it/s]Problems:   7%|▋         | 11/164 [00:00<00:07, 19.34it/s]Problems:   9%|▊         | 14/164 [00:00<00:07, 20.58it/s]Problems:  10%|█         | 17/164 [00:00<00:07, 18.78it/s]Problems:  12%|█▏        | 19/164 [00:01<00:07, 18.32it/s]Problems:  13%|█▎        | 21/164 [00:01<00:10, 14.17it/s]Problems:  14%|█▍        | 23/164 [00:01<00:09, 14.11it/s]Problems:  15%|█▌        | 25/164 [00:01<00:09, 15.34it/s]Problems:  16%|█▋        | 27/164 [00:01<00:09, 14.92it/s]Problems:  18%|█▊        | 29/164 [00:11<03:27,  1.54s/it]Problems:  20%|█▉        | 32/164 [00:12<02:07,  1.04it/s]Problems:  21%|██▏       | 35/164 [00:12<01:23,  1.55it/s]Problems:  23%|██▎       | 37/164 [00:12<01:04,  1.98it/s]Problems:  26%|██▌       | 42/164 [00:12<00:33,  3.60it/s]Problems:  28%|██▊       | 46/164 [00:12<00:22,  5.19it/s]Problems:  30%|██▉       | 49/164 [00:12<00:17,  6.56it/s]Problems:  32%|███▏      | 53/164 [00:12<00:12,  8.92it/s]Problems:  34%|███▍      | 56/164 [00:13<00:09, 10.83it/s]Problems:  37%|███▋      | 60/164 [00:13<00:07, 14.07it/s]Problems:  39%|███▉      | 64/164 [00:13<00:05, 17.45it/s]Problems:  41%|████▏     | 68/164 [00:13<00:04, 21.19it/s]Problems:  45%|████▍     | 73/164 [00:13<00:03, 26.32it/s]Problems:  47%|████▋     | 77/164 [00:13<00:03, 27.26it/s]Problems:  49%|████▉     | 81/164 [00:13<00:02, 28.49it/s]Problems:  52%|█████▏    | 86/164 [00:13<00:02, 32.94it/s]Problems:  55%|█████▌    | 91/164 [00:13<00:02, 35.22it/s]Problems:  58%|█████▊    | 95/164 [00:14<00:02, 34.32it/s]Problems:  60%|██████    | 99/164 [00:14<00:02, 26.70it/s]Problems:  63%|██████▎   | 103/164 [00:14<00:02, 26.25it/s]Problems:  65%|██████▍   | 106/164 [00:14<00:02, 25.76it/s]Problems:  66%|██████▋   | 109/164 [00:14<00:02, 24.48it/s]Problems:  68%|██████▊   | 112/164 [00:14<00:02, 24.52it/s]Problems:  70%|███████   | 115/164 [00:15<00:01, 24.82it/s]Problems:  73%|███████▎  | 119/164 [00:15<00:01, 26.01it/s]Problems:  75%|███████▌  | 123/164 [00:15<00:01, 27.75it/s]Problems:  77%|███████▋  | 127/164 [00:15<00:01, 30.11it/s]Problems:  80%|███████▉  | 131/164 [00:15<00:01, 22.79it/s]Problems:  82%|████████▏ | 134/164 [00:15<00:01, 21.99it/s]Problems:  84%|████████▎ | 137/164 [00:16<00:01, 18.59it/s]Problems:  85%|████████▌ | 140/164 [00:16<00:01, 20.02it/s]Problems:  87%|████████▋ | 143/164 [00:16<00:00, 21.90it/s]Problems:  89%|████████▉ | 146/164 [00:16<00:00, 22.37it/s]Problems:  92%|█████████▏| 151/164 [00:16<00:00, 26.75it/s]Problems:  95%|█████████▍| 155/164 [00:16<00:00, 29.60it/s]Problems:  98%|█████████▊| 160/164 [00:16<00:00, 32.54it/s]Problems: 100%|██████████| 164/164 [00:16<00:00,  9.73it/s]
+
+============================================================
+EVALUATION COMPLETE
+============================================================
+✅ Evaluated 16400 samples
+✅ Results saved to: data/results_codegen_mono/evaluation_results.json
+
+CATEGORY DISTRIBUTION:
+------------------------------------------------------------
+  syntax_error        :  9953 ( 60.7%)
+  success             :  6396 ( 39.0%)
+  runtime_error       :    46 (  0.3%)
+  wrong_output        :     3 (  0.0%)
+  timeout             :     2 (  0.0%)
+
+NEXT STEP: Analyze failures
+  python scripts/analyze_failures.py --config config.yaml
+============================================================
+PHASE 1-2: FEASIBILITY CHECK - ANALYSIS
+============================================================
+Input file: data/results_codegen_mono/evaluation_results.json
+
+FEASIBILITY REPORT
+============================================================
+Total problems: 164
+Total samples: 16400
+
+CATEGORY DISTRIBUTION:
+------------------------------------------------------------
+  syntax_error        :  9953 ( 60.7%)
+  success             :  6396 ( 39.0%)
+  runtime_error       :    46 (  0.3%)
+  wrong_output        :     3 (  0.0%)
+  timeout             :     2 (  0.0%)
+
+COMPLEXITY ANALYSIS:
+------------------------------------------------------------
+
+  MEDIUM problems:
+    syntax_error        : 1833 ( 63.2%)
+    success             : 1067 ( 36.8%)
+
+  COMPLEX problems:
+    syntax_error        : 8120 ( 60.1%)
+    success             : 5329 ( 39.5%)
+    runtime_error       :   46 (  0.3%)
+
+============================================================
+FEASIBILITY DECISION
+============================================================
+Categorization rate: 100.0%
+Threshold: 70.0%
+Clear categories: 16400 / 16400
+
+✅ DECISION: PROCEED TO FULL PAPER
+
+We can clearly categorize failure patterns.
+There are interesting differences across complexity levels.
+The error taxonomy is well-defined.
+
+NEXT STEPS:
+1. Expand to all 164 HumanEval problems
+2. Generate 100 samples × 164 = 16,400 total samples
+3. Deep dive into error patterns
+4. Extract activation patterns
+5. Build execution-aware decoding
+
+✅ Full report saved to: data/results_codegen_mono/feasibility_report.json
+============================================================
+DEEP SYNTAX ERROR ANALYSIS
+============================================================
+Input: data/results_codegen_mono/evaluation_results.json
+
+Analyzing syntax errors in detail...
+Problems:   0%|          | 0/164 [00:00<?, ?it/s]Problems:  37%|███▋      | 61/164 [00:00<00:00, 609.61it/s]Problems:  82%|████████▏ | 135/164 [00:00<00:00, 680.76it/s]Problems: 100%|██████████| 164/164 [00:00<00:00, 671.50it/s]
+
+============================================================
+SYNTAX ERROR BREAKDOWN
+============================================================
+Total syntax errors: 9953
+
+MAIN CATEGORIES:
+  bracket_mismatch    :  4322 ( 43.4%)
+  other               :  1724 ( 17.3%)
+  indentation         :  1699 ( 17.1%)
+  colon_missing       :  1173 ( 11.8%)
+  keyword_error       :   531 (  5.3%)
+  quote_mismatch      :   504 (  5.1%)
+
+TOP SUBCATEGORIES:
+  bracket_mismatch:parenthesis       :  3189 ( 32.0%)
+  other:unknown                      :  1724 ( 17.3%)
+  indentation:unexpected_indent      :  1699 ( 17.1%)
+  colon_missing:missing_colon        :  1173 ( 11.8%)
+  bracket_mismatch:square_bracket    :  1085 ( 10.9%)
+  keyword_error:misspelled_keyword   :   531 (  5.3%)
+  quote_mismatch:unclosed_string     :   504 (  5.1%)
+  bracket_mismatch:curly_brace       :    48 (  0.5%)
+
+ERROR POSITIONS:
+  late      :  9953 (100.0%)
+
+✅ Saved to: data/results_codegen_mono/syntax_analysis.json
+================================================================================
+BOOTSTRAP SIGNIFICANCE ANALYSIS
+================================================================================
+
+GPT-2 (124M)
+  Tasks: 164
+  Samples/task: 100
+  success_rate         5.15% [  4.49,   5.84]
+  syntax_error_rate   94.45% [ 93.70,  95.14]
+  runtime_error_rate   0.40% [  0.30,   0.52]
+  pass@1               5.15% [  4.50,   5.84]
+  pass@10             37.17% [ 33.50,  40.83]
+
+GPT-2 Medium (355M)
+  Tasks: 164
+  Samples/task: 100
+  success_rate         4.79% [  3.94,   5.77]
+  syntax_error_rate   94.90% [ 93.95,  95.73]
+  runtime_error_rate   0.31% [  0.23,   0.40]
+  pass@1               4.79% [  3.94,   5.74]
+  pass@10             33.09% [ 29.55,  36.79]
+
+CodeGen-350M
+  Tasks: 164
+  Samples/task: 100
+  success_rate        37.42% [ 35.77,  39.13]
+  syntax_error_rate   61.10% [ 59.29,  62.79]
+  runtime_error_rate   1.35% [  1.09,   1.63]
+  pass@1              37.42% [ 35.79,  39.10]
+  pass@10             97.90% [ 97.41,  98.36]
+
+================================================================================
+PAIRWISE SUCCESS-RATE DIFFERENCES
+================================================================================
+GPT-2 (124M) vs GPT-2 Medium (355M):  +0.37% [ -0.73,  +1.37], p=0.5001
+GPT-2 (124M) vs CodeGen-350M: -32.27% [-34.06, -30.47], p=0.0001
+GPT-2 Medium (355M) vs CodeGen-350M: -32.63% [-34.57, -30.68], p=0.0001
+
+Saved report to: outputs/tables/bootstrap_significance.json
+================================================================================
+BOOTSTRAP SIGNIFICANCE ANALYSIS
+================================================================================
+
+CodeGen-NL
+  Tasks: 164
+  Samples/task: 100
+  success_rate        31.60% [ 29.77,  33.48]
+  syntax_error_rate   68.05% [ 66.12,  69.82]
+  runtime_error_rate   0.35% [  0.21,   0.50]
+  pass@1              31.60% [ 29.87,  33.48]
+  pass@5              81.54% [ 79.29,  83.66]
+
+CodeGen-Multi
+  Tasks: 164
+  Samples/task: 100
+  success_rate        30.66% [ 28.66,  32.73]
+  syntax_error_rate   69.08% [ 66.98,  71.21]
+  runtime_error_rate   0.26% [  0.15,   0.39]
+  pass@1              30.66% [ 28.63,  32.71]
+  pass@5              78.98% [ 76.26,  81.56]
+
+CodeGen-Mono
+  Tasks: 164
+  Samples/task: 100
+  success_rate        39.00% [ 36.85,  41.06]
+  syntax_error_rate   60.69% [ 58.48,  62.80]
+  runtime_error_rate   0.28% [  0.13,   0.46]
+  pass@1              39.00% [ 36.88,  41.09]
+  pass@5              87.84% [ 85.92,  89.60]
+
+================================================================================
+PAIRWISE SUCCESS-RATE DIFFERENCES
+================================================================================
+CodeGen-NL vs CodeGen-Multi:  +0.93% [ -1.49,  +3.32], p=0.4421
+CodeGen-NL vs CodeGen-Mono:  -7.40% [ -9.96,  -4.75], p=0.0001
+CodeGen-Multi vs CodeGen-Mono:  -8.34% [-10.62,  -6.16], p=0.0001
+
+Saved report to: outputs/tables/bootstrap_significance_codegen_ladder.json
+Wrote CodeGen ladder summary to outputs/tables/codegen_ladder_summary.json
+CodeGen-NL: success=31.60% syntax=68.05% runtime=0.35%
+CodeGen-Multi: success=30.66% syntax=69.08% runtime=0.26%
+CodeGen-Mono: success=39.00% syntax=60.69% runtime=0.28%
+[2026-03-17 16:22:24] CodeGen HumanEval repairs completed

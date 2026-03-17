@@ -1,0 +1,48 @@
+{
+  "summary": {
+    "total_problems": 164,
+    "total_samples": 16400,
+    "samples_per_problem": 100
+  },
+  "category_distribution": {
+    "syntax_error": 9953,
+    "success": 6396,
+    "runtime_error": 46,
+    "wrong_output": 3,
+    "timeout": 2
+  },
+  "complexity_analysis": {
+    "complex": {
+      "syntax_error": 8120,
+      "success": 5329,
+      "runtime_error": 46,
+      "wrong_output": 3,
+      "timeout": 2
+    },
+    "medium": {
+      "syntax_error": 1833,
+      "success": 1067
+    }
+  },
+  "error_patterns": {
+    "expected '": 1168,
+    "NameError": 25,
+    "f-string": 15,
+    "TypeError": 7,
+    "RecursionError": 5,
+    "EOFError": 3,
+    "ModuleNotFoundError": 2,
+    "ValueError": 2,
+    "UnboundLocalError": 1,
+    "IndexError": 1,
+    "'": 1
+  },
+  "feasibility_decision": {
+    "can_proceed": true,
+    "categorization_rate": 1.0,
+    "threshold": 0.7,
+    "total_samples": 16400,
+    "clear_categories": 16400,
+    "unclear_categories": 0
+  }
+}

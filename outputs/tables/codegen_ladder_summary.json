@@ -3,90 +3,90 @@
     {
       "label": "CodeGen-NL",
       "results_dir": "data/results_codegen_nl",
-      "success_pct": 30.598591549295772,
-      "syntax_pct": 69.21830985915493,
-      "runtime_pct": 0.18309859154929578,
+      "success_pct": 31.597560975609756,
+      "syntax_pct": 68.05487804878048,
+      "runtime_pct": 0.34756097560975613,
       "timeout_pct": 0.0,
       "top_syntax_errors": [
         [
           "bracket_mismatch",
-          3686
+          3970
         ],
         [
           "indentation",
-          3456
+          3900
         ],
         [
           "other",
-          1239
+          1552
         ],
         [
           "colon_missing",
-          622
+          690
         ],
         [
           "keyword_error",
-          421
+          544
         ]
       ]
     },
     {
       "label": "CodeGen-Multi",
       "results_dir": "data/results_codegen_multi",
-      "success_pct": 28.462585034013603,
-      "syntax_pct": 71.42857142857143,
-      "runtime_pct": 0.10884353741496598,
+      "success_pct": 30.664634146341463,
+      "syntax_pct": 69.07926829268293,
+      "runtime_pct": 0.25609756097560976,
       "timeout_pct": 0.0,
       "top_syntax_errors": [
         [
           "bracket_mismatch",
-          5646
+          6025
         ],
         [
           "indentation",
-          1469
+          1574
         ],
         [
           "other",
-          1371
+          1534
         ],
         [
           "colon_missing",
-          883
+          933
         ],
         [
           "quote_mismatch",
-          770
+          831
         ]
       ]
     },
     {
       "label": "CodeGen-Mono",
       "results_dir": "data/results_codegen_mono",
-      "success_pct": 37.755102040816325,
-      "syntax_pct": 62.197278911564624,
-      "runtime_pct": 0.047619047619047616,
-      "timeout_pct": 0.0,
+      "success_pct": 39.0,
+      "syntax_pct": 60.68902439024391,
+      "runtime_pct": 0.28048780487804875,
+      "timeout_pct": 0.012195121951219513,
       "top_syntax_errors": [
         [
           "bracket_mismatch",
-          4022
-        ],
-        [
-          "indentation",
-          1601
+          4322
         ],
         [
           "other",
-          1542
+          1724
+        ],
+        [
+          "indentation",
+          1699
         ],
         [
           "colon_missing",
-          1109
+          1173
         ],
         [
           "keyword_error",
-          449
+          531
         ]
       ]
     }

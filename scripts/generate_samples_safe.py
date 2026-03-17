@@ -8,6 +8,7 @@ import json
 import torch
 import gc
 from pathlib import Path
+from typing import List, Optional, Set
 from tqdm import tqdm
 import yaml
 
@@ -25,6 +26,34 @@ def save_results(results_file: Path, all_results):
         json.dump(all_results, f, indent=2)
 
 
+def parse_task_ids(raw_value: Optional[str], task_ids_file: Optional[str]) -> Optional[List[str]]:
+    """Parse an explicit task-id selection from CLI flags."""
+    task_ids: List[str] = []
+
+    if raw_value:
+        task_ids.extend([item.strip() for item in raw_value.split(",") if item.strip()])
+
+    if task_ids_file:
+        with open(task_ids_file, "r", encoding="utf-8") as handle:
+            for line in handle:
+                task_id = line.strip()
+                if task_id:
+                    task_ids.append(task_id)
+
+    if not task_ids:
+        return None
+
+    seen: Set[str] = set()
+    ordered_task_ids: List[str] = []
+    for task_id in task_ids:
+        if task_id in seen:
+            continue
+        seen.add(task_id)
+        ordered_task_ids.append(task_id)
+
+    return ordered_task_ids
+
+
 def generate_with_memory_cleanup(model, prompt, num_samples):
     """Generate samples with automatic memory cleanup on OOM."""
     try:
@@ -35,21 +64,35 @@ def generate_with_memory_cleanup(model, prompt, num_samples):
             # Clear cache and retry with smaller batch
             torch.cuda.empty_cache()
             gc.collect()
-            
-            try:
-                # Retry with half the samples at a time
-                samples = []
-                for i in range(0, num_samples, num_samples // 2):
+
+            samples = []
+            remaining = num_samples
+            batch_size = max(1, num_samples // 2)
+
+            while remaining > 0:
+                current_batch = min(batch_size, remaining)
+                try:
                     batch_samples = model.generate(
                         prompt=prompt,
-                        num_samples=min(num_samples // 2, num_samples - i)
+                        num_samples=current_batch,
                     )
                     samples.extend(batch_samples)
+                    remaining -= current_batch
                     torch.cuda.empty_cache()
-                
-                return samples, None
-            except Exception as retry_error:
-                return [], str(retry_error)
+                    gc.collect()
+                except RuntimeError as retry_error:
+                    if "out of memory" not in str(retry_error).lower():
+                        return samples, str(retry_error)
+
+                    torch.cuda.empty_cache()
+                    gc.collect()
+
+                    if current_batch == 1:
+                        return samples, str(retry_error)
+
+                    batch_size = max(1, current_batch // 2)
+
+            return samples, None
         else:
             return [], str(e)
 
@@ -61,6 +104,23 @@ def main():
     parser.add_argument("--num_problems", type=int, default=None)
     parser.add_argument("--num_samples", type=int, default=None)
     parser.add_argument("--output_dir", type=str, default=None)
+    parser.add_argument(
+        "--task_ids",
+        type=str,
+        default=None,
+        help="Comma-separated task IDs to generate. Keeps dataset order.",
+    )
+    parser.add_argument(
+        "--task_ids_file",
+        type=str,
+        default=None,
+        help="File containing one task ID per line.",
+    )
+    parser.add_argument(
+        "--force_selected",
+        action="store_true",
+        help="If task IDs are provided, regenerate and replace those tasks even if they already exist.",
+    )
     args = parser.parse_args()
     
     with open(args.config) as f:
@@ -76,12 +136,30 @@ def main():
             existing_data = json.load(f)
             existing_results = {item['task_id']: item for item in existing_data}
         print(f"Resuming: Found {len(existing_results)} existing problems")
+
+    selected_task_ids = parse_task_ids(args.task_ids, args.task_ids_file)
+    if selected_task_ids:
+        selected_task_id_set = set(selected_task_ids)
+        print(f"Selected tasks: {len(selected_task_ids)}")
+        if args.force_selected:
+            for task_id in selected_task_ids:
+                existing_results.pop(task_id, None)
+    else:
+        selected_task_id_set = None
     
     # Load dataset
     loader = DatasetLoader(args.config)
     all_problems = loader.load(
         num_problems=args.num_problems or config['feasibility_check']['num_problems']
     )
+
+    if selected_task_id_set is not None:
+        all_problems = [problem for problem in all_problems if problem.task_id in selected_task_id_set]
+        missing_from_dataset = [task_id for task_id in selected_task_ids if task_id not in {problem.task_id for problem in all_problems}]
+        if missing_from_dataset:
+            print(f"⚠️  Requested task IDs not found in dataset: {missing_from_dataset}")
+        ordered_lookup = {problem.task_id: problem for problem in all_problems}
+        all_problems = [ordered_lookup[task_id] for task_id in selected_task_ids if task_id in ordered_lookup]
     
     # Filter to only missing problems
     problems_to_generate = [p for p in all_problems if p.task_id not in existing_results]
@@ -120,6 +198,7 @@ def main():
             })
         
         all_results.append(problem_result)
+        all_results.sort(key=lambda item: item["task_id"])
         
         # Save after each problem so long runs can resume safely.
         save_results(results_file, all_results)

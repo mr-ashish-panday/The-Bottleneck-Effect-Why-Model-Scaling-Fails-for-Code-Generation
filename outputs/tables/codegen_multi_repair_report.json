@@ -1,0 +1,48 @@
+{
+  "input_file": "data/results_codegen_multi/generated_samples.json",
+  "expected_num_problems": 164,
+  "expected_samples_per_task": 100,
+  "found_num_tasks": 164,
+  "missing_task_ids": [],
+  "short_task_ids": [
+    "HumanEval/68",
+    "HumanEval/72",
+    "HumanEval/74",
+    "HumanEval/81",
+    "HumanEval/87",
+    "HumanEval/105",
+    "HumanEval/115",
+    "HumanEval/123",
+    "HumanEval/124",
+    "HumanEval/126",
+    "HumanEval/127",
+    "HumanEval/129",
+    "HumanEval/130",
+    "HumanEval/141",
+    "HumanEval/148",
+    "HumanEval/152",
+    "HumanEval/160"
+  ],
+  "extra_task_ids": [],
+  "repair_task_ids": [
+    "HumanEval/68",
+    "HumanEval/72",
+    "HumanEval/74",
+    "HumanEval/81",
+    "HumanEval/87",
+    "HumanEval/105",
+    "HumanEval/115",
+    "HumanEval/123",
+    "HumanEval/124",
+    "HumanEval/126",
+    "HumanEval/127",
+    "HumanEval/129",
+    "HumanEval/130",
+    "HumanEval/141",
+    "HumanEval/148",
+    "HumanEval/152",
+    "HumanEval/160"
+  ]
+}
+
+Wrote repair task list to: outputs/tables/codegen_multi_repair_tasks.txt

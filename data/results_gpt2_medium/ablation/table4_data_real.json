@@ -1,0 +1,45 @@
+{
+  "analysis_file": "data/results_gpt2_medium/ablation/layer12_analysis_real.json",
+  "layer_index": 12,
+  "pooling": "mean",
+  "table_data": [
+    {
+      "dimension": 121,
+      "mean_success": -35.2734375,
+      "mean_failure": -29.54281234741211,
+      "difference": 5.730625152587891,
+      "pct_signal": 0.8974672295948106
+    },
+    {
+      "dimension": 346,
+      "mean_success": 17.02523422241211,
+      "mean_failure": 14.188593864440918,
+      "difference": 2.8366403579711914,
+      "pct_signal": 0.44424328858354734
+    },
+    {
+      "dimension": 615,
+      "mean_success": 6.955331802368164,
+      "mean_failure": 4.209453105926514,
+      "difference": 2.7458786964416504,
+      "pct_signal": 0.4300291994122194
+    },
+    {
+      "dimension": 820,
+      "mean_success": -3.147778272628784,
+      "mean_failure": -0.7582487463951111,
+      "difference": 2.3895294666290283,
+      "pct_signal": 0.37422171811085475
+    },
+    {
+      "dimension": 169,
+      "mean_success": -3.356844425201416,
+      "mean_failure": -1.0172810554504395,
+      "difference": 2.3395633697509766,
+      "pct_signal": 0.3663965797804301
+    }
+  ],
+  "top5_signal_pct": 2.5123580154818623,
+  "total_dimensions": 1024,
+  "discriminative_dimensions": 5
+}
