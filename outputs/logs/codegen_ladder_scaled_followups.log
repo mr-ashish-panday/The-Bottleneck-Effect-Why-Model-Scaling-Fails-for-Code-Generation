@@ -1,0 +1,19 @@
+[2026-03-17 14:19:10] Starting CodeGen ladder scaled follow-ups
+[2026-03-17 14:19:10] Starting scaled follow-up for results_codegen_nl layer 11
+Some weights of the model checkpoint at Salesforce/codegen-350M-nl were not used when initializing CodeGenForCausalLM: ['transformer.h.0.attn.causal_mask', 'transformer.h.1.attn.causal_mask', 'transformer.h.10.attn.causal_mask', 'transformer.h.11.attn.causal_mask', 'transformer.h.12.attn.causal_mask', 'transformer.h.13.attn.causal_mask', 'transformer.h.14.attn.causal_mask', 'transformer.h.15.attn.causal_mask', 'transformer.h.16.attn.causal_mask', 'transformer.h.17.attn.causal_mask', 'transformer.h.18.attn.causal_mask', 'transformer.h.19.attn.causal_mask', 'transformer.h.2.attn.causal_mask', 'transformer.h.3.attn.causal_mask', 'transformer.h.4.attn.causal_mask', 'transformer.h.5.attn.causal_mask', 'transformer.h.6.attn.causal_mask', 'transformer.h.7.attn.causal_mask', 'transformer.h.8.attn.causal_mask', 'transformer.h.9.attn.causal_mask']
+- This IS expected if you are initializing CodeGenForCausalLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing CodeGenForCausalLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+================================================================================
+SCALED LAYER ABLATION
+================================================================================
+Model config: config_codegen_nl.yaml
+Dataset config: config_codegen_nl.yaml
+Problems: 20
+Samples/problem: 10
+Scales: 0.75,0.5,0.25,0.0
+Output: data/results_codegen_nl/ablation/scaled_layer11_20x10.json
+Loading model: Salesforce/codegen-350M-nl
+✅ Model loaded on cuda
+
+Running baseline condition
+  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:05<01:49,  5.77s/it] 10%|█         | 2/20 [00:10<01:35,  5.29s/it] 15%|█▌        | 3/20 [00:15<01:26,  5.08s/it] 20%|██        | 4/20 [00:20<01:19,  5.00s/it] 25%|██▌       | 5/20 [00:25<01:14,  4.99s/it] 30%|███       | 6/20 [00:30<01:09,  5.00s/it] 35%|███▌      | 7/20 [00:35<01:04,  5.00s/it] 40%|████      | 8/20 [00:40<01:00,  5.04s/it] 45%|████▌     | 9/20 [00:46<00:57,  5.19s/it] 50%|█████     | 10/20 [00:51<00:51,  5.19s/it] 55%|█████▌    | 11/20 [00:56<00:46,  5.13s/it] 60%|██████    | 12/20 [01:01<00:40,  5.11s/it]

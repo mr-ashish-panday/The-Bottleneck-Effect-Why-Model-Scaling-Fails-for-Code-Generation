@@ -1,0 +1,16 @@
+{
+  "analysis_file": "data/results_gpt2_medium/ablation/layer12_analysis_real.json",
+  "samples_file": "data/results_gpt2_medium/ablation/layer12_probe_samples_real.json",
+  "classification_file": "data/results_gpt2_medium/ablation/activation_classification_real.json",
+  "dimensions": [
+    121,
+    346
+  ],
+  "held_out_accuracy": 0.675,
+  "top5_accuracy": 0.725,
+  "class_counts": {
+    "success": 100,
+    "syntax_error": 100
+  },
+  "class_mean_separation": 6.394262313842773
+}

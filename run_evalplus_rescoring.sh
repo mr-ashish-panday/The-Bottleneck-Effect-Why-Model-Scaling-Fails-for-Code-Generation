@@ -6,12 +6,12 @@ cd "$ROOT"
 
 source venv/bin/activate
 mkdir -p outputs/logs outputs/tables outputs/evalplus
+unset EVALPLUS_TIMEOUT_PER_TASK
+EVALPLUS_MAX_SAMPLES_PER_TASK="${EVALPLUS_MAX_SAMPLES_PER_TASK:-5}"
 
 if ! python -c "import importlib.util; raise SystemExit(0 if importlib.util.find_spec('evalplus') else 1)"; then
   python -m pip install "evalplus==0.3.1"
 fi
-
-export EVALPLUS_TIMEOUT_PER_TASK="${EVALPLUS_TIMEOUT_PER_TASK:-20}"
 
 run_case() {
   local label="$1"
@@ -22,11 +22,17 @@ run_case() {
   local log_file="outputs/logs/evalplus_${label}_${dataset}.log"
   local summary_file="outputs/tables/evalplus_${label}_${dataset}_summary.json"
 
+  if [[ -s "$summary_file" ]]; then
+    echo "[$(date '+%F %T')] Skipping ${label} ${dataset}; summary already exists"
+    return 0
+  fi
+
   mkdir -p "$case_dir"
 
   echo "[$(date '+%F %T')] Exporting ${label} ${dataset} samples"
   python scripts/export_evalplus_samples.py \
     --config "$config" \
+    --max_samples_per_task "$EVALPLUS_MAX_SAMPLES_PER_TASK" \
     --output_file "$samples_file"
 
   echo "[$(date '+%F %T')] Running EvalPlus for ${label} ${dataset}"

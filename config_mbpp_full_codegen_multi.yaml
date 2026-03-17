@@ -1,0 +1,42 @@
+project:
+  name: "code_execution_failures"
+  version: "0.1.0"
+
+paths:
+  data_dir: "data"
+  raw_data: "data/raw"
+  results_dir: "data/results_mbpp_full_codegen_multi"
+  models_dir: "models"
+  outputs_dir: "outputs"
+
+hardware:
+  device: "cuda"
+  max_memory_gb: 12
+
+model:
+  name: "Salesforce/codegen-350M-multi"
+  pretrained_path: "Salesforce/codegen-350M-multi"
+  max_length: 512
+  temperature: 0.8
+  top_p: 0.95
+
+dataset:
+  name: "mbpp"
+  seed: 42
+  mbpp_prompt_style: "signature_stub"
+  use_mbpp_challenge_tests: false
+
+generation:
+  batch_size: 1
+  max_new_tokens: 128
+  do_sample: true
+  max_time_seconds: 30
+  repetition_penalty: 1.05
+
+execution:
+  timeout_seconds: 5
+
+feasibility_check:
+  num_problems: 257
+  num_samples_per_problem: 20
+  decision_threshold: 0.7

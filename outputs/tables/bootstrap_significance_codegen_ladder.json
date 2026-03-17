@@ -1,0 +1,389 @@
+{
+  "metadata": {
+    "num_bootstrap": 5000,
+    "num_permutations": 10000,
+    "seed": 42
+  },
+  "models": {
+    "CodeGen-NL": {
+      "num_tasks": 142,
+      "samples_per_task": 100,
+      "metrics": {
+        "success_rate": {
+          "mean": 0.3059859154929578,
+          "ci_low": 0.28725176056338025,
+          "ci_high": 0.327044014084507
+        },
+        "syntax_error_rate": {
+          "mean": 0.6921830985915494,
+          "ci_low": 0.6722517605633801,
+          "ci_high": 0.7107042253521126
+        },
+        "runtime_error_rate": {
+          "mean": 0.0018309859154929577,
+          "ci_low": 0.0009859154929577466,
+          "ci_high": 0.0027482394366196926
+        },
+        "wrong_output_rate": {
+          "mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0
+        },
+        "timeout_rate": {
+          "mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0
+        },
+        "pass@1": {
+          "mean": 0.30598591549295756,
+          "ci_low": 0.28767605633802795,
+          "ci_high": 0.3254929577464787
+        },
+        "pass@5": {
+          "mean": 0.8067415083358034,
+          "ci_low": 0.7844371752061626,
+          "ci_high": 0.8275572988508624
+        },
+        "pass@10": {
+          "mean": 0.948940512698618,
+          "ci_low": 0.9364026146086817,
+          "ci_high": 0.9603563954365498
+        }
+      }
+    },
+    "CodeGen-Multi": {
+      "num_tasks": 147,
+      "samples_per_task": 100,
+      "metrics": {
+        "success_rate": {
+          "mean": 0.2846258503401361,
+          "ci_low": 0.2661870748299319,
+          "ci_high": 0.30367687074829924
+        },
+        "syntax_error_rate": {
+          "mean": 0.7142857142857143,
+          "ci_low": 0.69421768707483,
+          "ci_high": 0.7336054421768707
+        },
+        "runtime_error_rate": {
+          "mean": 0.0010884353741496598,
+          "ci_low": 0.0005442176870748299,
+          "ci_high": 0.0017006802721088435
+        },
+        "wrong_output_rate": {
+          "mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0
+        },
+        "timeout_rate": {
+          "mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0
+        },
+        "pass@1": {
+          "mean": 0.2846258503401359,
+          "ci_low": 0.26585034013605424,
+          "ci_high": 0.30394557823129226
+        },
+        "pass@5": {
+          "mean": 0.7701275418221106,
+          "ci_low": 0.7412914958399155,
+          "ci_high": 0.7965044423250048
+        },
+        "pass@10": {
+          "mean": 0.9216391338418946,
+          "ci_low": 0.8975678571543007,
+          "ci_high": 0.9414295176555537
+        }
+      }
+    },
+    "CodeGen-Mono": {
+      "num_tasks": 147,
+      "samples_per_task": 100,
+      "metrics": {
+        "success_rate": {
+          "mean": 0.37755102040816324,
+          "ci_low": 0.35714285714285715,
+          "ci_high": 0.39945578231292517
+        },
+        "syntax_error_rate": {
+          "mean": 0.6219727891156464,
+          "ci_low": 0.6010204081632653,
+          "ci_high": 0.6425170068027211
+        },
+        "runtime_error_rate": {
+          "mean": 0.00047619047619047624,
+          "ci_low": 0.00013605442176870748,
+          "ci_high": 0.0008163265306122449
+        },
+        "wrong_output_rate": {
+          "mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0
+        },
+        "timeout_rate": {
+          "mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0
+        },
+        "pass@1": {
+          "mean": 0.37755102040816313,
+          "ci_low": 0.35659863945578213,
+          "ci_high": 0.39925170068027194
+        },
+        "pass@5": {
+          "mean": 0.8710050239835939,
+          "ci_low": 0.851337806170844,
+          "ci_high": 0.8897863340530848
+        },
+        "pass@10": {
+          "mean": 0.9714496988809641,
+          "ci_low": 0.9611581134449788,
+          "ci_high": 0.9799603542014768
+        }
+      }
+    }
+  },
+  "pairwise_tests": [
+    {
+      "model_a": "CodeGen-NL",
+      "model_b": "CodeGen-Multi",
+      "metric": "success_rate",
+      "num_shared_tasks": 137,
+      "difference": 0.025036496350364968,
+      "ci_low": 0.0006569343065693404,
+      "ci_high": 0.049271897810218956,
+      "p_value": 0.044295570442955706
+    },
+    {
+      "model_a": "CodeGen-NL",
+      "model_b": "CodeGen-Multi",
+      "metric": "syntax_error_rate",
+      "num_shared_tasks": 137,
+      "difference": -0.025766423357664242,
+      "ci_low": -0.050291970802919715,
+      "ci_high": 0.00014781021897807556,
+      "p_value": 0.0405959404059594
+    },
+    {
+      "model_a": "CodeGen-NL",
+      "model_b": "CodeGen-Multi",
+      "metric": "runtime_error_rate",
+      "num_shared_tasks": 137,
+      "difference": 0.0007299270072992701,
+      "ci_low": -0.00021897810218978104,
+      "ci_high": 0.0017518248175182483,
+      "p_value": 0.1947805219478052
+    },
+    {
+      "model_a": "CodeGen-NL",
+      "model_b": "CodeGen-Multi",
+      "metric": "wrong_output_rate",
+      "num_shared_tasks": 137,
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "p_value": 1.0
+    },
+    {
+      "model_a": "CodeGen-NL",
+      "model_b": "CodeGen-Multi",
+      "metric": "timeout_rate",
+      "num_shared_tasks": 137,
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "p_value": 1.0
+    },
+    {
+      "model_a": "CodeGen-NL",
+      "model_b": "CodeGen-Multi",
+      "metric": "pass@1",
+      "num_shared_tasks": 137,
+      "difference": 0.025036496350364937,
+      "ci_low": -0.00022080291970806202,
+      "ci_high": 0.04912591240875904,
+      "p_value": 0.047595240475952406
+    },
+    {
+      "model_a": "CodeGen-NL",
+      "model_b": "CodeGen-Multi",
+      "metric": "pass@5",
+      "num_shared_tasks": 137,
+      "difference": 0.04149300812182573,
+      "ci_low": 0.006403276060262766,
+      "ci_high": 0.07693879950822952,
+      "p_value": 0.0244975502449755
+    },
+    {
+      "model_a": "CodeGen-NL",
+      "model_b": "CodeGen-Multi",
+      "metric": "pass@10",
+      "num_shared_tasks": 137,
+      "difference": 0.029922647097963304,
+      "ci_low": 0.004977338078563664,
+      "ci_high": 0.0579757114316429,
+      "p_value": 0.025297470252974703
+    },
+    {
+      "model_a": "CodeGen-NL",
+      "model_b": "CodeGen-Mono",
+      "metric": "success_rate",
+      "num_shared_tasks": 137,
+      "difference": -0.06635036496350365,
+      "ci_low": -0.09423357664233577,
+      "ci_high": -0.03839233576642338,
+      "p_value": 9.999000099990002e-05
+    },
+    {
+      "model_a": "CodeGen-NL",
+      "model_b": "CodeGen-Mono",
+      "metric": "syntax_error_rate",
+      "num_shared_tasks": 137,
+      "difference": 0.06496350364963505,
+      "ci_low": 0.03547262773722628,
+      "ci_high": 0.09314051094890506,
+      "p_value": 9.999000099990002e-05
+    },
+    {
+      "model_a": "CodeGen-NL",
+      "model_b": "CodeGen-Mono",
+      "metric": "runtime_error_rate",
+      "num_shared_tasks": 137,
+      "difference": 0.0013868613138686133,
+      "ci_low": 0.00043795620437956203,
+      "ci_high": 0.002481751824817518,
+      "p_value": 0.007799220077992201
+    },
+    {
+      "model_a": "CodeGen-NL",
+      "model_b": "CodeGen-Mono",
+      "metric": "wrong_output_rate",
+      "num_shared_tasks": 137,
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "p_value": 1.0
+    },
+    {
+      "model_a": "CodeGen-NL",
+      "model_b": "CodeGen-Mono",
+      "metric": "timeout_rate",
+      "num_shared_tasks": 137,
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "p_value": 1.0
+    },
+    {
+      "model_a": "CodeGen-NL",
+      "model_b": "CodeGen-Mono",
+      "metric": "pass@1",
+      "num_shared_tasks": 137,
+      "difference": -0.06635036496350369,
+      "ci_low": -0.09321532846715329,
+      "ci_high": -0.03839233576642341,
+      "p_value": 9.999000099990002e-05
+    },
+    {
+      "model_a": "CodeGen-NL",
+      "model_b": "CodeGen-Mono",
+      "metric": "pass@5",
+      "num_shared_tasks": 137,
+      "difference": -0.06094188074854147,
+      "ci_low": -0.09052859475917985,
+      "ci_high": -0.03158728455042438,
+      "p_value": 0.00019998000199980003
+    },
+    {
+      "model_a": "CodeGen-NL",
+      "model_b": "CodeGen-Mono",
+      "metric": "pass@10",
+      "num_shared_tasks": 137,
+      "difference": -0.02180813624068407,
+      "ci_low": -0.03837534902261541,
+      "ci_high": -0.00550554863914051,
+      "p_value": 0.010198980101989802
+    },
+    {
+      "model_a": "CodeGen-Multi",
+      "model_b": "CodeGen-Mono",
+      "metric": "success_rate",
+      "num_shared_tasks": 147,
+      "difference": -0.09292517006802721,
+      "ci_low": -0.11612244897959184,
+      "ci_high": -0.06931972789115647,
+      "p_value": 9.999000099990002e-05
+    },
+    {
+      "model_a": "CodeGen-Multi",
+      "model_b": "CodeGen-Mono",
+      "metric": "syntax_error_rate",
+      "num_shared_tasks": 147,
+      "difference": 0.09231292517006803,
+      "ci_low": 0.06904761904761905,
+      "ci_high": 0.11449149659863947,
+      "p_value": 9.999000099990002e-05
+    },
+    {
+      "model_a": "CodeGen-Multi",
+      "model_b": "CodeGen-Mono",
+      "metric": "runtime_error_rate",
+      "num_shared_tasks": 147,
+      "difference": 0.0006122448979591835,
+      "ci_low": 0.0,
+      "ci_high": 0.0012244897959183675,
+      "p_value": 0.08799120087991201
+    },
+    {
+      "model_a": "CodeGen-Multi",
+      "model_b": "CodeGen-Mono",
+      "metric": "wrong_output_rate",
+      "num_shared_tasks": 147,
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "p_value": 1.0
+    },
+    {
+      "model_a": "CodeGen-Multi",
+      "model_b": "CodeGen-Mono",
+      "metric": "timeout_rate",
+      "num_shared_tasks": 147,
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "p_value": 1.0
+    },
+    {
+      "model_a": "CodeGen-Multi",
+      "model_b": "CodeGen-Mono",
+      "metric": "pass@1",
+      "num_shared_tasks": 147,
+      "difference": -0.09292517006802721,
+      "ci_low": -0.11687074829931973,
+      "ci_high": -0.06986394557823132,
+      "p_value": 9.999000099990002e-05
+    },
+    {
+      "model_a": "CodeGen-Multi",
+      "model_b": "CodeGen-Mono",
+      "metric": "pass@5",
+      "num_shared_tasks": 147,
+      "difference": -0.10087748216148323,
+      "ci_low": -0.13016753258382133,
+      "ci_high": -0.07319933455937785,
+      "p_value": 9.999000099990002e-05
+    },
+    {
+      "model_a": "CodeGen-Multi",
+      "model_b": "CodeGen-Mono",
+      "metric": "pass@10",
+      "num_shared_tasks": 147,
+      "difference": -0.049810565039069735,
+      "ci_low": -0.07489097198626722,
+      "ci_high": -0.028697575801884784,
+      "p_value": 9.999000099990002e-05
+    }
+  ]
+}

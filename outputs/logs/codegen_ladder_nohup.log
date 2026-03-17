@@ -1,0 +1,520 @@
+[2026-03-15 01:57:32] Running CodeGen ladder benchmark for config_codegen_nl.yaml
+Some weights of the model checkpoint at Salesforce/codegen-350M-nl were not used when initializing CodeGenForCausalLM: ['transformer.h.0.attn.causal_mask', 'transformer.h.1.attn.causal_mask', 'transformer.h.10.attn.causal_mask', 'transformer.h.11.attn.causal_mask', 'transformer.h.12.attn.causal_mask', 'transformer.h.13.attn.causal_mask', 'transformer.h.14.attn.causal_mask', 'transformer.h.15.attn.causal_mask', 'transformer.h.16.attn.causal_mask', 'transformer.h.17.attn.causal_mask', 'transformer.h.18.attn.causal_mask', 'transformer.h.19.attn.causal_mask', 'transformer.h.2.attn.causal_mask', 'transformer.h.3.attn.causal_mask', 'transformer.h.4.attn.causal_mask', 'transformer.h.5.attn.causal_mask', 'transformer.h.6.attn.causal_mask', 'transformer.h.7.attn.causal_mask', 'transformer.h.8.attn.causal_mask', 'transformer.h.9.attn.causal_mask']
+- This IS expected if you are initializing CodeGenForCausalLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing CodeGenForCausalLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Need to generate: 164 problems
+Loading model: Salesforce/codegen-350M-nl
+✅ Model loaded on cuda
+Problems:   0%|          | 0/164 [00:00<?, ?it/s]Problems:   1%|          | 1/164 [00:44<2:01:02, 44.55s/it]Problems:   1%|          | 2/164 [01:32<2:05:13, 46.38s/it]Problems:   2%|▏         | 3/164 [02:14<1:59:20, 44.48s/it]Problems:   2%|▏         | 4/164 [02:54<1:53:39, 42.62s/it]Problems:   3%|▎         | 5/164 [03:33<1:49:38, 41.38s/it]Problems:   4%|▎         | 6/164 [04:15<1:49:48, 41.70s/it]Problems:   4%|▍         | 7/164 [04:59<1:51:17, 42.53s/it]Problems:   5%|▍         | 8/164 [05:50<1:57:33, 45.21s/it]Problems:   5%|▌         | 9/164 [06:38<1:58:29, 45.87s/it]Problems:   6%|▌         | 10/164 [07:24<1:58:23, 46.12s/it]Problems:   7%|▋         | 11/164 [08:08<1:55:35, 45.33s/it]Problems:   7%|▋         | 12/164 [08:53<1:54:18, 45.12s/it]Problems:   8%|▊         | 13/164 [09:36<1:52:19, 44.63s/it]Problems:   9%|▊         | 14/164 [10:23<1:53:03, 45.22s/it]Problems:   9%|▉         | 15/164 [11:06<1:50:37, 44.55s/it]Problems:  10%|▉         | 16/164 [11:55<1:53:22, 45.96s/it]Problems:  10%|█         | 17/164 [12:37<1:49:49, 44.83s/it]Problems:  11%|█         | 18/164 [13:21<1:48:14, 44.48s/it]Problems:  12%|█▏        | 19/164 [14:05<1:47:34, 44.51s/it]Problems:  12%|█▏        | 20/164 [14:48<1:45:26, 43.94s/it]Problems:  13%|█▎        | 21/164 [15:33<1:45:21, 44.20s/it]Problems:  13%|█▎        | 22/164 [16:18<1:45:13, 44.46s/it]Problems:  14%|█▍        | 23/164 [17:01<1:43:39, 44.11s/it]Problems:  15%|█▍        | 24/164 [17:48<1:44:34, 44.82s/it]Problems:  15%|█▌        | 25/164 [18:30<1:41:57, 44.01s/it]Problems:  16%|█▌        | 26/164 [19:14<1:41:04, 43.95s/it]Problems:  16%|█▋        | 27/164 [20:02<1:43:21, 45.27s/it]Problems:  17%|█▋        | 28/164 [20:48<1:43:10, 45.52s/it]Problems:  18%|█▊        | 29/164 [21:36<1:44:05, 46.26s/it]Problems:  18%|█▊        | 30/164 [22:19<1:40:57, 45.21s/it]Problems:  19%|█▉        | 31/164 [23:06<1:41:18, 45.70s/it]Problems:  20%|█▉        | 32/164 [23:49<1:38:42, 44.87s/it]Problems:  20%|██        | 33/164 [25:25<2:11:47, 60.37s/it]Problems:  21%|██        | 34/164 [26:16<2:04:43, 57.56s/it]Problems:  21%|██▏       | 35/164 [27:10<2:01:16, 56.40s/it]Problems:  22%|██▏       | 36/164 [27:57<1:54:32, 53.69s/it]Problems:  23%|██▎       | 37/164 [28:58<1:58:15, 55.87s/it]Problems:  23%|██▎       | 38/164 [29:43<1:50:35, 52.66s/it]Problems:  24%|██▍       | 39/164 [30:30<1:45:43, 50.75s/it]Problems:  24%|██▍       | 40/164 [31:17<1:42:45, 49.72s/it]Problems:  25%|██▌       | 41/164 [32:00<1:37:40, 47.64s/it]Problems:  26%|██▌       | 42/164 [32:47<1:36:58, 47.69s/it]Problems:  26%|██▌       | 43/164 [33:42<1:40:19, 49.74s/it]Problems:  27%|██▋       | 44/164 [34:27<1:36:39, 48.33s/it]Problems:  27%|██▋       | 45/164 [35:21<1:39:06, 49.97s/it]Problems:  28%|██▊       | 46/164 [36:11<1:38:29, 50.08s/it]Problems:  29%|██▊       | 47/164 [37:02<1:37:50, 50.17s/it]Problems:  29%|██▉       | 48/164 [37:54<1:38:19, 50.86s/it]Problems:  30%|██▉       | 49/164 [38:39<1:34:12, 49.15s/it]Problems:  30%|███       | 50/164 [39:31<1:34:40, 49.83s/it]Problems:  31%|███       | 51/164 [40:17<1:31:48, 48.74s/it]Problems:  32%|███▏      | 52/164 [41:02<1:28:51, 47.60s/it]Problems:  32%|███▏      | 53/164 [41:46<1:26:04, 46.53s/it]Problems:  33%|███▎      | 54/164 [42:34<1:26:08, 46.99s/it]Problems:  34%|███▎      | 55/164 [43:19<1:24:27, 46.50s/it]Problems:  34%|███▍      | 56/164 [44:00<1:20:35, 44.77s/it]Problems:  35%|███▍      | 57/164 [44:45<1:20:10, 44.96s/it]Problems:  35%|███▌      | 58/164 [45:32<1:20:31, 45.58s/it]Problems:  36%|███▌      | 59/164 [46:16<1:18:53, 45.09s/it]Problems:  37%|███▋      | 60/164 [47:04<1:19:40, 45.96s/it]Problems:  37%|███▋      | 61/164 [47:48<1:17:58, 45.42s/it]Problems:  38%|███▊      | 62/164 [48:29<1:14:57, 44.09s/it]Problems:  38%|███▊      | 63/164 [49:17<1:16:01, 45.16s/it]Problems:  39%|███▉      | 64/164 [49:58<1:12:58, 43.78s/it]Problems:  40%|███▉      | 65/164 [50:48<1:15:34, 45.80s/it]Problems:  40%|████      | 66/164 [51:35<1:15:33, 46.26s/it]Problems:  41%|████      | 67/164 [52:20<1:14:03, 45.81s/it]Problems:  41%|████▏     | 68/164 [52:56<1:08:16, 42.67s/it]Problems:  42%|████▏     | 69/164 [53:33<1:04:49, 40.94s/it]Problems:  43%|████▎     | 70/164 [54:22<1:08:04, 43.46s/it]Problems:  43%|████▎     | 71/164 [55:03<1:06:30, 42.90s/it]Problems:  44%|████▍     | 72/164 [55:50<1:07:38, 44.11s/it]Problems:  45%|████▍     | 73/164 [56:29<1:04:22, 42.44s/it]Problems:  45%|████▌     | 74/164 [57:10<1:02:56, 41.96s/it]Problems:  46%|████▌     | 75/164 [57:47<1:00:09, 40.56s/it]Problems:  46%|████▋     | 76/164 [58:32<1:01:18, 41.80s/it]Problems:  47%|████▋     | 77/164 [59:12<59:55, 41.33s/it]  Problems:  48%|████▊     | 78/164 [59:54<59:28, 41.50s/it]Problems:  48%|████▊     | 79/164 [1:00:35<58:38, 41.39s/it]Problems:  49%|████▉     | 80/164 [1:01:17<58:16, 41.62s/it]Problems:  49%|████▉     | 81/164 [1:02:00<58:01, 41.94s/it]Problems:  50%|█████     | 82/164 [1:02:38<55:47, 40.82s/it]Problems:  51%|█████     | 83/164 [1:03:20<55:31, 41.13s/it]Problems:  51%|█████     | 84/164 [1:04:03<55:43, 41.79s/it]Problems:  52%|█████▏    | 85/164 [1:04:47<55:39, 42.27s/it]Problems:  52%|█████▏    | 86/164 [1:05:29<54:57, 42.27s/it]Problems:  53%|█████▎    | 87/164 [1:06:11<54:02, 42.12s/it]Problems:  54%|█████▎    | 88/164 [1:07:34<1:09:10, 54.61s/it]Problems:  54%|█████▍    | 89/164 [1:08:14<1:02:27, 49.97s/it]Problems:  55%|█████▍    | 90/164 [1:08:57<59:14, 48.04s/it]  Problems:  55%|█████▌    | 91/164 [1:09:41<56:45, 46.65s/it]Problems:  56%|█████▌    | 92/164 [1:10:24<54:46, 45.65s/it]Problems:  57%|█████▋    | 93/164 [1:11:11<54:25, 46.00s/it]Problems:  57%|█████▋    | 94/164 [1:11:50<51:10, 43.87s/it]Problems:  58%|█████▊    | 95/164 [1:13:22<1:07:10, 58.41s/it]Problems:  59%|█████▊    | 96/164 [1:13:51<56:21, 49.72s/it]  Problems:  59%|█████▉    | 97/164 [1:14:33<52:43, 47.21s/it]Problems:  60%|█████▉    | 98/164 [1:15:12<49:27, 44.96s/it]Problems:  60%|██████    | 99/164 [1:15:57<48:30, 44.78s/it]Problems:  61%|██████    | 100/164 [1:16:38<46:44, 43.82s/it]Problems:  62%|██████▏   | 101/164 [1:17:21<45:41, 43.51s/it]Problems:  62%|██████▏   | 102/164 [1:18:06<45:28, 44.01s/it]Problems:  63%|██████▎   | 103/164 [1:18:46<43:30, 42.80s/it]Problems:  63%|██████▎   | 104/164 [1:19:28<42:30, 42.50s/it]Problems:  64%|██████▍   | 105/164 [1:20:10<41:35, 42.29s/it]Problems:  65%|██████▍   | 106/164 [1:20:38<36:39, 37.93s/it]Problems:  65%|██████▌   | 107/164 [1:21:21<37:39, 39.63s/it]Problems:  66%|██████▌   | 108/164 [1:22:52<51:16, 54.94s/it]Problems:  66%|██████▋   | 109/164 [1:23:32<46:21, 50.57s/it]Problems:  67%|██████▋   | 110/164 [1:24:05<40:48, 45.33s/it]Problems:  68%|██████▊   | 111/164 [1:24:38<36:39, 41.50s/it]Problems:  68%|██████▊   | 112/164 [1:25:19<35:47, 41.30s/it]Problems:  69%|██████▉   | 113/164 [1:25:59<34:48, 40.95s/it]Problems:  70%|██████▉   | 114/164 [1:26:44<35:11, 42.23s/it]Problems:  70%|███████   | 115/164 [1:27:29<35:09, 43.05s/it]Problems:  71%|███████   | 116/164 [1:28:16<35:27, 44.33s/it]Problems:  71%|███████▏  | 117/164 [1:29:02<34:57, 44.63s/it]Problems:  72%|███████▏  | 118/164 [1:29:45<33:54, 44.23s/it]Problems:  73%|███████▎  | 119/164 [1:30:37<34:53, 46.53s/it]Problems:  73%|███████▎  | 120/164 [1:31:24<34:08, 46.55s/it]Problems:  74%|███████▍  | 121/164 [1:32:00<31:16, 43.65s/it]Problems:  74%|███████▍  | 122/164 [1:32:47<31:06, 44.45s/it]Problems:  75%|███████▌  | 123/164 [1:33:33<30:38, 44.85s/it]Problems:  76%|███████▌  | 124/164 [1:34:05<27:20, 41.02s/it]Problems:  76%|███████▌  | 125/164 [1:35:39<37:06, 57.09s/it]Problems:  77%|███████▋  | 126/164 [1:36:19<32:50, 51.85s/it]Problems:  77%|███████▋  | 127/164 [1:36:46<27:25, 44.47s/it]Problems:  78%|███████▊  | 128/164 [1:38:26<36:44, 61.24s/it]Problems:  79%|███████▊  | 129/164 [1:39:11<32:53, 56.38s/it]Problems:  79%|███████▉  | 130/164 [1:40:00<30:39, 54.11s/it]Problems:  80%|███████▉  | 131/164 [1:41:41<37:29, 68.16s/it]Problems:  80%|████████  | 132/164 [1:42:29<33:03, 62.00s/it]Problems:  81%|████████  | 133/164 [1:43:13<29:14, 56.60s/it]Problems:  82%|████████▏ | 134/164 [1:44:00<26:51, 53.72s/it]Problems:  82%|████████▏ | 135/164 [1:44:44<24:33, 50.82s/it]Problems:  83%|████████▎ | 136/164 [1:45:29<22:56, 49.16s/it]Problems:  84%|████████▎ | 137/164 [1:46:19<22:10, 49.29s/it]Problems:  84%|████████▍ | 138/164 [1:47:08<21:18, 49.17s/it]Problems:  85%|████████▍ | 139/164 [1:47:49<19:33, 46.92s/it]Problems:  85%|████████▌ | 140/164 [1:48:35<18:35, 46.50s/it]Problems:  86%|████████▌ | 141/164 [1:49:22<17:49, 46.52s/it]Problems:  87%|████████▋ | 142/164 [1:49:58<15:56, 43.47s/it]Problems:  87%|████████▋ | 143/164 [1:50:41<15:12, 43.46s/it]Problems:  88%|████████▊ | 144/164 [1:51:23<14:16, 42.81s/it]Problems:  88%|████████▊ | 145/164 [1:52:06<13:35, 42.93s/it]Problems:  89%|████████▉ | 146/164 [1:52:52<13:12, 44.02s/it]Problems:  90%|████████▉ | 147/164 [1:53:36<12:25, 43.83s/it]Problems:  90%|█████████ | 148/164 [1:54:06<10:35, 39.72s/it]Problems:  91%|█████████ | 149/164 [1:54:40<09:30, 38.01s/it]Problems:  91%|█████████▏| 150/164 [1:55:06<08:02, 34.46s/it]Problems:  92%|█████████▏| 151/164 [1:55:50<08:05, 37.36s/it]Problems:  93%|█████████▎| 152/164 [1:56:35<07:54, 39.58s/it]Problems:  93%|█████████▎| 153/164 [1:57:13<07:11, 39.18s/it]Problems:  94%|█████████▍| 154/164 [1:57:55<06:39, 39.97s/it]Problems:  95%|█████████▍| 155/164 [1:58:44<06:24, 42.75s/it]Problems:  95%|█████████▌| 156/164 [1:59:31<05:50, 43.80s/it]Problems:  96%|█████████▌| 157/164 [2:00:16<05:09, 44.28s/it]Problems:  96%|█████████▋| 158/164 [2:01:03<04:30, 45.13s/it]Problems:  97%|█████████▋| 159/164 [2:01:49<03:47, 45.42s/it]Problems:  98%|█████████▊| 160/164 [2:02:25<02:50, 42.63s/it]Problems:  98%|█████████▊| 161/164 [2:04:01<02:56, 58.71s/it]Problems:  99%|█████████▉| 162/164 [2:04:47<01:49, 54.84s/it]Problems:  99%|█████████▉| 163/164 [2:05:31<00:51, 51.37s/it]Problems: 100%|██████████| 164/164 [2:06:14<00:00, 49.00s/it]Problems: 100%|██████████| 164/164 [2:06:14<00:00, 46.19s/it]
+
+⚠️  HumanEval/67: CUDA out of memory. Tried to allocate 2.19 GiB. GPU 
+
+⚠️  HumanEval/68: CUDA out of memory. Tried to allocate 4.28 GiB. GPU 
+
+⚠️  HumanEval/72: CUDA out of memory. Tried to allocate 2.50 GiB. GPU 
+
+⚠️  HumanEval/74: CUDA out of memory. Tried to allocate 2.39 GiB. GPU 
+
+⚠️  HumanEval/78: CUDA out of memory. Tried to allocate 3.21 GiB. GPU 
+
+⚠️  HumanEval/81: CUDA out of memory. Tried to allocate 4.88 GiB. GPU 
+
+⚠️  HumanEval/95: CUDA out of memory. Tried to allocate 2.14 GiB. GPU 
+
+⚠️  HumanEval/105: CUDA out of memory. Tried to allocate 3.42 GiB. GPU 
+
+⚠️  HumanEval/109: CUDA out of memory. Tried to allocate 3.90 GiB. GPU 
+
+⚠️  HumanEval/110: CUDA out of memory. Tried to allocate 2.15 GiB. GPU 
+
+⚠️  HumanEval/115: CUDA out of memory. Tried to allocate 4.64 GiB. GPU 
+
+⚠️  HumanEval/120: CUDA out of memory. Tried to allocate 2.63 GiB. GPU 
+
+⚠️  HumanEval/123: CUDA out of memory. Tried to allocate 2.48 GiB. GPU 
+
+⚠️  HumanEval/126: CUDA out of memory. Tried to allocate 2.59 GiB. GPU 
+
+⚠️  HumanEval/129: CUDA out of memory. Tried to allocate 4.69 GiB. GPU 
+
+⚠️  HumanEval/141: CUDA out of memory. Tried to allocate 2.52 GiB. GPU 
+
+⚠️  HumanEval/147: CUDA out of memory. Tried to allocate 2.15 GiB. GPU 
+
+⚠️  HumanEval/148: CUDA out of memory. Tried to allocate 2.47 GiB. GPU 
+
+⚠️  HumanEval/149: CUDA out of memory. Tried to allocate 2.25 GiB. GPU 
+
+⚠️  HumanEval/152: CUDA out of memory. Tried to allocate 2.56 GiB. GPU 
+
+⚠️  HumanEval/153: CUDA out of memory. Tried to allocate 3.16 GiB. GPU 
+
+⚠️  HumanEval/159: CUDA out of memory. Tried to allocate 3.61 GiB. GPU 
+
+✅ Complete: 164 problems
+============================================================
+PHASE 1-2: FEASIBILITY CHECK - EVALUATION
+============================================================
+Input file: data/results_codegen_nl/generated_samples.json
+Output file: data/results_codegen_nl/evaluation_results.json
+
+Loading generated samples...
+✅ Loaded 164 problems
+
+Evaluating samples...
+Problems:   0%|          | 0/164 [00:00<?, ?it/s]Problems:   1%|          | 1/164 [00:00<00:57,  2.82it/s]Problems:   1%|          | 2/164 [00:00<01:12,  2.25it/s]Problems:   2%|▏         | 4/164 [00:01<00:34,  4.64it/s]Problems:   4%|▎         | 6/164 [00:01<00:23,  6.60it/s]Problems:   4%|▍         | 7/164 [00:01<00:36,  4.36it/s]Problems:   5%|▍         | 8/164 [00:01<00:39,  3.98it/s]Problems:   6%|▌         | 10/164 [00:02<00:33,  4.56it/s]Problems:   7%|▋         | 11/164 [00:02<00:47,  3.20it/s]Problems:   8%|▊         | 13/164 [00:03<00:31,  4.76it/s]Problems:   9%|▉         | 15/164 [00:03<00:23,  6.43it/s]Problems:  10%|█         | 17/164 [00:03<00:24,  5.95it/s]Problems:  12%|█▏        | 19/164 [00:03<00:18,  7.69it/s]Problems:  13%|█▎        | 21/164 [00:04<00:35,  4.00it/s]Problems:  13%|█▎        | 22/164 [00:04<00:31,  4.46it/s]Problems:  15%|█▌        | 25/164 [00:04<00:20,  6.91it/s]Problems:  16%|█▋        | 27/164 [00:05<00:27,  5.03it/s]Problems:  18%|█▊        | 29/164 [00:05<00:21,  6.43it/s]Problems:  19%|█▉        | 31/164 [00:06<00:33,  3.91it/s]Problems:  20%|██        | 33/164 [00:06<00:28,  4.65it/s]Problems:  21%|██        | 34/164 [00:07<00:31,  4.15it/s]Problems:  21%|██▏       | 35/164 [00:07<00:28,  4.52it/s]Problems:  22%|██▏       | 36/164 [00:08<00:39,  3.24it/s]Problems:  23%|██▎       | 38/164 [00:08<00:28,  4.44it/s]Problems:  24%|██▍       | 39/164 [00:08<00:26,  4.70it/s]Problems:  24%|██▍       | 40/164 [00:08<00:23,  5.34it/s]Problems:  25%|██▌       | 41/164 [00:09<00:43,  2.83it/s]Problems:  26%|██▌       | 43/164 [00:09<00:28,  4.24it/s]Problems:  27%|██▋       | 44/164 [00:09<00:30,  4.00it/s]Problems:  28%|██▊       | 46/164 [00:09<00:20,  5.84it/s]Problems:  30%|██▉       | 49/164 [00:10<00:27,  4.21it/s]Problems:  30%|███       | 50/164 [00:10<00:24,  4.66it/s]Problems:  31%|███       | 51/164 [00:11<00:22,  4.93it/s]Problems:  32%|███▏      | 52/164 [00:11<00:21,  5.32it/s]Problems:  33%|███▎      | 54/164 [00:11<00:15,  6.88it/s]Problems:  34%|███▎      | 55/164 [00:12<00:31,  3.51it/s]Problems:  35%|███▌      | 58/164 [00:12<00:18,  5.89it/s]Problems:  37%|███▋      | 61/164 [00:12<00:12,  8.53it/s]Problems:  39%|███▉      | 64/164 [00:12<00:11,  8.76it/s]Problems:  40%|████      | 66/164 [00:13<00:12,  7.93it/s]Problems:  43%|████▎     | 70/164 [00:13<00:08, 11.52it/s]Problems:  44%|████▍     | 72/164 [00:14<00:15,  5.91it/s]Problems:  46%|████▋     | 76/164 [00:14<00:09,  8.89it/s]Problems:  48%|████▊     | 78/164 [00:14<00:09,  8.85it/s]Problems:  49%|████▉     | 80/164 [00:15<00:13,  6.36it/s]Problems:  51%|█████     | 83/164 [00:15<00:09,  8.34it/s]Problems:  52%|█████▏    | 86/164 [00:15<00:09,  8.08it/s]Problems:  54%|█████▎    | 88/164 [00:16<00:15,  4.82it/s]Problems:  55%|█████▍    | 90/164 [00:16<00:12,  5.85it/s]Problems:  56%|█████▌    | 92/164 [00:17<00:13,  5.36it/s]Problems:  57%|█████▋    | 94/164 [00:17<00:10,  6.53it/s]Problems:  59%|█████▉    | 97/164 [00:18<00:14,  4.69it/s]Problems:  60%|██████    | 99/164 [00:18<00:11,  5.67it/s]Problems:  62%|██████▏   | 101/164 [00:18<00:09,  6.77it/s]Problems:  63%|██████▎   | 103/164 [00:19<00:13,  4.47it/s]Problems:  65%|██████▌   | 107/164 [00:19<00:08,  7.09it/s]Problems:  66%|██████▋   | 109/164 [00:20<00:10,  5.17it/s]Problems:  69%|██████▉   | 113/164 [00:20<00:06,  7.86it/s]Problems:  70%|███████   | 115/164 [00:21<00:10,  4.79it/s]Problems:  72%|███████▏  | 118/164 [00:21<00:07,  6.34it/s]Problems:  73%|███████▎  | 120/164 [00:22<00:08,  5.12it/s]Problems:  75%|███████▌  | 123/164 [00:22<00:05,  6.98it/s]Problems:  76%|███████▌  | 125/164 [00:22<00:05,  7.14it/s]Problems:  77%|███████▋  | 127/164 [00:22<00:04,  7.56it/s]Problems:  79%|███████▊  | 129/164 [00:22<00:03,  8.82it/s]Problems:  80%|███████▉  | 131/164 [00:22<00:03, 10.29it/s]Problems:  81%|████████  | 133/164 [00:23<00:05,  5.51it/s]Problems:  82%|████████▏ | 135/164 [00:23<00:04,  6.55it/s]Problems:  84%|████████▎ | 137/164 [00:24<00:04,  5.82it/s]Problems:  85%|████████▍ | 139/164 [00:24<00:03,  7.00it/s]Problems:  86%|████████▌ | 141/164 [00:25<00:04,  5.36it/s]Problems:  88%|████████▊ | 144/164 [00:25<00:02,  7.47it/s]Problems:  89%|████████▉ | 146/164 [00:26<00:04,  4.34it/s]Problems:  92%|█████████▏| 151/164 [00:26<00:01,  7.65it/s]Problems:  95%|█████████▌| 156/164 [00:26<00:00, 11.38it/s]Problems:  97%|█████████▋| 159/164 [00:27<00:00,  8.08it/s]Problems:  99%|█████████▉| 162/164 [00:27<00:00,  9.95it/s]Problems: 100%|██████████| 164/164 [00:27<00:00,  5.90it/s]
+
+============================================================
+EVALUATION COMPLETE
+============================================================
+✅ Evaluated 14200 samples
+✅ Results saved to: data/results_codegen_nl/evaluation_results.json
+
+CATEGORY DISTRIBUTION:
+------------------------------------------------------------
+  syntax_error        :  9829 ( 69.2%)
+  success             :  4345 ( 30.6%)
+  runtime_error       :    26 (  0.2%)
+
+NEXT STEP: Analyze failures
+  python scripts/analyze_failures.py --config config.yaml
+============================================================
+PHASE 1-2: FEASIBILITY CHECK - ANALYSIS
+============================================================
+Input file: data/results_codegen_nl/evaluation_results.json
+
+FEASIBILITY REPORT
+============================================================
+Total problems: 164
+Total samples: 14200
+
+CATEGORY DISTRIBUTION:
+------------------------------------------------------------
+  syntax_error        :  9829 ( 69.2%)
+  success             :  4345 ( 30.6%)
+  runtime_error       :    26 (  0.2%)
+
+COMPLEXITY ANALYSIS:
+------------------------------------------------------------
+
+  MEDIUM problems:
+    syntax_error        : 2047 ( 70.6%)
+    success             :  847 ( 29.2%)
+    runtime_error       :    6 (  0.2%)
+
+  COMPLEX problems:
+    syntax_error        : 7782 ( 68.9%)
+    success             : 3498 ( 31.0%)
+    runtime_error       :   20 (  0.2%)
+
+============================================================
+FEASIBILITY DECISION
+============================================================
+Categorization rate: 100.0%
+Threshold: 70.0%
+Clear categories: 14200 / 14200
+
+✅ DECISION: PROCEED TO FULL PAPER
+
+We can clearly categorize failure patterns.
+There are interesting differences across complexity levels.
+The error taxonomy is well-defined.
+
+NEXT STEPS:
+1. Expand to all 164 HumanEval problems
+2. Generate 100 samples × 164 = 16,400 total samples
+3. Deep dive into error patterns
+4. Extract activation patterns
+5. Build execution-aware decoding
+
+✅ Full report saved to: data/results_codegen_nl/feasibility_report.json
+============================================================
+DEEP SYNTAX ERROR ANALYSIS
+============================================================
+Input: data/results_codegen_nl/evaluation_results.json
+
+Analyzing syntax errors in detail...
+Problems:   0%|          | 0/164 [00:00<?, ?it/s]Problems:   7%|▋         | 12/164 [00:00<00:01, 76.43it/s]Problems:  30%|██▉       | 49/164 [00:00<00:00, 214.54it/s]Problems:  45%|████▌     | 74/164 [00:00<00:00, 111.91it/s]Problems:  65%|██████▌   | 107/164 [00:00<00:00, 159.61it/s]Problems:  85%|████████▌ | 140/164 [00:00<00:00, 199.22it/s]Problems: 100%|██████████| 164/164 [00:01<00:00, 140.90it/s]
+
+============================================================
+SYNTAX ERROR BREAKDOWN
+============================================================
+Total syntax errors: 9829
+
+MAIN CATEGORIES:
+  bracket_mismatch    :  3686 ( 37.5%)
+  indentation         :  3456 ( 35.2%)
+  other               :  1239 ( 12.6%)
+  colon_missing       :   622 (  6.3%)
+  keyword_error       :   421 (  4.3%)
+  quote_mismatch      :   402 (  4.1%)
+  operator_error      :     3 (  0.0%)
+
+TOP SUBCATEGORIES:
+  indentation:unexpected_indent      :  3456 ( 35.2%)
+  bracket_mismatch:parenthesis       :  2867 ( 29.2%)
+  other:unknown                      :  1239 ( 12.6%)
+  bracket_mismatch:square_bracket    :   802 (  8.2%)
+  colon_missing:missing_colon        :   622 (  6.3%)
+  keyword_error:misspelled_keyword   :   421 (  4.3%)
+  quote_mismatch:unclosed_string     :   402 (  4.1%)
+  bracket_mismatch:curly_brace       :    17 (  0.2%)
+  operator_error:assignment_vs_comparison:     3 (  0.0%)
+
+ERROR POSITIONS:
+  late      :  9829 (100.0%)
+
+✅ Saved to: data/results_codegen_nl/syntax_analysis.json
+[2026-03-15 04:09:16] Running CodeGen ladder benchmark for config_codegen_multi.yaml
+Some weights of the model checkpoint at Salesforce/codegen-350M-multi were not used when initializing CodeGenForCausalLM: ['transformer.h.0.attn.causal_mask', 'transformer.h.1.attn.causal_mask', 'transformer.h.10.attn.causal_mask', 'transformer.h.11.attn.causal_mask', 'transformer.h.12.attn.causal_mask', 'transformer.h.13.attn.causal_mask', 'transformer.h.14.attn.causal_mask', 'transformer.h.15.attn.causal_mask', 'transformer.h.16.attn.causal_mask', 'transformer.h.17.attn.causal_mask', 'transformer.h.18.attn.causal_mask', 'transformer.h.19.attn.causal_mask', 'transformer.h.2.attn.causal_mask', 'transformer.h.3.attn.causal_mask', 'transformer.h.4.attn.causal_mask', 'transformer.h.5.attn.causal_mask', 'transformer.h.6.attn.causal_mask', 'transformer.h.7.attn.causal_mask', 'transformer.h.8.attn.causal_mask', 'transformer.h.9.attn.causal_mask']
+- This IS expected if you are initializing CodeGenForCausalLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing CodeGenForCausalLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Need to generate: 164 problems
+Loading model: Salesforce/codegen-350M-multi
+✅ Model loaded on cuda
+Problems:   0%|          | 0/164 [00:00<?, ?it/s]Problems:   1%|          | 1/164 [00:48<2:13:02, 48.97s/it]Problems:   1%|          | 2/164 [01:29<1:58:21, 43.84s/it]Problems:   2%|▏         | 3/164 [02:18<2:04:27, 46.38s/it]Problems:   2%|▏         | 4/164 [03:04<2:02:45, 46.03s/it]Problems:   3%|▎         | 5/164 [03:51<2:02:55, 46.39s/it]Problems:   4%|▎         | 6/164 [04:31<1:56:32, 44.26s/it]Problems:   4%|▍         | 7/164 [05:12<1:53:10, 43.25s/it]Problems:   5%|▍         | 8/164 [05:53<1:50:44, 42.59s/it]Problems:   5%|▌         | 9/164 [06:39<1:52:34, 43.58s/it]Problems:   6%|▌         | 10/164 [07:23<1:52:20, 43.77s/it]Problems:   7%|▋         | 11/164 [08:05<1:50:30, 43.34s/it]Problems:   7%|▋         | 12/164 [08:48<1:49:17, 43.14s/it]Problems:   8%|▊         | 13/164 [09:32<1:49:15, 43.42s/it]Problems:   9%|▊         | 14/164 [10:13<1:46:39, 42.66s/it]Problems:   9%|▉         | 15/164 [10:54<1:44:55, 42.25s/it]Problems:  10%|▉         | 16/164 [11:36<1:43:29, 41.96s/it]Problems:  10%|█         | 17/164 [12:17<1:42:27, 41.82s/it]Problems:  11%|█         | 18/164 [12:58<1:40:51, 41.45s/it]Problems:  12%|█▏        | 19/164 [13:39<1:40:01, 41.39s/it]Problems:  12%|█▏        | 20/164 [14:32<1:47:25, 44.76s/it]Problems:  13%|█▎        | 21/164 [15:17<1:47:03, 44.92s/it]Problems:  13%|█▎        | 22/164 [16:10<1:52:27, 47.52s/it]Problems:  14%|█▍        | 23/164 [16:58<1:51:27, 47.43s/it]Problems:  15%|█▍        | 24/164 [17:41<1:47:29, 46.07s/it]Problems:  15%|█▌        | 25/164 [18:28<1:47:35, 46.45s/it]Problems:  16%|█▌        | 26/164 [19:11<1:44:22, 45.38s/it]Problems:  16%|█▋        | 27/164 [19:54<1:42:16, 44.79s/it]Problems:  17%|█▋        | 28/164 [20:34<1:38:19, 43.38s/it]Problems:  18%|█▊        | 29/164 [21:17<1:37:13, 43.21s/it]Problems:  18%|█▊        | 30/164 [22:02<1:37:42, 43.75s/it]Problems:  19%|█▉        | 31/164 [22:45<1:36:03, 43.33s/it]Problems:  20%|█▉        | 32/164 [23:25<1:33:20, 42.43s/it]Problems:  20%|██        | 33/164 [24:58<2:05:38, 57.55s/it]Problems:  21%|██        | 34/164 [25:44<1:57:06, 54.05s/it]Problems:  21%|██▏       | 35/164 [26:29<1:50:58, 51.62s/it]Problems:  22%|██▏       | 36/164 [27:10<1:42:44, 48.16s/it]Problems:  23%|██▎       | 37/164 [27:51<1:37:57, 46.28s/it]Problems:  23%|██▎       | 38/164 [28:34<1:34:48, 45.15s/it]Problems:  24%|██▍       | 39/164 [29:19<1:34:00, 45.13s/it]Problems:  24%|██▍       | 40/164 [30:08<1:35:23, 46.16s/it]Problems:  25%|██▌       | 41/164 [30:58<1:37:29, 47.56s/it]Problems:  26%|██▌       | 42/164 [31:50<1:38:53, 48.64s/it]Problems:  26%|██▌       | 43/164 [32:38<1:37:49, 48.51s/it]Problems:  27%|██▋       | 44/164 [33:30<1:39:03, 49.53s/it]Problems:  27%|██▋       | 45/164 [34:18<1:37:32, 49.18s/it]Problems:  28%|██▊       | 46/164 [35:08<1:37:23, 49.52s/it]Problems:  29%|██▊       | 47/164 [35:57<1:36:04, 49.27s/it]Problems:  29%|██▉       | 48/164 [36:42<1:32:27, 47.82s/it]Problems:  30%|██▉       | 49/164 [37:27<1:30:20, 47.14s/it]Problems:  30%|███       | 50/164 [38:12<1:28:23, 46.52s/it]Problems:  31%|███       | 51/164 [38:57<1:26:29, 45.92s/it]Problems:  32%|███▏      | 52/164 [39:46<1:27:42, 46.99s/it]Problems:  32%|███▏      | 53/164 [40:34<1:27:35, 47.35s/it]Problems:  33%|███▎      | 54/164 [41:17<1:24:11, 45.92s/it]Problems:  34%|███▎      | 55/164 [42:03<1:23:25, 45.92s/it]Problems:  34%|███▍      | 56/164 [42:42<1:19:03, 43.92s/it]Problems:  35%|███▍      | 57/164 [43:22<1:16:11, 42.72s/it]Problems:  35%|███▌      | 58/164 [44:03<1:14:26, 42.14s/it]Problems:  36%|███▌      | 59/164 [44:44<1:13:22, 41.93s/it]Problems:  37%|███▋      | 60/164 [45:27<1:13:10, 42.22s/it]Problems:  37%|███▋      | 61/164 [46:09<1:12:22, 42.16s/it]Problems:  38%|███▊      | 62/164 [46:54<1:13:13, 43.07s/it]Problems:  38%|███▊      | 63/164 [47:40<1:13:56, 43.92s/it]Problems:  39%|███▉      | 64/164 [48:21<1:11:29, 42.89s/it]Problems:  40%|███▉      | 65/164 [49:04<1:10:43, 42.87s/it]Problems:  40%|████      | 66/164 [49:47<1:10:15, 43.01s/it]Problems:  41%|████      | 67/164 [50:28<1:08:26, 42.34s/it]Problems:  41%|████▏     | 68/164 [51:13<1:09:16, 43.29s/it]Problems:  42%|████▏     | 69/164 [51:56<1:08:22, 43.19s/it]Problems:  43%|████▎     | 70/164 [52:41<1:08:19, 43.62s/it]Problems:  43%|████▎     | 71/164 [53:23<1:07:05, 43.29s/it]Problems:  44%|████▍     | 72/164 [54:09<1:07:17, 43.88s/it]Problems:  45%|████▍     | 73/164 [54:34<58:01, 38.26s/it]  Problems:  45%|████▌     | 74/164 [55:14<58:17, 38.86s/it]Problems:  46%|████▌     | 75/164 [55:50<56:25, 38.04s/it]Problems:  46%|████▋     | 76/164 [56:30<56:29, 38.52s/it]Problems:  47%|████▋     | 77/164 [57:14<58:25, 40.29s/it]Problems:  48%|████▊     | 78/164 [58:00<1:00:15, 42.05s/it]Problems:  48%|████▊     | 79/164 [59:36<1:22:22, 58.15s/it]Problems:  49%|████▉     | 80/164 [1:00:20<1:15:22, 53.84s/it]Problems:  49%|████▉     | 81/164 [1:01:09<1:12:25, 52.35s/it]Problems:  50%|█████     | 82/164 [1:01:41<1:03:09, 46.21s/it]Problems:  51%|█████     | 83/164 [1:02:27<1:02:28, 46.28s/it]Problems:  51%|█████     | 84/164 [1:03:07<59:13, 44.42s/it]  Problems:  52%|█████▏    | 85/164 [1:03:57<1:00:33, 45.99s/it]Problems:  52%|█████▏    | 86/164 [1:04:39<58:31, 45.01s/it]  Problems:  53%|█████▎    | 87/164 [1:05:22<56:42, 44.18s/it]Problems:  54%|█████▎    | 88/164 [1:05:53<51:00, 40.27s/it]Problems:  54%|█████▍    | 89/164 [1:06:36<51:16, 41.02s/it]Problems:  55%|█████▍    | 90/164 [1:07:16<50:29, 40.94s/it]Problems:  55%|█████▌    | 91/164 [1:07:57<49:38, 40.80s/it]Problems:  56%|█████▌    | 92/164 [1:08:44<51:04, 42.57s/it]Problems:  57%|█████▋    | 93/164 [1:09:25<49:49, 42.11s/it]Problems:  57%|█████▋    | 94/164 [1:10:09<50:00, 42.86s/it]Problems:  58%|█████▊    | 95/164 [1:11:46<1:07:52, 59.02s/it]Problems:  59%|█████▊    | 96/164 [1:12:31<1:02:02, 54.75s/it]Problems:  59%|█████▉    | 97/164 [1:13:14<57:21, 51.36s/it]  Problems:  60%|█████▉    | 98/164 [1:13:58<53:59, 49.08s/it]Problems:  60%|██████    | 99/164 [1:14:38<50:07, 46.27s/it]Problems:  61%|██████    | 100/164 [1:15:21<48:30, 45.48s/it]Problems:  62%|██████▏   | 101/164 [1:16:05<47:14, 44.99s/it]Problems:  62%|██████▏   | 102/164 [1:16:50<46:32, 45.04s/it]Problems:  63%|██████▎   | 103/164 [1:17:32<44:50, 44.10s/it]Problems:  63%|██████▎   | 104/164 [1:18:16<44:09, 44.15s/it]Problems:  64%|██████▍   | 105/164 [1:19:01<43:39, 44.40s/it]Problems:  65%|██████▍   | 106/164 [1:19:34<39:30, 40.86s/it]Problems:  65%|██████▌   | 107/164 [1:20:24<41:21, 43.54s/it]Problems:  66%|██████▌   | 108/164 [1:21:06<40:07, 43.00s/it]Problems:  66%|██████▋   | 109/164 [1:21:48<39:21, 42.94s/it]Problems:  67%|██████▋   | 110/164 [1:23:20<51:43, 57.48s/it]Problems:  68%|██████▊   | 111/164 [1:23:58<45:47, 51.84s/it]Problems:  68%|██████▊   | 112/164 [1:24:35<40:56, 47.24s/it]Problems:  69%|██████▉   | 113/164 [1:25:15<38:13, 44.98s/it]Problems:  70%|██████▉   | 114/164 [1:25:57<36:50, 44.22s/it]Problems:  70%|███████   | 115/164 [1:26:42<36:12, 44.34s/it]Problems:  71%|███████   | 116/164 [1:27:13<32:20, 40.43s/it]Problems:  71%|███████▏  | 117/164 [1:27:54<31:53, 40.71s/it]Problems:  72%|███████▏  | 118/164 [1:28:36<31:23, 40.94s/it]Problems:  73%|███████▎  | 119/164 [1:29:17<30:39, 40.87s/it]Problems:  73%|███████▎  | 120/164 [1:29:59<30:20, 41.38s/it]Problems:  74%|███████▍  | 121/164 [1:30:46<30:56, 43.16s/it]Problems:  74%|███████▍  | 122/164 [1:31:28<29:53, 42.70s/it]Problems:  75%|███████▌  | 123/164 [1:32:13<29:38, 43.37s/it]Problems:  76%|███████▌  | 124/164 [1:32:52<27:59, 41.99s/it]Problems:  76%|███████▌  | 125/164 [1:33:18<24:11, 37.21s/it]Problems:  77%|███████▋  | 126/164 [1:34:03<25:08, 39.69s/it]Problems:  77%|███████▋  | 127/164 [1:34:36<23:10, 37.58s/it]Problems:  78%|███████▊  | 128/164 [1:35:07<21:21, 35.59s/it]Problems:  79%|███████▊  | 129/164 [1:35:48<21:44, 37.27s/it]Problems:  79%|███████▉  | 130/164 [1:36:18<19:53, 35.12s/it]Problems:  80%|███████▉  | 131/164 [1:36:56<19:42, 35.82s/it]Problems:  80%|████████  | 132/164 [1:37:38<20:09, 37.79s/it]Problems:  81%|████████  | 133/164 [1:38:21<20:21, 39.40s/it]Problems:  82%|████████▏ | 134/164 [1:39:09<20:59, 41.99s/it]Problems:  82%|████████▏ | 135/164 [1:39:54<20:39, 42.73s/it]Problems:  83%|████████▎ | 136/164 [1:40:35<19:46, 42.36s/it]Problems:  84%|████████▎ | 137/164 [1:41:17<19:00, 42.23s/it]Problems:  84%|████████▍ | 138/164 [1:41:59<18:16, 42.19s/it]Problems:  85%|████████▍ | 139/164 [1:42:44<17:50, 42.81s/it]Problems:  85%|████████▌ | 140/164 [1:43:33<17:53, 44.73s/it]Problems:  86%|████████▌ | 141/164 [1:44:25<17:59, 46.95s/it]Problems:  87%|████████▋ | 142/164 [1:45:05<16:29, 44.97s/it]Problems:  87%|████████▋ | 143/164 [1:45:53<16:01, 45.80s/it]Problems:  88%|████████▊ | 144/164 [1:46:36<15:02, 45.11s/it]Problems:  88%|████████▊ | 145/164 [1:47:26<14:40, 46.33s/it]Problems:  89%|████████▉ | 146/164 [1:48:08<13:31, 45.07s/it]Problems:  90%|████████▉ | 147/164 [1:48:54<12:50, 45.35s/it]Problems:  90%|█████████ | 148/164 [1:49:40<12:11, 45.73s/it]Problems:  91%|█████████ | 149/164 [1:50:15<10:37, 42.53s/it]Problems:  91%|█████████▏| 150/164 [1:50:59<10:00, 42.90s/it]Problems:  92%|█████████▏| 151/164 [1:51:48<09:42, 44.80s/it]Problems:  93%|█████████▎| 152/164 [1:52:35<09:05, 45.43s/it]Problems:  93%|█████████▎| 153/164 [1:53:15<08:02, 43.84s/it]Problems:  94%|█████████▍| 154/164 [1:54:56<10:09, 60.91s/it]Problems:  95%|█████████▍| 155/164 [1:55:48<08:42, 58.07s/it]Problems:  95%|█████████▌| 156/164 [1:56:32<07:10, 53.87s/it]Problems:  96%|█████████▌| 157/164 [1:57:18<06:01, 51.70s/it]Problems:  96%|█████████▋| 158/164 [1:58:04<04:59, 49.95s/it]Problems:  97%|█████████▋| 159/164 [1:58:50<04:03, 48.62s/it]Problems:  98%|█████████▊| 160/164 [2:00:18<04:02, 60.64s/it]Problems:  98%|█████████▊| 161/164 [2:00:50<02:35, 51.83s/it]Problems:  99%|█████████▉| 162/164 [2:01:33<01:38, 49.21s/it]Problems:  99%|█████████▉| 163/164 [2:02:16<00:47, 47.43s/it]Problems: 100%|██████████| 164/164 [2:03:04<00:00, 47.61s/it]Problems: 100%|██████████| 164/164 [2:03:04<00:00, 45.03s/it]
+
+⚠️  HumanEval/68: CUDA out of memory. Tried to allocate 3.11 GiB. GPU 
+
+⚠️  HumanEval/72: CUDA out of memory. Tried to allocate 2.25 GiB. GPU 
+
+⚠️  HumanEval/74: CUDA out of memory. Tried to allocate 2.19 GiB. GPU 
+
+⚠️  HumanEval/81: CUDA out of memory. Tried to allocate 2.63 GiB. GPU 
+
+⚠️  HumanEval/87: CUDA out of memory. Tried to allocate 2.60 GiB. GPU 
+
+⚠️  HumanEval/105: CUDA out of memory. Tried to allocate 2.54 GiB. GPU 
+
+⚠️  HumanEval/115: CUDA out of memory. Tried to allocate 3.19 GiB. GPU 
+
+⚠️  HumanEval/123: CUDA out of memory. Tried to allocate 2.17 GiB. GPU 
+
+⚠️  HumanEval/124: CUDA out of memory. Tried to allocate 2.47 GiB. GPU 
+
+⚠️  HumanEval/126: CUDA out of memory. Tried to allocate 2.32 GiB. GPU 
+
+⚠️  HumanEval/127: CUDA out of memory. Tried to allocate 2.58 GiB. GPU 
+
+⚠️  HumanEval/129: CUDA out of memory. Tried to allocate 4.08 GiB. GPU 
+
+⚠️  HumanEval/130: CUDA out of memory. Tried to allocate 2.29 GiB. GPU 
+
+⚠️  HumanEval/141: CUDA out of memory. Tried to allocate 2.27 GiB. GPU 
+
+⚠️  HumanEval/148: CUDA out of memory. Tried to allocate 2.18 GiB. GPU 
+
+⚠️  HumanEval/152: CUDA out of memory. Tried to allocate 2.32 GiB. GPU 
+
+⚠️  HumanEval/160: CUDA out of memory. Tried to allocate 2.20 GiB. GPU 
+
+✅ Complete: 164 problems
+============================================================
+PHASE 1-2: FEASIBILITY CHECK - EVALUATION
+============================================================
+Input file: data/results_codegen_multi/generated_samples.json
+Output file: data/results_codegen_multi/evaluation_results.json
+
+Loading generated samples...
+✅ Loaded 164 problems
+
+Evaluating samples...
+Problems:   0%|          | 0/164 [00:00<?, ?it/s]Problems:   1%|          | 1/164 [00:00<00:21,  7.41it/s]Problems:   2%|▏         | 3/164 [00:00<00:12, 13.12it/s]Problems:   3%|▎         | 5/164 [00:00<00:22,  7.22it/s]Problems:   6%|▌         | 10/164 [00:00<00:09, 15.82it/s]Problems:  10%|▉         | 16/164 [00:00<00:05, 25.25it/s]Problems:  12%|█▏        | 20/164 [00:01<00:09, 15.16it/s]Problems:  14%|█▍        | 23/164 [00:02<00:25,  5.57it/s]Problems:  15%|█▌        | 25/164 [00:03<00:29,  4.73it/s]Problems:  16%|█▋        | 27/164 [00:03<00:25,  5.28it/s]Problems:  18%|█▊        | 29/164 [00:04<00:35,  3.85it/s]Problems:  18%|█▊        | 30/164 [00:04<00:32,  4.13it/s]Problems:  19%|█▉        | 31/164 [00:04<00:29,  4.49it/s]Problems:  20%|█▉        | 32/164 [00:05<00:34,  3.88it/s]Problems:  20%|██        | 33/164 [00:05<00:34,  3.83it/s]Problems:  21%|██        | 34/164 [00:05<00:32,  4.02it/s]Problems:  22%|██▏       | 36/164 [00:06<00:23,  5.35it/s]Problems:  23%|██▎       | 37/164 [00:06<00:22,  5.65it/s]Problems:  24%|██▍       | 39/164 [00:06<00:18,  6.66it/s]Problems:  25%|██▌       | 41/164 [00:06<00:24,  5.05it/s]Problems:  26%|██▌       | 43/164 [00:07<00:19,  6.19it/s]Problems:  27%|██▋       | 45/164 [00:07<00:15,  7.78it/s]Problems:  29%|██▊       | 47/164 [00:07<00:23,  5.01it/s]Problems:  30%|██▉       | 49/164 [00:08<00:17,  6.49it/s]Problems:  31%|███       | 51/164 [00:08<00:26,  4.28it/s]Problems:  32%|███▏      | 52/164 [00:09<00:23,  4.77it/s]Problems:  33%|███▎      | 54/164 [00:09<00:26,  4.09it/s]Problems:  34%|███▍      | 56/164 [00:09<00:20,  5.27it/s]Problems:  35%|███▌      | 58/164 [00:09<00:15,  6.63it/s]Problems:  37%|███▋      | 60/164 [00:10<00:18,  5.55it/s]Problems:  38%|███▊      | 63/164 [00:10<00:12,  7.83it/s]Problems:  40%|████      | 66/164 [00:10<00:09, 10.07it/s]Problems:  41%|████▏     | 68/164 [00:11<00:16,  5.82it/s]Problems:  43%|████▎     | 70/164 [00:11<00:14,  6.53it/s]Problems:  44%|████▍     | 72/164 [00:12<00:17,  5.18it/s]Problems:  45%|████▌     | 74/164 [00:12<00:17,  5.11it/s]Problems:  47%|████▋     | 77/164 [00:12<00:12,  7.09it/s]Problems:  48%|████▊     | 79/164 [00:13<00:13,  6.10it/s]Problems:  49%|████▉     | 81/164 [00:13<00:11,  7.25it/s]Problems:  51%|█████     | 84/164 [00:13<00:08,  9.63it/s]Problems:  52%|█████▏    | 86/164 [00:13<00:07,  9.99it/s]Problems:  54%|█████▍    | 89/164 [00:13<00:06, 12.07it/s]Problems:  55%|█████▌    | 91/164 [00:14<00:07,  9.93it/s]Problems:  57%|█████▋    | 93/164 [00:14<00:06, 10.28it/s]Problems:  58%|█████▊    | 95/164 [00:14<00:08,  8.19it/s]Problems:  59%|█████▉    | 97/164 [00:14<00:07,  9.35it/s]Problems:  60%|██████    | 99/164 [00:15<00:08,  7.92it/s]Problems:  62%|██████▏   | 101/164 [00:15<00:06,  9.58it/s]Problems:  63%|██████▎   | 103/164 [00:15<00:07,  8.15it/s]Problems:  64%|██████▍   | 105/164 [00:15<00:06,  9.25it/s]Problems:  66%|██████▌   | 108/164 [00:15<00:04, 12.09it/s]Problems:  67%|██████▋   | 110/164 [00:16<00:05,  9.79it/s]Problems:  68%|██████▊   | 112/164 [00:16<00:05, 10.34it/s]Problems:  70%|██████▉   | 114/164 [00:16<00:05,  8.71it/s]Problems:  71%|███████▏  | 117/164 [00:16<00:04, 10.13it/s]Problems:  73%|███████▎  | 119/164 [00:17<00:05,  8.58it/s]Problems:  74%|███████▍  | 121/164 [00:17<00:04,  8.98it/s]Problems:  75%|███████▌  | 123/164 [00:17<00:04,  9.52it/s]Problems:  77%|███████▋  | 126/164 [00:17<00:03, 10.15it/s]Problems:  79%|███████▊  | 129/164 [00:18<00:02, 12.86it/s]Problems:  81%|████████  | 133/164 [00:18<00:01, 16.62it/s]Problems:  82%|████████▏ | 135/164 [00:18<00:03,  9.25it/s]Problems:  84%|████████▎ | 137/164 [00:18<00:02,  9.28it/s]Problems:  85%|████████▍ | 139/164 [00:19<00:03,  8.15it/s]Problems:  86%|████████▌ | 141/164 [00:19<00:02,  8.64it/s]Problems:  87%|████████▋ | 143/164 [00:19<00:02, 10.21it/s]Problems:  88%|████████▊ | 145/164 [00:19<00:01, 10.06it/s]Problems:  90%|████████▉ | 147/164 [00:20<00:01,  8.54it/s]Problems:  91%|█████████▏| 150/164 [00:20<00:02,  5.78it/s]Problems:  93%|█████████▎| 152/164 [00:21<00:01,  6.99it/s]Problems:  94%|█████████▍| 154/164 [00:21<00:01,  5.30it/s]Problems:  95%|█████████▌| 156/164 [00:23<00:02,  3.03it/s]Problems:  96%|█████████▋| 158/164 [00:23<00:01,  3.34it/s]Problems:  97%|█████████▋| 159/164 [00:23<00:01,  3.72it/s]Problems:  99%|█████████▉| 162/164 [00:24<00:00,  4.13it/s]Problems:  99%|█████████▉| 163/164 [00:24<00:00,  4.10it/s]Problems: 100%|██████████| 164/164 [00:24<00:00,  4.53it/s]Problems: 100%|██████████| 164/164 [00:24<00:00,  6.68it/s]
+
+============================================================
+EVALUATION COMPLETE
+============================================================
+✅ Evaluated 14700 samples
+✅ Results saved to: data/results_codegen_multi/evaluation_results.json
+
+CATEGORY DISTRIBUTION:
+------------------------------------------------------------
+  syntax_error        : 10500 ( 71.4%)
+  success             :  4184 ( 28.5%)
+  runtime_error       :    16 (  0.1%)
+
+NEXT STEP: Analyze failures
+  python scripts/analyze_failures.py --config config.yaml
+============================================================
+PHASE 1-2: FEASIBILITY CHECK - ANALYSIS
+============================================================
+Input file: data/results_codegen_multi/evaluation_results.json
+
+FEASIBILITY REPORT
+============================================================
+Total problems: 164
+Total samples: 14700
+
+CATEGORY DISTRIBUTION:
+------------------------------------------------------------
+  syntax_error        : 10500 ( 71.4%)
+  success             :  4184 ( 28.5%)
+  runtime_error       :    16 (  0.1%)
+
+COMPLEXITY ANALYSIS:
+------------------------------------------------------------
+
+  MEDIUM problems:
+    syntax_error        : 2221 ( 76.6%)
+    success             :  678 ( 23.4%)
+    runtime_error       :    1 (  0.0%)
+
+  COMPLEX problems:
+    syntax_error        : 8279 ( 70.2%)
+    success             : 3506 ( 29.7%)
+    runtime_error       :   15 (  0.1%)
+
+============================================================
+FEASIBILITY DECISION
+============================================================
+Categorization rate: 100.0%
+Threshold: 70.0%
+Clear categories: 14700 / 14700
+
+✅ DECISION: PROCEED TO FULL PAPER
+
+We can clearly categorize failure patterns.
+There are interesting differences across complexity levels.
+The error taxonomy is well-defined.
+
+NEXT STEPS:
+1. Expand to all 164 HumanEval problems
+2. Generate 100 samples × 164 = 16,400 total samples
+3. Deep dive into error patterns
+4. Extract activation patterns
+5. Build execution-aware decoding
+
+✅ Full report saved to: data/results_codegen_multi/feasibility_report.json
+============================================================
+DEEP SYNTAX ERROR ANALYSIS
+============================================================
+Input: data/results_codegen_multi/evaluation_results.json
+
+Analyzing syntax errors in detail...
+Problems:   0%|          | 0/164 [00:00<?, ?it/s]Problems:   6%|▌         | 10/164 [00:00<00:01, 97.84it/s]Problems:  38%|███▊      | 62/164 [00:00<00:00, 343.31it/s]Problems:  73%|███████▎  | 119/164 [00:00<00:00, 444.43it/s]Problems: 100%|██████████| 164/164 [00:00<00:00, 414.11it/s]
+
+============================================================
+SYNTAX ERROR BREAKDOWN
+============================================================
+Total syntax errors: 10500
+
+MAIN CATEGORIES:
+  bracket_mismatch    :  5646 ( 53.8%)
+  indentation         :  1469 ( 14.0%)
+  other               :  1371 ( 13.1%)
+  colon_missing       :   883 (  8.4%)
+  quote_mismatch      :   770 (  7.3%)
+  keyword_error       :   361 (  3.4%)
+
+TOP SUBCATEGORIES:
+  bracket_mismatch:parenthesis       :  4273 ( 40.7%)
+  indentation:unexpected_indent      :  1469 ( 14.0%)
+  other:unknown                      :  1371 ( 13.1%)
+  bracket_mismatch:square_bracket    :  1356 ( 12.9%)
+  colon_missing:missing_colon        :   883 (  8.4%)
+  quote_mismatch:unclosed_string     :   770 (  7.3%)
+  keyword_error:misspelled_keyword   :   361 (  3.4%)
+  bracket_mismatch:curly_brace       :    17 (  0.2%)
+
+ERROR POSITIONS:
+  late      : 10500 (100.0%)
+
+✅ Saved to: data/results_codegen_multi/syntax_analysis.json
+[2026-03-15 06:17:29] Running CodeGen ladder benchmark for config_codegen_mono.yaml
+Some weights of the model checkpoint at Salesforce/codegen-350M-mono were not used when initializing CodeGenForCausalLM: ['transformer.h.0.attn.causal_mask', 'transformer.h.1.attn.causal_mask', 'transformer.h.10.attn.causal_mask', 'transformer.h.11.attn.causal_mask', 'transformer.h.12.attn.causal_mask', 'transformer.h.13.attn.causal_mask', 'transformer.h.14.attn.causal_mask', 'transformer.h.15.attn.causal_mask', 'transformer.h.16.attn.causal_mask', 'transformer.h.17.attn.causal_mask', 'transformer.h.18.attn.causal_mask', 'transformer.h.19.attn.causal_mask', 'transformer.h.2.attn.causal_mask', 'transformer.h.3.attn.causal_mask', 'transformer.h.4.attn.causal_mask', 'transformer.h.5.attn.causal_mask', 'transformer.h.6.attn.causal_mask', 'transformer.h.7.attn.causal_mask', 'transformer.h.8.attn.causal_mask', 'transformer.h.9.attn.causal_mask']
+- This IS expected if you are initializing CodeGenForCausalLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing CodeGenForCausalLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Need to generate: 164 problems
+Loading model: Salesforce/codegen-350M-mono
+✅ Model loaded on cuda
+Problems:   0%|          | 0/164 [00:00<?, ?it/s]Problems:   1%|          | 1/164 [00:42<1:54:36, 42.19s/it]Problems:   1%|          | 2/164 [01:26<1:57:47, 43.63s/it]Problems:   2%|▏         | 3/164 [02:07<1:53:08, 42.16s/it]Problems:   2%|▏         | 4/164 [02:50<1:53:28, 42.55s/it]Problems:   3%|▎         | 5/164 [03:28<1:48:50, 41.07s/it]Problems:   4%|▎         | 6/164 [04:10<1:48:20, 41.14s/it]Problems:   4%|▍         | 7/164 [04:51<1:47:35, 41.12s/it]Problems:   5%|▍         | 8/164 [05:34<1:48:24, 41.70s/it]Problems:   5%|▌         | 9/164 [06:16<1:48:23, 41.96s/it]Problems:   6%|▌         | 10/164 [07:02<1:51:08, 43.30s/it]Problems:   7%|▋         | 11/164 [07:52<1:55:05, 45.13s/it]Problems:   7%|▋         | 12/164 [08:41<1:57:41, 46.46s/it]Problems:   8%|▊         | 13/164 [09:26<1:55:48, 46.02s/it]Problems:   9%|▊         | 14/164 [10:08<1:51:58, 44.79s/it]Problems:   9%|▉         | 15/164 [10:54<1:52:06, 45.15s/it]Problems:  10%|▉         | 16/164 [11:43<1:53:54, 46.18s/it]Problems:  10%|█         | 17/164 [12:29<1:52:50, 46.06s/it]Problems:  11%|█         | 18/164 [13:12<1:50:11, 45.28s/it]Problems:  12%|█▏        | 19/164 [13:55<1:47:31, 44.50s/it]Problems:  12%|█▏        | 20/164 [14:36<1:44:46, 43.65s/it]Problems:  13%|█▎        | 21/164 [15:15<1:40:36, 42.21s/it]Problems:  13%|█▎        | 22/164 [15:54<1:37:32, 41.21s/it]Problems:  14%|█▍        | 23/164 [16:38<1:38:41, 42.00s/it]Problems:  15%|█▍        | 24/164 [17:17<1:35:40, 41.00s/it]Problems:  15%|█▌        | 25/164 [17:59<1:36:18, 41.58s/it]Problems:  16%|█▌        | 26/164 [18:43<1:37:08, 42.24s/it]Problems:  16%|█▋        | 27/164 [19:22<1:34:13, 41.27s/it]Problems:  17%|█▋        | 28/164 [20:04<1:34:00, 41.48s/it]Problems:  18%|█▊        | 29/164 [20:42<1:30:53, 40.40s/it]Problems:  18%|█▊        | 30/164 [21:22<1:29:52, 40.25s/it]Problems:  19%|█▉        | 31/164 [21:59<1:26:50, 39.18s/it]Problems:  20%|█▉        | 32/164 [22:38<1:26:32, 39.34s/it]Problems:  20%|██        | 33/164 [24:03<1:55:47, 53.03s/it]Problems:  21%|██        | 34/164 [24:44<1:47:04, 49.42s/it]Problems:  21%|██▏       | 35/164 [25:26<1:41:20, 47.13s/it]Problems:  22%|██▏       | 36/164 [26:02<1:33:25, 43.79s/it]Problems:  23%|██▎       | 37/164 [26:45<1:32:16, 43.59s/it]Problems:  23%|██▎       | 38/164 [27:30<1:32:00, 43.81s/it]Problems:  24%|██▍       | 39/164 [28:11<1:29:33, 42.99s/it]Problems:  24%|██▍       | 40/164 [28:52<1:27:38, 42.41s/it]Problems:  25%|██▌       | 41/164 [29:30<1:24:38, 41.29s/it]Problems:  26%|██▌       | 42/164 [30:11<1:23:22, 41.01s/it]Problems:  26%|██▌       | 43/164 [30:53<1:23:12, 41.26s/it]Problems:  27%|██▋       | 44/164 [31:32<1:21:31, 40.76s/it]Problems:  27%|██▋       | 45/164 [32:14<1:21:21, 41.02s/it]Problems:  28%|██▊       | 46/164 [32:53<1:19:43, 40.54s/it]Problems:  29%|██▊       | 47/164 [33:32<1:17:46, 39.89s/it]Problems:  29%|██▉       | 48/164 [34:13<1:17:40, 40.18s/it]Problems:  30%|██▉       | 49/164 [34:54<1:17:48, 40.59s/it]Problems:  30%|███       | 50/164 [35:35<1:17:15, 40.67s/it]Problems:  31%|███       | 51/164 [36:16<1:16:43, 40.74s/it]Problems:  32%|███▏      | 52/164 [36:57<1:16:02, 40.74s/it]Problems:  32%|███▏      | 53/164 [37:36<1:14:41, 40.37s/it]Problems:  33%|███▎      | 54/164 [38:17<1:14:06, 40.43s/it]Problems:  34%|███▎      | 55/164 [38:57<1:13:18, 40.35s/it]Problems:  34%|███▍      | 56/164 [39:37<1:12:46, 40.43s/it]Problems:  35%|███▍      | 57/164 [40:20<1:13:27, 41.20s/it]Problems:  35%|███▌      | 58/164 [41:08<1:16:21, 43.22s/it]Problems:  36%|███▌      | 59/164 [41:52<1:16:05, 43.48s/it]Problems:  37%|███▋      | 60/164 [42:46<1:20:21, 46.36s/it]Problems:  37%|███▋      | 61/164 [43:33<1:20:23, 46.83s/it]Problems:  38%|███▊      | 62/164 [44:22<1:20:23, 47.29s/it]Problems:  38%|███▊      | 63/164 [45:12<1:21:17, 48.30s/it]Problems:  39%|███▉      | 64/164 [45:58<1:19:06, 47.46s/it]Problems:  40%|███▉      | 65/164 [46:48<1:19:20, 48.08s/it]Problems:  40%|████      | 66/164 [47:37<1:19:15, 48.53s/it]Problems:  41%|████      | 67/164 [48:30<1:20:40, 49.91s/it]Problems:  41%|████▏     | 68/164 [49:15<1:17:33, 48.48s/it]Problems:  42%|████▏     | 69/164 [50:02<1:16:03, 48.04s/it]Problems:  43%|████▎     | 70/164 [50:51<1:15:21, 48.10s/it]Problems:  43%|████▎     | 71/164 [51:35<1:12:58, 47.08s/it]Problems:  44%|████▍     | 72/164 [52:20<1:11:12, 46.44s/it]Problems:  45%|████▍     | 73/164 [52:56<1:05:30, 43.19s/it]Problems:  45%|████▌     | 74/164 [53:40<1:05:22, 43.58s/it]Problems:  46%|████▌     | 75/164 [54:13<59:45, 40.29s/it]  Problems:  46%|████▋     | 76/164 [54:58<1:01:03, 41.63s/it]Problems:  47%|████▋     | 77/164 [55:49<1:04:32, 44.51s/it]Problems:  48%|████▊     | 78/164 [56:39<1:06:08, 46.15s/it]Problems:  48%|████▊     | 79/164 [58:30<1:32:52, 65.56s/it]Problems:  49%|████▉     | 80/164 [59:20<1:25:11, 60.85s/it]Problems:  49%|████▉     | 81/164 [1:00:07<1:18:41, 56.89s/it]Problems:  50%|█████     | 82/164 [1:00:48<1:11:13, 52.12s/it]Problems:  51%|█████     | 83/164 [1:01:33<1:07:19, 49.87s/it]Problems:  51%|█████     | 84/164 [1:02:21<1:05:54, 49.43s/it]Problems:  52%|█████▏    | 85/164 [1:03:07<1:03:46, 48.43s/it]Problems:  52%|█████▏    | 86/164 [1:03:53<1:01:44, 47.49s/it]Problems:  53%|█████▎    | 87/164 [1:04:41<1:01:21, 47.81s/it]Problems:  54%|█████▎    | 88/164 [1:05:27<59:36, 47.06s/it]  Problems:  54%|█████▍    | 89/164 [1:06:17<1:00:15, 48.21s/it]Problems:  55%|█████▍    | 90/164 [1:07:05<59:08, 47.96s/it]  Problems:  55%|█████▌    | 91/164 [1:07:55<59:15, 48.71s/it]Problems:  56%|█████▌    | 92/164 [1:08:39<56:30, 47.09s/it]Problems:  57%|█████▋    | 93/164 [1:09:28<56:38, 47.87s/it]Problems:  57%|█████▋    | 94/164 [1:10:15<55:27, 47.53s/it]Problems:  58%|█████▊    | 95/164 [1:12:00<1:14:32, 64.82s/it]Problems:  59%|█████▊    | 96/164 [1:12:51<1:08:37, 60.55s/it]Problems:  59%|█████▉    | 97/164 [1:13:41<1:04:02, 57.35s/it]Problems:  60%|█████▉    | 98/164 [1:14:29<1:00:10, 54.70s/it]Problems:  60%|██████    | 99/164 [1:15:18<57:20, 52.93s/it]  Problems:  61%|██████    | 100/164 [1:16:21<59:48, 56.08s/it]Problems:  62%|██████▏   | 101/164 [1:17:16<58:17, 55.52s/it]Problems:  62%|██████▏   | 102/164 [1:18:09<56:49, 54.99s/it]Problems:  63%|██████▎   | 103/164 [1:19:03<55:24, 54.49s/it]Problems:  63%|██████▎   | 104/164 [1:19:52<52:56, 52.95s/it]Problems:  64%|██████▍   | 105/164 [1:20:46<52:23, 53.28s/it]Problems:  65%|██████▍   | 106/164 [1:21:40<51:36, 53.39s/it]Problems:  65%|██████▌   | 107/164 [1:22:44<53:41, 56.51s/it]Problems:  66%|██████▌   | 108/164 [1:23:38<52:07, 55.86s/it]Problems:  66%|██████▋   | 109/164 [1:24:35<51:34, 56.26s/it]Problems:  67%|██████▋   | 110/164 [1:26:27<1:05:47, 73.10s/it]Problems:  68%|██████▊   | 111/164 [1:27:33<1:02:38, 70.92s/it]Problems:  68%|██████▊   | 112/164 [1:28:30<57:48, 66.71s/it]  Problems:  69%|██████▉   | 113/164 [1:29:21<52:43, 62.03s/it]Problems:  70%|██████▉   | 114/164 [1:30:28<52:58, 63.57s/it]Problems:  70%|███████   | 115/164 [1:31:20<48:58, 59.98s/it]Problems:  71%|███████   | 116/164 [1:32:08<45:04, 56.34s/it]Problems:  71%|███████▏  | 117/164 [1:33:00<43:04, 55.00s/it]Problems:  72%|███████▏  | 118/164 [1:33:51<41:13, 53.77s/it]Problems:  73%|███████▎  | 119/164 [1:34:42<39:44, 53.00s/it]Problems:  73%|███████▎  | 120/164 [1:35:34<38:41, 52.76s/it]Problems:  74%|███████▍  | 121/164 [1:36:24<37:16, 52.00s/it]Problems:  74%|███████▍  | 122/164 [1:37:14<35:49, 51.17s/it]Problems:  75%|███████▌  | 123/164 [1:38:06<35:17, 51.64s/it]Problems:  76%|███████▌  | 124/164 [1:39:03<35:23, 53.09s/it]Problems:  76%|███████▌  | 125/164 [1:39:52<33:48, 52.02s/it]Problems:  77%|███████▋  | 126/164 [1:40:44<32:51, 51.89s/it]Problems:  77%|███████▋  | 127/164 [1:41:36<32:05, 52.05s/it]Problems:  78%|███████▊  | 128/164 [1:42:58<36:31, 60.88s/it]Problems:  79%|███████▊  | 129/164 [1:43:52<34:18, 58.82s/it]Problems:  79%|███████▉  | 130/164 [1:44:48<32:49, 57.93s/it]Problems:  80%|███████▉  | 131/164 [1:45:26<28:35, 51.99s/it]Problems:  80%|████████  | 132/164 [1:46:18<27:44, 52.02s/it]Problems:  81%|████████  | 133/164 [1:47:07<26:24, 51.12s/it]Problems:  82%|████████▏ | 134/164 [1:48:01<25:58, 51.96s/it]Problems:  82%|████████▏ | 135/164 [1:48:50<24:44, 51.18s/it]Problems:  83%|████████▎ | 136/164 [1:49:40<23:45, 50.92s/it]Problems:  84%|████████▎ | 137/164 [1:50:31<22:50, 50.74s/it]Problems:  84%|████████▍ | 138/164 [1:51:27<22:41, 52.36s/it]Problems:  85%|████████▍ | 139/164 [1:52:12<20:55, 50.21s/it]Problems:  85%|████████▌ | 140/164 [1:52:55<19:09, 47.91s/it]Problems:  86%|████████▌ | 141/164 [1:53:38<17:52, 46.61s/it]Problems:  87%|████████▋ | 142/164 [1:54:05<14:56, 40.74s/it]Problems:  87%|████████▋ | 143/164 [1:54:46<14:15, 40.74s/it]Problems:  88%|████████▊ | 144/164 [1:55:29<13:46, 41.33s/it]Problems:  88%|████████▊ | 145/164 [1:56:12<13:18, 42.00s/it]Problems:  89%|████████▉ | 146/164 [1:56:57<12:52, 42.90s/it]Problems:  90%|████████▉ | 147/164 [1:57:41<12:15, 43.27s/it]Problems:  90%|█████████ | 148/164 [1:58:26<11:39, 43.71s/it]Problems:  91%|█████████ | 149/164 [1:59:05<10:31, 42.07s/it]Problems:  91%|█████████▏| 150/164 [1:59:51<10:06, 43.31s/it]Problems:  92%|█████████▏| 151/164 [2:00:39<09:44, 44.95s/it]Problems:  93%|█████████▎| 152/164 [2:01:28<09:11, 45.92s/it]Problems:  93%|█████████▎| 153/164 [2:02:01<07:43, 42.10s/it]Problems:  94%|█████████▍| 154/164 [2:03:32<09:28, 56.87s/it]Problems:  95%|█████████▍| 155/164 [2:04:19<08:03, 53.73s/it]Problems:  95%|█████████▌| 156/164 [2:05:08<06:58, 52.36s/it]Problems:  96%|█████████▌| 157/164 [2:06:03<06:12, 53.25s/it]Problems:  96%|█████████▋| 158/164 [2:06:58<05:23, 53.87s/it]Problems:  97%|█████████▋| 159/164 [2:07:56<04:34, 54.88s/it]Problems:  98%|█████████▊| 160/164 [2:09:51<04:52, 73.12s/it]Problems:  98%|█████████▊| 161/164 [2:10:32<03:10, 63.55s/it]Problems:  99%|█████████▉| 162/164 [2:11:26<02:01, 60.60s/it]Problems:  99%|█████████▉| 163/164 [2:12:22<00:59, 59.10s/it]Problems: 100%|██████████| 164/164 [2:13:12<00:00, 56.57s/it]Problems: 100%|██████████| 164/164 [2:13:12<00:00, 48.74s/it]
+
+⚠️  HumanEval/68: CUDA out of memory. Tried to allocate 3.11 GiB. GPU 
+
+⚠️  HumanEval/72: CUDA out of memory. Tried to allocate 2.25 GiB. GPU 
+
+⚠️  HumanEval/74: CUDA out of memory. Tried to allocate 2.19 GiB. GPU 
+
+⚠️  HumanEval/81: CUDA out of memory. Tried to allocate 2.63 GiB. GPU 
+
+⚠️  HumanEval/87: CUDA out of memory. Tried to allocate 2.60 GiB. GPU 
+
+⚠️  HumanEval/105: CUDA out of memory. Tried to allocate 2.54 GiB. GPU 
+
+⚠️  HumanEval/115: CUDA out of memory. Tried to allocate 3.19 GiB. GPU 
+
+⚠️  HumanEval/123: CUDA out of memory. Tried to allocate 2.17 GiB. GPU 
+
+⚠️  HumanEval/124: CUDA out of memory. Tried to allocate 2.47 GiB. GPU 
+
+⚠️  HumanEval/126: CUDA out of memory. Tried to allocate 2.32 GiB. GPU 
+
+⚠️  HumanEval/127: CUDA out of memory. Tried to allocate 2.58 GiB. GPU 
+
+⚠️  HumanEval/129: CUDA out of memory. Tried to allocate 4.08 GiB. GPU 
+
+⚠️  HumanEval/130: CUDA out of memory. Tried to allocate 2.29 GiB. GPU 
+
+⚠️  HumanEval/141: CUDA out of memory. Tried to allocate 2.27 GiB. GPU 
+
+⚠️  HumanEval/148: CUDA out of memory. Tried to allocate 2.18 GiB. GPU 
+
+⚠️  HumanEval/152: CUDA out of memory. Tried to allocate 2.32 GiB. GPU 
+
+⚠️  HumanEval/160: CUDA out of memory. Tried to allocate 2.20 GiB. GPU 
+
+✅ Complete: 164 problems
+============================================================
+PHASE 1-2: FEASIBILITY CHECK - EVALUATION
+============================================================
+Input file: data/results_codegen_mono/generated_samples.json
+Output file: data/results_codegen_mono/evaluation_results.json
+
+Loading generated samples...
+✅ Loaded 164 problems
+
+Evaluating samples...
+Problems:   0%|          | 0/164 [00:00<?, ?it/s]Problems:   1%|          | 1/164 [00:00<00:25,  6.51it/s]Problems:   1%|          | 2/164 [00:00<00:28,  5.59it/s]Problems:   2%|▏         | 3/164 [00:00<00:23,  6.84it/s]Problems:   2%|▏         | 4/164 [00:00<00:22,  7.25it/s]Problems:   4%|▎         | 6/164 [00:00<00:15,  9.96it/s]Problems:   5%|▍         | 8/164 [00:00<00:13, 11.90it/s]Problems:   6%|▌         | 10/164 [00:01<00:18,  8.11it/s]Problems:   7%|▋         | 11/164 [00:01<00:18,  8.42it/s]Problems:   8%|▊         | 13/164 [00:01<00:14, 10.22it/s]Problems:   9%|▉         | 15/164 [00:01<00:13, 10.73it/s]Problems:  10%|█         | 17/164 [00:01<00:11, 12.35it/s]Problems:  12%|█▏        | 19/164 [00:01<00:11, 12.75it/s]Problems:  13%|█▎        | 21/164 [00:02<00:17,  8.16it/s]Problems:  14%|█▍        | 23/164 [00:02<00:15,  8.87it/s]Problems:  15%|█▌        | 25/164 [00:03<00:23,  5.94it/s]Problems:  16%|█▋        | 27/164 [00:03<00:18,  7.28it/s]Problems:  18%|█▊        | 29/164 [00:03<00:26,  5.13it/s]Problems:  18%|█▊        | 30/164 [00:04<00:30,  4.34it/s]Problems:  20%|█▉        | 32/164 [00:04<00:23,  5.52it/s]Problems:  20%|██        | 33/164 [00:05<00:38,  3.38it/s]Problems:  21%|██        | 34/164 [00:05<00:33,  3.92it/s]Problems:  23%|██▎       | 37/164 [00:05<00:19,  6.47it/s]Problems:  24%|██▍       | 39/164 [00:05<00:22,  5.57it/s]Problems:  24%|██▍       | 40/164 [00:06<00:34,  3.60it/s]Problems:  25%|██▌       | 41/164 [00:06<00:30,  4.10it/s]Problems:  26%|██▌       | 43/164 [00:07<00:38,  3.12it/s]Problems:  27%|██▋       | 45/164 [00:07<00:27,  4.37it/s]Problems:  29%|██▉       | 48/164 [00:08<00:33,  3.45it/s]Problems:  30%|███       | 50/164 [00:09<00:34,  3.27it/s]Problems:  31%|███       | 51/164 [00:09<00:31,  3.59it/s]Problems:  32%|███▏      | 52/164 [00:10<00:44,  2.54it/s]Problems:  32%|███▏      | 53/164 [00:10<00:37,  2.96it/s]Problems:  33%|███▎      | 54/164 [00:11<00:52,  2.09it/s]Problems:  34%|███▍      | 56/164 [00:11<00:33,  3.23it/s]Problems:  36%|███▌      | 59/164 [00:11<00:19,  5.45it/s]Problems:  38%|███▊      | 62/164 [00:11<00:12,  7.96it/s]Problems:  39%|███▉      | 64/164 [00:12<00:21,  4.61it/s]Problems:  40%|████      | 66/164 [00:13<00:18,  5.17it/s]Problems:  41%|████▏     | 68/164 [00:13<00:14,  6.47it/s]Problems:  43%|████▎     | 70/164 [00:14<00:23,  3.92it/s]Problems:  43%|████▎     | 71/164 [00:14<00:21,  4.29it/s]Problems:  46%|████▋     | 76/164 [00:14<00:10,  8.30it/s]Problems:  48%|████▊     | 78/164 [00:15<00:17,  4.90it/s]Problems:  49%|████▉     | 80/164 [00:15<00:14,  5.96it/s]Problems:  50%|█████     | 82/164 [00:16<00:14,  5.55it/s]Problems:  51%|█████     | 84/164 [00:16<00:12,  6.46it/s]Problems:  52%|█████▏    | 86/164 [00:16<00:16,  4.87it/s]Problems:  54%|█████▍    | 89/164 [00:17<00:10,  6.91it/s]Problems:  55%|█████▌    | 91/164 [00:17<00:10,  6.92it/s]Problems:  57%|█████▋    | 93/164 [00:17<00:08,  8.17it/s]Problems:  58%|█████▊    | 95/164 [00:18<00:14,  4.85it/s]Problems:  59%|█████▉    | 97/164 [00:18<00:11,  5.97it/s]Problems:  60%|██████    | 99/164 [00:19<00:19,  3.31it/s]Problems:  61%|██████    | 100/164 [00:20<00:20,  3.18it/s]Problems:  62%|██████▏   | 101/164 [00:20<00:17,  3.56it/s]Problems:  62%|██████▏   | 102/164 [00:20<00:15,  3.92it/s]Problems:  63%|██████▎   | 104/164 [00:20<00:11,  5.29it/s]Problems:  64%|██████▍   | 105/164 [00:21<00:15,  3.78it/s]Problems:  66%|██████▌   | 108/164 [00:21<00:08,  6.26it/s]Problems:  68%|██████▊   | 111/164 [00:22<00:12,  4.19it/s]Problems:  68%|██████▊   | 112/164 [00:22<00:11,  4.56it/s]Problems:  69%|██████▉   | 113/164 [00:22<00:12,  3.98it/s]Problems:  70%|███████   | 115/164 [00:23<00:15,  3.09it/s]Problems:  71%|███████▏  | 117/164 [00:23<00:11,  4.07it/s]Problems:  73%|███████▎  | 119/164 [00:24<00:12,  3.61it/s]Problems:  73%|███████▎  | 120/164 [00:24<00:10,  4.05it/s]Problems:  74%|███████▍  | 121/164 [00:25<00:11,  3.65it/s]Problems:  74%|███████▍  | 122/164 [00:25<00:10,  4.09it/s]Problems:  75%|███████▌  | 123/164 [00:25<00:13,  3.07it/s]Problems:  77%|███████▋  | 126/164 [00:25<00:06,  5.55it/s]Problems:  80%|████████  | 132/164 [00:26<00:05,  6.32it/s]Problems:  82%|████████▏ | 134/164 [00:26<00:04,  7.06it/s]Problems:  83%|████████▎ | 136/164 [00:27<00:05,  4.73it/s]Problems:  84%|████████▎ | 137/164 [00:28<00:05,  4.74it/s]Problems:  84%|████████▍ | 138/164 [00:29<00:09,  2.89it/s]Problems:  85%|████████▌ | 140/164 [00:29<00:06,  3.92it/s]Problems:  86%|████████▌ | 141/164 [00:29<00:06,  3.32it/s]Problems:  87%|████████▋ | 143/164 [00:30<00:06,  3.34it/s]Problems:  88%|████████▊ | 144/164 [00:30<00:05,  3.72it/s]Problems:  89%|████████▉ | 146/164 [00:30<00:03,  4.76it/s]Problems:  90%|████████▉ | 147/164 [00:31<00:05,  3.11it/s]Problems:  91%|█████████▏| 150/164 [00:31<00:02,  5.20it/s]Problems:  93%|█████████▎| 152/164 [00:31<00:02,  4.88it/s]Problems:  94%|█████████▍| 154/164 [00:32<00:01,  5.00it/s]Problems:  95%|█████████▌| 156/164 [00:32<00:01,  5.86it/s]Problems:  96%|█████████▌| 157/164 [00:32<00:01,  6.32it/s]Problems:  96%|█████████▋| 158/164 [00:32<00:01,  5.14it/s]Problems:  97%|█████████▋| 159/164 [00:33<00:01,  3.88it/s]Problems:  99%|█████████▉| 162/164 [00:33<00:00,  6.71it/s]Problems: 100%|██████████| 164/164 [00:34<00:00,  3.78it/s]Problems: 100%|██████████| 164/164 [00:34<00:00,  4.74it/s]
+
+============================================================
+EVALUATION COMPLETE
+============================================================
+✅ Evaluated 14700 samples
+✅ Results saved to: data/results_codegen_mono/evaluation_results.json
+
+CATEGORY DISTRIBUTION:
+------------------------------------------------------------
+  syntax_error        :  9143 ( 62.2%)
+  success             :  5550 ( 37.8%)
+  runtime_error       :     7 (  0.0%)
+
+NEXT STEP: Analyze failures
+  python scripts/analyze_failures.py --config config.yaml
+============================================================
+PHASE 1-2: FEASIBILITY CHECK - ANALYSIS
+============================================================
+Input file: data/results_codegen_mono/evaluation_results.json
+
+FEASIBILITY REPORT
+============================================================
+Total problems: 164
+Total samples: 14700
+
+CATEGORY DISTRIBUTION:
+------------------------------------------------------------
+  syntax_error        :  9143 ( 62.2%)
+  success             :  5550 ( 37.8%)
+  runtime_error       :     7 (  0.0%)
+
+COMPLEXITY ANALYSIS:
+------------------------------------------------------------
+
+  MEDIUM problems:
+    syntax_error        : 1833 ( 63.2%)
+    success             : 1067 ( 36.8%)
+
+  COMPLEX problems:
+    syntax_error        : 7310 ( 61.9%)
+    success             : 4483 ( 38.0%)
+    runtime_error       :    7 (  0.1%)
+
+============================================================
+FEASIBILITY DECISION
+============================================================
+Categorization rate: 100.0%
+Threshold: 70.0%
+Clear categories: 14700 / 14700
+
+✅ DECISION: PROCEED TO FULL PAPER
+
+We can clearly categorize failure patterns.
+There are interesting differences across complexity levels.
+The error taxonomy is well-defined.
+
+NEXT STEPS:
+1. Expand to all 164 HumanEval problems
+2. Generate 100 samples × 164 = 16,400 total samples
+3. Deep dive into error patterns
+4. Extract activation patterns
+5. Build execution-aware decoding
+
+✅ Full report saved to: data/results_codegen_mono/feasibility_report.json
+============================================================
+DEEP SYNTAX ERROR ANALYSIS
+============================================================
+Input: data/results_codegen_mono/evaluation_results.json
+
+Analyzing syntax errors in detail...
+Problems:   0%|          | 0/164 [00:00<?, ?it/s]Problems:   6%|▌         | 10/164 [00:00<00:02, 66.68it/s]Problems:  30%|██▉       | 49/164 [00:00<00:00, 222.65it/s]Problems:  66%|██████▌   | 108/164 [00:00<00:00, 371.95it/s]Problems:  91%|█████████ | 149/164 [00:01<00:00, 83.94it/s] Problems: 100%|██████████| 164/164 [00:01<00:00, 111.33it/s]
+
+============================================================
+SYNTAX ERROR BREAKDOWN
+============================================================
+Total syntax errors: 9143
+
+MAIN CATEGORIES:
+  bracket_mismatch    :  4022 ( 44.0%)
+  indentation         :  1601 ( 17.5%)
+  other               :  1542 ( 16.9%)
+  colon_missing       :  1109 ( 12.1%)
+  keyword_error       :   449 (  4.9%)
+  quote_mismatch      :   420 (  4.6%)
+
+TOP SUBCATEGORIES:
+  bracket_mismatch:parenthesis       :  3041 ( 33.3%)
+  indentation:unexpected_indent      :  1601 ( 17.5%)
+  other:unknown                      :  1542 ( 16.9%)
+  colon_missing:missing_colon        :  1109 ( 12.1%)
+  bracket_mismatch:square_bracket    :   935 ( 10.2%)
+  keyword_error:misspelled_keyword   :   449 (  4.9%)
+  quote_mismatch:unclosed_string     :   420 (  4.6%)
+  bracket_mismatch:curly_brace       :    46 (  0.5%)
+
+ERROR POSITIONS:
+  late      :  9143 (100.0%)
+
+✅ Saved to: data/results_codegen_mono/syntax_analysis.json
+================================================================================
+BOOTSTRAP SIGNIFICANCE ANALYSIS
+================================================================================
+
+CodeGen-NL
+  Tasks: 142
+  Samples/task: 100
+  success_rate        30.60% [ 28.73,  32.70]
+  syntax_error_rate   69.22% [ 67.23,  71.07]
+  runtime_error_rate   0.18% [  0.10,   0.27]
+  pass@1              30.60% [ 28.77,  32.55]
+  pass@5              80.67% [ 78.44,  82.76]
+
+CodeGen-Multi
+  Tasks: 147
+  Samples/task: 100
+  success_rate        28.46% [ 26.62,  30.37]
+  syntax_error_rate   71.43% [ 69.42,  73.36]
+  runtime_error_rate   0.11% [  0.05,   0.17]
+  pass@1              28.46% [ 26.59,  30.39]
+  pass@5              77.01% [ 74.13,  79.65]
+
+CodeGen-Mono
+  Tasks: 147
+  Samples/task: 100
+  success_rate        37.76% [ 35.71,  39.95]
+  syntax_error_rate   62.20% [ 60.10,  64.25]
+  runtime_error_rate   0.05% [  0.01,   0.08]
+  pass@1              37.76% [ 35.66,  39.93]
+  pass@5              87.10% [ 85.13,  88.98]
+
+================================================================================
+PAIRWISE SUCCESS-RATE DIFFERENCES
+================================================================================
+CodeGen-NL vs CodeGen-Multi:  +2.50% [ +0.07,  +4.93], p=0.0443
+CodeGen-NL vs CodeGen-Mono:  -6.64% [ -9.42,  -3.84], p=0.0001
+CodeGen-Multi vs CodeGen-Mono:  -9.29% [-11.61,  -6.93], p=0.0001
+
+Saved report to: outputs/tables/bootstrap_significance_codegen_ladder.json
+Wrote CodeGen ladder summary to outputs/tables/codegen_ladder_summary.json
+CodeGen-NL: success=30.60% syntax=69.22% runtime=0.18%
+CodeGen-Multi: success=28.46% syntax=71.43% runtime=0.11%
+CodeGen-Mono: success=37.76% syntax=62.20% runtime=0.05%
+[2026-03-15 08:35:07] CodeGen pretraining ladder completed

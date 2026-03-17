@@ -18,6 +18,13 @@ from src.data.dataset_loader import DatasetLoader
 from src.models.model_wrapper import CodeGenerationModel
 
 
+def save_results(results_file: Path, all_results):
+    """Persist results after each problem so overnight runs can resume safely."""
+    results_file.parent.mkdir(parents=True, exist_ok=True)
+    with open(results_file, 'w') as f:
+        json.dump(all_results, f, indent=2)
+
+
 def generate_with_memory_cleanup(model, prompt, num_samples):
     """Generate samples with automatic memory cleanup on OOM."""
     try:
@@ -51,12 +58,15 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", default="config_codegen.yaml")
     parser.add_argument("--resume", action="store_true", help="Resume from failures")
+    parser.add_argument("--num_problems", type=int, default=None)
+    parser.add_argument("--num_samples", type=int, default=None)
+    parser.add_argument("--output_dir", type=str, default=None)
     args = parser.parse_args()
     
     with open(args.config) as f:
         config = yaml.safe_load(f)
     
-    results_dir = Path(config['paths']['results_dir'])
+    results_dir = Path(args.output_dir or config['paths']['results_dir'])
     
     # Load existing results if resuming
     existing_results = {}
@@ -69,7 +79,9 @@ def main():
     
     # Load dataset
     loader = DatasetLoader(args.config)
-    all_problems = loader.load(num_problems=164)
+    all_problems = loader.load(
+        num_problems=args.num_problems or config['feasibility_check']['num_problems']
+    )
     
     # Filter to only missing problems
     problems_to_generate = [p for p in all_problems if p.task_id not in existing_results]
@@ -83,7 +95,7 @@ def main():
     model = CodeGenerationModel(args.config)
     model.load_model()
     
-    num_samples = config['feasibility_check']['num_samples_per_problem']
+    num_samples = args.num_samples or config['feasibility_check']['num_samples_per_problem']
     all_results = list(existing_results.values())
     
     for problem in tqdm(problems_to_generate, desc="Problems"):
@@ -109,9 +121,8 @@ def main():
         
         all_results.append(problem_result)
         
-        # Save after each problem
-        with open(results_file, 'w') as f:
-            json.dump(all_results, f, indent=2)
+        # Save after each problem so long runs can resume safely.
+        save_results(results_file, all_results)
         
         # Clear memory
         torch.cuda.empty_cache()

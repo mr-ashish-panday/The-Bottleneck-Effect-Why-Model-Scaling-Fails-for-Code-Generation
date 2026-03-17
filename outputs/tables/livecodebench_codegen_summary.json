@@ -1,0 +1,23 @@
+{
+  "search_root": "/home/ashish/paper11_code_execution_failures/external/LiveCodeBench",
+  "label": "codegen",
+  "json_summaries": [
+    {
+      "file": "/home/ashish/paper11_code_execution_failures/outputs/livecodebench/codegen_custom_outputs_codegeneration_output_eval.json",
+      "metrics": {
+        "pass@1": 0.0001956947162426614,
+        "pass@5": 0.0009784735812133072,
+        "pass@10": 0.0019569471624266144
+      }
+    },
+    {
+      "file": "/home/ashish/paper11_code_execution_failures/outputs/livecodebench/codegen_custom_outputs_codegeneration_output_eval_all.json",
+      "metrics": {
+        "pass@1": 0.0,
+        "tasks_scored": 511,
+        "pass@1_mean": 0.00019569471624266145
+      }
+    }
+  ],
+  "log_metrics": {}
+}

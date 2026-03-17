@@ -1,0 +1,2067 @@
+{
+  "config": "config_mbpp_full_codegen_mono.yaml",
+  "model_name": "Salesforce/codegen-350M-mono",
+  "dataset_name": "mbpp",
+  "num_problems": 257,
+  "mean_prompt_perplexity": 4.4625533831120325,
+  "token_weighted_avg_nll": 1.3499202598487328,
+  "token_weighted_prompt_perplexity": 3.8571179512650327,
+  "per_problem": [
+    {
+      "task_id": "MBPP/11",
+      "prompt_length_chars": 289,
+      "num_tokens": 90,
+      "total_nll": 147.69064331054688,
+      "avg_nll": 1.6410071478949653,
+      "perplexity": 5.160364145800151
+    },
+    {
+      "task_id": "MBPP/12",
+      "prompt_length_chars": 428,
+      "num_tokens": 199,
+      "total_nll": 167.31158447265625,
+      "avg_nll": 0.8407617310183731,
+      "perplexity": 2.318132097545511
+    },
+    {
+      "task_id": "MBPP/14",
+      "prompt_length_chars": 244,
+      "num_tokens": 84,
+      "total_nll": 118.88873291015625,
+      "avg_nll": 1.415342058454241,
+      "perplexity": 4.117894785820838
+    },
+    {
+      "task_id": "MBPP/16",
+      "prompt_length_chars": 394,
+      "num_tokens": 115,
+      "total_nll": 202.04025268554688,
+      "avg_nll": 1.7568717624830164,
+      "perplexity": 5.794283119926167
+    },
+    {
+      "task_id": "MBPP/17",
+      "prompt_length_chars": 257,
+      "num_tokens": 74,
+      "total_nll": 94.67549896240234,
+      "avg_nll": 1.2793986346270587,
+      "perplexity": 3.5944774811939895
+    },
+    {
+      "task_id": "MBPP/18",
+      "prompt_length_chars": 371,
+      "num_tokens": 117,
+      "total_nll": 259.80865478515625,
+      "avg_nll": 2.2205867930355234,
+      "perplexity": 9.21273524898222
+    },
+    {
+      "task_id": "MBPP/19",
+      "prompt_length_chars": 301,
+      "num_tokens": 113,
+      "total_nll": 150.18182373046875,
+      "avg_nll": 1.3290426878802544,
+      "perplexity": 3.777425480917821
+    },
+    {
+      "task_id": "MBPP/20",
+      "prompt_length_chars": 230,
+      "num_tokens": 72,
+      "total_nll": 123.7900390625,
+      "avg_nll": 1.7193060980902777,
+      "perplexity": 5.580654693473708
+    },
+    {
+      "task_id": "MBPP/56",
+      "prompt_length_chars": 228,
+      "num_tokens": 63,
+      "total_nll": 118.15444946289062,
+      "avg_nll": 1.8754674517919148,
+      "perplexity": 6.523868001459618
+    },
+    {
+      "task_id": "MBPP/57",
+      "prompt_length_chars": 286,
+      "num_tokens": 99,
+      "total_nll": 143.16574096679688,
+      "avg_nll": 1.4461185956242109,
+      "perplexity": 4.246599714877572
+    },
+    {
+      "task_id": "MBPP/58",
+      "prompt_length_chars": 282,
+      "num_tokens": 83,
+      "total_nll": 125.20227813720703,
+      "avg_nll": 1.5084611823759884,
+      "perplexity": 4.519770337998737
+    },
+    {
+      "task_id": "MBPP/59",
+      "prompt_length_chars": 213,
+      "num_tokens": 70,
+      "total_nll": 112.39602661132812,
+      "avg_nll": 1.6056575230189731,
+      "perplexity": 4.981133736304836
+    },
+    {
+      "task_id": "MBPP/61",
+      "prompt_length_chars": 295,
+      "num_tokens": 81,
+      "total_nll": 147.13629150390625,
+      "avg_nll": 1.8164974259741513,
+      "perplexity": 6.150278872880287
+    },
+    {
+      "task_id": "MBPP/62",
+      "prompt_length_chars": 256,
+      "num_tokens": 83,
+      "total_nll": 111.88705444335938,
+      "avg_nll": 1.3480368005224022,
+      "perplexity": 3.8498600636006346
+    },
+    {
+      "task_id": "MBPP/63",
+      "prompt_length_chars": 368,
+      "num_tokens": 131,
+      "total_nll": 201.0458984375,
+      "avg_nll": 1.5347015147900764,
+      "perplexity": 4.639940369664043
+    },
+    {
+      "task_id": "MBPP/64",
+      "prompt_length_chars": 561,
+      "num_tokens": 186,
+      "total_nll": 224.85507202148438,
+      "avg_nll": 1.2088982366746472,
+      "perplexity": 3.349791940767461
+    },
+    {
+      "task_id": "MBPP/65",
+      "prompt_length_chars": 313,
+      "num_tokens": 115,
+      "total_nll": 168.83010864257812,
+      "avg_nll": 1.4680879012398098,
+      "perplexity": 4.340926919543095
+    },
+    {
+      "task_id": "MBPP/66",
+      "prompt_length_chars": 245,
+      "num_tokens": 86,
+      "total_nll": 102.83131408691406,
+      "avg_nll": 1.1957129544990008,
+      "perplexity": 3.3059138966824375
+    },
+    {
+      "task_id": "MBPP/67",
+      "prompt_length_chars": 286,
+      "num_tokens": 95,
+      "total_nll": 275.0310974121094,
+      "avg_nll": 2.8950641832853616,
+      "perplexity": 18.084662137039324
+    },
+    {
+      "task_id": "MBPP/68",
+      "prompt_length_chars": 273,
+      "num_tokens": 94,
+      "total_nll": 109.52388000488281,
+      "avg_nll": 1.165147659626413,
+      "perplexity": 3.2063963035297314
+    },
+    {
+      "task_id": "MBPP/69",
+      "prompt_length_chars": 282,
+      "num_tokens": 112,
+      "total_nll": 119.533935546875,
+      "avg_nll": 1.0672672816685267,
+      "perplexity": 2.907423464727034
+    },
+    {
+      "task_id": "MBPP/70",
+      "prompt_length_chars": 299,
+      "num_tokens": 107,
+      "total_nll": 127.41323852539062,
+      "avg_nll": 1.1907779301438377,
+      "perplexity": 3.289639321827744
+    },
+    {
+      "task_id": "MBPP/71",
+      "prompt_length_chars": 292,
+      "num_tokens": 113,
+      "total_nll": 165.71580505371094,
+      "avg_nll": 1.4665115491478844,
+      "perplexity": 4.334089480833839
+    },
+    {
+      "task_id": "MBPP/72",
+      "prompt_length_chars": 277,
+      "num_tokens": 79,
+      "total_nll": 117.30473327636719,
+      "avg_nll": 1.4848700414730023,
+      "perplexity": 4.41439168765783
+    },
+    {
+      "task_id": "MBPP/74",
+      "prompt_length_chars": 376,
+      "num_tokens": 121,
+      "total_nll": 173.1690216064453,
+      "avg_nll": 1.4311489388962422,
+      "perplexity": 4.183503021085184
+    },
+    {
+      "task_id": "MBPP/75",
+      "prompt_length_chars": 411,
+      "num_tokens": 167,
+      "total_nll": 220.25558471679688,
+      "avg_nll": 1.3188957168670472,
+      "perplexity": 3.7392898617756956
+    },
+    {
+      "task_id": "MBPP/77",
+      "prompt_length_chars": 229,
+      "num_tokens": 72,
+      "total_nll": 133.0025634765625,
+      "avg_nll": 1.847257826063368,
+      "perplexity": 6.342403680812216
+    },
+    {
+      "task_id": "MBPP/79",
+      "prompt_length_chars": 251,
+      "num_tokens": 73,
+      "total_nll": 123.59481811523438,
+      "avg_nll": 1.6930797002086901,
+      "perplexity": 5.4361968080705845
+    },
+    {
+      "task_id": "MBPP/80",
+      "prompt_length_chars": 235,
+      "num_tokens": 74,
+      "total_nll": 95.45954895019531,
+      "avg_nll": 1.2899939047323692,
+      "perplexity": 3.632764413013989
+    },
+    {
+      "task_id": "MBPP/82",
+      "prompt_length_chars": 340,
+      "num_tokens": 131,
+      "total_nll": 221.74351501464844,
+      "avg_nll": 1.6926985878980796,
+      "perplexity": 5.434125401288512
+    },
+    {
+      "task_id": "MBPP/83",
+      "prompt_length_chars": 286,
+      "num_tokens": 86,
+      "total_nll": 157.71714782714844,
+      "avg_nll": 1.8339203235714934,
+      "perplexity": 6.25837347810078
+    },
+    {
+      "task_id": "MBPP/84",
+      "prompt_length_chars": 211,
+      "num_tokens": 62,
+      "total_nll": 123.74626922607422,
+      "avg_nll": 1.9959075681624874,
+      "perplexity": 7.358878682130462
+    },
+    {
+      "task_id": "MBPP/85",
+      "prompt_length_chars": 368,
+      "num_tokens": 136,
+      "total_nll": 227.97723388671875,
+      "avg_nll": 1.6763031903435202,
+      "perplexity": 5.345757150778877
+    },
+    {
+      "task_id": "MBPP/86",
+      "prompt_length_chars": 268,
+      "num_tokens": 77,
+      "total_nll": 124.87684631347656,
+      "avg_nll": 1.621777224850345,
+      "perplexity": 5.062078779139171
+    },
+    {
+      "task_id": "MBPP/87",
+      "prompt_length_chars": 844,
+      "num_tokens": 335,
+      "total_nll": 238.9683380126953,
+      "avg_nll": 0.7133383224259562,
+      "perplexity": 2.040792723704839
+    },
+    {
+      "task_id": "MBPP/88",
+      "prompt_length_chars": 404,
+      "num_tokens": 203,
+      "total_nll": 232.6387939453125,
+      "avg_nll": 1.1460039110606528,
+      "perplexity": 3.145597672539784
+    },
+    {
+      "task_id": "MBPP/89",
+      "prompt_length_chars": 215,
+      "num_tokens": 65,
+      "total_nll": 100.72403717041016,
+      "avg_nll": 1.549600571852464,
+      "perplexity": 4.709588664574181
+    },
+    {
+      "task_id": "MBPP/90",
+      "prompt_length_chars": 260,
+      "num_tokens": 86,
+      "total_nll": 161.00181579589844,
+      "avg_nll": 1.8721141371616097,
+      "perplexity": 6.502028058010423
+    },
+    {
+      "task_id": "MBPP/91",
+      "prompt_length_chars": 419,
+      "num_tokens": 127,
+      "total_nll": 184.41964721679688,
+      "avg_nll": 1.4521232064314715,
+      "perplexity": 4.272175603201765
+    },
+    {
+      "task_id": "MBPP/92",
+      "prompt_length_chars": 253,
+      "num_tokens": 74,
+      "total_nll": 121.69021606445312,
+      "avg_nll": 1.6444623792493664,
+      "perplexity": 5.178225237128504
+    },
+    {
+      "task_id": "MBPP/93",
+      "prompt_length_chars": 208,
+      "num_tokens": 72,
+      "total_nll": 111.05473327636719,
+      "avg_nll": 1.5424268510606554,
+      "perplexity": 4.675924284253114
+    },
+    {
+      "task_id": "MBPP/94",
+      "prompt_length_chars": 437,
+      "num_tokens": 144,
+      "total_nll": 263.07147216796875,
+      "avg_nll": 1.8268852233886719,
+      "perplexity": 6.214499702855198
+    },
+    {
+      "task_id": "MBPP/95",
+      "prompt_length_chars": 303,
+      "num_tokens": 117,
+      "total_nll": 134.6128692626953,
+      "avg_nll": 1.150537344125601,
+      "perplexity": 3.1598904021252543
+    },
+    {
+      "task_id": "MBPP/96",
+      "prompt_length_chars": 212,
+      "num_tokens": 70,
+      "total_nll": 92.85809326171875,
+      "avg_nll": 1.326544189453125,
+      "perplexity": 3.767999369760636
+    },
+    {
+      "task_id": "MBPP/97",
+      "prompt_length_chars": 557,
+      "num_tokens": 268,
+      "total_nll": 257.96295166015625,
+      "avg_nll": 0.9625483270901353,
+      "perplexity": 2.61836041764606
+    },
+    {
+      "task_id": "MBPP/98",
+      "prompt_length_chars": 382,
+      "num_tokens": 148,
+      "total_nll": 213.293701171875,
+      "avg_nll": 1.441173656566723,
+      "perplexity": 4.225652372436272
+    },
+    {
+      "task_id": "MBPP/99",
+      "prompt_length_chars": 317,
+      "num_tokens": 92,
+      "total_nll": 115.89451599121094,
+      "avg_nll": 1.2597229999044668,
+      "perplexity": 3.5244450805152256
+    },
+    {
+      "task_id": "MBPP/100",
+      "prompt_length_chars": 312,
+      "num_tokens": 96,
+      "total_nll": 138.22512817382812,
+      "avg_nll": 1.439845085144043,
+      "perplexity": 4.220042019154831
+    },
+    {
+      "task_id": "MBPP/101",
+      "prompt_length_chars": 288,
+      "num_tokens": 108,
+      "total_nll": 174.68389892578125,
+      "avg_nll": 1.6174435085720487,
+      "perplexity": 5.040188633033322
+    },
+    {
+      "task_id": "MBPP/102",
+      "prompt_length_chars": 332,
+      "num_tokens": 96,
+      "total_nll": 129.60166931152344,
+      "avg_nll": 1.3500173886617024,
+      "perplexity": 3.8574926067477495
+    },
+    {
+      "task_id": "MBPP/103",
+      "prompt_length_chars": 226,
+      "num_tokens": 86,
+      "total_nll": 123.67489624023438,
+      "avg_nll": 1.4380801888399346,
+      "perplexity": 4.212600651145059
+    },
+    {
+      "task_id": "MBPP/104",
+      "prompt_length_chars": 621,
+      "num_tokens": 202,
+      "total_nll": 298.83111572265625,
+      "avg_nll": 1.4793619590230507,
+      "perplexity": 4.3901436955506155
+    },
+    {
+      "task_id": "MBPP/105",
+      "prompt_length_chars": 236,
+      "num_tokens": 70,
+      "total_nll": 103.24734497070312,
+      "avg_nll": 1.4749620710100446,
+      "perplexity": 4.370869987101896
+    },
+    {
+      "task_id": "MBPP/106",
+      "prompt_length_chars": 312,
+      "num_tokens": 127,
+      "total_nll": 119.14139556884766,
+      "avg_nll": 0.9381212249515564,
+      "perplexity": 2.5551763043935414
+    },
+    {
+      "task_id": "MBPP/108",
+      "prompt_length_chars": 678,
+      "num_tokens": 316,
+      "total_nll": 457.05181884765625,
+      "avg_nll": 1.4463665153406844,
+      "perplexity": 4.247652661192544
+    },
+    {
+      "task_id": "MBPP/109",
+      "prompt_length_chars": 322,
+      "num_tokens": 94,
+      "total_nll": 178.5958709716797,
+      "avg_nll": 1.8999560741668051,
+      "perplexity": 6.685600765245291
+    },
+    {
+      "task_id": "MBPP/111",
+      "prompt_length_chars": 461,
+      "num_tokens": 199,
+      "total_nll": 305.5819396972656,
+      "avg_nll": 1.5355876366696766,
+      "perplexity": 4.64405374455223
+    },
+    {
+      "task_id": "MBPP/113",
+      "prompt_length_chars": 246,
+      "num_tokens": 68,
+      "total_nll": 100.93639373779297,
+      "avg_nll": 1.484358731438132,
+      "perplexity": 4.412135141836506
+    },
+    {
+      "task_id": "MBPP/115",
+      "prompt_length_chars": 248,
+      "num_tokens": 82,
+      "total_nll": 111.34619903564453,
+      "avg_nll": 1.3578804760444454,
+      "perplexity": 3.887943972170728
+    },
+    {
+      "task_id": "MBPP/116",
+      "prompt_length_chars": 259,
+      "num_tokens": 90,
+      "total_nll": 108.22970581054688,
+      "avg_nll": 1.202552286783854,
+      "perplexity": 3.328601636384649
+    },
+    {
+      "task_id": "MBPP/117",
+      "prompt_length_chars": 573,
+      "num_tokens": 268,
+      "total_nll": 269.3018493652344,
+      "avg_nll": 1.0048576468852028,
+      "perplexity": 2.7315184049952332
+    },
+    {
+      "task_id": "MBPP/118",
+      "prompt_length_chars": 373,
+      "num_tokens": 103,
+      "total_nll": 138.00787353515625,
+      "avg_nll": 1.339882267331614,
+      "perplexity": 3.818593905650573
+    },
+    {
+      "task_id": "MBPP/119",
+      "prompt_length_chars": 263,
+      "num_tokens": 102,
+      "total_nll": 118.50042724609375,
+      "avg_nll": 1.1617688945695466,
+      "perplexity": 3.1955809253409257
+    },
+    {
+      "task_id": "MBPP/120",
+      "prompt_length_chars": 376,
+      "num_tokens": 138,
+      "total_nll": 222.8368682861328,
+      "avg_nll": 1.6147599151169045,
+      "perplexity": 5.0266809484784485
+    },
+    {
+      "task_id": "MBPP/123",
+      "prompt_length_chars": 268,
+      "num_tokens": 86,
+      "total_nll": 148.84022521972656,
+      "avg_nll": 1.7307002932526345,
+      "perplexity": 5.644605403742105
+    },
+    {
+      "task_id": "MBPP/124",
+      "prompt_length_chars": 361,
+      "num_tokens": 143,
+      "total_nll": 157.49203491210938,
+      "avg_nll": 1.1013429014832823,
+      "perplexity": 3.0082030330020517
+    },
+    {
+      "task_id": "MBPP/125",
+      "prompt_length_chars": 320,
+      "num_tokens": 92,
+      "total_nll": 155.46200561523438,
+      "avg_nll": 1.6898044088612432,
+      "perplexity": 5.4184208063854
+    },
+    {
+      "task_id": "MBPP/126",
+      "prompt_length_chars": 219,
+      "num_tokens": 72,
+      "total_nll": 114.50392150878906,
+      "avg_nll": 1.590332243177626,
+      "perplexity": 4.905378436134286
+    },
+    {
+      "task_id": "MBPP/127",
+      "prompt_length_chars": 211,
+      "num_tokens": 70,
+      "total_nll": 92.33169555664062,
+      "avg_nll": 1.3190242222377233,
+      "perplexity": 3.739770411481396
+    },
+    {
+      "task_id": "MBPP/128",
+      "prompt_length_chars": 374,
+      "num_tokens": 103,
+      "total_nll": 162.0514373779297,
+      "avg_nll": 1.5733149259993173,
+      "perplexity": 4.822608315538463
+    },
+    {
+      "task_id": "MBPP/129",
+      "prompt_length_chars": 373,
+      "num_tokens": 149,
+      "total_nll": 175.95968627929688,
+      "avg_nll": 1.1809374918073616,
+      "perplexity": 3.2574265826099
+    },
+    {
+      "task_id": "MBPP/130",
+      "prompt_length_chars": 353,
+      "num_tokens": 168,
+      "total_nll": 230.9816131591797,
+      "avg_nll": 1.3748905545189267,
+      "perplexity": 3.9546438813326654
+    },
+    {
+      "task_id": "MBPP/131",
+      "prompt_length_chars": 286,
+      "num_tokens": 90,
+      "total_nll": 137.26185607910156,
+      "avg_nll": 1.5251317342122397,
+      "perplexity": 4.5957489467985075
+    },
+    {
+      "task_id": "MBPP/132",
+      "prompt_length_chars": 317,
+      "num_tokens": 128,
+      "total_nll": 195.88790893554688,
+      "avg_nll": 1.53037428855896,
+      "perplexity": 4.619905676572626
+    },
+    {
+      "task_id": "MBPP/133",
+      "prompt_length_chars": 361,
+      "num_tokens": 140,
+      "total_nll": 271.654541015625,
+      "avg_nll": 1.9403895786830356,
+      "perplexity": 6.961462479814779
+    },
+    {
+      "task_id": "MBPP/135",
+      "prompt_length_chars": 215,
+      "num_tokens": 69,
+      "total_nll": 105.67118835449219,
+      "avg_nll": 1.5314664978911912,
+      "perplexity": 4.624954337261879
+    },
+    {
+      "task_id": "MBPP/137",
+      "prompt_length_chars": 443,
+      "num_tokens": 201,
+      "total_nll": 232.03558349609375,
+      "avg_nll": 1.1544058880402674,
+      "perplexity": 3.172138252309827
+    },
+    {
+      "task_id": "MBPP/138",
+      "prompt_length_chars": 327,
+      "num_tokens": 114,
+      "total_nll": 130.40536499023438,
+      "avg_nll": 1.1439067104406524,
+      "perplexity": 3.139007635880531
+    },
+    {
+      "task_id": "MBPP/139",
+      "prompt_length_chars": 364,
+      "num_tokens": 126,
+      "total_nll": 145.584228515625,
+      "avg_nll": 1.1554303850446428,
+      "perplexity": 3.175389763744248
+    },
+    {
+      "task_id": "MBPP/140",
+      "prompt_length_chars": 401,
+      "num_tokens": 171,
+      "total_nll": 197.08718872070312,
+      "avg_nll": 1.1525566591853984,
+      "perplexity": 3.166277663177383
+    },
+    {
+      "task_id": "MBPP/141",
+      "prompt_length_chars": 314,
+      "num_tokens": 121,
+      "total_nll": 174.70785522460938,
+      "avg_nll": 1.4438665721042097,
+      "perplexity": 4.237047032909163
+    },
+    {
+      "task_id": "MBPP/142",
+      "prompt_length_chars": 426,
+      "num_tokens": 220,
+      "total_nll": 181.89910888671875,
+      "avg_nll": 0.8268141313032671,
+      "perplexity": 2.2860241538450654
+    },
+    {
+      "task_id": "MBPP/143",
+      "prompt_length_chars": 295,
+      "num_tokens": 117,
+      "total_nll": 129.59503173828125,
+      "avg_nll": 1.1076498439169338,
+      "perplexity": 3.0272355517712244
+    },
+    {
+      "task_id": "MBPP/145",
+      "prompt_length_chars": 277,
+      "num_tokens": 97,
+      "total_nll": 137.0952911376953,
+      "avg_nll": 1.4133535168834568,
+      "perplexity": 4.109714317151793
+    },
+    {
+      "task_id": "MBPP/160",
+      "prompt_length_chars": 326,
+      "num_tokens": 111,
+      "total_nll": 153.7019500732422,
+      "avg_nll": 1.3847022529120918,
+      "perplexity": 3.9936366340965064
+    },
+    {
+      "task_id": "MBPP/161",
+      "prompt_length_chars": 442,
+      "num_tokens": 193,
+      "total_nll": 119.66542053222656,
+      "avg_nll": 0.620028085659205,
+      "perplexity": 1.858980251798984
+    },
+    {
+      "task_id": "MBPP/162",
+      "prompt_length_chars": 271,
+      "num_tokens": 100,
+      "total_nll": 210.97940063476562,
+      "avg_nll": 2.109794006347656,
+      "perplexity": 8.24654237426741
+    },
+    {
+      "task_id": "MBPP/163",
+      "prompt_length_chars": 372,
+      "num_tokens": 134,
+      "total_nll": 182.74526977539062,
+      "avg_nll": 1.3637706699656016,
+      "perplexity": 3.9109122936492366
+    },
+    {
+      "task_id": "MBPP/164",
+      "prompt_length_chars": 280,
+      "num_tokens": 86,
+      "total_nll": 130.31814575195312,
+      "avg_nll": 1.5153272761855014,
+      "perplexity": 4.55091028770843
+    },
+    {
+      "task_id": "MBPP/165",
+      "prompt_length_chars": 359,
+      "num_tokens": 98,
+      "total_nll": 185.03634643554688,
+      "avg_nll": 1.8881259840361926,
+      "perplexity": 6.606975494606094
+    },
+    {
+      "task_id": "MBPP/166",
+      "prompt_length_chars": 305,
+      "num_tokens": 107,
+      "total_nll": 164.17523193359375,
+      "avg_nll": 1.5343479619962033,
+      "perplexity": 4.638300195744065
+    },
+    {
+      "task_id": "MBPP/167",
+      "prompt_length_chars": 253,
+      "num_tokens": 87,
+      "total_nll": 98.36431121826172,
+      "avg_nll": 1.1306242668765716,
+      "perplexity": 3.097589619267328
+    },
+    {
+      "task_id": "MBPP/168",
+      "prompt_length_chars": 271,
+      "num_tokens": 97,
+      "total_nll": 119.43037414550781,
+      "avg_nll": 1.2312409705722456,
+      "perplexity": 3.425477816915527
+    },
+    {
+      "task_id": "MBPP/170",
+      "prompt_length_chars": 374,
+      "num_tokens": 165,
+      "total_nll": 173.3809814453125,
+      "avg_nll": 1.050793826941288,
+      "perplexity": 2.8599204991382297
+    },
+    {
+      "task_id": "MBPP/171",
+      "prompt_length_chars": 275,
+      "num_tokens": 76,
+      "total_nll": 104.50725555419922,
+      "avg_nll": 1.3750954678184109,
+      "perplexity": 3.9554543234910264
+    },
+    {
+      "task_id": "MBPP/172",
+      "prompt_length_chars": 315,
+      "num_tokens": 98,
+      "total_nll": 224.33168029785156,
+      "avg_nll": 2.289098778549506,
+      "perplexity": 9.866042184520891
+    },
+    {
+      "task_id": "MBPP/222",
+      "prompt_length_chars": 284,
+      "num_tokens": 97,
+      "total_nll": 151.39849853515625,
+      "avg_nll": 1.5608092632490336,
+      "perplexity": 4.762673942993393
+    },
+    {
+      "task_id": "MBPP/223",
+      "prompt_length_chars": 481,
+      "num_tokens": 154,
+      "total_nll": 183.723388671875,
+      "avg_nll": 1.1930090173498376,
+      "perplexity": 3.296986987624701
+    },
+    {
+      "task_id": "MBPP/224",
+      "prompt_length_chars": 267,
+      "num_tokens": 88,
+      "total_nll": 119.48553466796875,
+      "avg_nll": 1.3577901666814631,
+      "perplexity": 3.8875928702814226
+    },
+    {
+      "task_id": "MBPP/226",
+      "prompt_length_chars": 301,
+      "num_tokens": 87,
+      "total_nll": 142.01693725585938,
+      "avg_nll": 1.6323785891478089,
+      "perplexity": 5.1160291890693514
+    },
+    {
+      "task_id": "MBPP/227",
+      "prompt_length_chars": 238,
+      "num_tokens": 90,
+      "total_nll": 110.36640930175781,
+      "avg_nll": 1.226293436686198,
+      "perplexity": 3.408572004864584
+    },
+    {
+      "task_id": "MBPP/228",
+      "prompt_length_chars": 358,
+      "num_tokens": 135,
+      "total_nll": 167.162109375,
+      "avg_nll": 1.2382378472222222,
+      "perplexity": 3.449529507901875
+    },
+    {
+      "task_id": "MBPP/229",
+      "prompt_length_chars": 599,
+      "num_tokens": 214,
+      "total_nll": 267.1173095703125,
+      "avg_nll": 1.2482117269640771,
+      "perplexity": 3.484106848859202
+    },
+    {
+      "task_id": "MBPP/230",
+      "prompt_length_chars": 410,
+      "num_tokens": 108,
+      "total_nll": 180.99746704101562,
+      "avg_nll": 1.6759024726019964,
+      "perplexity": 5.343615440186058
+    },
+    {
+      "task_id": "MBPP/232",
+      "prompt_length_chars": 452,
+      "num_tokens": 174,
+      "total_nll": 187.49237060546875,
+      "avg_nll": 1.0775423598015446,
+      "perplexity": 2.9374514738739164
+    },
+    {
+      "task_id": "MBPP/233",
+      "prompt_length_chars": 406,
+      "num_tokens": 147,
+      "total_nll": 208.53001403808594,
+      "avg_nll": 1.4185715240686119,
+      "perplexity": 4.131214882255182
+    },
+    {
+      "task_id": "MBPP/234",
+      "prompt_length_chars": 217,
+      "num_tokens": 68,
+      "total_nll": 93.19802856445312,
+      "avg_nll": 1.370559243594899,
+      "perplexity": 3.937552130652483
+    },
+    {
+      "task_id": "MBPP/235",
+      "prompt_length_chars": 253,
+      "num_tokens": 83,
+      "total_nll": 102.08294677734375,
+      "avg_nll": 1.2299150214137802,
+      "perplexity": 3.4209388173931616
+    },
+    {
+      "task_id": "MBPP/237",
+      "prompt_length_chars": 559,
+      "num_tokens": 233,
+      "total_nll": 222.52651977539062,
+      "avg_nll": 0.9550494410960971,
+      "perplexity": 2.598799067217713
+    },
+    {
+      "task_id": "MBPP/238",
+      "prompt_length_chars": 291,
+      "num_tokens": 86,
+      "total_nll": 103.52391815185547,
+      "avg_nll": 1.2037664901378542,
+      "perplexity": 3.332645690310756
+    },
+    {
+      "task_id": "MBPP/239",
+      "prompt_length_chars": 487,
+      "num_tokens": 139,
+      "total_nll": 182.42018127441406,
+      "avg_nll": 1.3123754048518996,
+      "perplexity": 3.7149878396441904
+    },
+    {
+      "task_id": "MBPP/240",
+      "prompt_length_chars": 429,
+      "num_tokens": 164,
+      "total_nll": 150.4601593017578,
+      "avg_nll": 0.9174399957424257,
+      "perplexity": 2.5028748113126387
+    },
+    {
+      "task_id": "MBPP/242",
+      "prompt_length_chars": 254,
+      "num_tokens": 72,
+      "total_nll": 126.24957275390625,
+      "avg_nll": 1.753466288248698,
+      "perplexity": 5.77458439883606
+    },
+    {
+      "task_id": "MBPP/244",
+      "prompt_length_chars": 271,
+      "num_tokens": 77,
+      "total_nll": 117.31869506835938,
+      "avg_nll": 1.5236194164721997,
+      "perplexity": 4.588803966969252
+    },
+    {
+      "task_id": "MBPP/245",
+      "prompt_length_chars": 411,
+      "num_tokens": 131,
+      "total_nll": 257.61883544921875,
+      "avg_nll": 1.966555995795563,
+      "perplexity": 7.146023125882208
+    },
+    {
+      "task_id": "MBPP/246",
+      "prompt_length_chars": 380,
+      "num_tokens": 142,
+      "total_nll": 139.557373046875,
+      "avg_nll": 0.9827984017385564,
+      "perplexity": 2.6719229033957035
+    },
+    {
+      "task_id": "MBPP/247",
+      "prompt_length_chars": 274,
+      "num_tokens": 86,
+      "total_nll": 177.670654296875,
+      "avg_nll": 2.0659378406613373,
+      "perplexity": 7.892696519471984
+    },
+    {
+      "task_id": "MBPP/248",
+      "prompt_length_chars": 370,
+      "num_tokens": 140,
+      "total_nll": 187.3746337890625,
+      "avg_nll": 1.3383902413504465,
+      "perplexity": 3.8129007125839545
+    },
+    {
+      "task_id": "MBPP/249",
+      "prompt_length_chars": 370,
+      "num_tokens": 153,
+      "total_nll": 136.3345184326172,
+      "avg_nll": 0.8910752838733149,
+      "perplexity": 2.437749515229628
+    },
+    {
+      "task_id": "MBPP/250",
+      "prompt_length_chars": 382,
+      "num_tokens": 154,
+      "total_nll": 172.55320739746094,
+      "avg_nll": 1.1204753727107852,
+      "perplexity": 3.066311497695335
+    },
+    {
+      "task_id": "MBPP/251",
+      "prompt_length_chars": 497,
+      "num_tokens": 152,
+      "total_nll": 197.61520385742188,
+      "avg_nll": 1.3001000253777755,
+      "perplexity": 3.6696637087610013
+    },
+    {
+      "task_id": "MBPP/252",
+      "prompt_length_chars": 233,
+      "num_tokens": 81,
+      "total_nll": 103.05604553222656,
+      "avg_nll": 1.2722968584225502,
+      "perplexity": 3.569040736493428
+    },
+    {
+      "task_id": "MBPP/253",
+      "prompt_length_chars": 276,
+      "num_tokens": 91,
+      "total_nll": 141.30877685546875,
+      "avg_nll": 1.5528437017084478,
+      "perplexity": 4.724887266448828
+    },
+    {
+      "task_id": "MBPP/255",
+      "prompt_length_chars": 836,
+      "num_tokens": 258,
+      "total_nll": 199.36705017089844,
+      "avg_nll": 0.7727405045383661,
+      "perplexity": 2.1656932207356627
+    },
+    {
+      "task_id": "MBPP/256",
+      "prompt_length_chars": 320,
+      "num_tokens": 97,
+      "total_nll": 122.5460205078125,
+      "avg_nll": 1.2633610361630154,
+      "perplexity": 3.5372904913768948
+    },
+    {
+      "task_id": "MBPP/257",
+      "prompt_length_chars": 302,
+      "num_tokens": 100,
+      "total_nll": 97.31879425048828,
+      "avg_nll": 0.9731879425048828,
+      "perplexity": 2.646367493562443
+    },
+    {
+      "task_id": "MBPP/259",
+      "prompt_length_chars": 534,
+      "num_tokens": 242,
+      "total_nll": 256.3408203125,
+      "avg_nll": 1.0592595880681819,
+      "perplexity": 2.8842346767210962
+    },
+    {
+      "task_id": "MBPP/260",
+      "prompt_length_chars": 227,
+      "num_tokens": 77,
+      "total_nll": 147.629638671875,
+      "avg_nll": 1.9172680346996753,
+      "perplexity": 6.802349278843325
+    },
+    {
+      "task_id": "MBPP/261",
+      "prompt_length_chars": 418,
+      "num_tokens": 152,
+      "total_nll": 222.02828979492188,
+      "avg_nll": 1.4607124328613281,
+      "perplexity": 4.309028328439965
+    },
+    {
+      "task_id": "MBPP/262",
+      "prompt_length_chars": 513,
+      "num_tokens": 205,
+      "total_nll": 217.76065063476562,
+      "avg_nll": 1.0622470762671494,
+      "perplexity": 2.8928641776286637
+    },
+    {
+      "task_id": "MBPP/264",
+      "prompt_length_chars": 194,
+      "num_tokens": 67,
+      "total_nll": 122.35401153564453,
+      "avg_nll": 1.8261792766514109,
+      "perplexity": 6.210114145233438
+    },
+    {
+      "task_id": "MBPP/265",
+      "prompt_length_chars": 595,
+      "num_tokens": 270,
+      "total_nll": 237.39552307128906,
+      "avg_nll": 0.8792426780418113,
+      "perplexity": 2.409074570325601
+    },
+    {
+      "task_id": "MBPP/266",
+      "prompt_length_chars": 267,
+      "num_tokens": 82,
+      "total_nll": 148.50155639648438,
+      "avg_nll": 1.810994590201029,
+      "perplexity": 6.116527846629665
+    },
+    {
+      "task_id": "MBPP/267",
+      "prompt_length_chars": 272,
+      "num_tokens": 78,
+      "total_nll": 106.68780517578125,
+      "avg_nll": 1.3677923740484776,
+      "perplexity": 3.9266724957807493
+    },
+    {
+      "task_id": "MBPP/268",
+      "prompt_length_chars": 210,
+      "num_tokens": 73,
+      "total_nll": 112.12002563476562,
+      "avg_nll": 1.535890762120077,
+      "perplexity": 4.6454616888163205
+    },
+    {
+      "task_id": "MBPP/269",
+      "prompt_length_chars": 211,
+      "num_tokens": 75,
+      "total_nll": 104.4801254272461,
+      "avg_nll": 1.3930683390299479,
+      "perplexity": 4.027187892769097
+    },
+    {
+      "task_id": "MBPP/270",
+      "prompt_length_chars": 353,
+      "num_tokens": 129,
+      "total_nll": 192.69252014160156,
+      "avg_nll": 1.4937404662139655,
+      "perplexity": 4.4537234035139015
+    },
+    {
+      "task_id": "MBPP/271",
+      "prompt_length_chars": 311,
+      "num_tokens": 92,
+      "total_nll": 170.35028076171875,
+      "avg_nll": 1.8516334865404211,
+      "perplexity": 6.370216691697519
+    },
+    {
+      "task_id": "MBPP/272",
+      "prompt_length_chars": 459,
+      "num_tokens": 181,
+      "total_nll": 259.36444091796875,
+      "avg_nll": 1.432952712253971,
+      "perplexity": 4.191055922189647
+    },
+    {
+      "task_id": "MBPP/273",
+      "prompt_length_chars": 432,
+      "num_tokens": 150,
+      "total_nll": 222.33010864257812,
+      "avg_nll": 1.4822007242838542,
+      "perplexity": 4.4026239888939465
+    },
+    {
+      "task_id": "MBPP/274",
+      "prompt_length_chars": 314,
+      "num_tokens": 103,
+      "total_nll": 143.32508850097656,
+      "avg_nll": 1.3915057136017142,
+      "perplexity": 4.02089982079368
+    },
+    {
+      "task_id": "MBPP/276",
+      "prompt_length_chars": 408,
+      "num_tokens": 142,
+      "total_nll": 193.3822784423828,
+      "avg_nll": 1.361847031284386,
+      "perplexity": 3.9033963427868934
+    },
+    {
+      "task_id": "MBPP/277",
+      "prompt_length_chars": 683,
+      "num_tokens": 217,
+      "total_nll": 249.0030517578125,
+      "avg_nll": 1.147479501188076,
+      "perplexity": 3.1502427116543297
+    },
+    {
+      "task_id": "MBPP/278",
+      "prompt_length_chars": 356,
+      "num_tokens": 121,
+      "total_nll": 195.6174774169922,
+      "avg_nll": 1.6166733670825801,
+      "perplexity": 5.036308468981719
+    },
+    {
+      "task_id": "MBPP/279",
+      "prompt_length_chars": 228,
+      "num_tokens": 77,
+      "total_nll": 125.59745025634766,
+      "avg_nll": 1.6311357176149046,
+      "perplexity": 5.109674571833197
+    },
+    {
+      "task_id": "MBPP/280",
+      "prompt_length_chars": 519,
+      "num_tokens": 164,
+      "total_nll": 279.8634033203125,
+      "avg_nll": 1.7064841665872714,
+      "perplexity": 5.509556702091046
+    },
+    {
+      "task_id": "MBPP/281",
+      "prompt_length_chars": 265,
+      "num_tokens": 89,
+      "total_nll": 98.05722045898438,
+      "avg_nll": 1.1017665220110604,
+      "perplexity": 3.009477639514236
+    },
+    {
+      "task_id": "MBPP/282",
+      "prompt_length_chars": 254,
+      "num_tokens": 105,
+      "total_nll": 136.28836059570312,
+      "avg_nll": 1.2979843866257441,
+      "perplexity": 3.661908232797314
+    },
+    {
+      "task_id": "MBPP/283",
+      "prompt_length_chars": 306,
+      "num_tokens": 76,
+      "total_nll": 145.547607421875,
+      "avg_nll": 1.91510009765625,
+      "perplexity": 6.787618187668143
+    },
+    {
+      "task_id": "MBPP/284",
+      "prompt_length_chars": 389,
+      "num_tokens": 115,
+      "total_nll": 148.04644775390625,
+      "avg_nll": 1.2873604152513587,
+      "perplexity": 3.6232101521897957
+    },
+    {
+      "task_id": "MBPP/285",
+      "prompt_length_chars": 325,
+      "num_tokens": 101,
+      "total_nll": 153.6791229248047,
+      "avg_nll": 1.5215754745030168,
+      "perplexity": 4.579434296745886
+    },
+    {
+      "task_id": "MBPP/286",
+      "prompt_length_chars": 421,
+      "num_tokens": 147,
+      "total_nll": 199.69674682617188,
+      "avg_nll": 1.3584812709263392,
+      "perplexity": 3.8902805308362587
+    },
+    {
+      "task_id": "MBPP/287",
+      "prompt_length_chars": 261,
+      "num_tokens": 75,
+      "total_nll": 125.00653076171875,
+      "avg_nll": 1.6667537434895834,
+      "perplexity": 5.294951097915571
+    },
+    {
+      "task_id": "MBPP/290",
+      "prompt_length_chars": 350,
+      "num_tokens": 147,
+      "total_nll": 188.6308135986328,
+      "avg_nll": 1.2832028135961415,
+      "perplexity": 3.608177559084847
+    },
+    {
+      "task_id": "MBPP/291",
+      "prompt_length_chars": 361,
+      "num_tokens": 114,
+      "total_nll": 194.57791137695312,
+      "avg_nll": 1.7068237840083607,
+      "perplexity": 5.511428161301642
+    },
+    {
+      "task_id": "MBPP/292",
+      "prompt_length_chars": 232,
+      "num_tokens": 73,
+      "total_nll": 116.64654541015625,
+      "avg_nll": 1.5978978823309076,
+      "perplexity": 4.942631503230335
+    },
+    {
+      "task_id": "MBPP/293",
+      "prompt_length_chars": 294,
+      "num_tokens": 98,
+      "total_nll": 204.75213623046875,
+      "avg_nll": 2.0893075125558034,
+      "perplexity": 8.079318400134497
+    },
+    {
+      "task_id": "MBPP/294",
+      "prompt_length_chars": 294,
+      "num_tokens": 101,
+      "total_nll": 167.4344024658203,
+      "avg_nll": 1.6577663610477258,
+      "perplexity": 5.247576552846692
+    },
+    {
+      "task_id": "MBPP/295",
+      "prompt_length_chars": 195,
+      "num_tokens": 69,
+      "total_nll": 106.38142395019531,
+      "avg_nll": 1.541759767394135,
+      "perplexity": 4.6728060917004965
+    },
+    {
+      "task_id": "MBPP/296",
+      "prompt_length_chars": 243,
+      "num_tokens": 93,
+      "total_nll": 133.23892211914062,
+      "avg_nll": 1.4326765819262433,
+      "perplexity": 4.189898804309349
+    },
+    {
+      "task_id": "MBPP/297",
+      "prompt_length_chars": 486,
+      "num_tokens": 219,
+      "total_nll": 190.1513671875,
+      "avg_nll": 0.8682710830479452,
+      "perplexity": 2.3827876482533945
+    },
+    {
+      "task_id": "MBPP/299",
+      "prompt_length_chars": 583,
+      "num_tokens": 212,
+      "total_nll": 278.6243896484375,
+      "avg_nll": 1.314265988907724,
+      "perplexity": 3.7220179798629163
+    },
+    {
+      "task_id": "MBPP/300",
+      "prompt_length_chars": 392,
+      "num_tokens": 140,
+      "total_nll": 156.4795684814453,
+      "avg_nll": 1.1177112034388952,
+      "perplexity": 3.057847397167914
+    },
+    {
+      "task_id": "MBPP/301",
+      "prompt_length_chars": 277,
+      "num_tokens": 112,
+      "total_nll": 147.3392333984375,
+      "avg_nll": 1.3155288696289062,
+      "perplexity": 3.7267214139265676
+    },
+    {
+      "task_id": "MBPP/304",
+      "prompt_length_chars": 341,
+      "num_tokens": 145,
+      "total_nll": 170.03025817871094,
+      "avg_nll": 1.1726224701980064,
+      "perplexity": 3.230453307278148
+    },
+    {
+      "task_id": "MBPP/305",
+      "prompt_length_chars": 384,
+      "num_tokens": 126,
+      "total_nll": 236.77317810058594,
+      "avg_nll": 1.8791522071475075,
+      "perplexity": 6.547951202119507
+    },
+    {
+      "task_id": "MBPP/306",
+      "prompt_length_chars": 497,
+      "num_tokens": 175,
+      "total_nll": 288.6838073730469,
+      "avg_nll": 1.6496217564174107,
+      "perplexity": 5.2050106929052244
+    },
+    {
+      "task_id": "MBPP/307",
+      "prompt_length_chars": 360,
+      "num_tokens": 154,
+      "total_nll": 186.88055419921875,
+      "avg_nll": 1.213510092202719,
+      "perplexity": 3.3652763757908772
+    },
+    {
+      "task_id": "MBPP/308",
+      "prompt_length_chars": 452,
+      "num_tokens": 178,
+      "total_nll": 200.7798614501953,
+      "avg_nll": 1.1279767497201985,
+      "perplexity": 3.0893995440731317
+    },
+    {
+      "task_id": "MBPP/309",
+      "prompt_length_chars": 212,
+      "num_tokens": 67,
+      "total_nll": 85.03591918945312,
+      "avg_nll": 1.2691928237231809,
+      "perplexity": 3.5579794863373304
+    },
+    {
+      "task_id": "MBPP/310",
+      "prompt_length_chars": 345,
+      "num_tokens": 139,
+      "total_nll": 166.32962036132812,
+      "avg_nll": 1.1966159738225044,
+      "perplexity": 3.3089005491124555
+    },
+    {
+      "task_id": "MBPP/311",
+      "prompt_length_chars": 261,
+      "num_tokens": 94,
+      "total_nll": 115.81942749023438,
+      "avg_nll": 1.2321215690450464,
+      "perplexity": 3.4284956159893305
+    },
+    {
+      "task_id": "MBPP/312",
+      "prompt_length_chars": 346,
+      "num_tokens": 137,
+      "total_nll": 222.83831787109375,
+      "avg_nll": 1.6265570647525092,
+      "perplexity": 5.086332623845935
+    },
+    {
+      "task_id": "MBPP/388",
+      "prompt_length_chars": 272,
+      "num_tokens": 89,
+      "total_nll": 106.28634643554688,
+      "avg_nll": 1.1942286116353582,
+      "perplexity": 3.30101042709743
+    },
+    {
+      "task_id": "MBPP/389",
+      "prompt_length_chars": 196,
+      "num_tokens": 74,
+      "total_nll": 102.1902847290039,
+      "avg_nll": 1.380949793635188,
+      "perplexity": 3.978678757223981
+    },
+    {
+      "task_id": "MBPP/390",
+      "prompt_length_chars": 418,
+      "num_tokens": 160,
+      "total_nll": 192.52578735351562,
+      "avg_nll": 1.2032861709594727,
+      "perplexity": 3.3310453410409395
+    },
+    {
+      "task_id": "MBPP/391",
+      "prompt_length_chars": 827,
+      "num_tokens": 342,
+      "total_nll": 332.47320556640625,
+      "avg_nll": 0.9721438759251645,
+      "perplexity": 2.6436059515724692
+    },
+    {
+      "task_id": "MBPP/392",
+      "prompt_length_chars": 287,
+      "num_tokens": 112,
+      "total_nll": 160.40963745117188,
+      "avg_nll": 1.4322289058140345,
+      "perplexity": 4.188023506496425
+    },
+    {
+      "task_id": "MBPP/393",
+      "prompt_length_chars": 370,
+      "num_tokens": 177,
+      "total_nll": 181.95950317382812,
+      "avg_nll": 1.0280197919425318,
+      "perplexity": 2.7955246297437513
+    },
+    {
+      "task_id": "MBPP/394",
+      "prompt_length_chars": 280,
+      "num_tokens": 94,
+      "total_nll": 115.17681121826172,
+      "avg_nll": 1.2252852257261886,
+      "perplexity": 3.405137177017794
+    },
+    {
+      "task_id": "MBPP/395",
+      "prompt_length_chars": 331,
+      "num_tokens": 97,
+      "total_nll": 105.14408874511719,
+      "avg_nll": 1.0839596777847134,
+      "perplexity": 2.956362648652981
+    },
+    {
+      "task_id": "MBPP/396",
+      "prompt_length_chars": 278,
+      "num_tokens": 79,
+      "total_nll": 114.14596557617188,
+      "avg_nll": 1.4448856402047072,
+      "perplexity": 4.241367073214478
+    },
+    {
+      "task_id": "MBPP/397",
+      "prompt_length_chars": 253,
+      "num_tokens": 92,
+      "total_nll": 127.72154998779297,
+      "avg_nll": 1.3882777172586191,
+      "perplexity": 4.007941297161928
+    },
+    {
+      "task_id": "MBPP/398",
+      "prompt_length_chars": 280,
+      "num_tokens": 109,
+      "total_nll": 187.01248168945312,
+      "avg_nll": 1.7157108411876434,
+      "perplexity": 5.560626830395395
+    },
+    {
+      "task_id": "MBPP/399",
+      "prompt_length_chars": 369,
+      "num_tokens": 151,
+      "total_nll": 201.1201171875,
+      "avg_nll": 1.3319213058774835,
+      "perplexity": 3.7883149116264403
+    },
+    {
+      "task_id": "MBPP/400",
+      "prompt_length_chars": 328,
+      "num_tokens": 130,
+      "total_nll": 160.3988800048828,
+      "avg_nll": 1.2338375384990985,
+      "perplexity": 3.43438386031857
+    },
+    {
+      "task_id": "MBPP/401",
+      "prompt_length_chars": 590,
+      "num_tokens": 262,
+      "total_nll": 300.65673828125,
+      "avg_nll": 1.1475448026001909,
+      "perplexity": 3.150448433668801
+    },
+    {
+      "task_id": "MBPP/404",
+      "prompt_length_chars": 210,
+      "num_tokens": 67,
+      "total_nll": 79.11294555664062,
+      "avg_nll": 1.180790232188666,
+      "perplexity": 3.256946930530974
+    },
+    {
+      "task_id": "MBPP/405",
+      "prompt_length_chars": 383,
+      "num_tokens": 165,
+      "total_nll": 175.4984130859375,
+      "avg_nll": 1.0636267459753788,
+      "perplexity": 2.8968581292380486
+    },
+    {
+      "task_id": "MBPP/406",
+      "prompt_length_chars": 241,
+      "num_tokens": 73,
+      "total_nll": 103.77366638183594,
+      "avg_nll": 1.42155707372378,
+      "perplexity": 4.143567259564984
+    },
+    {
+      "task_id": "MBPP/407",
+      "prompt_length_chars": 271,
+      "num_tokens": 80,
+      "total_nll": 133.60308837890625,
+      "avg_nll": 1.670038604736328,
+      "perplexity": 5.312372875976789
+    },
+    {
+      "task_id": "MBPP/408",
+      "prompt_length_chars": 443,
+      "num_tokens": 185,
+      "total_nll": 176.08352661132812,
+      "avg_nll": 0.9518028465477196,
+      "perplexity": 2.5903755016836865
+    },
+    {
+      "task_id": "MBPP/409",
+      "prompt_length_chars": 355,
+      "num_tokens": 136,
+      "total_nll": 199.3590087890625,
+      "avg_nll": 1.4658750646254595,
+      "perplexity": 4.331331777671272
+    },
+    {
+      "task_id": "MBPP/410",
+      "prompt_length_chars": 294,
+      "num_tokens": 101,
+      "total_nll": 168.5081787109375,
+      "avg_nll": 1.668397809019183,
+      "perplexity": 5.303663504417741
+    },
+    {
+      "task_id": "MBPP/411",
+      "prompt_length_chars": 310,
+      "num_tokens": 96,
+      "total_nll": 136.53929138183594,
+      "avg_nll": 1.4222842852274578,
+      "perplexity": 4.146581605242988
+    },
+    {
+      "task_id": "MBPP/412",
+      "prompt_length_chars": 246,
+      "num_tokens": 90,
+      "total_nll": 104.04017639160156,
+      "avg_nll": 1.156001959906684,
+      "perplexity": 3.177205255505687
+    },
+    {
+      "task_id": "MBPP/413",
+      "prompt_length_chars": 666,
+      "num_tokens": 239,
+      "total_nll": 262.59967041015625,
+      "avg_nll": 1.0987433908374737,
+      "perplexity": 3.000393332290887
+    },
+    {
+      "task_id": "MBPP/414",
+      "prompt_length_chars": 310,
+      "num_tokens": 103,
+      "total_nll": 124.45490264892578,
+      "avg_nll": 1.208300025717726,
+      "perplexity": 3.3477886577777456
+    },
+    {
+      "task_id": "MBPP/415",
+      "prompt_length_chars": 297,
+      "num_tokens": 113,
+      "total_nll": 166.2223663330078,
+      "avg_nll": 1.4709943923275028,
+      "perplexity": 4.35356213812731
+    },
+    {
+      "task_id": "MBPP/417",
+      "prompt_length_chars": 414,
+      "num_tokens": 170,
+      "total_nll": 156.54104614257812,
+      "avg_nll": 0.920829683191636,
+      "perplexity": 2.511373169900048
+    },
+    {
+      "task_id": "MBPP/418",
+      "prompt_length_chars": 314,
+      "num_tokens": 135,
+      "total_nll": 153.7305908203125,
+      "avg_nll": 1.1387451171875,
+      "perplexity": 3.1228470981858742
+    },
+    {
+      "task_id": "MBPP/419",
+      "prompt_length_chars": 377,
+      "num_tokens": 145,
+      "total_nll": 295.7318115234375,
+      "avg_nll": 2.0395297346443964,
+      "perplexity": 7.686993422063199
+    },
+    {
+      "task_id": "MBPP/420",
+      "prompt_length_chars": 222,
+      "num_tokens": 69,
+      "total_nll": 123.33045196533203,
+      "avg_nll": 1.7873978545700295,
+      "perplexity": 5.973887300215547
+    },
+    {
+      "task_id": "MBPP/421",
+      "prompt_length_chars": 351,
+      "num_tokens": 143,
+      "total_nll": 202.87994384765625,
+      "avg_nll": 1.4187408660675263,
+      "perplexity": 4.131914529679462
+    },
+    {
+      "task_id": "MBPP/422",
+      "prompt_length_chars": 271,
+      "num_tokens": 87,
+      "total_nll": 117.97451782226562,
+      "avg_nll": 1.3560289404858117,
+      "perplexity": 3.8807519658386354
+    },
+    {
+      "task_id": "MBPP/424",
+      "prompt_length_chars": 360,
+      "num_tokens": 126,
+      "total_nll": 241.96119689941406,
+      "avg_nll": 1.9203269595191592,
+      "perplexity": 6.823189011220662
+    },
+    {
+      "task_id": "MBPP/425",
+      "prompt_length_chars": 433,
+      "num_tokens": 180,
+      "total_nll": 163.56439208984375,
+      "avg_nll": 0.9086910671657986,
+      "perplexity": 2.481072849323182
+    },
+    {
+      "task_id": "MBPP/426",
+      "prompt_length_chars": 298,
+      "num_tokens": 133,
+      "total_nll": 177.61959838867188,
+      "avg_nll": 1.3354857021704651,
+      "perplexity": 3.8018420609928394
+    },
+    {
+      "task_id": "MBPP/427",
+      "prompt_length_chars": 323,
+      "num_tokens": 120,
+      "total_nll": 123.7823486328125,
+      "avg_nll": 1.0315195719401042,
+      "perplexity": 2.8053254913515704
+    },
+    {
+      "task_id": "MBPP/428",
+      "prompt_length_chars": 387,
+      "num_tokens": 156,
+      "total_nll": 240.66622924804688,
+      "avg_nll": 1.5427322387695312,
+      "perplexity": 4.67735247212157
+    },
+    {
+      "task_id": "MBPP/429",
+      "prompt_length_chars": 350,
+      "num_tokens": 147,
+      "total_nll": 202.92242431640625,
+      "avg_nll": 1.3804246552136479,
+      "perplexity": 3.9765899486464193
+    },
+    {
+      "task_id": "MBPP/430",
+      "prompt_length_chars": 261,
+      "num_tokens": 101,
+      "total_nll": 150.8715057373047,
+      "avg_nll": 1.4937772845277693,
+      "perplexity": 4.453887385118511
+    },
+    {
+      "task_id": "MBPP/431",
+      "prompt_length_chars": 340,
+      "num_tokens": 125,
+      "total_nll": 115.64398193359375,
+      "avg_nll": 0.92515185546875,
+      "perplexity": 2.5222512489236686
+    },
+    {
+      "task_id": "MBPP/432",
+      "prompt_length_chars": 258,
+      "num_tokens": 95,
+      "total_nll": 126.44336700439453,
+      "avg_nll": 1.330982810572574,
+      "perplexity": 3.7847612636701515
+    },
+    {
+      "task_id": "MBPP/433",
+      "prompt_length_chars": 332,
+      "num_tokens": 111,
+      "total_nll": 133.14088439941406,
+      "avg_nll": 1.1994674270217482,
+      "perplexity": 3.3183491889442696
+    },
+    {
+      "task_id": "MBPP/434",
+      "prompt_length_chars": 261,
+      "num_tokens": 80,
+      "total_nll": 129.06430053710938,
+      "avg_nll": 1.6133037567138673,
+      "perplexity": 5.01936663147046
+    },
+    {
+      "task_id": "MBPP/435",
+      "prompt_length_chars": 217,
+      "num_tokens": 71,
+      "total_nll": 99.4121322631836,
+      "avg_nll": 1.4001708769462478,
+      "perplexity": 4.055892966238557
+    },
+    {
+      "task_id": "MBPP/436",
+      "prompt_length_chars": 249,
+      "num_tokens": 99,
+      "total_nll": 123.78533935546875,
+      "avg_nll": 1.250356963186553,
+      "perplexity": 3.4915891038070526
+    },
+    {
+      "task_id": "MBPP/437",
+      "prompt_length_chars": 239,
+      "num_tokens": 73,
+      "total_nll": 147.32723999023438,
+      "avg_nll": 2.018181369729238,
+      "perplexity": 7.524627966381513
+    },
+    {
+      "task_id": "MBPP/438",
+      "prompt_length_chars": 380,
+      "num_tokens": 159,
+      "total_nll": 151.54623413085938,
+      "avg_nll": 0.9531209693764741,
+      "perplexity": 2.5937921860776587
+    },
+    {
+      "task_id": "MBPP/439",
+      "prompt_length_chars": 303,
+      "num_tokens": 103,
+      "total_nll": 158.92845153808594,
+      "avg_nll": 1.542994675127048,
+      "perplexity": 4.678580140552545
+    },
+    {
+      "task_id": "MBPP/440",
+      "prompt_length_chars": 421,
+      "num_tokens": 127,
+      "total_nll": 243.55572509765625,
+      "avg_nll": 1.9177616149421752,
+      "perplexity": 6.8057076127854055
+    },
+    {
+      "task_id": "MBPP/441",
+      "prompt_length_chars": 240,
+      "num_tokens": 73,
+      "total_nll": 112.30567932128906,
+      "avg_nll": 1.5384339633053297,
+      "perplexity": 4.657291068359492
+    },
+    {
+      "task_id": "MBPP/442",
+      "prompt_length_chars": 365,
+      "num_tokens": 151,
+      "total_nll": 215.29611206054688,
+      "avg_nll": 1.4258020666261382,
+      "perplexity": 4.16119405952312
+    },
+    {
+      "task_id": "MBPP/443",
+      "prompt_length_chars": 270,
+      "num_tokens": 95,
+      "total_nll": 118.70342254638672,
+      "avg_nll": 1.249509711014597,
+      "perplexity": 3.488632100196027
+    },
+    {
+      "task_id": "MBPP/444",
+      "prompt_length_chars": 521,
+      "num_tokens": 269,
+      "total_nll": 306.0016174316406,
+      "avg_nll": 1.1375524811585154,
+      "perplexity": 3.1191248982796242
+    },
+    {
+      "task_id": "MBPP/445",
+      "prompt_length_chars": 604,
+      "num_tokens": 252,
+      "total_nll": 332.31463623046875,
+      "avg_nll": 1.3187088739304316,
+      "perplexity": 3.7385912671428327
+    },
+    {
+      "task_id": "MBPP/446",
+      "prompt_length_chars": 350,
+      "num_tokens": 137,
+      "total_nll": 176.43975830078125,
+      "avg_nll": 1.2878814474509581,
+      "perplexity": 3.6250984532351067
+    },
+    {
+      "task_id": "MBPP/447",
+      "prompt_length_chars": 324,
+      "num_tokens": 128,
+      "total_nll": 185.24481201171875,
+      "avg_nll": 1.4472250938415527,
+      "perplexity": 4.2513011704882935
+    },
+    {
+      "task_id": "MBPP/448",
+      "prompt_length_chars": 197,
+      "num_tokens": 65,
+      "total_nll": 107.96598815917969,
+      "avg_nll": 1.6610152024489182,
+      "perplexity": 5.264652820830754
+    },
+    {
+      "task_id": "MBPP/450",
+      "prompt_length_chars": 468,
+      "num_tokens": 142,
+      "total_nll": 176.6379852294922,
+      "avg_nll": 1.243929473447128,
+      "perplexity": 3.4692189197465018
+    },
+    {
+      "task_id": "MBPP/451",
+      "prompt_length_chars": 331,
+      "num_tokens": 98,
+      "total_nll": 145.0106201171875,
+      "avg_nll": 1.4797002052774235,
+      "perplexity": 4.3916288963794425
+    },
+    {
+      "task_id": "MBPP/452",
+      "prompt_length_chars": 272,
+      "num_tokens": 82,
+      "total_nll": 169.5294647216797,
+      "avg_nll": 2.06743249660585,
+      "perplexity": 7.904502205764823
+    },
+    {
+      "task_id": "MBPP/453",
+      "prompt_length_chars": 228,
+      "num_tokens": 72,
+      "total_nll": 116.05088806152344,
+      "avg_nll": 1.611817889743381,
+      "perplexity": 5.011914058517144
+    },
+    {
+      "task_id": "MBPP/454",
+      "prompt_length_chars": 252,
+      "num_tokens": 80,
+      "total_nll": 152.31375122070312,
+      "avg_nll": 1.903921890258789,
+      "perplexity": 6.712167272466448
+    },
+    {
+      "task_id": "MBPP/455",
+      "prompt_length_chars": 282,
+      "num_tokens": 85,
+      "total_nll": 124.14346313476562,
+      "avg_nll": 1.4605113309972426,
+      "perplexity": 4.308161861937652
+    },
+    {
+      "task_id": "MBPP/456",
+      "prompt_length_chars": 435,
+      "num_tokens": 155,
+      "total_nll": 351.75469970703125,
+      "avg_nll": 2.2693851594002017,
+      "perplexity": 9.673451354642653
+    },
+    {
+      "task_id": "MBPP/457",
+      "prompt_length_chars": 288,
+      "num_tokens": 121,
+      "total_nll": 155.11602783203125,
+      "avg_nll": 1.2819506432399277,
+      "perplexity": 3.6036623336111133
+    },
+    {
+      "task_id": "MBPP/458",
+      "prompt_length_chars": 225,
+      "num_tokens": 73,
+      "total_nll": 85.70350646972656,
+      "avg_nll": 1.1740206365715968,
+      "perplexity": 3.2349731774927992
+    },
+    {
+      "task_id": "MBPP/459",
+      "prompt_length_chars": 369,
+      "num_tokens": 137,
+      "total_nll": 472.5644226074219,
+      "avg_nll": 3.4493753474994295,
+      "perplexity": 31.4807216542247
+    },
+    {
+      "task_id": "MBPP/460",
+      "prompt_length_chars": 278,
+      "num_tokens": 113,
+      "total_nll": 140.37582397460938,
+      "avg_nll": 1.242263928978844,
+      "perplexity": 3.4634455905683095
+    },
+    {
+      "task_id": "MBPP/461",
+      "prompt_length_chars": 244,
+      "num_tokens": 72,
+      "total_nll": 122.42276763916016,
+      "avg_nll": 1.7003162172105577,
+      "perplexity": 5.475678621810099
+    },
+    {
+      "task_id": "MBPP/462",
+      "prompt_length_chars": 2782,
+      "num_tokens": 511,
+      "total_nll": 227.62158203125,
+      "avg_nll": 0.44544340906311153,
+      "perplexity": 1.5611822847563068
+    },
+    {
+      "task_id": "MBPP/463",
+      "prompt_length_chars": 326,
+      "num_tokens": 118,
+      "total_nll": 167.48780822753906,
+      "avg_nll": 1.4193882053181277,
+      "perplexity": 4.13459014605697
+    },
+    {
+      "task_id": "MBPP/464",
+      "prompt_length_chars": 473,
+      "num_tokens": 160,
+      "total_nll": 202.88490295410156,
+      "avg_nll": 1.2680306434631348,
+      "perplexity": 3.5538468746976424
+    },
+    {
+      "task_id": "MBPP/465",
+      "prompt_length_chars": 367,
+      "num_tokens": 148,
+      "total_nll": 137.52037048339844,
+      "avg_nll": 0.9291916924553949,
+      "perplexity": 2.5324613424795097
+    },
+    {
+      "task_id": "MBPP/468",
+      "prompt_length_chars": 352,
+      "num_tokens": 110,
+      "total_nll": 241.3634033203125,
+      "avg_nll": 2.1942127574573864,
+      "perplexity": 8.972934399906169
+    },
+    {
+      "task_id": "MBPP/470",
+      "prompt_length_chars": 339,
+      "num_tokens": 123,
+      "total_nll": 167.0590057373047,
+      "avg_nll": 1.3582032986772739,
+      "perplexity": 3.889199291091891
+    },
+    {
+      "task_id": "MBPP/471",
+      "prompt_length_chars": 294,
+      "num_tokens": 104,
+      "total_nll": 177.19338989257812,
+      "avg_nll": 1.7037825951209435,
+      "perplexity": 5.49469232853691
+    },
+    {
+      "task_id": "MBPP/472",
+      "prompt_length_chars": 305,
+      "num_tokens": 97,
+      "total_nll": 109.07322692871094,
+      "avg_nll": 1.12446625699702,
+      "perplexity": 3.0785732433977526
+    },
+    {
+      "task_id": "MBPP/473",
+      "prompt_length_chars": 560,
+      "num_tokens": 235,
+      "total_nll": 277.3912658691406,
+      "avg_nll": 1.1803883654005984,
+      "perplexity": 3.2556383346873106
+    },
+    {
+      "task_id": "MBPP/474",
+      "prompt_length_chars": 293,
+      "num_tokens": 94,
+      "total_nll": 190.41624450683594,
+      "avg_nll": 2.025704728796127,
+      "perplexity": 7.581451929934208
+    },
+    {
+      "task_id": "MBPP/475",
+      "prompt_length_chars": 480,
+      "num_tokens": 161,
+      "total_nll": 147.83163452148438,
+      "avg_nll": 0.9182089100713315,
+      "perplexity": 2.50480004769458
+    },
+    {
+      "task_id": "MBPP/476",
+      "prompt_length_chars": 248,
+      "num_tokens": 87,
+      "total_nll": 119.30461120605469,
+      "avg_nll": 1.3713173701845367,
+      "perplexity": 3.9405384254725364
+    },
+    {
+      "task_id": "MBPP/477",
+      "prompt_length_chars": 250,
+      "num_tokens": 79,
+      "total_nll": 149.49488830566406,
+      "avg_nll": 1.892340358299545,
+      "perplexity": 6.634878517681651
+    },
+    {
+      "task_id": "MBPP/478",
+      "prompt_length_chars": 273,
+      "num_tokens": 88,
+      "total_nll": 163.13796997070312,
+      "avg_nll": 1.8538405678488992,
+      "perplexity": 6.3842918046344925
+    },
+    {
+      "task_id": "MBPP/479",
+      "prompt_length_chars": 223,
+      "num_tokens": 71,
+      "total_nll": 85.13907623291016,
+      "avg_nll": 1.1991419187733825,
+      "perplexity": 3.3172692146921094
+    }
+  ]
+}

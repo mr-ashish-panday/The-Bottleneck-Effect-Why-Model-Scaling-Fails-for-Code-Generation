@@ -1,75 +1,84 @@
 #!/usr/bin/env python3
 """
-Extract actual mean activation values for Table 4.
-This replaces fabricated numbers with real data.
+Extract the real top-dimension activation statistics used in the manuscript table.
 """
 
+import argparse
 import json
-import numpy as np
 from pathlib import Path
 
-# Load layer 12 analysis
-analysis_file = Path("data/results_gpt2_medium/ablation/layer12_analysis.json")
+import numpy as np
 
-with open(analysis_file) as f:
-    data = json.load(f)
 
-success_mean = np.array(data['success_mean'])
-failure_mean = np.array(data['failure_mean'])
-difference = np.array(data['difference'])
+def parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--analysis_file",
+        default="data/results_gpt2_medium/ablation/layer12_analysis.json",
+    )
+    parser.add_argument(
+        "--output_file",
+        default="data/results_gpt2_medium/ablation/table4_data.json",
+    )
+    return parser.parse_args()
 
-# Top 5 discriminative dimensions
-top_dims = data['top_discriminative_dims'][:5]
 
-print("="*60)
-print("TABLE 4 DATA: TOP DISCRIMINATIVE DIMENSIONS")
-print("="*60)
+def main():
+    args = parse_args()
 
-table_data = []
+    with open(args.analysis_file, "r", encoding="utf-8") as handle:
+        data = json.load(handle)
 
-for i, dim in enumerate(top_dims):
-    succ_val = success_mean[dim]
-    fail_val = failure_mean[dim]
-    diff_val = abs(succ_val - fail_val)
-    
-    table_data.append({
-        "dimension": int(dim),
-        "mean_success": float(succ_val),
-        "mean_failure": float(fail_val),
-        "difference": float(diff_val),
-    })
-    
-    print(f"\nDimension {dim}:")
-    print(f"  Mean (Success):  {succ_val:+.4f}")
-    print(f"  Mean (Failure):  {fail_val:+.4f}")
-    print(f"  Difference:      {diff_val:.4f}")
+    success_mean = np.asarray(data["success_mean"], dtype=np.float32)
+    failure_mean = np.asarray(data["failure_mean"], dtype=np.float32)
+    difference = success_mean - failure_mean
 
-# Calculate percentage of total signal
-total_diff = np.sum(np.abs(difference))
-for item in table_data:
-    item['pct_signal'] = (item['difference'] / total_diff) * 100
+    top_dims = [int(dim) for dim in data["top_discriminative_dims"][:5]]
+    total_abs_signal = float(np.abs(difference).sum())
 
-print("\n" + "="*60)
-print("PERCENTAGE OF TOTAL DISCRIMINATIVE SIGNAL")
-print("="*60)
-for item in table_data:
-    print(f"Dimension {item['dimension']:4d}: {item['pct_signal']:5.1f}%")
+    table_data = []
+    for dim in top_dims:
+        succ_val = float(success_mean[dim])
+        fail_val = float(failure_mean[dim])
+        diff_val = float(abs(difference[dim]))
+        table_data.append(
+            {
+                "dimension": dim,
+                "mean_success": succ_val,
+                "mean_failure": fail_val,
+                "difference": diff_val,
+                "pct_signal": (diff_val / total_abs_signal) * 100 if total_abs_signal else 0.0,
+            }
+        )
 
-top5_signal = sum(item['pct_signal'] for item in table_data)
-print(f"\nTop 5 dimensions: {top5_signal:.1f}% of total signal")
-print(f"Remaining 1019 dimensions: {100 - top5_signal:.1f}% of total signal")
+    output = {
+        "analysis_file": str(Path(args.analysis_file)),
+        "layer_index": data.get("layer_index"),
+        "pooling": data.get("pooling"),
+        "table_data": table_data,
+        "top5_signal_pct": float(sum(item["pct_signal"] for item in table_data)),
+        "total_dimensions": int(success_mean.shape[0]),
+        "discriminative_dimensions": len(table_data),
+    }
 
-# Save for paper
-output = {
-    "table_data": table_data,
-    "top5_signal_pct": top5_signal,
-    "total_dimensions": 1024,
-    "discriminative_dimensions": 5,
-}
+    output_path = Path(args.output_file)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as handle:
+        json.dump(output, handle, indent=2)
 
-output_file = Path("data/results_gpt2_medium/ablation/table4_data.json")
-with open(output_file, 'w') as f:
-    json.dump(output, f, indent=2)
+    print("=" * 60)
+    print("TABLE 4 DATA")
+    print("=" * 60)
+    for item in table_data:
+        print(
+            f"Dim {item['dimension']:4d}: "
+            f"success={item['mean_success']:+.4f}, "
+            f"failure={item['mean_failure']:+.4f}, "
+            f"|delta|={item['difference']:.4f}"
+        )
+    print(f"Top-5 signal share: {output['top5_signal_pct']:.2f}%")
+    print(f"Saved to: {output_path}")
 
-print(f"\n✅ Data saved to: {output_file}")
-print("\nUse this data for Table 4 in the paper!")
+
+if __name__ == "__main__":
+    main()

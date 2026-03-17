@@ -1,0 +1,39 @@
+============================================================
+DEEP SYNTAX ERROR ANALYSIS
+============================================================
+Input: data/results/evaluation_results.json
+
+Analyzing syntax errors in detail...
+Problems:   0%|          | 0/164 [00:00<?, ?it/s]Problems:  30%|██▉       | 49/164 [00:00<00:00, 481.61it/s]Problems:  63%|██████▎   | 104/164 [00:00<00:00, 518.91it/s]Problems: 100%|██████████| 164/164 [00:00<00:00, 548.33it/s]
+
+============================================================
+SYNTAX ERROR BREAKDOWN
+============================================================
+Total syntax errors: 15489
+
+MAIN CATEGORIES:
+  other               :  8419 ( 54.4%)
+  indentation         :  3407 ( 22.0%)
+  keyword_error       :  1335 (  8.6%)
+  quote_mismatch      :  1230 (  7.9%)
+  bracket_mismatch    :  1009 (  6.5%)
+  operator_error      :    46 (  0.3%)
+  colon_missing       :    43 (  0.3%)
+
+TOP SUBCATEGORIES:
+  other:unknown                      :  8419 ( 54.4%)
+  indentation:unexpected_indent      :  3407 ( 22.0%)
+  keyword_error:misspelled_keyword   :  1335 (  8.6%)
+  quote_mismatch:unclosed_string     :  1230 (  7.9%)
+  bracket_mismatch:parenthesis       :   744 (  4.8%)
+  bracket_mismatch:curly_brace       :   179 (  1.2%)
+  bracket_mismatch:square_bracket    :    86 (  0.6%)
+  operator_error:assignment_vs_comparison:    46 (  0.3%)
+  colon_missing:missing_colon        :    43 (  0.3%)
+
+ERROR POSITIONS:
+  late      :  7971 ( 51.5%)
+  early     :  4376 ( 28.3%)
+  middle    :  3142 ( 20.3%)
+
+✅ Saved to: data/results/syntax_analysis.json

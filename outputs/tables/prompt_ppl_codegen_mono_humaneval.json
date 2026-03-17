@@ -1,0 +1,1323 @@
+{
+  "config": "config_codegen_mono.yaml",
+  "model_name": "Salesforce/codegen-350M-mono",
+  "dataset_name": "humaneval",
+  "num_problems": 164,
+  "mean_prompt_perplexity": 4.867951978659362,
+  "token_weighted_avg_nll": 1.524792451828181,
+  "token_weighted_prompt_perplexity": 4.594189954623548,
+  "per_problem": [
+    {
+      "task_id": "HumanEval/0",
+      "prompt_length_chars": 348,
+      "num_tokens": 126,
+      "total_nll": 148.0493927001953,
+      "avg_nll": 1.1749951801602803,
+      "perplexity": 3.238127336545594
+    },
+    {
+      "task_id": "HumanEval/1",
+      "prompt_length_chars": 506,
+      "num_tokens": 126,
+      "total_nll": 256.3366394042969,
+      "avg_nll": 2.034417773049975,
+      "perplexity": 7.647798074822788
+    },
+    {
+      "task_id": "HumanEval/2",
+      "prompt_length_chars": 331,
+      "num_tokens": 89,
+      "total_nll": 181.44873046875,
+      "avg_nll": 2.038749780547753,
+      "perplexity": 7.681000257553213
+    },
+    {
+      "task_id": "HumanEval/3",
+      "prompt_length_chars": 448,
+      "num_tokens": 120,
+      "total_nll": 225.95745849609375,
+      "avg_nll": 1.8829788208007812,
+      "perplexity": 6.5730556835324965
+    },
+    {
+      "task_id": "HumanEval/4",
+      "prompt_length_chars": 430,
+      "num_tokens": 123,
+      "total_nll": 197.3495635986328,
+      "avg_nll": 1.604467996736852,
+      "perplexity": 4.9752120694981405
+    },
+    {
+      "task_id": "HumanEval/5",
+      "prompt_length_chars": 287,
+      "num_tokens": 94,
+      "total_nll": 124.82127380371094,
+      "avg_nll": 1.3278858915288398,
+      "perplexity": 3.773058295362919
+    },
+    {
+      "task_id": "HumanEval/6",
+      "prompt_length_chars": 436,
+      "num_tokens": 122,
+      "total_nll": 243.962890625,
+      "avg_nll": 1.999695824795082,
+      "perplexity": 7.386808873070128
+    },
+    {
+      "task_id": "HumanEval/7",
+      "prompt_length_chars": 330,
+      "num_tokens": 109,
+      "total_nll": 129.3668670654297,
+      "avg_nll": 1.1868519914259605,
+      "perplexity": 3.2767497178995018
+    },
+    {
+      "task_id": "HumanEval/8",
+      "prompt_length_chars": 372,
+      "num_tokens": 115,
+      "total_nll": 125.36963653564453,
+      "avg_nll": 1.0901707524838655,
+      "perplexity": 2.9747819806106985
+    },
+    {
+      "task_id": "HumanEval/9",
+      "prompt_length_chars": 288,
+      "num_tokens": 94,
+      "total_nll": 146.5142364501953,
+      "avg_nll": 1.5586620898956949,
+      "perplexity": 4.752458627363799
+    },
+    {
+      "task_id": "HumanEval/10",
+      "prompt_length_chars": 580,
+      "num_tokens": 176,
+      "total_nll": 242.23358154296875,
+      "avg_nll": 1.376327167857777,
+      "perplexity": 3.9603292583494025
+    },
+    {
+      "task_id": "HumanEval/11",
+      "prompt_length_chars": 259,
+      "num_tokens": 81,
+      "total_nll": 126.71961975097656,
+      "avg_nll": 1.5644397500120564,
+      "perplexity": 4.779996192773063
+    },
+    {
+      "task_id": "HumanEval/12",
+      "prompt_length_chars": 376,
+      "num_tokens": 113,
+      "total_nll": 140.3760223388672,
+      "avg_nll": 1.242265684414754,
+      "perplexity": 3.4634516704304077
+    },
+    {
+      "task_id": "HumanEval/13",
+      "prompt_length_chars": 217,
+      "num_tokens": 77,
+      "total_nll": 63.2744026184082,
+      "avg_nll": 0.8217454885507559,
+      "perplexity": 2.274466429816926
+    },
+    {
+      "task_id": "HumanEval/14",
+      "prompt_length_chars": 210,
+      "num_tokens": 62,
+      "total_nll": 76.72257995605469,
+      "avg_nll": 1.23746096703314,
+      "perplexity": 3.446850677465412
+    },
+    {
+      "task_id": "HumanEval/15",
+      "prompt_length_chars": 219,
+      "num_tokens": 71,
+      "total_nll": 88.30326843261719,
+      "avg_nll": 1.2437080060931998,
+      "perplexity": 3.468450686084626
+    },
+    {
+      "task_id": "HumanEval/16",
+      "prompt_length_chars": 262,
+      "num_tokens": 79,
+      "total_nll": 116.52198791503906,
+      "avg_nll": 1.4749618723422666,
+      "perplexity": 4.370869118750954
+    },
+    {
+      "task_id": "HumanEval/17",
+      "prompt_length_chars": 533,
+      "num_tokens": 167,
+      "total_nll": 298.6251220703125,
+      "avg_nll": 1.7881743836545658,
+      "perplexity": 5.9785279990375155
+    },
+    {
+      "task_id": "HumanEval/18",
+      "prompt_length_chars": 295,
+      "num_tokens": 98,
+      "total_nll": 132.72604370117188,
+      "avg_nll": 1.3543473847058354,
+      "perplexity": 3.874231748530772
+    },
+    {
+      "task_id": "HumanEval/19",
+      "prompt_length_chars": 383,
+      "num_tokens": 113,
+      "total_nll": 163.81398010253906,
+      "avg_nll": 1.4496812398454784,
+      "perplexity": 4.261755820687554
+    },
+    {
+      "task_id": "HumanEval/20",
+      "prompt_length_chars": 451,
+      "num_tokens": 173,
+      "total_nll": 178.8496856689453,
+      "avg_nll": 1.0338132119592214,
+      "perplexity": 2.811767282916575
+    },
+    {
+      "task_id": "HumanEval/21",
+      "prompt_length_chars": 350,
+      "num_tokens": 120,
+      "total_nll": 141.458251953125,
+      "avg_nll": 1.1788187662760417,
+      "perplexity": 3.2505322958726257
+    },
+    {
+      "task_id": "HumanEval/22",
+      "prompt_length_chars": 269,
+      "num_tokens": 94,
+      "total_nll": 130.12486267089844,
+      "avg_nll": 1.3843070496904089,
+      "perplexity": 3.9920586478656395
+    },
+    {
+      "task_id": "HumanEval/23",
+      "prompt_length_chars": 133,
+      "num_tokens": 46,
+      "total_nll": 52.00196838378906,
+      "avg_nll": 1.1304775735606318,
+      "perplexity": 3.0971352569014328
+    },
+    {
+      "task_id": "HumanEval/24",
+      "prompt_length_chars": 172,
+      "num_tokens": 54,
+      "total_nll": 81.29216003417969,
+      "avg_nll": 1.5054103710033275,
+      "perplexity": 4.506002383644327
+    },
+    {
+      "task_id": "HumanEval/25",
+      "prompt_length_chars": 449,
+      "num_tokens": 127,
+      "total_nll": 202.648681640625,
+      "avg_nll": 1.5956589105561023,
+      "perplexity": 4.931577470253073
+    },
+    {
+      "task_id": "HumanEval/26",
+      "prompt_length_chars": 285,
+      "num_tokens": 88,
+      "total_nll": 105.38519287109375,
+      "avg_nll": 1.1975590098987927,
+      "perplexity": 3.3120224334965567
+    },
+    {
+      "task_id": "HumanEval/27",
+      "prompt_length_chars": 179,
+      "num_tokens": 57,
+      "total_nll": 81.90093994140625,
+      "avg_nll": 1.4368585954632676,
+      "perplexity": 4.207457708023268
+    },
+    {
+      "task_id": "HumanEval/28",
+      "prompt_length_chars": 213,
+      "num_tokens": 70,
+      "total_nll": 54.69552993774414,
+      "avg_nll": 0.7813647133963448,
+      "perplexity": 2.184451382280603
+    },
+    {
+      "task_id": "HumanEval/29",
+      "prompt_length_chars": 312,
+      "num_tokens": 101,
+      "total_nll": 117.2522201538086,
+      "avg_nll": 1.1609130708297881,
+      "perplexity": 3.192847241265418
+    },
+    {
+      "task_id": "HumanEval/30",
+      "prompt_length_chars": 230,
+      "num_tokens": 102,
+      "total_nll": 128.38009643554688,
+      "avg_nll": 1.2586283964269303,
+      "perplexity": 3.5205893213224013
+    },
+    {
+      "task_id": "HumanEval/31",
+      "prompt_length_chars": 309,
+      "num_tokens": 113,
+      "total_nll": 102.18456268310547,
+      "avg_nll": 0.9042881653372166,
+      "perplexity": 2.4701729423565895
+    },
+    {
+      "task_id": "HumanEval/32",
+      "prompt_length_chars": 759,
+      "num_tokens": 285,
+      "total_nll": 431.1214294433594,
+      "avg_nll": 1.5127067699766996,
+      "perplexity": 4.539000211074267
+    },
+    {
+      "task_id": "HumanEval/33",
+      "prompt_length_chars": 426,
+      "num_tokens": 142,
+      "total_nll": 221.02493286132812,
+      "avg_nll": 1.5565136116994938,
+      "perplexity": 4.742259034349569
+    },
+    {
+      "task_id": "HumanEval/34",
+      "prompt_length_chars": 149,
+      "num_tokens": 60,
+      "total_nll": 88.18740844726562,
+      "avg_nll": 1.4697901407877605,
+      "perplexity": 4.348322509767585
+    },
+    {
+      "task_id": "HumanEval/35",
+      "prompt_length_chars": 185,
+      "num_tokens": 75,
+      "total_nll": 102.71381378173828,
+      "avg_nll": 1.3695175170898437,
+      "perplexity": 3.9334524139954468
+    },
+    {
+      "task_id": "HumanEval/36",
+      "prompt_length_chars": 228,
+      "num_tokens": 84,
+      "total_nll": 119.63370513916016,
+      "avg_nll": 1.4242107754661923,
+      "perplexity": 4.154577653911438
+    },
+    {
+      "task_id": "HumanEval/37",
+      "prompt_length_chars": 345,
+      "num_tokens": 119,
+      "total_nll": 179.86544799804688,
+      "avg_nll": 1.5114743529247636,
+      "perplexity": 4.533409715434071
+    },
+    {
+      "task_id": "HumanEval/38",
+      "prompt_length_chars": 567,
+      "num_tokens": 176,
+      "total_nll": 252.49832153320312,
+      "avg_nll": 1.4346495541659268,
+      "perplexity": 4.19817351854388
+    },
+    {
+      "task_id": "HumanEval/39",
+      "prompt_length_chars": 260,
+      "num_tokens": 107,
+      "total_nll": 99.30477142333984,
+      "avg_nll": 0.9280819759190639,
+      "perplexity": 2.529652586999584
+    },
+    {
+      "task_id": "HumanEval/40",
+      "prompt_length_chars": 484,
+      "num_tokens": 181,
+      "total_nll": 170.94171142578125,
+      "avg_nll": 0.944429344893819,
+      "perplexity": 2.571345608331711
+    },
+    {
+      "task_id": "HumanEval/41",
+      "prompt_length_chars": 647,
+      "num_tokens": 159,
+      "total_nll": 416.0753173828125,
+      "avg_nll": 2.6168258954893866,
+      "perplexity": 13.692194083030804
+    },
+    {
+      "task_id": "HumanEval/42",
+      "prompt_length_chars": 212,
+      "num_tokens": 97,
+      "total_nll": 120.3251953125,
+      "avg_nll": 1.240465931056701,
+      "perplexity": 3.457223917546712
+    },
+    {
+      "task_id": "HumanEval/43",
+      "prompt_length_chars": 462,
+      "num_tokens": 173,
+      "total_nll": 159.8984832763672,
+      "avg_nll": 0.9242686894587698,
+      "perplexity": 2.5200246657180165
+    },
+    {
+      "task_id": "HumanEval/44",
+      "prompt_length_chars": 300,
+      "num_tokens": 97,
+      "total_nll": 149.14749145507812,
+      "avg_nll": 1.537603004691527,
+      "perplexity": 4.653422659695595
+    },
+    {
+      "task_id": "HumanEval/45",
+      "prompt_length_chars": 138,
+      "num_tokens": 46,
+      "total_nll": 91.70777893066406,
+      "avg_nll": 1.9936473680579143,
+      "perplexity": 7.342264926042813
+    },
+    {
+      "task_id": "HumanEval/46",
+      "prompt_length_chars": 453,
+      "num_tokens": 180,
+      "total_nll": 218.24478149414062,
+      "avg_nll": 1.2124710083007812,
+      "perplexity": 3.3617813873907734
+    },
+    {
+      "task_id": "HumanEval/47",
+      "prompt_length_chars": 168,
+      "num_tokens": 65,
+      "total_nll": 97.48300170898438,
+      "avg_nll": 1.4997384878305289,
+      "perplexity": 4.480517207341282
+    },
+    {
+      "task_id": "HumanEval/48",
+      "prompt_length_chars": 244,
+      "num_tokens": 89,
+      "total_nll": 70.8235855102539,
+      "avg_nll": 0.795770623710718,
+      "perplexity": 2.2161481552461
+    },
+    {
+      "task_id": "HumanEval/49",
+      "prompt_length_chars": 224,
+      "num_tokens": 100,
+      "total_nll": 144.08990478515625,
+      "avg_nll": 1.4408990478515624,
+      "perplexity": 4.224492130781089
+    },
+    {
+      "task_id": "HumanEval/50",
+      "prompt_length_chars": 333,
+      "num_tokens": 104,
+      "total_nll": 126.1845703125,
+      "avg_nll": 1.2133131760817308,
+      "perplexity": 3.3646137638625295
+    },
+    {
+      "task_id": "HumanEval/51",
+      "prompt_length_chars": 382,
+      "num_tokens": 150,
+      "total_nll": 175.14736938476562,
+      "avg_nll": 1.1676491292317708,
+      "perplexity": 3.2144270465679545
+    },
+    {
+      "task_id": "HumanEval/52",
+      "prompt_length_chars": 225,
+      "num_tokens": 78,
+      "total_nll": 98.64067077636719,
+      "avg_nll": 1.2646239843123999,
+      "perplexity": 3.5417607281012304
+    },
+    {
+      "task_id": "HumanEval/53",
+      "prompt_length_chars": 115,
+      "num_tokens": 49,
+      "total_nll": 50.43598556518555,
+      "avg_nll": 1.0293058278609295,
+      "perplexity": 2.799122087562536
+    },
+    {
+      "task_id": "HumanEval/54",
+      "prompt_length_chars": 431,
+      "num_tokens": 177,
+      "total_nll": 193.3230743408203,
+      "avg_nll": 1.0922207589876853,
+      "perplexity": 2.9808865580922794
+    },
+    {
+      "task_id": "HumanEval/55",
+      "prompt_length_chars": 130,
+      "num_tokens": 54,
+      "total_nll": 55.02781677246094,
+      "avg_nll": 1.0190336439344618,
+      "perplexity": 2.770516164831931
+    },
+    {
+      "task_id": "HumanEval/56",
+      "prompt_length_chars": 348,
+      "num_tokens": 106,
+      "total_nll": 138.89474487304688,
+      "avg_nll": 1.310327781821197,
+      "perplexity": 3.7073887276983752
+    },
+    {
+      "task_id": "HumanEval/57",
+      "prompt_length_chars": 243,
+      "num_tokens": 85,
+      "total_nll": 101.53067016601562,
+      "avg_nll": 1.1944784725413602,
+      "perplexity": 3.301835323603869
+    },
+    {
+      "task_id": "HumanEval/58",
+      "prompt_length_chars": 234,
+      "num_tokens": 101,
+      "total_nll": 164.90579223632812,
+      "avg_nll": 1.6327306162012685,
+      "perplexity": 5.117830486784355
+    },
+    {
+      "task_id": "HumanEval/59",
+      "prompt_length_chars": 206,
+      "num_tokens": 68,
+      "total_nll": 89.6614990234375,
+      "avg_nll": 1.318551456227022,
+      "perplexity": 3.7380027930109105
+    },
+    {
+      "task_id": "HumanEval/60",
+      "prompt_length_chars": 234,
+      "num_tokens": 106,
+      "total_nll": 102.13761901855469,
+      "avg_nll": 0.9635624435712706,
+      "perplexity": 2.62101708695753
+    },
+    {
+      "task_id": "HumanEval/61",
+      "prompt_length_chars": 348,
+      "num_tokens": 105,
+      "total_nll": 120.6649169921875,
+      "avg_nll": 1.1491896856398809,
+      "perplexity": 3.1556348171925346
+    },
+    {
+      "task_id": "HumanEval/62",
+      "prompt_length_chars": 286,
+      "num_tokens": 109,
+      "total_nll": 163.15769958496094,
+      "avg_nll": 1.496859629219825,
+      "perplexity": 4.467636980869719
+    },
+    {
+      "task_id": "HumanEval/63",
+      "prompt_length_chars": 427,
+      "num_tokens": 168,
+      "total_nll": 203.6832275390625,
+      "avg_nll": 1.212400163922991,
+      "perplexity": 3.361543232516184
+    },
+    {
+      "task_id": "HumanEval/64",
+      "prompt_length_chars": 425,
+      "num_tokens": 141,
+      "total_nll": 215.0341796875,
+      "avg_nll": 1.5250651041666667,
+      "perplexity": 4.595442742038072
+    },
+    {
+      "task_id": "HumanEval/65",
+      "prompt_length_chars": 296,
+      "num_tokens": 87,
+      "total_nll": 141.10311889648438,
+      "avg_nll": 1.621874929844648,
+      "perplexity": 5.06257339368021
+    },
+    {
+      "task_id": "HumanEval/66",
+      "prompt_length_chars": 363,
+      "num_tokens": 109,
+      "total_nll": 247.6905517578125,
+      "avg_nll": 2.2723903830991974,
+      "perplexity": 9.70256596595259
+    },
+    {
+      "task_id": "HumanEval/67",
+      "prompt_length_chars": 766,
+      "num_tokens": 205,
+      "total_nll": 369.2771911621094,
+      "avg_nll": 1.8013521520102895,
+      "perplexity": 6.057833040217734
+    },
+    {
+      "task_id": "HumanEval/68",
+      "prompt_length_chars": 1167,
+      "num_tokens": 325,
+      "total_nll": 492.47100830078125,
+      "avg_nll": 1.51529541015625,
+      "perplexity": 4.550765270578654
+    },
+    {
+      "task_id": "HumanEval/69",
+      "prompt_length_chars": 491,
+      "num_tokens": 153,
+      "total_nll": 213.48170471191406,
+      "avg_nll": 1.395305259554994,
+      "perplexity": 4.036206475190103
+    },
+    {
+      "task_id": "HumanEval/70",
+      "prompt_length_chars": 385,
+      "num_tokens": 131,
+      "total_nll": 174.8020477294922,
+      "avg_nll": 1.334366776561009,
+      "perplexity": 3.797590461602988
+    },
+    {
+      "task_id": "HumanEval/71",
+      "prompt_length_chars": 419,
+      "num_tokens": 124,
+      "total_nll": 177.6422576904297,
+      "avg_nll": 1.4325988523421749,
+      "perplexity": 4.189573137875124
+    },
+    {
+      "task_id": "HumanEval/72",
+      "prompt_length_chars": 723,
+      "num_tokens": 235,
+      "total_nll": 297.03948974609375,
+      "avg_nll": 1.263997828706782,
+      "perplexity": 3.5395437289332357
+    },
+    {
+      "task_id": "HumanEval/73",
+      "prompt_length_chars": 472,
+      "num_tokens": 151,
+      "total_nll": 196.98980712890625,
+      "avg_nll": 1.3045682591318295,
+      "perplexity": 3.686097311257651
+    },
+    {
+      "task_id": "HumanEval/74",
+      "prompt_length_chars": 613,
+      "num_tokens": 228,
+      "total_nll": 259.42633056640625,
+      "avg_nll": 1.1378347831859923,
+      "perplexity": 3.1200055578625063
+    },
+    {
+      "task_id": "HumanEval/75",
+      "prompt_length_chars": 269,
+      "num_tokens": 81,
+      "total_nll": 167.08444213867188,
+      "avg_nll": 2.0627708906008873,
+      "perplexity": 7.867740282189476
+    },
+    {
+      "task_id": "HumanEval/76",
+      "prompt_length_chars": 426,
+      "num_tokens": 150,
+      "total_nll": 165.77410888671875,
+      "avg_nll": 1.1051607259114584,
+      "perplexity": 3.0197097754108433
+    },
+    {
+      "task_id": "HumanEval/77",
+      "prompt_length_chars": 359,
+      "num_tokens": 120,
+      "total_nll": 176.72824096679688,
+      "avg_nll": 1.472735341389974,
+      "perplexity": 4.361148069494124
+    },
+    {
+      "task_id": "HumanEval/78",
+      "prompt_length_chars": 927,
+      "num_tokens": 305,
+      "total_nll": 490.34808349609375,
+      "avg_nll": 1.607698634413422,
+      "perplexity": 4.99131116823404
+    },
+    {
+      "task_id": "HumanEval/79",
+      "prompt_length_chars": 560,
+      "num_tokens": 150,
+      "total_nll": 258.326171875,
+      "avg_nll": 1.7221744791666667,
+      "perplexity": 5.59668511748176
+    },
+    {
+      "task_id": "HumanEval/80",
+      "prompt_length_chars": 387,
+      "num_tokens": 125,
+      "total_nll": 149.8557586669922,
+      "avg_nll": 1.1988460693359375,
+      "perplexity": 3.316287947621902
+    },
+    {
+      "task_id": "HumanEval/81",
+      "prompt_length_chars": 1035,
+      "num_tokens": 275,
+      "total_nll": 526.1039428710938,
+      "avg_nll": 1.9131052468039773,
+      "perplexity": 6.774091398191073
+    },
+    {
+      "task_id": "HumanEval/82",
+      "prompt_length_chars": 313,
+      "num_tokens": 84,
+      "total_nll": 126.49645233154297,
+      "avg_nll": 1.505910146804083,
+      "perplexity": 4.508254937432869
+    },
+    {
+      "task_id": "HumanEval/83",
+      "prompt_length_chars": 164,
+      "num_tokens": 45,
+      "total_nll": 85.99246215820312,
+      "avg_nll": 1.910943603515625,
+      "perplexity": 6.759464044242005
+    },
+    {
+      "task_id": "HumanEval/84",
+      "prompt_length_chars": 480,
+      "num_tokens": 131,
+      "total_nll": 266.6673583984375,
+      "avg_nll": 2.0356286900644083,
+      "perplexity": 7.657064532958151
+    },
+    {
+      "task_id": "HumanEval/85",
+      "prompt_length_chars": 167,
+      "num_tokens": 55,
+      "total_nll": 158.70932006835938,
+      "avg_nll": 2.8856240012428978,
+      "perplexity": 17.91474293030076
+    },
+    {
+      "task_id": "HumanEval/86",
+      "prompt_length_chars": 542,
+      "num_tokens": 148,
+      "total_nll": 300.190673828125,
+      "avg_nll": 2.0283153637035474,
+      "perplexity": 7.6012701908575036
+    },
+    {
+      "task_id": "HumanEval/87",
+      "prompt_length_chars": 754,
+      "num_tokens": 271,
+      "total_nll": 417.63427734375,
+      "avg_nll": 1.5410858942573802,
+      "perplexity": 4.66965827393607
+    },
+    {
+      "task_id": "HumanEval/88",
+      "prompt_length_chars": 578,
+      "num_tokens": 195,
+      "total_nll": 275.0315856933594,
+      "avg_nll": 1.4104183881710737,
+      "perplexity": 4.097669461907243
+    },
+    {
+      "task_id": "HumanEval/89",
+      "prompt_length_chars": 435,
+      "num_tokens": 124,
+      "total_nll": 258.823486328125,
+      "avg_nll": 2.087286180065524,
+      "perplexity": 8.063003905416904
+    },
+    {
+      "task_id": "HumanEval/90",
+      "prompt_length_chars": 361,
+      "num_tokens": 121,
+      "total_nll": 125.34978485107422,
+      "avg_nll": 1.0359486351328449,
+      "perplexity": 2.8177780113716753
+    },
+    {
+      "task_id": "HumanEval/91",
+      "prompt_length_chars": 372,
+      "num_tokens": 117,
+      "total_nll": 228.1074981689453,
+      "avg_nll": 1.949636736486712,
+      "perplexity": 7.026134778542957
+    },
+    {
+      "task_id": "HumanEval/92",
+      "prompt_length_chars": 386,
+      "num_tokens": 147,
+      "total_nll": 213.12782287597656,
+      "avg_nll": 1.449849135210725,
+      "perplexity": 4.262471409808028
+    },
+    {
+      "task_id": "HumanEval/93",
+      "prompt_length_chars": 415,
+      "num_tokens": 121,
+      "total_nll": 283.70208740234375,
+      "avg_nll": 2.344645350432593,
+      "perplexity": 10.429573227941194
+    },
+    {
+      "task_id": "HumanEval/94",
+      "prompt_length_chars": 608,
+      "num_tokens": 289,
+      "total_nll": 570.00048828125,
+      "avg_nll": 1.9723200286548443,
+      "perplexity": 7.187331976408252
+    },
+    {
+      "task_id": "HumanEval/95",
+      "prompt_length_chars": 660,
+      "num_tokens": 201,
+      "total_nll": 235.714599609375,
+      "avg_nll": 1.1727094507929106,
+      "perplexity": 3.230734306249177
+    },
+    {
+      "task_id": "HumanEval/96",
+      "prompt_length_chars": 396,
+      "num_tokens": 167,
+      "total_nll": 160.45672607421875,
+      "avg_nll": 0.9608187190072979,
+      "perplexity": 2.6138355945172633
+    },
+    {
+      "task_id": "HumanEval/97",
+      "prompt_length_chars": 346,
+      "num_tokens": 104,
+      "total_nll": 199.4634246826172,
+      "avg_nll": 1.9179175450251653,
+      "perplexity": 6.806768910080211
+    },
+    {
+      "task_id": "HumanEval/98",
+      "prompt_length_chars": 242,
+      "num_tokens": 78,
+      "total_nll": 124.30097961425781,
+      "avg_nll": 1.593602302746895,
+      "perplexity": 4.92144557175801
+    },
+    {
+      "task_id": "HumanEval/99",
+      "prompt_length_chars": 613,
+      "num_tokens": 165,
+      "total_nll": 257.728271484375,
+      "avg_nll": 1.5619895241477273,
+      "perplexity": 4.76829845936699
+    },
+    {
+      "task_id": "HumanEval/100",
+      "prompt_length_chars": 475,
+      "num_tokens": 141,
+      "total_nll": 222.11392211914062,
+      "avg_nll": 1.5752760433981605,
+      "perplexity": 4.832075296510268
+    },
+    {
+      "task_id": "HumanEval/101",
+      "prompt_length_chars": 394,
+      "num_tokens": 123,
+      "total_nll": 119.52580261230469,
+      "avg_nll": 0.9717544927829649,
+      "perplexity": 2.6425767763650496
+    },
+    {
+      "task_id": "HumanEval/102",
+      "prompt_length_chars": 316,
+      "num_tokens": 97,
+      "total_nll": 149.90435791015625,
+      "avg_nll": 1.5454057516510953,
+      "perplexity": 4.689874165202867
+    },
+    {
+      "task_id": "HumanEval/103",
+      "prompt_length_chars": 440,
+      "num_tokens": 149,
+      "total_nll": 213.72071838378906,
+      "avg_nll": 1.4343672374750944,
+      "perplexity": 4.196988471375754
+    },
+    {
+      "task_id": "HumanEval/104",
+      "prompt_length_chars": 338,
+      "num_tokens": 108,
+      "total_nll": 205.75,
+      "avg_nll": 1.9050925925925926,
+      "perplexity": 6.720029823812811
+    },
+    {
+      "task_id": "HumanEval/105",
+      "prompt_length_chars": 809,
+      "num_tokens": 265,
+      "total_nll": 385.70880126953125,
+      "avg_nll": 1.4555049104510613,
+      "perplexity": 4.286647292304687
+    },
+    {
+      "task_id": "HumanEval/106",
+      "prompt_length_chars": 400,
+      "num_tokens": 121,
+      "total_nll": 200.10809326171875,
+      "avg_nll": 1.6537858947249484,
+      "perplexity": 5.226730267594324
+    },
+    {
+      "task_id": "HumanEval/107",
+      "prompt_length_chars": 676,
+      "num_tokens": 207,
+      "total_nll": 243.942138671875,
+      "avg_nll": 1.1784644380283817,
+      "perplexity": 3.249380744485908
+    },
+    {
+      "task_id": "HumanEval/108",
+      "prompt_length_chars": 396,
+      "num_tokens": 128,
+      "total_nll": 213.89964294433594,
+      "avg_nll": 1.6710909605026245,
+      "perplexity": 5.317966324838414
+    },
+    {
+      "task_id": "HumanEval/109",
+      "prompt_length_chars": 1265,
+      "num_tokens": 321,
+      "total_nll": 551.9541015625,
+      "avg_nll": 1.7194831824376946,
+      "perplexity": 5.581643027574928
+    },
+    {
+      "task_id": "HumanEval/110",
+      "prompt_length_chars": 673,
+      "num_tokens": 202,
+      "total_nll": 270.0148010253906,
+      "avg_nll": 1.3367069357692605,
+      "perplexity": 3.806487834464969
+    },
+    {
+      "task_id": "HumanEval/111",
+      "prompt_length_chars": 499,
+      "num_tokens": 161,
+      "total_nll": 217.93609619140625,
+      "avg_nll": 1.3536403490149456,
+      "perplexity": 3.8714934965447956
+    },
+    {
+      "task_id": "HumanEval/112",
+      "prompt_length_chars": 598,
+      "num_tokens": 174,
+      "total_nll": 286.0137939453125,
+      "avg_nll": 1.6437574364673133,
+      "perplexity": 5.1745761709662865
+    },
+    {
+      "task_id": "HumanEval/113",
+      "prompt_length_chars": 590,
+      "num_tokens": 177,
+      "total_nll": 359.4886474609375,
+      "avg_nll": 2.0310093076889126,
+      "perplexity": 7.621775194233588
+    },
+    {
+      "task_id": "HumanEval/114",
+      "prompt_length_chars": 236,
+      "num_tokens": 87,
+      "total_nll": 124.51580810546875,
+      "avg_nll": 1.4312161851203304,
+      "perplexity": 4.183784355326041
+    },
+    {
+      "task_id": "HumanEval/115",
+      "prompt_length_chars": 1050,
+      "num_tokens": 333,
+      "total_nll": 434.59222412109375,
+      "avg_nll": 1.3050817541173987,
+      "perplexity": 3.6879905897962186
+    },
+    {
+      "task_id": "HumanEval/116",
+      "prompt_length_chars": 462,
+      "num_tokens": 165,
+      "total_nll": 221.66259765625,
+      "avg_nll": 1.3434096827651516,
+      "perplexity": 3.8320874574178534
+    },
+    {
+      "task_id": "HumanEval/117",
+      "prompt_length_chars": 702,
+      "num_tokens": 195,
+      "total_nll": 317.5621337890625,
+      "avg_nll": 1.6285237630208333,
+      "perplexity": 5.096345748579429
+    },
+    {
+      "task_id": "HumanEval/118",
+      "prompt_length_chars": 571,
+      "num_tokens": 181,
+      "total_nll": 308.46575927734375,
+      "avg_nll": 1.7042307142394681,
+      "perplexity": 5.497155156998785
+    },
+    {
+      "task_id": "HumanEval/119",
+      "prompt_length_chars": 641,
+      "num_tokens": 187,
+      "total_nll": 311.61700439453125,
+      "avg_nll": 1.6664010930188837,
+      "perplexity": 5.293084160126152
+    },
+    {
+      "task_id": "HumanEval/120",
+      "prompt_length_chars": 613,
+      "num_tokens": 205,
+      "total_nll": 197.8357696533203,
+      "avg_nll": 0.9650525348942455,
+      "perplexity": 2.624925553038684
+    },
+    {
+      "task_id": "HumanEval/121",
+      "prompt_length_chars": 267,
+      "num_tokens": 92,
+      "total_nll": 193.90576171875,
+      "avg_nll": 2.107671323029891,
+      "perplexity": 8.229056141773079
+    },
+    {
+      "task_id": "HumanEval/122",
+      "prompt_length_chars": 382,
+      "num_tokens": 127,
+      "total_nll": 250.63299560546875,
+      "avg_nll": 1.9734881543737697,
+      "perplexity": 7.1957325892710875
+    },
+    {
+      "task_id": "HumanEval/123",
+      "prompt_length_chars": 843,
+      "num_tokens": 226,
+      "total_nll": 389.43902587890625,
+      "avg_nll": 1.7231815304376383,
+      "perplexity": 5.602324105240877
+    },
+    {
+      "task_id": "HumanEval/124",
+      "prompt_length_chars": 851,
+      "num_tokens": 258,
+      "total_nll": 372.2405090332031,
+      "avg_nll": 1.4427926706713299,
+      "perplexity": 4.232499304372499
+    },
+    {
+      "task_id": "HumanEval/125",
+      "prompt_length_chars": 490,
+      "num_tokens": 154,
+      "total_nll": 281.74249267578125,
+      "avg_nll": 1.8294967056868912,
+      "perplexity": 6.2307499682263225
+    },
+    {
+      "task_id": "HumanEval/126",
+      "prompt_length_chars": 576,
+      "num_tokens": 242,
+      "total_nll": 181.5735626220703,
+      "avg_nll": 0.7503039777771501,
+      "perplexity": 2.1176436353898977
+    },
+    {
+      "task_id": "HumanEval/127",
+      "prompt_length_chars": 926,
+      "num_tokens": 269,
+      "total_nll": 466.7454833984375,
+      "avg_nll": 1.7351133211837826,
+      "perplexity": 5.669570249815169
+    },
+    {
+      "task_id": "HumanEval/128",
+      "prompt_length_chars": 387,
+      "num_tokens": 121,
+      "total_nll": 207.3783416748047,
+      "avg_nll": 1.7138705923537578,
+      "perplexity": 5.550403303157305
+    },
+    {
+      "task_id": "HumanEval/129",
+      "prompt_length_chars": 1360,
+      "num_tokens": 427,
+      "total_nll": 711.3492431640625,
+      "avg_nll": 1.665923286098507,
+      "perplexity": 5.290555691992197
+    },
+    {
+      "task_id": "HumanEval/130",
+      "prompt_length_chars": 672,
+      "num_tokens": 239,
+      "total_nll": 414.33233642578125,
+      "avg_nll": 1.7336081021999215,
+      "perplexity": 5.661042724551326
+    },
+    {
+      "task_id": "HumanEval/131",
+      "prompt_length_chars": 213,
+      "num_tokens": 70,
+      "total_nll": 131.20684814453125,
+      "avg_nll": 1.874383544921875,
+      "perplexity": 6.516800567025906
+    },
+    {
+      "task_id": "HumanEval/132",
+      "prompt_length_chars": 472,
+      "num_tokens": 161,
+      "total_nll": 240.0400848388672,
+      "avg_nll": 1.4909322039681192,
+      "perplexity": 4.441233725580023
+    },
+    {
+      "task_id": "HumanEval/133",
+      "prompt_length_chars": 467,
+      "num_tokens": 164,
+      "total_nll": 245.54518127441406,
+      "avg_nll": 1.4972267150878906,
+      "perplexity": 4.469277288317466
+    },
+    {
+      "task_id": "HumanEval/134",
+      "prompt_length_chars": 520,
+      "num_tokens": 178,
+      "total_nll": 198.82449340820312,
+      "avg_nll": 1.116991536001141,
+      "perplexity": 3.055647555638655
+    },
+    {
+      "task_id": "HumanEval/135",
+      "prompt_length_chars": 361,
+      "num_tokens": 106,
+      "total_nll": 153.27621459960938,
+      "avg_nll": 1.4460020245246168,
+      "perplexity": 4.246104712931294
+    },
+    {
+      "task_id": "HumanEval/136",
+      "prompt_length_chars": 465,
+      "num_tokens": 147,
+      "total_nll": 180.47552490234375,
+      "avg_nll": 1.2277246591996174,
+      "perplexity": 3.4134539225784852
+    },
+    {
+      "task_id": "HumanEval/137",
+      "prompt_length_chars": 454,
+      "num_tokens": 154,
+      "total_nll": 272.70074462890625,
+      "avg_nll": 1.7707840560318588,
+      "perplexity": 5.875458244379995
+    },
+    {
+      "task_id": "HumanEval/138",
+      "prompt_length_chars": 264,
+      "num_tokens": 91,
+      "total_nll": 116.05877685546875,
+      "avg_nll": 1.2753711742359204,
+      "perplexity": 3.5800299784129717
+    },
+    {
+      "task_id": "HumanEval/139",
+      "prompt_length_chars": 325,
+      "num_tokens": 101,
+      "total_nll": 163.96075439453125,
+      "avg_nll": 1.623373805886448,
+      "perplexity": 5.070167253355301
+    },
+    {
+      "task_id": "HumanEval/140",
+      "prompt_length_chars": 392,
+      "num_tokens": 119,
+      "total_nll": 162.6522216796875,
+      "avg_nll": 1.3668253922662814,
+      "perplexity": 3.9228773102460397
+    },
+    {
+      "task_id": "HumanEval/141",
+      "prompt_length_chars": 805,
+      "num_tokens": 237,
+      "total_nll": 405.38482666015625,
+      "avg_nll": 1.7104845006757647,
+      "perplexity": 5.531640912237716
+    },
+    {
+      "task_id": "HumanEval/142",
+      "prompt_length_chars": 609,
+      "num_tokens": 172,
+      "total_nll": 295.6806640625,
+      "avg_nll": 1.719073628270349,
+      "perplexity": 5.579357510465823
+    },
+    {
+      "task_id": "HumanEval/143",
+      "prompt_length_chars": 636,
+      "num_tokens": 161,
+      "total_nll": 231.02349853515625,
+      "avg_nll": 1.434928562330163,
+      "perplexity": 4.1993450066502085
+    },
+    {
+      "task_id": "HumanEval/144",
+      "prompt_length_chars": 586,
+      "num_tokens": 169,
+      "total_nll": 294.291015625,
+      "avg_nll": 1.7413669563609468,
+      "perplexity": 5.705136767871974
+    },
+    {
+      "task_id": "HumanEval/145",
+      "prompt_length_chars": 414,
+      "num_tokens": 123,
+      "total_nll": 199.78744506835938,
+      "avg_nll": 1.6242881712874746,
+      "perplexity": 5.0748053590077085
+    },
+    {
+      "task_id": "HumanEval/146",
+      "prompt_length_chars": 360,
+      "num_tokens": 111,
+      "total_nll": 204.72154235839844,
+      "avg_nll": 1.844338219445031,
+      "perplexity": 6.323913362411987
+    },
+    {
+      "task_id": "HumanEval/147",
+      "prompt_length_chars": 476,
+      "num_tokens": 173,
+      "total_nll": 237.174560546875,
+      "avg_nll": 1.3709512170339595,
+      "perplexity": 3.9390958490311507
+    },
+    {
+      "task_id": "HumanEval/148",
+      "prompt_length_chars": 775,
+      "num_tokens": 227,
+      "total_nll": 349.7652282714844,
+      "avg_nll": 1.540815983574821,
+      "perplexity": 4.668398053365182
+    },
+    {
+      "task_id": "HumanEval/149",
+      "prompt_length_chars": 776,
+      "num_tokens": 207,
+      "total_nll": 373.47314453125,
+      "avg_nll": 1.804218089522947,
+      "perplexity": 6.075219313258847
+    },
+    {
+      "task_id": "HumanEval/150",
+      "prompt_length_chars": 243,
+      "num_tokens": 88,
+      "total_nll": 157.0369873046875,
+      "avg_nll": 1.784511219371449,
+      "perplexity": 5.956667732125138
+    },
+    {
+      "task_id": "HumanEval/151",
+      "prompt_length_chars": 435,
+      "num_tokens": 146,
+      "total_nll": 202.21759033203125,
+      "avg_nll": 1.3850519885755566,
+      "perplexity": 3.9950335955237457
+    },
+    {
+      "task_id": "HumanEval/152",
+      "prompt_length_chars": 794,
+      "num_tokens": 242,
+      "total_nll": 532.623779296875,
+      "avg_nll": 2.2009247078383263,
+      "perplexity": 9.033362859922642
+    },
+    {
+      "task_id": "HumanEval/153",
+      "prompt_length_chars": 1053,
+      "num_tokens": 300,
+      "total_nll": 621.3941650390625,
+      "avg_nll": 2.071313883463542,
+      "perplexity": 7.9352422551627635
+    },
+    {
+      "task_id": "HumanEval/154",
+      "prompt_length_chars": 441,
+      "num_tokens": 143,
+      "total_nll": 290.7518310546875,
+      "avg_nll": 2.0332295877950175,
+      "perplexity": 7.638716470300122
+    },
+    {
+      "task_id": "HumanEval/155",
+      "prompt_length_chars": 224,
+      "num_tokens": 72,
+      "total_nll": 111.8831787109375,
+      "avg_nll": 1.5539330376519098,
+      "perplexity": 4.730037060395549
+    },
+    {
+      "task_id": "HumanEval/156",
+      "prompt_length_chars": 332,
+      "num_tokens": 115,
+      "total_nll": 195.84854125976562,
+      "avg_nll": 1.7030307935631794,
+      "perplexity": 5.490562962711207
+    },
+    {
+      "task_id": "HumanEval/157",
+      "prompt_length_chars": 383,
+      "num_tokens": 117,
+      "total_nll": 167.0048828125,
+      "avg_nll": 1.4273921607905984,
+      "perplexity": 4.167816013284125
+    },
+    {
+      "task_id": "HumanEval/158",
+      "prompt_length_chars": 465,
+      "num_tokens": 133,
+      "total_nll": 241.21975708007812,
+      "avg_nll": 1.8136823840607377,
+      "perplexity": 6.132989926046066
+    },
+    {
+      "task_id": "HumanEval/159",
+      "prompt_length_chars": 987,
+      "num_tokens": 277,
+      "total_nll": 478.2864990234375,
+      "avg_nll": 1.726666061456453,
+      "perplexity": 5.621879628489863
+    },
+    {
+      "task_id": "HumanEval/160",
+      "prompt_length_chars": 812,
+      "num_tokens": 230,
+      "total_nll": 378.72613525390625,
+      "avg_nll": 1.6466353706691577,
+      "perplexity": 5.189489710508064
+    },
+    {
+      "task_id": "HumanEval/161",
+      "prompt_length_chars": 367,
+      "num_tokens": 119,
+      "total_nll": 240.44601440429688,
+      "avg_nll": 2.020554742893251,
+      "perplexity": 7.542507925981247
+    },
+    {
+      "task_id": "HumanEval/162",
+      "prompt_length_chars": 231,
+      "num_tokens": 82,
+      "total_nll": 184.6304473876953,
+      "avg_nll": 2.2515908218011624,
+      "perplexity": 9.502841145112313
+    },
+    {
+      "task_id": "HumanEval/163",
+      "prompt_length_chars": 293,
+      "num_tokens": 105,
+      "total_nll": 135.37158203125,
+      "avg_nll": 1.2892531622023808,
+      "perplexity": 3.6300744663138014
+    }
+  ]
+}

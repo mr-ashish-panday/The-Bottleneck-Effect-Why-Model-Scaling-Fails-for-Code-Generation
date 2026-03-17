@@ -1,0 +1,389 @@
+{
+  "metadata": {
+    "num_bootstrap": 2000,
+    "num_permutations": 5000,
+    "seed": 42
+  },
+  "models": {
+    "GPT-2 (124M)": {
+      "num_tasks": 164,
+      "samples_per_task": 100,
+      "metrics": {
+        "success_rate": {
+          "mean": 0.05152439024390244,
+          "ci_low": 0.0448155487804878,
+          "ci_high": 0.05835365853658537
+        },
+        "syntax_error_rate": {
+          "mean": 0.944451219512195,
+          "ci_low": 0.9372560975609755,
+          "ci_high": 0.9514024390243903
+        },
+        "runtime_error_rate": {
+          "mean": 0.004024390243902439,
+          "ci_low": 0.0029878048780487805,
+          "ci_high": 0.0052439024390243906
+        },
+        "wrong_output_rate": {
+          "mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0
+        },
+        "timeout_rate": {
+          "mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0
+        },
+        "pass@1": {
+          "mean": 0.051524390243902415,
+          "ci_low": 0.04524390243902438,
+          "ci_high": 0.05847560975609754
+        },
+        "pass@10": {
+          "mean": 0.3716568119459614,
+          "ci_low": 0.33645637638809034,
+          "ci_high": 0.40817192301817196
+        },
+        "pass@100": {
+          "mean": 0.9390243902439024,
+          "ci_low": 0.9024390243902439,
+          "ci_high": 0.9696646341463406
+        }
+      }
+    },
+    "GPT-2 Medium (355M)": {
+      "num_tasks": 164,
+      "samples_per_task": 100,
+      "metrics": {
+        "success_rate": {
+          "mean": 0.047865853658536586,
+          "ci_low": 0.039571646341463415,
+          "ci_high": 0.05738414634146338
+        },
+        "syntax_error_rate": {
+          "mean": 0.9489634146341464,
+          "ci_low": 0.9388399390243902,
+          "ci_high": 0.9573170731707317
+        },
+        "runtime_error_rate": {
+          "mean": 0.0031097560975609758,
+          "ci_low": 0.0022560975609756096,
+          "ci_high": 0.003963414634146342
+        },
+        "wrong_output_rate": {
+          "mean": 6.097560975609756e-05,
+          "ci_low": 0.0,
+          "ci_high": 0.00018292682926829268
+        },
+        "timeout_rate": {
+          "mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0
+        },
+        "pass@1": {
+          "mean": 0.04786585365853658,
+          "ci_low": 0.03920731707317074,
+          "ci_high": 0.0572576219512195
+        },
+        "pass@10": {
+          "mean": 0.33093542119689723,
+          "ci_low": 0.2957170740071368,
+          "ci_high": 0.3676691625076836
+        },
+        "pass@100": {
+          "mean": 0.9024390243902439,
+          "ci_low": 0.8536585365853658,
+          "ci_high": 0.9451219512195121
+        }
+      }
+    },
+    "CodeGen-350M": {
+      "num_tasks": 163,
+      "samples_per_task": 100,
+      "metrics": {
+        "success_rate": {
+          "mean": 0.3739877300613497,
+          "ci_low": 0.357116564417178,
+          "ci_high": 0.39116717791411043
+        },
+        "syntax_error_rate": {
+          "mean": 0.6110429447852761,
+          "ci_low": 0.5931901840490797,
+          "ci_high": 0.6290812883435583
+        },
+        "runtime_error_rate": {
+          "mean": 0.011104294478527607,
+          "ci_low": 0.008957055214723926,
+          "ci_high": 0.01325153374233129
+        },
+        "wrong_output_rate": {
+          "mean": 0.0009202453987730062,
+          "ci_low": 0.00049079754601227,
+          "ci_high": 0.0013496932515337425
+        },
+        "timeout_rate": {
+          "mean": 0.0029447852760736194,
+          "ci_low": 0.0019616564417177912,
+          "ci_high": 0.003987730061349694
+        },
+        "pass@1": {
+          "mean": 0.3739877300613495,
+          "ci_low": 0.3583374233128832,
+          "ci_high": 0.39061503067484643
+        },
+        "pass@10": {
+          "mean": 0.9789369423885512,
+          "ci_low": 0.973743493265706,
+          "ci_high": 0.9835333668050585
+        },
+        "pass@100": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0
+        }
+      }
+    }
+  },
+  "pairwise_tests": [
+    {
+      "model_a": "GPT-2 (124M)",
+      "model_b": "GPT-2 Medium (355M)",
+      "metric": "success_rate",
+      "num_shared_tasks": 164,
+      "difference": 0.003658536585365853,
+      "ci_low": -0.007015243902439024,
+      "ci_high": 0.01359908536585365,
+      "p_value": 0.4907018596280744
+    },
+    {
+      "model_a": "GPT-2 (124M)",
+      "model_b": "GPT-2 Medium (355M)",
+      "metric": "syntax_error_rate",
+      "num_shared_tasks": 164,
+      "difference": -0.004512195121951222,
+      "ci_low": -0.014451219512195126,
+      "ci_high": 0.006586890243902434,
+      "p_value": 0.42091581683663265
+    },
+    {
+      "model_a": "GPT-2 (124M)",
+      "model_b": "GPT-2 Medium (355M)",
+      "metric": "runtime_error_rate",
+      "num_shared_tasks": 164,
+      "difference": 0.0009146341463414634,
+      "ci_low": -0.0003658536585365854,
+      "ci_high": 0.002195121951219512,
+      "p_value": 0.20055988802239552
+    },
+    {
+      "model_a": "GPT-2 (124M)",
+      "model_b": "GPT-2 Medium (355M)",
+      "metric": "wrong_output_rate",
+      "num_shared_tasks": 164,
+      "difference": -6.097560975609756e-05,
+      "ci_low": -0.00018292682926829268,
+      "ci_high": 0.0,
+      "p_value": 1.0
+    },
+    {
+      "model_a": "GPT-2 (124M)",
+      "model_b": "GPT-2 Medium (355M)",
+      "metric": "timeout_rate",
+      "num_shared_tasks": 164,
+      "difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "p_value": 1.0
+    },
+    {
+      "model_a": "GPT-2 (124M)",
+      "model_b": "GPT-2 Medium (355M)",
+      "metric": "pass@1",
+      "num_shared_tasks": 164,
+      "difference": 0.003658536585365844,
+      "ci_low": -0.006768292682926826,
+      "ci_high": 0.013782012195121927,
+      "p_value": 0.5016996600679864
+    },
+    {
+      "model_a": "GPT-2 (124M)",
+      "model_b": "GPT-2 Medium (355M)",
+      "metric": "pass@10",
+      "num_shared_tasks": 164,
+      "difference": 0.04072139074906422,
+      "ci_low": -0.005292809576307387,
+      "ci_high": 0.08533753576858517,
+      "p_value": 0.08338332333533294
+    },
+    {
+      "model_a": "GPT-2 (124M)",
+      "model_b": "GPT-2 Medium (355M)",
+      "metric": "pass@100",
+      "num_shared_tasks": 164,
+      "difference": 0.036585365853658534,
+      "ci_low": -0.018292682926829267,
+      "ci_high": 0.09146341463414634,
+      "p_value": 0.28314337132573486
+    },
+    {
+      "model_a": "GPT-2 (124M)",
+      "model_b": "CodeGen-350M",
+      "metric": "success_rate",
+      "num_shared_tasks": 163,
+      "difference": -0.32233128834355834,
+      "ci_low": -0.3404309815950921,
+      "ci_high": -0.304478527607362,
+      "p_value": 0.0001999600079984003
+    },
+    {
+      "model_a": "GPT-2 (124M)",
+      "model_b": "CodeGen-350M",
+      "metric": "syntax_error_rate",
+      "num_shared_tasks": 163,
+      "difference": 0.33325153374233124,
+      "ci_low": 0.3146610429447852,
+      "ci_high": 0.35208588957055215,
+      "p_value": 0.0001999600079984003
+    },
+    {
+      "model_a": "GPT-2 (124M)",
+      "model_b": "CodeGen-350M",
+      "metric": "runtime_error_rate",
+      "num_shared_tasks": 163,
+      "difference": -0.0070552147239263795,
+      "ci_low": -0.009570552147239264,
+      "ci_high": -0.004599693251533751,
+      "p_value": 0.0001999600079984003
+    },
+    {
+      "model_a": "GPT-2 (124M)",
+      "model_b": "CodeGen-350M",
+      "metric": "wrong_output_rate",
+      "num_shared_tasks": 163,
+      "difference": -0.0009202453987730062,
+      "ci_low": -0.001411042944785276,
+      "ci_high": -0.00049079754601227,
+      "p_value": 0.0001999600079984003
+    },
+    {
+      "model_a": "GPT-2 (124M)",
+      "model_b": "CodeGen-350M",
+      "metric": "timeout_rate",
+      "num_shared_tasks": 163,
+      "difference": -0.0029447852760736194,
+      "ci_low": -0.003989263803680982,
+      "ci_high": -0.0019631901840490803,
+      "p_value": 0.0001999600079984003
+    },
+    {
+      "model_a": "GPT-2 (124M)",
+      "model_b": "CodeGen-350M",
+      "metric": "pass@1",
+      "num_shared_tasks": 163,
+      "difference": -0.3223312883435581,
+      "ci_low": -0.34117024539877283,
+      "ci_high": -0.3046595092024539,
+      "p_value": 0.0001999600079984003
+    },
+    {
+      "model_a": "GPT-2 (124M)",
+      "model_b": "CodeGen-350M",
+      "metric": "pass@10",
+      "num_shared_tasks": 163,
+      "difference": -0.6066777536070633,
+      "ci_low": -0.6439163406663626,
+      "ci_high": -0.571109012669369,
+      "p_value": 0.0001999600079984003
+    },
+    {
+      "model_a": "GPT-2 (124M)",
+      "model_b": "CodeGen-350M",
+      "metric": "pass@100",
+      "num_shared_tasks": 163,
+      "difference": -0.06134969325153374,
+      "ci_low": -0.09815950920245399,
+      "ci_high": -0.03067484662576687,
+      "p_value": 0.0021995600879824036
+    },
+    {
+      "model_a": "GPT-2 Medium (355M)",
+      "model_b": "CodeGen-350M",
+      "metric": "success_rate",
+      "num_shared_tasks": 163,
+      "difference": -0.32625766871165646,
+      "ci_low": -0.3452776073619632,
+      "ci_high": -0.30754141104294475,
+      "p_value": 0.0001999600079984003
+    },
+    {
+      "model_a": "GPT-2 Medium (355M)",
+      "model_b": "CodeGen-350M",
+      "metric": "syntax_error_rate",
+      "num_shared_tasks": 163,
+      "difference": 0.3380368098159509,
+      "ci_low": 0.31717791411042945,
+      "ci_high": 0.35754754601226996,
+      "p_value": 0.0001999600079984003
+    },
+    {
+      "model_a": "GPT-2 Medium (355M)",
+      "model_b": "CodeGen-350M",
+      "metric": "runtime_error_rate",
+      "num_shared_tasks": 163,
+      "difference": -0.007975460122699387,
+      "ci_low": -0.01049079754601227,
+      "ci_high": -0.005458588957055223,
+      "p_value": 0.0001999600079984003
+    },
+    {
+      "model_a": "GPT-2 Medium (355M)",
+      "model_b": "CodeGen-350M",
+      "metric": "wrong_output_rate",
+      "num_shared_tasks": 163,
+      "difference": -0.0008588957055214724,
+      "ci_low": -0.0013496932515337423,
+      "ci_high": -0.0004294478527607362,
+      "p_value": 0.0001999600079984003
+    },
+    {
+      "model_a": "GPT-2 Medium (355M)",
+      "model_b": "CodeGen-350M",
+      "metric": "timeout_rate",
+      "num_shared_tasks": 163,
+      "difference": -0.0029447852760736194,
+      "ci_low": -0.0040490797546012276,
+      "ci_high": -0.00196319018404908,
+      "p_value": 0.0001999600079984003
+    },
+    {
+      "model_a": "GPT-2 Medium (355M)",
+      "model_b": "CodeGen-350M",
+      "metric": "pass@1",
+      "num_shared_tasks": 163,
+      "difference": -0.3262576687116563,
+      "ci_low": -0.34607361963190164,
+      "ci_high": -0.30760736196319,
+      "p_value": 0.0001999600079984003
+    },
+    {
+      "model_a": "GPT-2 Medium (355M)",
+      "model_b": "CodeGen-350M",
+      "metric": "pass@10",
+      "num_shared_tasks": 163,
+      "difference": -0.6492427737345124,
+      "ci_low": -0.6835638361224073,
+      "ci_high": -0.6109175736334569,
+      "p_value": 0.0001999600079984003
+    },
+    {
+      "model_a": "GPT-2 Medium (355M)",
+      "model_b": "CodeGen-350M",
+      "metric": "pass@100",
+      "num_shared_tasks": 163,
+      "difference": -0.09815950920245399,
+      "ci_low": -0.147239263803681,
+      "ci_high": -0.05521472392638037,
+      "p_value": 0.0001999600079984003
+    }
+  ]
+}

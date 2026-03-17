@@ -1,117 +1,287 @@
 #!/usr/bin/env python3
 """
-Create Figure 4: 2D projection of Layer 12 activations.
-Shows linear separability of success vs failure.
+Create Figure 4 from real activation samples rather than simulated points.
 """
 
+import argparse
 import json
-import numpy as np
-import matplotlib.pyplot as plt
 from pathlib import Path
-from sklearn.decomposition import PCA
 
-# Load data
-analysis_file = Path("data/results_gpt2_medium/ablation/layer12_analysis.json")
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+from sklearn.model_selection import train_test_split
 
-with open(analysis_file) as f:
-    data = json.load(f)
 
-success_mean = np.array(data['success_mean'])
-failure_mean = np.array(data['failure_mean'])
+def parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--analysis_file",
+        default="data/results_gpt2_medium/ablation/layer12_analysis.json",
+    )
+    parser.add_argument("--samples_file", default=None)
+    parser.add_argument(
+        "--classification_file",
+        default="data/results_gpt2_medium/ablation/activation_classification.json",
+    )
+    parser.add_argument("--positive_category", default="success")
+    parser.add_argument("--negative_category", default="syntax_error")
+    parser.add_argument("--test_size", type=float, default=0.2)
+    parser.add_argument("--random_state", type=int, default=42)
+    parser.add_argument(
+        "--output_file",
+        default="outputs/figures/figure4_activation_projection.png",
+    )
+    return parser.parse_args()
 
-# Get top 2 discriminative dimensions
-top_dims = data['top_discriminative_dims'][:2]
-dim1, dim2 = top_dims[0], top_dims[1]
 
-print(f"Creating 2D projection using dimensions {dim1} and {dim2}")
+def load_json(path):
+    with open(path, "r", encoding="utf-8") as handle:
+        return json.load(handle)
 
-# For visualization, we need individual samples, not just means
-# Since we only have means, we'll simulate distribution around means
 
-np.random.seed(42)
+def resolve_samples_path(analysis_path, analysis_data, explicit_path):
+    if explicit_path:
+        return Path(explicit_path)
 
-# Simulate 100 samples each (around the mean with small variance)
-n_samples = 100
-noise_scale = 0.3
+    sample_path = analysis_data.get("sample_activations_file")
+    if sample_path:
+        return Path(sample_path)
 
-# Success samples
-success_samples = np.random.normal(
-    loc=[success_mean[dim1], success_mean[dim2]],
-    scale=noise_scale,
-    size=(n_samples, 2)
-)
+    return analysis_path.parent / "layer12_probe_samples.json"
 
-# Failure samples  
-failure_samples = np.random.normal(
-    loc=[failure_mean[dim1], failure_mean[dim2]],
-    scale=noise_scale,
-    size=(n_samples, 2)
-)
 
-# Create figure
-fig, ax = plt.subplots(figsize=(10, 8))
+def get_activation_vector(record):
+    if "activation" in record:
+        return np.asarray(record["activation"], dtype=np.float32)
+    activations = record.get("activations")
+    if activations and len(activations) == 1:
+        return np.asarray(next(iter(activations.values())), dtype=np.float32)
+    raise ValueError("Sample record does not contain a single activation vector")
 
-# Plot points
-ax.scatter(success_samples[:, 0], success_samples[:, 1], 
-          c='green', alpha=0.6, s=50, label='Success', edgecolors='darkgreen')
-ax.scatter(failure_samples[:, 0], failure_samples[:, 1],
-          c='red', alpha=0.6, s=50, label='Syntax Error', edgecolors='darkred')
 
-# Plot means
-ax.scatter([success_mean[dim1]], [success_mean[dim2]], 
-          c='darkgreen', marker='*', s=500, label='Success Mean', 
-          edgecolors='black', linewidths=2, zorder=5)
-ax.scatter([failure_mean[dim1]], [failure_mean[dim2]],
-          c='darkred', marker='*', s=500, label='Failure Mean',
-          edgecolors='black', linewidths=2, zorder=5)
+def prepare_points(sample_records, positive_category, negative_category, dimensions):
+    xs = []
+    ys = []
 
-# Draw decision boundary (midpoint)
-mid_x = (success_mean[dim1] + failure_mean[dim1]) / 2
-mid_y = (success_mean[dim2] + failure_mean[dim2]) / 2
+    for record in sample_records:
+        category = record.get("category")
+        if category == positive_category:
+            label = 1
+        elif category == negative_category:
+            label = 0
+        else:
+            continue
 
-# Slope of separation line
-dx = success_mean[dim1] - failure_mean[dim1]
-dy = success_mean[dim2] - failure_mean[dim2]
+        activation = get_activation_vector(record)
+        xs.append(activation[dimensions])
+        ys.append(label)
 
-# Perpendicular line
-perp_slope = -dx / dy if dy != 0 else 0
+    if not xs:
+        raise ValueError("No samples matched the requested categories")
 
-x_line = np.linspace(ax.get_xlim()[0], ax.get_xlim()[1], 100)
-y_line = mid_y + perp_slope * (x_line - mid_x)
+    return np.stack(xs), np.asarray(ys, dtype=np.int32)
 
-ax.plot(x_line, y_line, 'k--', linewidth=2, alpha=0.5, label='Decision Boundary')
 
-ax.set_xlabel(f'Dimension {dim1} Activation', fontsize=14, fontweight='bold')
-ax.set_ylabel(f'Dimension {dim2} Activation', fontsize=14, fontweight='bold')
-ax.set_title('Layer 12 Activation Space: Success vs. Failure\n(2D Projection of Top Discriminative Dimensions)', 
-            fontsize=16, fontweight='bold')
-ax.legend(fontsize=12, loc='best')
-ax.grid(True, alpha=0.3)
+def build_plot_statistics(points, labels, positive_category, negative_category, test_size, random_state):
+    x_train, x_test, y_train, y_test = train_test_split(
+        points,
+        labels,
+        test_size=test_size,
+        random_state=random_state,
+        stratify=labels,
+    )
 
-plt.tight_layout()
+    held_out_model = LogisticRegression(max_iter=5000, random_state=random_state)
+    held_out_model.fit(x_train, y_train)
+    held_out_accuracy = float(accuracy_score(y_test, held_out_model.predict(x_test)))
 
-# Save figure
-output_dir = Path("outputs/figures")
-output_dir.mkdir(parents=True, exist_ok=True)
-output_file = output_dir / "figure4_activation_projection.png"
+    plot_model = LogisticRegression(max_iter=5000, random_state=random_state)
+    plot_model.fit(points, labels)
 
-plt.savefig(output_file, dpi=300, bbox_inches='tight')
-print(f"\n✅ Figure saved to: {output_file}")
+    positive_points = points[labels == 1]
+    negative_points = points[labels == 0]
+    positive_mean = positive_points.mean(axis=0)
+    negative_mean = negative_points.mean(axis=0)
+    separation = float(np.linalg.norm(positive_mean - negative_mean))
 
-# Also save as PDF for paper
-pdf_file = output_dir / "figure4_activation_projection.pdf"
-plt.savefig(pdf_file, bbox_inches='tight')
-print(f"✅ PDF saved to: {pdf_file}")
+    return {
+        "held_out_accuracy": held_out_accuracy,
+        "plot_model": plot_model,
+        "positive_points": positive_points,
+        "negative_points": negative_points,
+        "positive_mean": positive_mean,
+        "negative_mean": negative_mean,
+        "class_counts": {
+            positive_category: int(len(positive_points)),
+            negative_category: int(len(negative_points)),
+        },
+        "separation": separation,
+    }
 
-plt.close()
 
-# Print statistics
-separation = np.sqrt(dx**2 + dy**2)
-print(f"\n" + "="*60)
-print("FIGURE 4 STATISTICS")
-print("="*60)
-print(f"Projection dimensions: {dim1}, {dim2}")
-print(f"Euclidean separation: {separation:.4f}")
-print(f"Linear separability: Clear boundary visible")
-print(f"Overlap region: Minimal (<5%)")
-print("="*60)
+def draw_decision_boundary(ax, classifier, points):
+    coef = classifier.coef_[0]
+    intercept = classifier.intercept_[0]
+
+    x_min, x_max = points[:, 0].min(), points[:, 0].max()
+    y_min, y_max = points[:, 1].min(), points[:, 1].max()
+    padding_x = max(0.5, 0.05 * (x_max - x_min))
+    padding_y = max(0.5, 0.05 * (y_max - y_min))
+
+    x_values = np.linspace(x_min - padding_x, x_max + padding_x, 200)
+    if abs(coef[1]) < 1e-8:
+        x_boundary = np.full(200, -intercept / coef[0])
+        y_values = np.linspace(y_min - padding_y, y_max + padding_y, 200)
+        ax.plot(x_boundary, y_values, "--", color="black", linewidth=2, label="Linear boundary")
+    else:
+        y_values = -(coef[0] * x_values + intercept) / coef[1]
+        ax.plot(x_values, y_values, "--", color="black", linewidth=2, label="Linear boundary")
+
+    ax.set_xlim(x_min - padding_x, x_max + padding_x)
+    ax.set_ylim(y_min - padding_y, y_max + padding_y)
+
+
+def main():
+    args = parse_args()
+
+    analysis_path = Path(args.analysis_file)
+    analysis_data = load_json(analysis_path)
+    samples_path = resolve_samples_path(analysis_path, analysis_data, args.samples_file)
+    sample_records = load_json(samples_path)
+
+    top2_dims = [int(dim) for dim in analysis_data["top_discriminative_dims"][:2]]
+    points, labels = prepare_points(
+        sample_records=sample_records,
+        positive_category=args.positive_category,
+        negative_category=args.negative_category,
+        dimensions=top2_dims,
+    )
+
+    stats = build_plot_statistics(
+        points=points,
+        labels=labels,
+        positive_category=args.positive_category,
+        negative_category=args.negative_category,
+        test_size=args.test_size,
+        random_state=args.random_state,
+    )
+
+    classification_path = Path(args.classification_file)
+    classification_data = None
+    if classification_path.exists():
+        classification_data = load_json(classification_path)
+
+    fig, ax = plt.subplots(figsize=(10, 8))
+
+    ax.scatter(
+        stats["positive_points"][:, 0],
+        stats["positive_points"][:, 1],
+        c="#2ca02c",
+        alpha=0.45,
+        s=28,
+        label=args.positive_category.replace("_", " ").title(),
+        edgecolors="none",
+    )
+    ax.scatter(
+        stats["negative_points"][:, 0],
+        stats["negative_points"][:, 1],
+        c="#d62728",
+        alpha=0.45,
+        s=28,
+        label=args.negative_category.replace("_", " ").title(),
+        edgecolors="none",
+    )
+
+    ax.scatter(
+        [stats["positive_mean"][0]],
+        [stats["positive_mean"][1]],
+        c="#1b6e1b",
+        marker="*",
+        s=450,
+        edgecolors="black",
+        linewidths=1.2,
+        label=f"{args.positive_category.replace('_', ' ').title()} mean",
+        zorder=5,
+    )
+    ax.scatter(
+        [stats["negative_mean"][0]],
+        [stats["negative_mean"][1]],
+        c="#8b1e1e",
+        marker="*",
+        s=450,
+        edgecolors="black",
+        linewidths=1.2,
+        label=f"{args.negative_category.replace('_', ' ').title()} mean",
+        zorder=5,
+    )
+
+    draw_decision_boundary(ax, stats["plot_model"], points)
+
+    top2_accuracy = stats["held_out_accuracy"]
+    top5_accuracy = None
+    if classification_data:
+        top2_accuracy = classification_data["metrics"]["top2"]["accuracy"]
+        top5_accuracy = classification_data["metrics"]["top5"]["accuracy"]
+
+    annotation_lines = [f"Top-2 held-out accuracy: {top2_accuracy:.1%}"]
+    if top5_accuracy is not None:
+        annotation_lines.append(f"Top-5 held-out accuracy: {top5_accuracy:.1%}")
+    annotation_lines.append(f"2D class-mean separation: {stats['separation']:.2f}")
+
+    ax.text(
+        0.02,
+        0.98,
+        "\n".join(annotation_lines),
+        transform=ax.transAxes,
+        va="top",
+        fontsize=11,
+        bbox={"boxstyle": "round", "facecolor": "white", "alpha": 0.9},
+    )
+
+    ax.set_xlabel(f"Activation dimension {top2_dims[0]}", fontsize=13)
+    ax.set_ylabel(f"Activation dimension {top2_dims[1]}", fontsize=13)
+    ax.set_title(
+        "GPT-2 Medium target-layer activation space\n"
+        "Real success vs. syntax-error samples",
+        fontsize=15,
+    )
+    ax.grid(True, alpha=0.2)
+    ax.legend(loc="best", framealpha=0.95)
+
+    plt.tight_layout()
+
+    output_path = Path(args.output_file)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    plt.savefig(output_path, dpi=300, bbox_inches="tight")
+    plt.savefig(output_path.with_suffix(".pdf"), bbox_inches="tight")
+    plt.close()
+
+    stats_output = output_path.with_name("figure4_activation_projection_stats.json")
+    stats_payload = {
+        "analysis_file": str(analysis_path),
+        "samples_file": str(samples_path),
+        "classification_file": str(classification_path),
+        "dimensions": top2_dims,
+        "held_out_accuracy": top2_accuracy,
+        "top5_accuracy": top5_accuracy,
+        "class_counts": stats["class_counts"],
+        "class_mean_separation": stats["separation"],
+    }
+    with open(stats_output, "w", encoding="utf-8") as handle:
+        json.dump(stats_payload, handle, indent=2)
+
+    print("=" * 60)
+    print("FIGURE 4 CREATED")
+    print("=" * 60)
+    print(f"Dimensions: {top2_dims}")
+    print(f"Top-2 held-out accuracy: {top2_accuracy:.4f}")
+    if top5_accuracy is not None:
+        print(f"Top-5 held-out accuracy: {top5_accuracy:.4f}")
+    print(f"Saved figure to: {output_path}")
+    print(f"Saved stats to: {stats_output}")
+
+
+if __name__ == "__main__":
+    main()

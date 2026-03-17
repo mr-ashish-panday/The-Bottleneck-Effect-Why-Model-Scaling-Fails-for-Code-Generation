@@ -1,0 +1,23 @@
+{
+  "search_root": "external/LiveCodeBench",
+  "label": "gpt2",
+  "json_summaries": [
+    {
+      "file": "/home/ashish/paper11_code_execution_failures/outputs/livecodebench/gpt2_custom_outputs_codegeneration_output_eval.json",
+      "metrics": {
+        "pass@1": 0.0,
+        "pass@5": 0.0,
+        "pass@10": 0.0
+      }
+    },
+    {
+      "file": "/home/ashish/paper11_code_execution_failures/outputs/livecodebench/gpt2_custom_outputs_codegeneration_output_eval_all.json",
+      "metrics": {
+        "pass@1": 0.0,
+        "tasks_scored": 510,
+        "pass@1_mean": 0.0
+      }
+    }
+  ],
+  "log_metrics": {}
+}

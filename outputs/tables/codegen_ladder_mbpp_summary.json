@@ -1,0 +1,94 @@
+{
+  "models": [
+    {
+      "label": "CodeGen-NL MBPP",
+      "results_dir": "data/results_mbpp_full_codegen_nl",
+      "success_pct": 0.019455252918287938,
+      "syntax_pct": 73.17120622568093,
+      "runtime_pct": 12.178988326848248,
+      "timeout_pct": 0.019455252918287938,
+      "top_syntax_errors": [
+        [
+          "bracket_mismatch",
+          1471
+        ],
+        [
+          "indentation",
+          1312
+        ],
+        [
+          "other",
+          361
+        ],
+        [
+          "colon_missing",
+          261
+        ],
+        [
+          "keyword_error",
+          207
+        ]
+      ]
+    },
+    {
+      "label": "CodeGen-Multi MBPP",
+      "results_dir": "data/results_mbpp_full_codegen_multi",
+      "success_pct": 1.2256809338521402,
+      "syntax_pct": 62.06225680933852,
+      "runtime_pct": 11.361867704280156,
+      "timeout_pct": 0.1556420233463035,
+      "top_syntax_errors": [
+        [
+          "bracket_mismatch",
+          1820
+        ],
+        [
+          "other",
+          352
+        ],
+        [
+          "indentation",
+          318
+        ],
+        [
+          "colon_missing",
+          257
+        ],
+        [
+          "keyword_error",
+          241
+        ]
+      ]
+    },
+    {
+      "label": "CodeGen-Mono MBPP",
+      "results_dir": "data/results_mbpp_full_codegen_mono",
+      "success_pct": 2.762645914396887,
+      "syntax_pct": 36.16731517509727,
+      "runtime_pct": 18.40466926070039,
+      "timeout_pct": 0.019455252918287938,
+      "top_syntax_errors": [
+        [
+          "other",
+          677
+        ],
+        [
+          "keyword_error",
+          492
+        ],
+        [
+          "bracket_mismatch",
+          343
+        ],
+        [
+          "colon_missing",
+          193
+        ],
+        [
+          "indentation",
+          95
+        ]
+      ]
+    }
+  ]
+}

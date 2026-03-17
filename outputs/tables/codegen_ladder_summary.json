@@ -1,0 +1,94 @@
+{
+  "models": [
+    {
+      "label": "CodeGen-NL",
+      "results_dir": "data/results_codegen_nl",
+      "success_pct": 30.598591549295772,
+      "syntax_pct": 69.21830985915493,
+      "runtime_pct": 0.18309859154929578,
+      "timeout_pct": 0.0,
+      "top_syntax_errors": [
+        [
+          "bracket_mismatch",
+          3686
+        ],
+        [
+          "indentation",
+          3456
+        ],
+        [
+          "other",
+          1239
+        ],
+        [
+          "colon_missing",
+          622
+        ],
+        [
+          "keyword_error",
+          421
+        ]
+      ]
+    },
+    {
+      "label": "CodeGen-Multi",
+      "results_dir": "data/results_codegen_multi",
+      "success_pct": 28.462585034013603,
+      "syntax_pct": 71.42857142857143,
+      "runtime_pct": 0.10884353741496598,
+      "timeout_pct": 0.0,
+      "top_syntax_errors": [
+        [
+          "bracket_mismatch",
+          5646
+        ],
+        [
+          "indentation",
+          1469
+        ],
+        [
+          "other",
+          1371
+        ],
+        [
+          "colon_missing",
+          883
+        ],
+        [
+          "quote_mismatch",
+          770
+        ]
+      ]
+    },
+    {
+      "label": "CodeGen-Mono",
+      "results_dir": "data/results_codegen_mono",
+      "success_pct": 37.755102040816325,
+      "syntax_pct": 62.197278911564624,
+      "runtime_pct": 0.047619047619047616,
+      "timeout_pct": 0.0,
+      "top_syntax_errors": [
+        [
+          "bracket_mismatch",
+          4022
+        ],
+        [
+          "indentation",
+          1601
+        ],
+        [
+          "other",
+          1542
+        ],
+        [
+          "colon_missing",
+          1109
+        ],
+        [
+          "keyword_error",
+          449
+        ]
+      ]
+    }
+  ]
+}

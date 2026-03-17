@@ -51,3 +51,18 @@ datasets/
 # Other
 *.log
 .cache/
+
+# Keep research logs and summaries under outputs/
+!outputs/logs/
+!outputs/logs/*.log
+!outputs/tables/
+!outputs/tables/*.json
+
+# LaTeX scratch files
+*.aux
+*.bbl
+*.blg
+*.out
+
+# Temporary sync workspace
+tmp_remote_sync/

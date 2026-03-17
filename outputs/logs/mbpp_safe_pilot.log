@@ -1,0 +1,347 @@
+[2026-03-09 10:40:06] Starting robust MBPP pilot
+[2026-03-09 10:40:07] Problems: 30 | Samples/problem: 10
+[2026-03-09 10:40:07] MBPP dataset already present
+[2026-03-09 10:40:07] Running safe generation for config_mbpp_gpt2.yaml
+Need to generate: 30 problems
+Loading model: gpt2
+✅ Model loaded on cuda
+Problems:   0%|          | 0/30 [00:00<?, ?it/s]Problems:   3%|▎         | 1/30 [00:52<25:33, 52.89s/it]Problems:   7%|▋         | 2/30 [01:31<20:49, 44.63s/it]Problems:  10%|█         | 3/30 [02:08<18:27, 41.03s/it]Problems:  13%|█▎        | 4/30 [02:43<16:46, 38.72s/it]Problems:  17%|█▋        | 5/30 [03:19<15:45, 37.83s/it]Problems:  20%|██        | 6/30 [03:56<14:56, 37.35s/it]Problems:  23%|██▎       | 7/30 [04:36<14:42, 38.38s/it]Problems:  27%|██▋       | 8/30 [05:09<13:25, 36.62s/it]Problems:  30%|███       | 9/30 [05:48<13:01, 37.21s/it]Problems:  33%|███▎      | 10/30 [06:23<12:13, 36.69s/it]Problems:  37%|███▋      | 11/30 [06:57<11:21, 35.89s/it]Problems:  40%|████      | 12/30 [07:30<10:31, 35.06s/it]Problems:  43%|████▎     | 13/30 [08:04<09:50, 34.72s/it]Problems:  47%|████▋     | 14/30 [08:41<09:24, 35.31s/it]Problems:  50%|█████     | 15/30 [09:19<09:01, 36.07s/it]Problems:  53%|█████▎    | 16/30 [09:57<08:31, 36.54s/it]Problems:  57%|█████▋    | 17/30 [10:30<07:44, 35.73s/it]Problems:  60%|██████    | 18/30 [11:02<06:55, 34.63s/it]Problems:  63%|██████▎   | 19/30 [11:44<06:45, 36.82s/it]Problems:  67%|██████▋   | 20/30 [12:20<06:05, 36.59s/it]Problems:  70%|███████   | 21/30 [12:53<05:17, 35.30s/it]Problems:  73%|███████▎  | 22/30 [13:40<05:10, 38.83s/it]Problems:  77%|███████▋  | 23/30 [14:20<04:34, 39.27s/it]Problems:  80%|████████  | 24/30 [14:58<03:53, 38.84s/it]Problems:  83%|████████▎ | 25/30 [15:41<03:20, 40.08s/it]Problems:  87%|████████▋ | 26/30 [16:21<02:39, 39.99s/it]Problems:  90%|█████████ | 27/30 [17:16<02:14, 44.72s/it]Problems:  93%|█████████▎| 28/30 [17:54<01:25, 42.55s/it]Problems:  97%|█████████▋| 29/30 [18:37<00:42, 42.74s/it]Problems: 100%|██████████| 30/30 [19:27<00:00, 44.79s/it]Problems: 100%|██████████| 30/30 [19:27<00:00, 38.91s/it]
+
+✅ Complete: 30 problems
+[2026-03-09 11:01:11] Evaluating config_mbpp_gpt2.yaml
+============================================================
+PHASE 1-2: FEASIBILITY CHECK - EVALUATION
+============================================================
+Input file: data/results_mbpp_gpt2/generated_samples.json
+Output file: data/results_mbpp_gpt2/evaluation_results.json
+
+Loading generated samples...
+✅ Loaded 30 problems
+
+Evaluating samples...
+Problems:   0%|          | 0/30 [00:00<?, ?it/s]Problems:  63%|██████▎   | 19/30 [00:00<00:00, 185.62it/s]Problems: 100%|██████████| 30/30 [00:00<00:00, 65.91it/s] 
+
+============================================================
+EVALUATION COMPLETE
+============================================================
+✅ Evaluated 300 samples
+✅ Results saved to: data/results_mbpp_gpt2/evaluation_results.json
+
+CATEGORY DISTRIBUTION:
+------------------------------------------------------------
+  syntax_error        :   287 ( 95.7%)
+  wrong_output        :     9 (  3.0%)
+  runtime_error       :     4 (  1.3%)
+
+NEXT STEP: Analyze failures
+  python scripts/analyze_failures.py --config config.yaml
+============================================================
+PHASE 1-2: FEASIBILITY CHECK - ANALYSIS
+============================================================
+Input file: data/results_mbpp_gpt2/evaluation_results.json
+
+FEASIBILITY REPORT
+============================================================
+Total problems: 30
+Total samples: 300
+
+CATEGORY DISTRIBUTION:
+------------------------------------------------------------
+  syntax_error        :   287 ( 95.7%)
+  wrong_output        :     9 (  3.0%)
+  runtime_error       :     4 (  1.3%)
+
+COMPLEXITY ANALYSIS:
+------------------------------------------------------------
+
+  MEDIUM problems:
+    syntax_error        :  287 ( 95.7%)
+    wrong_output        :    9 (  3.0%)
+    runtime_error       :    4 (  1.3%)
+
+============================================================
+FEASIBILITY DECISION
+============================================================
+Categorization rate: 100.0%
+Threshold: 70.0%
+Clear categories: 300 / 300
+
+✅ DECISION: PROCEED TO FULL PAPER
+
+We can clearly categorize failure patterns.
+There are interesting differences across complexity levels.
+The error taxonomy is well-defined.
+
+NEXT STEPS:
+1. Expand to all 164 HumanEval problems
+2. Generate 100 samples × 164 = 16,400 total samples
+3. Deep dive into error patterns
+4. Extract activation patterns
+5. Build execution-aware decoding
+
+✅ Full report saved to: data/results_mbpp_gpt2/feasibility_report.json
+============================================================
+DEEP SYNTAX ERROR ANALYSIS
+============================================================
+Input: data/results_mbpp_gpt2/evaluation_results.json
+
+Analyzing syntax errors in detail...
+Problems:   0%|          | 0/30 [00:00<?, ?it/s]Problems: 100%|██████████| 30/30 [00:00<00:00, 3024.52it/s]
+
+============================================================
+SYNTAX ERROR BREAKDOWN
+============================================================
+Total syntax errors: 287
+
+MAIN CATEGORIES:
+  other               :   174 ( 60.6%)
+  quote_mismatch      :    46 ( 16.0%)
+  keyword_error       :    42 ( 14.6%)
+  indentation         :    11 (  3.8%)
+  bracket_mismatch    :    11 (  3.8%)
+  operator_error      :     2 (  0.7%)
+  colon_missing       :     1 (  0.3%)
+
+TOP SUBCATEGORIES:
+  other:unknown                      :   174 ( 60.6%)
+  quote_mismatch:unclosed_string     :    46 ( 16.0%)
+  keyword_error:misspelled_keyword   :    42 ( 14.6%)
+  indentation:unexpected_indent      :    11 (  3.8%)
+  bracket_mismatch:curly_brace       :     5 (  1.7%)
+  bracket_mismatch:square_bracket    :     4 (  1.4%)
+  bracket_mismatch:parenthesis       :     2 (  0.7%)
+  operator_error:assignment_vs_comparison:     2 (  0.7%)
+  colon_missing:missing_colon        :     1 (  0.3%)
+
+ERROR POSITIONS:
+  late      :   286 ( 99.7%)
+  middle    :     1 (  0.3%)
+
+✅ Saved to: data/results_mbpp_gpt2/syntax_analysis.json
+[2026-03-09 11:01:15] Running safe generation for config_mbpp_gpt2_medium.yaml
+Need to generate: 30 problems
+Loading model: gpt2-medium
+✅ Model loaded on cuda
+Problems:   0%|          | 0/30 [00:00<?, ?it/s]Problems:   3%|▎         | 1/30 [01:02<30:04, 62.22s/it]Problems:   7%|▋         | 2/30 [01:43<23:14, 49.79s/it]Problems:  10%|█         | 3/30 [02:21<19:57, 44.34s/it]Problems:  13%|█▎        | 4/30 [03:07<19:31, 45.04s/it]Problems:  17%|█▋        | 5/30 [03:39<16:49, 40.38s/it]Problems:  20%|██        | 6/30 [04:25<16:51, 42.15s/it]Problems:  23%|██▎       | 7/30 [05:03<15:41, 40.92s/it]Problems:  27%|██▋       | 8/30 [05:45<15:09, 41.36s/it]Problems:  30%|███       | 9/30 [06:23<14:05, 40.25s/it]Problems:  33%|███▎      | 10/30 [07:04<13:27, 40.39s/it]Problems:  37%|███▋      | 11/30 [07:45<12:51, 40.63s/it]Problems:  40%|████      | 12/30 [08:30<12:35, 41.99s/it]Problems:  43%|████▎     | 13/30 [09:14<12:01, 42.47s/it]Problems:  47%|████▋     | 14/30 [09:46<10:30, 39.44s/it]Problems:  50%|█████     | 15/30 [10:25<09:50, 39.37s/it]Problems:  53%|█████▎    | 16/30 [10:59<08:49, 37.84s/it]Problems:  57%|█████▋    | 17/30 [11:39<08:18, 38.31s/it]Problems:  60%|██████    | 18/30 [12:20<07:51, 39.26s/it]Problems:  63%|██████▎   | 19/30 [13:01<07:15, 39.60s/it]Problems:  67%|██████▋   | 20/30 [13:35<06:21, 38.11s/it]Problems:  70%|███████   | 21/30 [14:10<05:34, 37.19s/it]Problems:  73%|███████▎  | 22/30 [14:44<04:49, 36.23s/it]Problems:  77%|███████▋  | 23/30 [15:24<04:20, 37.16s/it]Problems:  80%|████████  | 24/30 [15:57<03:35, 35.93s/it]Problems:  83%|████████▎ | 25/30 [16:39<03:08, 37.72s/it]Problems:  87%|████████▋ | 26/30 [17:23<02:38, 39.68s/it]Problems:  90%|█████████ | 27/30 [18:06<02:02, 40.76s/it]Problems:  93%|█████████▎| 28/30 [18:46<01:21, 40.60s/it]Problems:  97%|█████████▋| 29/30 [19:18<00:37, 37.88s/it]Problems: 100%|██████████| 30/30 [19:38<00:00, 32.59s/it]Problems: 100%|██████████| 30/30 [19:38<00:00, 39.29s/it]
+
+✅ Complete: 30 problems
+[2026-03-09 11:24:35] Evaluating config_mbpp_gpt2_medium.yaml
+============================================================
+PHASE 1-2: FEASIBILITY CHECK - EVALUATION
+============================================================
+Input file: data/results_mbpp_gpt2_medium/generated_samples.json
+Output file: data/results_mbpp_gpt2_medium/evaluation_results.json
+
+Loading generated samples...
+✅ Loaded 30 problems
+
+Evaluating samples...
+Problems:   0%|          | 0/30 [00:00<?, ?it/s]Problems: 100%|██████████| 30/30 [00:00<00:00, 422.18it/s]
+
+============================================================
+EVALUATION COMPLETE
+============================================================
+✅ Evaluated 300 samples
+✅ Results saved to: data/results_mbpp_gpt2_medium/evaluation_results.json
+
+CATEGORY DISTRIBUTION:
+------------------------------------------------------------
+  syntax_error        :   288 ( 96.0%)
+  wrong_output        :    12 (  4.0%)
+
+NEXT STEP: Analyze failures
+  python scripts/analyze_failures.py --config config.yaml
+============================================================
+PHASE 1-2: FEASIBILITY CHECK - ANALYSIS
+============================================================
+Input file: data/results_mbpp_gpt2_medium/evaluation_results.json
+
+FEASIBILITY REPORT
+============================================================
+Total problems: 30
+Total samples: 300
+
+CATEGORY DISTRIBUTION:
+------------------------------------------------------------
+  syntax_error        :   288 ( 96.0%)
+  wrong_output        :    12 (  4.0%)
+
+COMPLEXITY ANALYSIS:
+------------------------------------------------------------
+
+  MEDIUM problems:
+    syntax_error        :  288 ( 96.0%)
+    wrong_output        :   12 (  4.0%)
+
+============================================================
+FEASIBILITY DECISION
+============================================================
+Categorization rate: 100.0%
+Threshold: 70.0%
+Clear categories: 300 / 300
+
+✅ DECISION: PROCEED TO FULL PAPER
+
+We can clearly categorize failure patterns.
+There are interesting differences across complexity levels.
+The error taxonomy is well-defined.
+
+NEXT STEPS:
+1. Expand to all 164 HumanEval problems
+2. Generate 100 samples × 164 = 16,400 total samples
+3. Deep dive into error patterns
+4. Extract activation patterns
+5. Build execution-aware decoding
+
+✅ Full report saved to: data/results_mbpp_gpt2_medium/feasibility_report.json
+============================================================
+DEEP SYNTAX ERROR ANALYSIS
+============================================================
+Input: data/results_mbpp_gpt2_medium/evaluation_results.json
+
+Analyzing syntax errors in detail...
+Problems:   0%|          | 0/30 [00:00<?, ?it/s]Problems: 100%|██████████| 30/30 [00:00<00:00, 4692.32it/s]
+
+============================================================
+SYNTAX ERROR BREAKDOWN
+============================================================
+Total syntax errors: 288
+
+MAIN CATEGORIES:
+  indentation         :   204 ( 70.8%)
+  other               :    62 ( 21.5%)
+  keyword_error       :    17 (  5.9%)
+  quote_mismatch      :     5 (  1.7%)
+
+TOP SUBCATEGORIES:
+  indentation:unexpected_indent      :   204 ( 70.8%)
+  other:unknown                      :    62 ( 21.5%)
+  keyword_error:misspelled_keyword   :    17 (  5.9%)
+  quote_mismatch:unclosed_string     :     5 (  1.7%)
+
+ERROR POSITIONS:
+  late      :   286 ( 99.3%)
+  middle    :     2 (  0.7%)
+
+✅ Saved to: data/results_mbpp_gpt2_medium/syntax_analysis.json
+[2026-03-09 11:24:37] Running safe generation for config_mbpp_codegen.yaml
+Some weights of the model checkpoint at Salesforce/codegen-350M-mono were not used when initializing CodeGenForCausalLM: ['transformer.h.0.attn.causal_mask', 'transformer.h.1.attn.causal_mask', 'transformer.h.10.attn.causal_mask', 'transformer.h.11.attn.causal_mask', 'transformer.h.12.attn.causal_mask', 'transformer.h.13.attn.causal_mask', 'transformer.h.14.attn.causal_mask', 'transformer.h.15.attn.causal_mask', 'transformer.h.16.attn.causal_mask', 'transformer.h.17.attn.causal_mask', 'transformer.h.18.attn.causal_mask', 'transformer.h.19.attn.causal_mask', 'transformer.h.2.attn.causal_mask', 'transformer.h.3.attn.causal_mask', 'transformer.h.4.attn.causal_mask', 'transformer.h.5.attn.causal_mask', 'transformer.h.6.attn.causal_mask', 'transformer.h.7.attn.causal_mask', 'transformer.h.8.attn.causal_mask', 'transformer.h.9.attn.causal_mask']
+- This IS expected if you are initializing CodeGenForCausalLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing CodeGenForCausalLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Need to generate: 30 problems
+Loading model: Salesforce/codegen-350M-mono
+✅ Model loaded on cuda
+Problems:   0%|          | 0/30 [00:00<?, ?it/s]Problems:   3%|▎         | 1/30 [00:31<15:20, 31.76s/it]Problems:   7%|▋         | 2/30 [01:03<14:43, 31.56s/it]Problems:  10%|█         | 3/30 [01:33<14:01, 31.16s/it]Problems:  13%|█▎        | 4/30 [02:04<13:23, 30.91s/it]Problems:  17%|█▋        | 5/30 [02:35<12:56, 31.06s/it]Problems:  20%|██        | 6/30 [03:06<12:25, 31.05s/it]Problems:  23%|██▎       | 7/30 [03:38<11:56, 31.15s/it]Problems:  27%|██▋       | 8/30 [04:15<12:06, 33.03s/it]Problems:  30%|███       | 9/30 [04:45<11:17, 32.27s/it]Problems:  33%|███▎      | 10/30 [05:19<10:55, 32.77s/it]Problems:  37%|███▋      | 11/30 [05:53<10:28, 33.07s/it]Problems:  40%|████      | 12/30 [06:24<09:43, 32.41s/it]Problems:  43%|████▎     | 13/30 [06:57<09:13, 32.53s/it]Problems:  47%|████▋     | 14/30 [07:27<08:30, 31.89s/it]Problems:  50%|█████     | 15/30 [08:04<08:19, 33.31s/it]Problems:  53%|█████▎    | 16/30 [08:47<08:27, 36.26s/it]Problems:  57%|█████▋    | 17/30 [09:20<07:40, 35.45s/it]Problems:  60%|██████    | 18/30 [10:10<07:57, 39.79s/it]Problems:  63%|██████▎   | 19/30 [10:52<07:24, 40.43s/it]Problems:  67%|██████▋   | 20/30 [11:27<06:28, 38.83s/it]Problems:  70%|███████   | 21/30 [12:00<05:33, 37.02s/it]Problems:  73%|███████▎  | 22/30 [12:31<04:41, 35.20s/it]Problems:  77%|███████▋  | 23/30 [13:04<04:01, 34.49s/it]Problems:  80%|████████  | 24/30 [13:36<03:22, 33.82s/it]Problems:  83%|████████▎ | 25/30 [14:07<02:45, 33.03s/it]Problems:  87%|████████▋ | 26/30 [14:38<02:09, 32.43s/it]Problems:  90%|█████████ | 27/30 [15:09<01:35, 31.89s/it]Problems:  93%|█████████▎| 28/30 [15:38<01:02, 31.20s/it]Problems:  97%|█████████▋| 29/30 [16:10<00:31, 31.36s/it]Problems: 100%|██████████| 30/30 [16:41<00:00, 31.29s/it]Problems: 100%|██████████| 30/30 [16:41<00:00, 33.39s/it]
+
+✅ Complete: 30 problems
+[2026-03-09 11:41:44] Evaluating config_mbpp_codegen.yaml
+============================================================
+PHASE 1-2: FEASIBILITY CHECK - EVALUATION
+============================================================
+Input file: data/results_mbpp_codegen/generated_samples.json
+Output file: data/results_mbpp_codegen/evaluation_results.json
+
+Loading generated samples...
+✅ Loaded 30 problems
+
+Evaluating samples...
+Problems:   0%|          | 0/30 [00:00<?, ?it/s]Problems:  40%|████      | 12/30 [00:05<00:07,  2.35it/s]Problems:  97%|█████████▋| 29/30 [00:05<00:00,  6.91it/s]Problems: 100%|██████████| 30/30 [00:05<00:00,  5.70it/s]
+
+============================================================
+EVALUATION COMPLETE
+============================================================
+✅ Evaluated 300 samples
+✅ Results saved to: data/results_mbpp_codegen/evaluation_results.json
+
+CATEGORY DISTRIBUTION:
+------------------------------------------------------------
+  syntax_error        :   155 ( 51.7%)
+  wrong_output        :   101 ( 33.7%)
+  runtime_error       :    27 (  9.0%)
+  success             :    16 (  5.3%)
+  timeout             :     1 (  0.3%)
+
+NEXT STEP: Analyze failures
+  python scripts/analyze_failures.py --config config.yaml
+============================================================
+PHASE 1-2: FEASIBILITY CHECK - ANALYSIS
+============================================================
+Input file: data/results_mbpp_codegen/evaluation_results.json
+
+FEASIBILITY REPORT
+============================================================
+Total problems: 30
+Total samples: 300
+
+CATEGORY DISTRIBUTION:
+------------------------------------------------------------
+  syntax_error        :   155 ( 51.7%)
+  wrong_output        :   101 ( 33.7%)
+  runtime_error       :    27 (  9.0%)
+  success             :    16 (  5.3%)
+  timeout             :     1 (  0.3%)
+
+COMPLEXITY ANALYSIS:
+------------------------------------------------------------
+
+  MEDIUM problems:
+    syntax_error        :  155 ( 51.7%)
+    wrong_output        :  101 ( 33.7%)
+    runtime_error       :   27 (  9.0%)
+
+============================================================
+FEASIBILITY DECISION
+============================================================
+Categorization rate: 100.0%
+Threshold: 70.0%
+Clear categories: 300 / 300
+
+✅ DECISION: PROCEED TO FULL PAPER
+
+We can clearly categorize failure patterns.
+There are interesting differences across complexity levels.
+The error taxonomy is well-defined.
+
+NEXT STEPS:
+1. Expand to all 164 HumanEval problems
+2. Generate 100 samples × 164 = 16,400 total samples
+3. Deep dive into error patterns
+4. Extract activation patterns
+5. Build execution-aware decoding
+
+✅ Full report saved to: data/results_mbpp_codegen/feasibility_report.json
+============================================================
+DEEP SYNTAX ERROR ANALYSIS
+============================================================
+Input: data/results_mbpp_codegen/evaluation_results.json
+
+Analyzing syntax errors in detail...
+Problems:   0%|          | 0/30 [00:00<?, ?it/s]Problems: 100%|██████████| 30/30 [00:00<00:00, 3799.88it/s]
+
+============================================================
+SYNTAX ERROR BREAKDOWN
+============================================================
+Total syntax errors: 155
+
+MAIN CATEGORIES:
+  bracket_mismatch    :    54 ( 34.8%)
+  other               :    34 ( 21.9%)
+  indentation         :    23 ( 14.8%)
+  colon_missing       :    17 ( 11.0%)
+  keyword_error       :    14 (  9.0%)
+  quote_mismatch      :    13 (  8.4%)
+
+TOP SUBCATEGORIES:
+  bracket_mismatch:parenthesis       :    41 ( 26.5%)
+  other:unknown                      :    34 ( 21.9%)
+  indentation:unexpected_indent      :    23 ( 14.8%)
+  colon_missing:missing_colon        :    17 ( 11.0%)
+  keyword_error:misspelled_keyword   :    14 (  9.0%)
+  quote_mismatch:unclosed_string     :    13 (  8.4%)
+  bracket_mismatch:square_bracket    :    13 (  8.4%)
+
+ERROR POSITIONS:
+  late      :   155 (100.0%)
+
+✅ Saved to: data/results_mbpp_codegen/syntax_analysis.json
+[2026-03-09 11:41:52] Robust MBPP pilot completed
