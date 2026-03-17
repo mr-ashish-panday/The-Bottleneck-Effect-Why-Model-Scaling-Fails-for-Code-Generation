@@ -479,3 +479,21 @@ Last updated: 2026-03-13 16:55:01 +05:45
 - Added a conservative prompt-perplexity note as secondary evidence only.
 - Added discussion/conclusion language that treats the ladder as a within-family continued-pretraining control, not a matched-compute causal isolation.
 - Rebuilt `bottleneck.pdf` successfully. Remaining LaTeX issues are layout-only warnings (underfull boxes / float placement), not broken citations or failed compilation.
+
+## 2026-03-17 final follow-up + GitHub snapshot
+
+- Launched the remaining high-ROI experiment: targeted scaled follow-ups on the CodeGen ladder signature layers.
+- Runner: `run_codegen_ladder_scaled_followups.sh`
+- Signature layers:
+  - `CodeGen-NL`: layer `11`
+  - `CodeGen-Multi`: layer `7`
+  - `CodeGen-Mono`: layer `13`
+- Follow-up settings:
+  - `20` problems
+  - `10` samples per problem
+  - scales `0.75, 0.5, 0.25, 0.0`
+- Remote log:
+  - `/home/ashish/paper11_code_execution_failures/outputs/logs/codegen_ladder_scaled_followups.log`
+- Synced finished server tables/logs into the local repo and pushed the full paper/artifact snapshot to GitHub.
+- Pushed commit:
+  - `222a7cd` (`Add final benchmarks, manuscript updates, and research artifacts`)
