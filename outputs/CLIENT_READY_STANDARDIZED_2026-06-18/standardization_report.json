@@ -1,0 +1,82 @@
+[
+  {
+    "project": "MSA Worldwide",
+    "rows": 10,
+    "expectedRows": 10,
+    "columns": 19,
+    "xlsxPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\MSA_Worldwide_US_Franchise_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+    "csvPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\MSA_Worldwide_US_Franchise_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv"
+  },
+  {
+    "project": "Ephraim Solutions",
+    "rows": 20,
+    "expectedRows": 20,
+    "columns": 19,
+    "xlsxPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Ephraim_Solutions_Denton_100mi_AI_Ops_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+    "csvPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Ephraim_Solutions_Denton_100mi_AI_Ops_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv"
+  },
+  {
+    "project": "Absolute Vending Solutions",
+    "rows": 10,
+    "expectedRows": 10,
+    "columns": 19,
+    "xlsxPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Absolute_Vending_Solutions_Dallas_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+    "csvPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Absolute_Vending_Solutions_Dallas_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv"
+  },
+  {
+    "project": "Heroes Lawn Care",
+    "rows": 20,
+    "expectedRows": 20,
+    "columns": 19,
+    "xlsxPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Heroes_Lawn_Care_NJ_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+    "csvPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Heroes_Lawn_Care_NJ_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv"
+  },
+  {
+    "project": "Unique Construction",
+    "rows": 20,
+    "expectedRows": 20,
+    "columns": 19,
+    "xlsxPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Unique_Construction_East_Coast_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+    "csvPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Unique_Construction_East_Coast_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv"
+  },
+  {
+    "project": "Firm Facility Services",
+    "rows": 20,
+    "expectedRows": 20,
+    "columns": 19,
+    "xlsxPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Firm_Facility_Services_Dallas_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+    "csvPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Firm_Facility_Services_Dallas_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv"
+  },
+  {
+    "project": "All Janitorial Service",
+    "rows": 20,
+    "expectedRows": 20,
+    "columns": 19,
+    "xlsxPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\All_Janitorial_Service_Redwood_City_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+    "csvPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\All_Janitorial_Service_Redwood_City_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv"
+  },
+  {
+    "project": "Tectum Roofing",
+    "rows": 30,
+    "expectedRows": 30,
+    "columns": 19,
+    "xlsxPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Tectum_Roofing_CO_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+    "csvPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Tectum_Roofing_CO_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv"
+  },
+  {
+    "project": "Archer HVAC & Plumbing",
+    "rows": 20,
+    "expectedRows": 20,
+    "columns": 19,
+    "xlsxPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Archer_HVAC_Plumbing_Las_Vegas_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+    "csvPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Archer_HVAC_Plumbing_Las_Vegas_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv"
+  },
+  {
+    "project": "1-800 Striper Long Island",
+    "rows": 20,
+    "expectedRows": 20,
+    "columns": 19,
+    "xlsxPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\1-800_Striper_Long_Island_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+    "csvPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\1-800_Striper_Long_Island_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv"
+  }
+]

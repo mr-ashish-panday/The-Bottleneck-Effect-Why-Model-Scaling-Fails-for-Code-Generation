@@ -1,0 +1,38 @@
+{
+  "generatedAt": "2026-06-18T18:26:36.772Z",
+  "client": "Absolute Vending Solutions",
+  "rerunQualifiers": [
+    "Non-corporate locations and businesses",
+    "No public evidence of an existing vending machine onsite"
+  ],
+  "importantCaveat": "Public web research cannot prove a site has no vending machine; every row is public-screened and should be phone-confirmed before pitching.",
+  "rowCount": 10,
+  "columnCount": 19,
+  "headers": [
+    "Priority",
+    "Lead Segment",
+    "Company",
+    "Website",
+    "Location",
+    "Geography Fit",
+    "Decision Maker",
+    "Title",
+    "Contact Route",
+    "Route Evidence",
+    "Route Source",
+    "Why Now Signal",
+    "Signal Source",
+    "Why It Fits Client Offer",
+    "Subject Line",
+    "20-Second Call Opener",
+    "First Email Draft",
+    "Day-3 Follow-up",
+    "Verification Status"
+  ],
+  "files": {
+    "csvPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\absolute_vending_rerun_non_corporate_no_existing_vending_screened\\Absolute_Vending_Solutions_Dallas_NON_CORPORATE_NO_EXISTING_VENDING_SCREENED_CALL_TEAM_READY_2026-06-18.csv",
+    "xlsxPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\absolute_vending_rerun_non_corporate_no_existing_vending_screened\\Absolute_Vending_Solutions_Dallas_NON_CORPORATE_NO_EXISTING_VENDING_SCREENED_CALL_TEAM_READY_2026-06-18.xlsx",
+    "previewPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\absolute_vending_rerun_non_corporate_no_existing_vending_screened\\Absolute_Vending_Solutions_Dallas_NON_CORPORATE_NO_EXISTING_VENDING_SCREENED_CALL_TEAM_READY_2026-06-18_preview.png",
+    "previewBytes": 310329
+  }
+}

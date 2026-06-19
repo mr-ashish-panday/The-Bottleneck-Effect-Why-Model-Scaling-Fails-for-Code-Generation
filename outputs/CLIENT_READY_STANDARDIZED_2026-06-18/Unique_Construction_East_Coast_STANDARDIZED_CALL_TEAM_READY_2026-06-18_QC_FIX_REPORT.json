@@ -1,0 +1,21 @@
+{
+  "fixedAt": "2026-06-18T19:49:27.567Z",
+  "csvPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Unique_Construction_East_Coast_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv",
+  "xlsxPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Unique_Construction_East_Coast_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+  "replaced": [
+    {
+      "priority": 12,
+      "removed": "Brixmor Property Group / Josh Brawer leasing route",
+      "added": "Tractor Supply Company / Brad Rogers, SVP Real Estate & Construction"
+    },
+    {
+      "priority": 15,
+      "removed": "Kimco Realty / customer-service-investor route",
+      "added": "Ulta Beauty / Amiee Bayer-Thomas, real estate growth and development owner"
+    }
+  ],
+  "rowCount": 20,
+  "columnCount": 19,
+  "previewPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Unique_Construction_East_Coast_STANDARDIZED_CALL_TEAM_READY_2026-06-18_QC_FIXED_preview.png",
+  "previewBytes": 692416
+}

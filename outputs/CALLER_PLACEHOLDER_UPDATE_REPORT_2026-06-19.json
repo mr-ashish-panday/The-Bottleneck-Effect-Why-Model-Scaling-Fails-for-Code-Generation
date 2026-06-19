@@ -1,0 +1,125 @@
+{
+  "updatedAt": "2026-06-18T21:01:35.279Z",
+  "report": [
+    {
+      "title": "01 Absolute Vending Solutions - Dallas Rerun - Non-Corporate Screened.xlsx",
+      "driveId": "1sV7LBO9ELXEXTCmJRyF05hnDghL27-w2",
+      "csv": "outputs/absolute_vending_rerun_non_corporate_no_existing_vending_screened/Absolute_Vending_Solutions_Dallas_NON_CORPORATE_NO_EXISTING_VENDING_SCREENED_CALL_TEAM_READY_2026-06-18.csv",
+      "xlsx": "outputs/absolute_vending_rerun_non_corporate_no_existing_vending_screened/Absolute_Vending_Solutions_Dallas_NON_CORPORATE_NO_EXISTING_VENDING_SCREENED_CALL_TEAM_READY_2026-06-18.xlsx",
+      "csvPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\absolute_vending_rerun_non_corporate_no_existing_vending_screened\\Absolute_Vending_Solutions_Dallas_NON_CORPORATE_NO_EXISTING_VENDING_SCREENED_CALL_TEAM_READY_2026-06-18.csv",
+      "xlsxPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\absolute_vending_rerun_non_corporate_no_existing_vending_screened\\Absolute_Vending_Solutions_Dallas_NON_CORPORATE_NO_EXISTING_VENDING_SCREENED_CALL_TEAM_READY_2026-06-18.xlsx",
+      "rows": 10,
+      "replacements": 0,
+      "previewPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\absolute_vending_rerun_non_corporate_no_existing_vending_screened\\Absolute_Vending_Solutions_Dallas_NON_CORPORATE_NO_EXISTING_VENDING_SCREENED_CALL_TEAM_READY_2026-06-18_CALLER_PLACEHOLDER_preview.png",
+      "previewBytes": 236174
+    },
+    {
+      "title": "02 1-800 Striper Long Island - Client Ready.xlsx",
+      "driveId": "1fPS4Czyx5MkHa69yPSU-U6zXaF8VjG-P",
+      "csv": "outputs/CLIENT_READY_STANDARDIZED_2026-06-18/1-800_Striper_Long_Island_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv",
+      "xlsx": "outputs/CLIENT_READY_STANDARDIZED_2026-06-18/1-800_Striper_Long_Island_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+      "csvPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\1-800_Striper_Long_Island_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv",
+      "xlsxPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\1-800_Striper_Long_Island_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+      "rows": 20,
+      "replacements": 20,
+      "previewPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\1-800_Striper_Long_Island_STANDARDIZED_CALL_TEAM_READY_2026-06-18_CALLER_PLACEHOLDER_preview.png",
+      "previewBytes": 530795
+    },
+    {
+      "title": "03 All Janitorial Service - Redwood City - Client Ready.xlsx",
+      "driveId": "1rXkXmAR59g851YzLCT4GcGvc81xyc-PS",
+      "csv": "outputs/CLIENT_READY_STANDARDIZED_2026-06-18/All_Janitorial_Service_Redwood_City_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv",
+      "xlsx": "outputs/CLIENT_READY_STANDARDIZED_2026-06-18/All_Janitorial_Service_Redwood_City_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+      "csvPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\All_Janitorial_Service_Redwood_City_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv",
+      "xlsxPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\All_Janitorial_Service_Redwood_City_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+      "rows": 20,
+      "replacements": 20,
+      "previewPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\All_Janitorial_Service_Redwood_City_STANDARDIZED_CALL_TEAM_READY_2026-06-18_CALLER_PLACEHOLDER_preview.png",
+      "previewBytes": 499522
+    },
+    {
+      "title": "04 Archer HVAC Plumbing - Las Vegas - Client Ready.xlsx",
+      "driveId": "14pH1tPopLoFW6IpYuESDy9Gsbx_tDT7Z",
+      "csv": "outputs/CLIENT_READY_STANDARDIZED_2026-06-18/Archer_HVAC_Plumbing_Las_Vegas_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv",
+      "xlsx": "outputs/CLIENT_READY_STANDARDIZED_2026-06-18/Archer_HVAC_Plumbing_Las_Vegas_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+      "csvPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Archer_HVAC_Plumbing_Las_Vegas_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv",
+      "xlsxPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Archer_HVAC_Plumbing_Las_Vegas_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+      "rows": 20,
+      "replacements": 21,
+      "previewPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Archer_HVAC_Plumbing_Las_Vegas_STANDARDIZED_CALL_TEAM_READY_2026-06-18_CALLER_PLACEHOLDER_preview.png",
+      "previewBytes": 529450
+    },
+    {
+      "title": "05 Ephraim Solutions - Denton 100mi AI Ops - Client Ready.xlsx",
+      "driveId": "1AuNhml9jNiS1ZloUubKCKfzgyvuAGryu",
+      "csv": "outputs/CLIENT_READY_STANDARDIZED_2026-06-18/Ephraim_Solutions_Denton_100mi_AI_Ops_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv",
+      "xlsx": "outputs/CLIENT_READY_STANDARDIZED_2026-06-18/Ephraim_Solutions_Denton_100mi_AI_Ops_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+      "csvPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Ephraim_Solutions_Denton_100mi_AI_Ops_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv",
+      "xlsxPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Ephraim_Solutions_Denton_100mi_AI_Ops_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+      "rows": 20,
+      "replacements": 20,
+      "previewPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Ephraim_Solutions_Denton_100mi_AI_Ops_STANDARDIZED_CALL_TEAM_READY_2026-06-18_CALLER_PLACEHOLDER_preview.png",
+      "previewBytes": 531368
+    },
+    {
+      "title": "06 Firm Facility Services - Dallas - Client Ready.xlsx",
+      "driveId": "1r-5MtIX2HSLg9PkvMfs0Nx3H9-uXXzpA",
+      "csv": "outputs/CLIENT_READY_STANDARDIZED_2026-06-18/Firm_Facility_Services_Dallas_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv",
+      "xlsx": "outputs/CLIENT_READY_STANDARDIZED_2026-06-18/Firm_Facility_Services_Dallas_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+      "csvPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Firm_Facility_Services_Dallas_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv",
+      "xlsxPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Firm_Facility_Services_Dallas_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+      "rows": 20,
+      "replacements": 22,
+      "previewPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Firm_Facility_Services_Dallas_STANDARDIZED_CALL_TEAM_READY_2026-06-18_CALLER_PLACEHOLDER_preview.png",
+      "previewBytes": 489682
+    },
+    {
+      "title": "07 Heroes Lawn Care - NJ - Client Ready.xlsx",
+      "driveId": "1o4OZYxCdV6uqpHbafiKG50Ld2mMrE093",
+      "csv": "outputs/CLIENT_READY_STANDARDIZED_2026-06-18/Heroes_Lawn_Care_NJ_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv",
+      "xlsx": "outputs/CLIENT_READY_STANDARDIZED_2026-06-18/Heroes_Lawn_Care_NJ_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+      "csvPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Heroes_Lawn_Care_NJ_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv",
+      "xlsxPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Heroes_Lawn_Care_NJ_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+      "rows": 20,
+      "replacements": 0,
+      "previewPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Heroes_Lawn_Care_NJ_STANDARDIZED_CALL_TEAM_READY_2026-06-18_CALLER_PLACEHOLDER_preview.png",
+      "previewBytes": 433818
+    },
+    {
+      "title": "08 MSA Worldwide - US Franchise - Client Ready.xlsx",
+      "driveId": "1_Fy2fvJHpR62RFI-kceyi0lGzDaY5CrQ",
+      "csv": "outputs/CLIENT_READY_STANDARDIZED_2026-06-18/MSA_Worldwide_US_Franchise_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv",
+      "xlsx": "outputs/CLIENT_READY_STANDARDIZED_2026-06-18/MSA_Worldwide_US_Franchise_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+      "csvPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\MSA_Worldwide_US_Franchise_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv",
+      "xlsxPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\MSA_Worldwide_US_Franchise_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+      "rows": 10,
+      "replacements": 10,
+      "previewPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\MSA_Worldwide_US_Franchise_STANDARDIZED_CALL_TEAM_READY_2026-06-18_CALLER_PLACEHOLDER_preview.png",
+      "previewBytes": 262900
+    },
+    {
+      "title": "09 Tectum Roofing - Colorado - Client Ready.xlsx",
+      "driveId": "1xQcaQXgwihKQmz5RBO1ShI33J2yKNbX5",
+      "csv": "outputs/CLIENT_READY_STANDARDIZED_2026-06-18/Tectum_Roofing_CO_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv",
+      "xlsx": "outputs/CLIENT_READY_STANDARDIZED_2026-06-18/Tectum_Roofing_CO_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+      "csvPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Tectum_Roofing_CO_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv",
+      "xlsxPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Tectum_Roofing_CO_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+      "rows": 30,
+      "replacements": 32,
+      "previewPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Tectum_Roofing_CO_STANDARDIZED_CALL_TEAM_READY_2026-06-18_CALLER_PLACEHOLDER_preview.png",
+      "previewBytes": 779983
+    },
+    {
+      "title": "10 Unique Construction - East Coast - Client Ready.xlsx",
+      "driveId": "1Y2wJ03E_czgt8DJ9VYTmPLj_V1Vr4Sme",
+      "csv": "outputs/CLIENT_READY_STANDARDIZED_2026-06-18/Unique_Construction_East_Coast_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv",
+      "xlsx": "outputs/CLIENT_READY_STANDARDIZED_2026-06-18/Unique_Construction_East_Coast_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+      "csvPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Unique_Construction_East_Coast_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv",
+      "xlsxPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Unique_Construction_East_Coast_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+      "rows": 20,
+      "replacements": 22,
+      "previewPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Unique_Construction_East_Coast_STANDARDIZED_CALL_TEAM_READY_2026-06-18_CALLER_PLACEHOLDER_preview.png",
+      "previewBytes": 559728
+    }
+  ]
+}

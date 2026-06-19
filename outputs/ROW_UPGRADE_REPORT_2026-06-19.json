@@ -1,0 +1,67 @@
+{
+  "upgradedAt": "2026-06-18T20:31:34.581Z",
+  "report": [
+    {
+      "label": "Absolute Vending Solutions",
+      "csvPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\absolute_vending_rerun_non_corporate_no_existing_vending_screened\\Absolute_Vending_Solutions_Dallas_NON_CORPORATE_NO_EXISTING_VENDING_SCREENED_CALL_TEAM_READY_2026-06-18.csv",
+      "xlsxPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\absolute_vending_rerun_non_corporate_no_existing_vending_screened\\Absolute_Vending_Solutions_Dallas_NON_CORPORATE_NO_EXISTING_VENDING_SCREENED_CALL_TEAM_READY_2026-06-18.xlsx",
+      "replacedPriorities": [
+        "10"
+      ],
+      "rowCount": 10,
+      "columnCount": 19,
+      "previewPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\absolute_vending_rerun_non_corporate_no_existing_vending_screened\\Absolute_Vending_Solutions_Dallas_NON_CORPORATE_NO_EXISTING_VENDING_SCREENED_CALL_TEAM_READY_2026-06-18_ROW_UPGRADES_preview.png",
+      "previewBytes": 296064
+    },
+    {
+      "label": "Archer HVAC & Plumbing",
+      "csvPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Archer_HVAC_Plumbing_Las_Vegas_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv",
+      "xlsxPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Archer_HVAC_Plumbing_Las_Vegas_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+      "replacedPriorities": [
+        "20"
+      ],
+      "rowCount": 20,
+      "columnCount": 19,
+      "previewPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Archer_HVAC_Plumbing_Las_Vegas_STANDARDIZED_CALL_TEAM_READY_2026-06-18_ROW_UPGRADES_preview.png",
+      "previewBytes": 660708
+    },
+    {
+      "label": "Firm Facility Services",
+      "csvPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Firm_Facility_Services_Dallas_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv",
+      "xlsxPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Firm_Facility_Services_Dallas_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+      "replacedPriorities": [
+        "18",
+        "19"
+      ],
+      "rowCount": 20,
+      "columnCount": 19,
+      "previewPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Firm_Facility_Services_Dallas_STANDARDIZED_CALL_TEAM_READY_2026-06-18_ROW_UPGRADES_preview.png",
+      "previewBytes": 614877
+    },
+    {
+      "label": "Tectum Roofing",
+      "csvPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Tectum_Roofing_CO_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv",
+      "xlsxPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Tectum_Roofing_CO_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+      "replacedPriorities": [
+        "29",
+        "30"
+      ],
+      "rowCount": 30,
+      "columnCount": 19,
+      "previewPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Tectum_Roofing_CO_STANDARDIZED_CALL_TEAM_READY_2026-06-18_ROW_UPGRADES_preview.png",
+      "previewBytes": 986675
+    },
+    {
+      "label": "Unique Construction",
+      "csvPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Unique_Construction_East_Coast_STANDARDIZED_CALL_TEAM_READY_2026-06-18.csv",
+      "xlsxPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Unique_Construction_East_Coast_STANDARDIZED_CALL_TEAM_READY_2026-06-18.xlsx",
+      "replacedPriorities": [
+        "12"
+      ],
+      "rowCount": 20,
+      "columnCount": 19,
+      "previewPath": "C:\\Users\\Ashish\\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\\outputs\\CLIENT_READY_STANDARDIZED_2026-06-18\\Unique_Construction_East_Coast_STANDARDIZED_CALL_TEAM_READY_2026-06-18_ROW_UPGRADES_preview.png",
+      "previewBytes": 695956
+    }
+  ]
+}

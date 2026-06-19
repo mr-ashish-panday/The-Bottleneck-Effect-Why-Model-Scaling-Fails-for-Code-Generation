@@ -1,0 +1,12 @@
+PASS
+Rows: 25
+Old Ephraim companies reused: 0
+Numeric phone route present: 25/25
+Admin/office/dispatcher/coordinator trigger present: 25/25
+Route source URL present: 25/25
+Signal source URL present: 25/25
+Geography inside Denton 100-mile radius: 25/25
+Note: revenue qualifier is public-proxy qualified from scale evidence, not audited financials.
+
+C:\Users\Ashish\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\outputs\ephraim_admin_hiring_2026-06-19\Ephraim_Solutions_Denton_100mi_Admin_Hiring_25_CALL_TEAM_READY_2026-06-19.xlsx
+C:\Users\Ashish\The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation\outputs\ephraim_admin_hiring_2026-06-19\Ephraim_Solutions_Denton_100mi_Admin_Hiring_25_CALL_TEAM_READY_2026-06-19_preview.png
