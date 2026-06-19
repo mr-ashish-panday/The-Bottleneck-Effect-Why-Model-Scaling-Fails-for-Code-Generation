@@ -1,0 +1,20 @@
+May 27, 2026
+
+Dear Editors-in-Chief,
+
+Please consider our manuscript, "The Bottleneck Effect: When Small-Model Scaling Fails for Code Generation," for publication as an original research article in Innovations in Systems and Software Engineering: A NASA Journal.
+
+The manuscript studies a software-engineering reliability problem in neural code generation: why similarly sized small language models can differ sharply in executable-code behavior. Rather than treating benchmark scores as a single leaderboard number, the paper traces failures across benchmark families, prompt formats, decoding choices, layer interventions, and artifact provenance.
+
+The paper fits the journal's emphasis on systems and software engineering because it analyzes code-generation systems as engineered pipelines whose reliability depends on model family, pretraining distribution, generation protocol, evaluation strictness, and failure-mode structure. The central claim is deliberately conservative: in the small-model regime studied here, parameter count alone is a weak predictor of executable-code reliability, while code-specific pretraining and distributed execution-relevant representations provide stronger explanatory evidence.
+
+The submission includes a reviewer-facing artifact package with processed tables, benchmark summaries, result artifacts, scripts, configuration files, figures, and a claim-to-artifact audit. These materials are intended to make the empirical claims traceable and reproducible.
+
+Thank you for considering the manuscript.
+
+Sincerely,
+
+Ashish Pandey
+Department of Computer and Electronics Engineering
+Khwopa College of Engineering, Nepal
+ashishpanday9818@gmail.com

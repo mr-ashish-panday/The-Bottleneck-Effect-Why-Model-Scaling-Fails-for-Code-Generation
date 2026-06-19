@@ -1,0 +1,16 @@
+{
+  "label": "prompt_robustness__gpt2_medium__humaneval__standard__comment_plus_signature",
+  "tasks": 164,
+  "samples_per_task_min": 20,
+  "samples_per_task_max": 20,
+  "total_samples": 3280,
+  "success_samples": 35,
+  "success_sample_rate": 0.010670731707317074,
+  "problems_with_success": 33,
+  "problem_success_rate": 0.20121951219512196,
+  "category_counts": {
+    "syntax_error": 3244,
+    "success": 35,
+    "runtime_error": 1
+  }
+}

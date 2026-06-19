@@ -1,6 +1,6 @@
 # One-Page Research Summary
 
-## The Bottleneck Effect: Why Model Scaling Fails for Code Generation
+## The Bottleneck Effect: When Small-Model Scaling Fails for Code Generation
 
 ### Core claim
 Increasing parameter count inside a general-language model family does not automatically improve code generation. In our study, scaling GPT-2 from 124M to 355M parameters does not improve executable-code performance, while a similarly sized code-pretrained model, CodeGen-350M, performs dramatically better. The central conclusion is that for code generation, pretraining distribution and internal computation structure matter more than raw scale alone.

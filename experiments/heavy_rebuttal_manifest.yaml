@@ -1,0 +1,280 @@
+project:
+  name: "bottleneck_heavy_rebuttal"
+  server_root: "/home/ashish/paper11_code_execution_failures"
+  local_root: "C:/Users/Ashish/The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation"
+
+defaults:
+  seed: 42
+  hardware:
+    device: "cuda"
+    max_memory_gb: 12
+  paths:
+    data_dir: "data"
+    raw_data: "data/raw"
+    models_dir: "models"
+    outputs_dir: "outputs"
+  model:
+    max_length: 512
+  generation:
+    batch_size: 1
+    max_new_tokens: 128
+    do_sample: true
+    max_time_seconds: 30
+    repetition_penalty: 1.05
+  execution:
+    timeout_seconds: 5
+
+decoding:
+  standard:
+    temperature: 0.8
+    top_p: 0.95
+  low_temp:
+    temperature: 0.2
+    top_p: 0.95
+  high_temp:
+    temperature: 1.0
+    top_p: 0.95
+
+benchmarks:
+  humaneval:
+    dataset: "humaneval"
+    num_problems: 164
+    num_samples: 100
+    local_evaluation: true
+    evalplus_dataset: "humaneval"
+    extraction_sweep: true
+  mbpp:
+    dataset: "mbpp"
+    num_problems: 257
+    num_samples: 20
+    local_evaluation: true
+    evalplus_dataset: "mbpp"
+    extraction_sweep: true
+    dataset_options:
+      mbpp_prompt_style: "signature_stub"
+      use_mbpp_challenge_tests: false
+  mbppplus:
+    dataset: "mbppplus"
+    num_problems: 378
+    num_samples: 20
+    local_evaluation: false
+    evalplus_dataset: "mbpp"
+    clean_evalplus_generation: true
+    dataset_options:
+      cache_path: "data/raw/mbppplus_evalplus.jsonl"
+  livecodebench:
+    dataset: "livecodebench"
+    num_problems: 511
+    num_samples: 10
+    local_evaluation: false
+    livecodebench_evaluation: true
+    dataset_options:
+      version_tag: "release_v2"
+      livecodebench_prompt_style: "comment_plus_starter"
+  humaneval_t4:
+    dataset: "humaneval"
+    num_problems: 164
+    num_samples: 20
+    local_evaluation: true
+    extraction_sweep: true
+  mbpp_t4:
+    dataset: "mbpp"
+    num_problems: 257
+    num_samples: 10
+    local_evaluation: true
+    extraction_sweep: true
+    dataset_options:
+      mbpp_prompt_style: "signature_stub"
+      use_mbpp_challenge_tests: false
+
+models:
+  gpt2_small:
+    hf_name: "gpt2"
+    family: "gpt2"
+    parameter_millions: 124
+    role: "general_scaling"
+  gpt2_medium:
+    hf_name: "gpt2-medium"
+    family: "gpt2"
+    parameter_millions: 355
+    role: "general_scaling"
+  gpt2_large:
+    hf_name: "gpt2-large"
+    family: "gpt2"
+    parameter_millions: 774
+    role: "general_scaling"
+  gpt2_xl:
+    hf_name: "gpt2-xl"
+    family: "gpt2"
+    parameter_millions: 1558
+    role: "general_scaling"
+  pythia_70m:
+    hf_name: "EleutherAI/pythia-70m"
+    family: "pythia"
+    parameter_millions: 70
+    role: "general_scaling_control"
+  pythia_160m:
+    hf_name: "EleutherAI/pythia-160m"
+    family: "pythia"
+    parameter_millions: 160
+    role: "general_scaling_control"
+  pythia_410m:
+    hf_name: "EleutherAI/pythia-410m"
+    family: "pythia"
+    parameter_millions: 410
+    role: "general_scaling_control"
+  pythia_1b:
+    hf_name: "EleutherAI/pythia-1b"
+    family: "pythia"
+    parameter_millions: 1000
+    role: "general_scaling_control"
+  codegen_nl_350m:
+    hf_name: "Salesforce/codegen-350M-nl"
+    family: "codegen"
+    parameter_millions: 350
+    role: "within_family_ladder"
+  codegen_multi_350m:
+    hf_name: "Salesforce/codegen-350M-multi"
+    family: "codegen"
+    parameter_millions: 350
+    role: "within_family_ladder"
+  codegen_mono_350m:
+    hf_name: "Salesforce/codegen-350M-mono"
+    family: "codegen"
+    parameter_millions: 350
+    role: "within_family_ladder"
+  qwen25_coder_05b:
+    hf_name: "Qwen/Qwen2.5-Coder-0.5B"
+    family: "qwen_coder"
+    parameter_millions: 500
+    role: "modern_code_validation"
+  deepseek_coder_13b:
+    hf_name: "deepseek-ai/deepseek-coder-1.3b-base"
+    family: "deepseek_coder"
+    parameter_millions: 1300
+    role: "modern_code_validation_optional"
+
+phases:
+  t4_priority:
+    description: "T4-safe high-ROI run: controlled general-LM scaling and CodeGen ladder without oversized 1B+ jobs."
+    models:
+      - "gpt2_small"
+      - "gpt2_medium"
+      - "gpt2_large"
+      - "pythia_70m"
+      - "pythia_160m"
+      - "pythia_410m"
+      - "codegen_nl_350m"
+      - "codegen_multi_350m"
+      - "codegen_mono_350m"
+    benchmarks:
+      - "humaneval_t4"
+      - "mbpp_t4"
+    decoding:
+      - "standard"
+    humaneval_prompt_styles:
+      - "canonical"
+
+  t4_stretch:
+    description: "Optional T4 stretch run after priority phase: larger general and modern code models with smaller sample budget."
+    models:
+      - "gpt2_xl"
+      - "pythia_1b"
+      - "qwen25_coder_05b"
+    benchmarks:
+      - "humaneval_t4"
+      - "mbpp_t4"
+    decoding:
+      - "standard"
+    humaneval_prompt_styles:
+      - "canonical"
+
+  core_scaling:
+    description: "Main rejection fix: same-family general scaling curves plus CodeGen ladder on classical and strict benchmarks."
+    models:
+      - "gpt2_small"
+      - "gpt2_medium"
+      - "gpt2_large"
+      - "gpt2_xl"
+      - "pythia_70m"
+      - "pythia_160m"
+      - "pythia_410m"
+      - "pythia_1b"
+      - "codegen_nl_350m"
+      - "codegen_multi_350m"
+      - "codegen_mono_350m"
+    benchmarks:
+      - "humaneval"
+      - "mbpp"
+      - "mbppplus"
+    decoding:
+      - "standard"
+    humaneval_prompt_styles:
+      - "canonical"
+
+  modern_code_validation:
+    description: "Check whether the paper's pretraining story holds against newer small code-specialized models."
+    models:
+      - "qwen25_coder_05b"
+      - "deepseek_coder_13b"
+    benchmarks:
+      - "humaneval"
+      - "mbpp"
+      - "mbppplus"
+    decoding:
+      - "standard"
+    humaneval_prompt_styles:
+      - "canonical"
+
+  decoding_robustness:
+    description: "Control for sampling temperature/top-p rather than treating one decoding setting as universal."
+    models:
+      - "gpt2_medium"
+      - "gpt2_xl"
+      - "pythia_1b"
+      - "codegen_mono_350m"
+      - "qwen25_coder_05b"
+    benchmarks:
+      - "humaneval"
+      - "mbpp"
+    decoding:
+      - "low_temp"
+      - "standard"
+      - "high_temp"
+    humaneval_prompt_styles:
+      - "canonical"
+
+  prompt_robustness:
+    description: "Control for prompt-format advantage/disadvantage on HumanEval."
+    models:
+      - "gpt2_medium"
+      - "gpt2_xl"
+      - "pythia_1b"
+      - "codegen_mono_350m"
+      - "qwen25_coder_05b"
+    benchmarks:
+      - "humaneval"
+    decoding:
+      - "standard"
+    humaneval_prompt_styles:
+      - "canonical"
+      - "signature_only"
+      - "comment_plus_signature"
+
+  livecodebench_stress:
+    description: "Hard contamination-aware stress test. Use as calibration, not as the main positive claim."
+    models:
+      - "gpt2_small"
+      - "gpt2_medium"
+      - "gpt2_large"
+      - "gpt2_xl"
+      - "pythia_410m"
+      - "pythia_1b"
+      - "codegen_mono_350m"
+      - "qwen25_coder_05b"
+    benchmarks:
+      - "livecodebench"
+    decoding:
+      - "standard"
+    humaneval_prompt_styles:
+      - "canonical"

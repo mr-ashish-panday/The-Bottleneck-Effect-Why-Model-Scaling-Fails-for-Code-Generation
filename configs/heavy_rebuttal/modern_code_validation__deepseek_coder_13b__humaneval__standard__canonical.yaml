@@ -1,0 +1,44 @@
+project:
+  name: bottleneck_heavy_rebuttal
+  version: 0.2.0
+  phase: modern_code_validation
+paths:
+  data_dir: data
+  raw_data: data/raw
+  models_dir: models
+  outputs_dir: outputs
+  results_dir: data/results_heavy_rebuttal/modern_code_validation/modern_code_validation__deepseek_coder_13b__humaneval__standard__canonical
+hardware:
+  device: cuda
+  max_memory_gb: 12
+model:
+  max_length: 512
+  name: deepseek-ai/deepseek-coder-1.3b-base
+  pretrained_path: deepseek-ai/deepseek-coder-1.3b-base
+  temperature: 0.8
+  top_p: 0.95
+  family: deepseek_coder
+  parameter_millions: 1300
+  role: modern_code_validation_optional
+dataset:
+  name: humaneval
+  seed: 42
+  humaneval_prompt_style: canonical
+generation:
+  batch_size: 1
+  max_new_tokens: 128
+  do_sample: true
+  max_time_seconds: 30
+  repetition_penalty: 1.05
+execution:
+  timeout_seconds: 5
+feasibility_check:
+  num_problems: 164
+  num_samples_per_problem: 100
+  decision_threshold: 0.7
+heavy_rebuttal:
+  phase: modern_code_validation
+  model_key: deepseek_coder_13b
+  benchmark_key: humaneval
+  decoding_key: standard
+  humaneval_prompt_style: canonical

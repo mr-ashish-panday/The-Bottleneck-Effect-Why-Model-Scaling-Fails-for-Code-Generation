@@ -4,7 +4,7 @@ Last updated: 2026-03-13 16:55:01 +05:45
 
 ## Current paper state
 
-- Paper title: `The Bottleneck Effect: Why Model Scaling Fails for Code Generation`
+- Paper title: `The Bottleneck Effect: When Small-Model Scaling Fails for Code Generation`
 - Current overall readiness estimate: `92-93%`
 - Current strongest framing:
   - small-model regime result

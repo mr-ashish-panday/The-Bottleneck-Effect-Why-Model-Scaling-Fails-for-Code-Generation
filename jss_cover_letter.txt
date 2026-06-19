@@ -1,0 +1,35 @@
+May 12, 2026
+
+Dear Editor-in-Chief,
+
+Please consider our manuscript, "The Bottleneck Effect: When Small-Model Scaling Fails
+for Code Generation," for publication as a regular research article in the
+Journal of Systems and Software.
+
+This paper studies a practical software-engineering problem: why small language
+models that appear similar in size can differ sharply in code-generation
+reliability. Instead of treating benchmark accuracy as a single leaderboard
+number, the manuscript traces failures across benchmarks, prompt formats,
+decoding choices, layer interventions, and artifact provenance.
+
+The manuscript should fit JSS because it contributes empirical evidence about
+AI-based software generation systems, their evaluation reliability, and the
+engineering choices that shape whether generated code executes correctly. The
+main result is not a generic "bigger is better" scaling claim. The evidence
+shows that code-generation reliability depends on model family, code-specific
+pretraining, benchmark distribution, prompt interface, decoding policy, and the
+metric used to summarize generated programs.
+
+The submission includes a reproducible artifact trail: processed result tables,
+run logs, plotting scripts, benchmark summaries, and figure-generation scripts.
+These artifacts are intended to make the reported claims auditable rather than
+dependent on manually transcribed results.
+
+Thank you for considering the manuscript.
+
+Sincerely,
+
+Ashish Pandey
+Department of Computer and Electronics Engineering
+Khwopa College of Engineering, Nepal
+ashishpanday9818@gmail.com

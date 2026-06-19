@@ -1,0 +1,16 @@
+{
+  "label": "decoding_robustness__gpt2_medium__humaneval__high_temp__canonical",
+  "tasks": 164,
+  "samples_per_task_min": 20,
+  "samples_per_task_max": 20,
+  "total_samples": 3280,
+  "success_samples": 101,
+  "success_sample_rate": 0.030792682926829268,
+  "problems_with_success": 78,
+  "problem_success_rate": 0.47560975609756095,
+  "category_counts": {
+    "syntax_error": 3161,
+    "success": 101,
+    "runtime_error": 18
+  }
+}

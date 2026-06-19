@@ -1,0 +1,124 @@
+{
+  "checkpoint_rows": {
+    "test": 38790,
+    "train": 185204,
+    "val": 39425
+  },
+  "dummy_bootstrap": {
+    "brier_ci95": [
+      0.0638473615162814,
+      0.07973458764471544
+    ],
+    "reps": 200
+  },
+  "dummy_constant": {
+    "auc_diagnostic": 0.5,
+    "brier": 0.07126997192119275,
+    "calibration_intercept": -0.34685199624536794,
+    "calibration_slope": 0.8603727142035765,
+    "ece": 1.3877787807814457e-17,
+    "log_loss": 0.2719644255301117,
+    "n_rows": 39425,
+    "n_transcripts": 26,
+    "positive_rate": 0.07723525681674065,
+    "reliability": [
+      {
+        "abs_gap": 1.3877787807814457e-17,
+        "bin": 0,
+        "empirical_rate": 0.07723525681674065,
+        "mean_pred": 0.07723525681674066,
+        "n": 39425,
+        "p_high": 0.1,
+        "p_low": 0.0
+      },
+      {
+        "abs_gap": null,
+        "bin": 1,
+        "empirical_rate": null,
+        "mean_pred": null,
+        "n": 0,
+        "p_high": 0.2,
+        "p_low": 0.1
+      },
+      {
+        "abs_gap": null,
+        "bin": 2,
+        "empirical_rate": null,
+        "mean_pred": null,
+        "n": 0,
+        "p_high": 0.30000000000000004,
+        "p_low": 0.2
+      },
+      {
+        "abs_gap": null,
+        "bin": 3,
+        "empirical_rate": null,
+        "mean_pred": null,
+        "n": 0,
+        "p_high": 0.4,
+        "p_low": 0.30000000000000004
+      },
+      {
+        "abs_gap": null,
+        "bin": 4,
+        "empirical_rate": null,
+        "mean_pred": null,
+        "n": 0,
+        "p_high": 0.5,
+        "p_low": 0.4
+      },
+      {
+        "abs_gap": null,
+        "bin": 5,
+        "empirical_rate": null,
+        "mean_pred": null,
+        "n": 0,
+        "p_high": 0.6000000000000001,
+        "p_low": 0.5
+      },
+      {
+        "abs_gap": null,
+        "bin": 6,
+        "empirical_rate": null,
+        "mean_pred": null,
+        "n": 0,
+        "p_high": 0.7000000000000001,
+        "p_low": 0.6000000000000001
+      },
+      {
+        "abs_gap": null,
+        "bin": 7,
+        "empirical_rate": null,
+        "mean_pred": null,
+        "n": 0,
+        "p_high": 0.8,
+        "p_low": 0.7000000000000001
+      },
+      {
+        "abs_gap": null,
+        "bin": 8,
+        "empirical_rate": null,
+        "mean_pred": null,
+        "n": 0,
+        "p_high": 0.9,
+        "p_low": 0.8
+      },
+      {
+        "abs_gap": null,
+        "bin": 9,
+        "empirical_rate": null,
+        "mean_pred": null,
+        "n": 0,
+        "p_high": 1.0,
+        "p_low": 0.9
+      }
+    ]
+  },
+  "targets": {
+    "cold": 30,
+    "high": 40,
+    "mid": 40,
+    "phrase": 30,
+    "rare": 40
+  }
+}

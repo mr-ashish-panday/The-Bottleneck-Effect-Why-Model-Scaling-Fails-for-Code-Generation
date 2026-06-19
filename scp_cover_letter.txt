@@ -1,0 +1,20 @@
+June 1, 2026
+
+Dear Editors,
+
+Please consider our manuscript, "The Bottleneck Effect: When Small-Model Scaling Fails for Code Generation," for publication as an original research article in Science of Computer Programming.
+
+The manuscript studies a software-development reliability problem in neural code generation: why similarly sized small language models can differ sharply in executable-code behavior. Rather than treating benchmark scores as a single leaderboard number, the paper traces failures across benchmark families, prompt formats, decoding choices, layer interventions, and artifact provenance.
+
+The paper fits Science of Computer Programming because it connects program generation, executable correctness, validation, testing, and programming-language evaluation. Its central claim is deliberately conservative: in the small-model regime studied here, parameter count alone is a weak predictor of executable-code reliability, while code-specific pretraining, generation protocol, and the distribution of execution-relevant computation across layers provide stronger explanatory evidence.
+
+The submission includes a reviewer-facing artifact package with processed tables, benchmark summaries, result artifacts, scripts, configuration files, figures, and a claim-to-artifact audit. These materials are intended to make the empirical claims traceable and reproducible.
+
+Thank you for considering the manuscript.
+
+Sincerely,
+
+Ashish Pandey
+Department of Computer and Electronics Engineering
+Khwopa College of Engineering, Nepal
+ashishpanday9818@gmail.com

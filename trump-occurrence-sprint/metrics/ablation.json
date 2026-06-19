@@ -1,0 +1,18 @@
+{
+  "test": {
+    "challenger_blanked_brier": 0.044459621386768004,
+    "challenger_full_brier": 0.044434121400092175,
+    "content_share": -0.022859768365029245,
+    "imp_blank": -0.0011409962711805902,
+    "imp_full": -0.0011154962845047606,
+    "timing_brier": 0.043318625115587414
+  },
+  "validation": {
+    "challenger_blanked_brier": 0.04192767378900964,
+    "challenger_full_brier": 0.04033679163576759,
+    "content_share": 3.5880144548090285,
+    "imp_blank": -0.0011474942646816297,
+    "imp_full": 0.0004433878885604231,
+    "timing_brier": 0.04078017952432801
+  }
+}

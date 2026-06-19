@@ -1,0 +1,18 @@
+{
+  "label": "prompt_robustness__qwen25_coder_05b__humaneval__standard__signature_only",
+  "tasks": 164,
+  "samples_per_task_min": 20,
+  "samples_per_task_max": 20,
+  "total_samples": 3280,
+  "success_samples": 1614,
+  "success_sample_rate": 0.4920731707317073,
+  "problems_with_success": 164,
+  "problem_success_rate": 1.0,
+  "category_counts": {
+    "success": 1614,
+    "syntax_error": 1413,
+    "runtime_error": 239,
+    "timeout": 8,
+    "wrong_output": 6
+  }
+}

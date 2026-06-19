@@ -1,0 +1,12 @@
+{
+  "load_in_4bit": true,
+  "max_length": 768,
+  "max_prefix_words": 384,
+  "model_name": "Qwen/Qwen2.5-0.5B-Instruct",
+  "note": "If this uses the V1 validation split only, treat it as exploratory until a fresh sealed V2 test exists.",
+  "seed": 20260615,
+  "test_rows": 0,
+  "train_rows": 1000,
+  "train_seconds": 118.00823068618774,
+  "val_rows": 400
+}

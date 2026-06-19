@@ -119,7 +119,7 @@ If you use this code, please cite:
 
 ```bibtex
 @article{pandey2025bottleneck,
-  title={The Bottleneck Effect: Why Model Scaling Fails for Code Generation},
+  title={The Bottleneck Effect: When Small-Model Scaling Fails for Code Generation},
   author={Pandey, Ashish},
   journal={arXiv preprint},
   year={2025}

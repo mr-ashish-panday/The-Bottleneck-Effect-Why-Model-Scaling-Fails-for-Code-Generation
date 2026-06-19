@@ -1,0 +1,22 @@
+Source: user-pasted Gmail view in Codex chat, 2026-05-24 NPT.
+Raw .eml export: not yet saved.
+
+From: Journal of Systems and Software <em@editorialmanager.com>
+Received in Gmail UI: 2026-05-24 9:10 PM NPT
+Subject: JSSOFTWARE-D-26-01113 - Confirming your submission to The Journal of Systems & Software
+
+Re: The Bottleneck Effect: When Small-Model Scaling Fails for Code Generation
+Article type shown: Research Paper
+
+Dear Mr. Ashish Pandey,
+
+Your submission entitled "The Bottleneck Effect: When Small-Model Scaling Fails for Code Generation" has been received by The Journal of Systems & Software.
+
+Assigned manuscript number: JSSOFTWARE-D-26-01113.
+
+Portal: https://www.editorialmanager.com/jssoftware/
+
+Safe status interpretation:
+- Submitted/received by The Journal of Systems & Software.
+- Do not claim accepted or published.
+- Do not claim under review unless the Editorial Manager status explicitly says under review.

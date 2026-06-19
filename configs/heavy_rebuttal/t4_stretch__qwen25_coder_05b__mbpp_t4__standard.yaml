@@ -1,0 +1,45 @@
+project:
+  name: bottleneck_heavy_rebuttal
+  version: 0.2.0
+  phase: t4_stretch
+paths:
+  data_dir: data
+  raw_data: data/raw
+  models_dir: models
+  outputs_dir: outputs
+  results_dir: data/results_heavy_rebuttal/t4_stretch/t4_stretch__qwen25_coder_05b__mbpp_t4__standard
+hardware:
+  device: cuda
+  max_memory_gb: 12
+model:
+  max_length: 512
+  name: Qwen/Qwen2.5-Coder-0.5B
+  pretrained_path: Qwen/Qwen2.5-Coder-0.5B
+  temperature: 0.8
+  top_p: 0.95
+  family: qwen_coder
+  parameter_millions: 500
+  role: modern_code_validation
+dataset:
+  name: mbpp
+  seed: 42
+  mbpp_prompt_style: signature_stub
+  use_mbpp_challenge_tests: false
+generation:
+  batch_size: 1
+  max_new_tokens: 128
+  do_sample: true
+  max_time_seconds: 30
+  repetition_penalty: 1.05
+execution:
+  timeout_seconds: 5
+feasibility_check:
+  num_problems: 257
+  num_samples_per_problem: 10
+  decision_threshold: 0.7
+heavy_rebuttal:
+  phase: t4_stretch
+  model_key: qwen25_coder_05b
+  benchmark_key: mbpp_t4
+  decoding_key: standard
+  humaneval_prompt_style: canonical

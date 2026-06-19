@@ -57,6 +57,51 @@ class DatasetLoader:
             "livecodebench_prompt_style",
             "comment_plus_starter",
         )
+        self.humaneval_prompt_style = self.dataset_config.get(
+            "humaneval_prompt_style",
+            "canonical",
+        )
+
+    def _build_humaneval_prompt(self, prompt: str) -> str:
+        """Apply prompt-format controls for HumanEval."""
+        if self.humaneval_prompt_style == "canonical":
+            return prompt
+
+        lines = prompt.splitlines()
+        def_index = None
+        for index, line in enumerate(lines):
+            if line.lstrip().startswith("def "):
+                def_index = index
+                break
+
+        if def_index is None:
+            return prompt
+
+        preamble = lines[:def_index]
+        signature = lines[def_index].rstrip()
+
+        if self.humaneval_prompt_style == "signature_only":
+            rendered = preamble + [signature, "    "]
+            return "\n".join(rendered)
+
+        if self.humaneval_prompt_style == "comment_plus_signature":
+            comments = []
+            in_docstring = False
+            for line in lines[def_index + 1 :]:
+                stripped = line.strip()
+                triple_count = stripped.count('"""') + stripped.count("'''")
+                if triple_count:
+                    if triple_count % 2 == 1:
+                        in_docstring = not in_docstring
+                    stripped = stripped.replace('"""', "").replace("'''", "").strip()
+                if stripped:
+                    comments.append(f"# {stripped}")
+                elif in_docstring:
+                    comments.append("#")
+            rendered = preamble + comments + [signature, "    "]
+            return "\n".join(rendered)
+
+        raise ValueError(f"Unknown HumanEval prompt style: {self.humaneval_prompt_style}")
 
     def _infer_mbpp_signature(self, test_list: List[str]) -> Tuple[str, List[str]]:
         """Infer a function signature from MBPP assert statements."""
@@ -165,7 +210,7 @@ class DatasetLoader:
                 data = json.loads(line)
                 problems.append(CodeProblem(
                     task_id=data['task_id'],
-                    prompt=data['prompt'],
+                    prompt=self._build_humaneval_prompt(data['prompt']),
                     canonical_solution=data['canonical_solution'],
                     test=data['test'],
                     entry_point=data['entry_point'],

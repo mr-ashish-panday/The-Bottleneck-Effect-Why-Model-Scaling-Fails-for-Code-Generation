@@ -1,0 +1,53 @@
+seed: 20260615
+
+paths:
+  v1_root: "../trump-occurrence-sprint"
+  output_root: "."
+
+data:
+  train_path: "../trump-occurrence-sprint/benchmark/checkpoints_train.parquet"
+  val_path: "../trump-occurrence-sprint/benchmark/checkpoints_val.parquet"
+  test_path: null
+  val_timing_predictions_path: "../trump-occurrence-sprint/predictions/val_timing.parquet"
+  test_timing_predictions_path: null
+  corpus_path: "../trump-occurrence-sprint/data/corpus.jsonl"
+  targets_path: "../trump-occurrence-sprint/data/targets.json"
+  max_prefix_words: 384
+  include_title: true
+  include_date: true
+  include_format: true
+  include_timing: true
+
+model:
+  model_name: "Qwen/Qwen2.5-7B-Instruct"
+  load_in_4bit: true
+  torch_dtype: "bfloat16"
+  max_length: 768
+  lora_r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+
+training:
+  epochs: 1
+  learning_rate: 0.0002
+  per_device_train_batch_size: 2
+  per_device_eval_batch_size: 8
+  gradient_accumulation_steps: 8
+  warmup_ratio: 0.03
+  weight_decay: 0.01
+  logging_steps: 25
+  eval_steps: 250
+  save_steps: 250
+  max_grad_norm: 1.0
+
+evaluation:
+  ece_bins: 10
+  calibration_method: "isotonic"

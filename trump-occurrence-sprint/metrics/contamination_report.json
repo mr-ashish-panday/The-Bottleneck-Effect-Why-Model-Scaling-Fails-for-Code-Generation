@@ -1,0 +1,250 @@
+{
+  "continuation_words": 180,
+  "exact_span_recall_flag_threshold": 0.2,
+  "flagged_transcript_ids": [],
+  "generator_error": null,
+  "longest_ngram_flag_threshold": 18,
+  "max_new_tokens": 120,
+  "method": "local_deterministic_generation",
+  "model": "distilgpt2",
+  "n_checked": 26,
+  "n_flagged": 0,
+  "p0_deviation": false,
+  "prefix_words": 160,
+  "rows": [
+    {
+      "date": "2023-11-20",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 3,
+      "source_url": "https://www.rev.com/transcripts/donald-trump-at-commit-to-caucus-event-in-iowa-transcript",
+      "title": "Donald Trump at \"Commit to Caucus\" Event in Iowa",
+      "transcript_id": "rev_00e788d00185"
+    },
+    {
+      "date": "2024-01-08",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 3,
+      "source_url": "https://www.rev.com/transcripts/donald-trump-election-campaign-rally-in-sioux-center-iowa-transcript",
+      "title": "Donald Trump Election Campaign Rally in Sioux Center, Iowa",
+      "transcript_id": "rev_84d0b8623264"
+    },
+    {
+      "date": "2024-01-14",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 1,
+      "source_url": "https://www.rev.com/transcripts/dc-circuit-court-of-appeals-oral-argument-u-s-v-trump-1-10-24-transcript",
+      "title": "DC Circuit Court of Appeals Oral Argument U.S. v. Trump 1/10/24 Transcript",
+      "transcript_id": "rev_f3585e8e586d"
+    },
+    {
+      "date": "2024-02-12",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 4,
+      "source_url": "https://www.rev.com/transcripts/donald-trump-delivers-speech-in-south-carolina-transcript",
+      "title": "Donald Trump Delivers Speech in South Carolina",
+      "transcript_id": "rev_524d67001965"
+    },
+    {
+      "date": "2024-02-28",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 1,
+      "source_url": "https://www.rev.com/transcripts/biden-and-trump-win-michigan-primaries",
+      "title": "Biden and Trump Win Michigan Primaries",
+      "transcript_id": "rev_f9f97ededbe8"
+    },
+    {
+      "date": "2024-06-20",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 1,
+      "source_url": "https://www.rev.com/transcripts/donald-trump-campaign-rally-in-racine-wisconsin",
+      "title": "Donald Trump Campaign Rally in Racine, Wisconsin",
+      "transcript_id": "rev_6a25bb53e821"
+    },
+    {
+      "date": "2024-07-15",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 2,
+      "source_url": "https://www.rev.com/transcripts/biden-responds-to-shooting-at-trump-rally",
+      "title": "Biden Responds to Shooting at Trump Rally",
+      "transcript_id": "rev_fde5ffde286a"
+    },
+    {
+      "date": "2024-07-18",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 2,
+      "source_url": "https://www.rev.com/transcripts/don-trump-jr-speaks-at-rnc-2024-night-three",
+      "title": "Don Trump Jr. Speaks at RNC 2024 Night Three",
+      "transcript_id": "rev_f46b97630cf9"
+    },
+    {
+      "date": "2024-08-27",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 2,
+      "source_url": "https://www.rev.com/transcripts/congress-members-speak-from-trump-shooting-location",
+      "title": "Congress Members Speak from Trump Shooting Location",
+      "transcript_id": "rev_fdb5e9d0139c"
+    },
+    {
+      "date": "2024-09-03",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 2,
+      "source_url": "https://www.rev.com/transcripts/donald-trump-event-in-la-crosse-wisconsin",
+      "title": "Donald Trump Event in La Crosse, Wisconsin",
+      "transcript_id": "rev_ee77a6a5e886"
+    },
+    {
+      "date": "2024-09-17",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 2,
+      "source_url": "https://www.rev.com/transcripts/desantis-gives-update-on-trump-assassination-attempt",
+      "title": "DeSantis Gives Update on Trump Assassination Attempt",
+      "transcript_id": "rev_34f8957c36f3"
+    },
+    {
+      "date": "2025-09-23",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 2,
+      "source_url": "https://www.rev.com/transcripts/trump-speaks-at-un",
+      "title": "Trump Speaks at U.N.",
+      "transcript_id": "rev_80beefdc0b28"
+    },
+    {
+      "date": "2025-09-30",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 2,
+      "source_url": "https://www.rev.com/transcripts/trump-and-netanyahu-press-conference",
+      "title": "Trump and Netanyahu Press Conference",
+      "transcript_id": "rev_93c09d043115"
+    },
+    {
+      "date": "2025-10-06",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 1,
+      "source_url": "https://www.rev.com/transcripts/trump-at-navy-250th",
+      "title": "Trump at Navy 250th",
+      "transcript_id": "rev_3ee064f5560b"
+    },
+    {
+      "date": "2025-10-21",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 4,
+      "source_url": "https://www.rev.com/transcripts/albanese-and-trump-sign-mineral-deal",
+      "title": "Albanese and Trump Sign Mineral Deal",
+      "transcript_id": "rev_b29315ea4fbd"
+    },
+    {
+      "date": "2025-12-03",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 2,
+      "source_url": "https://www.rev.com/transcripts/dell-donation-to-trump-accounts",
+      "title": "Dell Donation to Trump Accounts",
+      "transcript_id": "rev_d1bd7efd0ac1"
+    },
+    {
+      "date": "2026-02-08",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 2,
+      "source_url": "https://www.rev.com/transcripts/trumprx-announcement",
+      "title": "TrumpRX Announcement",
+      "transcript_id": "rev_e6ce95e8fd03"
+    },
+    {
+      "date": "2026-03-10",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 4,
+      "source_url": "https://www.rev.com/transcripts/republican-policy-retreat",
+      "title": "Republican Policy Retreat",
+      "transcript_id": "rev_bc914d80e128"
+    },
+    {
+      "date": "2026-03-10",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 2,
+      "source_url": "https://www.rev.com/transcripts/trump-gives-iran-update",
+      "title": "Trump Gives Iran Update",
+      "transcript_id": "rev_e01f1530bac4"
+    },
+    {
+      "date": "2026-03-12",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 2,
+      "source_url": "https://www.rev.com/transcripts/trump-rally-in-kentucky",
+      "title": "Trump Rally in Kentucky",
+      "transcript_id": "rev_bf8045b70b20"
+    },
+    {
+      "date": "2026-03-15",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 3,
+      "source_url": "https://www.rev.com/transcripts/womens-history-month-event",
+      "title": "Women's History Month Event",
+      "transcript_id": "rev_73bcf2717de2"
+    },
+    {
+      "date": "2026-03-17",
+      "exact_span_recall_5gram": 0.011363636363636364,
+      "flagged": false,
+      "longest_common_ngram": 6,
+      "source_url": "https://www.rev.com/transcripts/executive-orders-3-16-26",
+      "title": "Executive Orders 3/16/26",
+      "transcript_id": "rev_a21e3e9763a3"
+    },
+    {
+      "date": "2026-03-17",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 2,
+      "source_url": "https://www.rev.com/transcripts/kennedy-center-luncheon",
+      "title": "Kennedy Center Luncheon",
+      "transcript_id": "rev_f849395bab51"
+    },
+    {
+      "date": "2026-03-18",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 1,
+      "source_url": "https://www.rev.com/transcripts/taoiseach-martin-vistits-the-white-house",
+      "title": "Taoiseach Martin Vistits the White House",
+      "transcript_id": "rev_52c5c6087721"
+    },
+    {
+      "date": "2026-04-06",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 2,
+      "source_url": "https://www.rev.com/transcripts/white-house-press-conference-4-06-26",
+      "title": "White House Press Conference 4/06/26",
+      "transcript_id": "rev_5d84da88caf7"
+    },
+    {
+      "date": "2026-04-07",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 1,
+      "source_url": "https://www.rev.com/transcripts/artemis-ii-crew-broadcast",
+      "title": "Artemis II Crew Q & A",
+      "transcript_id": "rev_3d9f053da596"
+    }
+  ]
+}

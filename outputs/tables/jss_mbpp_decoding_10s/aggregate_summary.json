@@ -1,0 +1,114 @@
+{
+  "run": "jss_mbpp_decoding_10s",
+  "jobs": 6,
+  "summaries": [
+    {
+      "label": "decoding_robustness__codegen_mono_350m__mbpp__high_temp",
+      "tasks": 257,
+      "samples_per_task_min": 10,
+      "samples_per_task_max": 10,
+      "total_samples": 2570,
+      "success_samples": 128,
+      "success_sample_rate": 0.049805447470817124,
+      "problems_with_success": 66,
+      "problem_success_rate": 0.25680933852140075,
+      "category_counts": {
+        "wrong_output": 946,
+        "syntax_error": 875,
+        "runtime_error": 604,
+        "success": 128,
+        "timeout": 17
+      }
+    },
+    {
+      "label": "decoding_robustness__codegen_mono_350m__mbpp__low_temp",
+      "tasks": 257,
+      "samples_per_task_min": 10,
+      "samples_per_task_max": 10,
+      "total_samples": 2570,
+      "success_samples": 371,
+      "success_sample_rate": 0.14435797665369648,
+      "problems_with_success": 79,
+      "problem_success_rate": 0.30739299610894943,
+      "category_counts": {
+        "syntax_error": 814,
+        "wrong_output": 1004,
+        "runtime_error": 379,
+        "success": 371,
+        "timeout": 2
+      }
+    },
+    {
+      "label": "decoding_robustness__codegen_mono_350m__mbpp__standard",
+      "tasks": 257,
+      "samples_per_task_min": 10,
+      "samples_per_task_max": 10,
+      "total_samples": 2570,
+      "success_samples": 220,
+      "success_sample_rate": 0.08560311284046693,
+      "problems_with_success": 88,
+      "problem_success_rate": 0.3424124513618677,
+      "category_counts": {
+        "wrong_output": 1068,
+        "syntax_error": 798,
+        "runtime_error": 472,
+        "success": 220,
+        "timeout": 12
+      }
+    },
+    {
+      "label": "decoding_robustness__qwen25_coder_05b__mbpp__high_temp",
+      "tasks": 257,
+      "samples_per_task_min": 10,
+      "samples_per_task_max": 10,
+      "total_samples": 2570,
+      "success_samples": 336,
+      "success_sample_rate": 0.13073929961089495,
+      "problems_with_success": 123,
+      "problem_success_rate": 0.4785992217898833,
+      "category_counts": {
+        "syntax_error": 1167,
+        "wrong_output": 740,
+        "success": 336,
+        "runtime_error": 316,
+        "timeout": 11
+      }
+    },
+    {
+      "label": "decoding_robustness__qwen25_coder_05b__mbpp__low_temp",
+      "tasks": 257,
+      "samples_per_task_min": 10,
+      "samples_per_task_max": 10,
+      "total_samples": 2570,
+      "success_samples": 741,
+      "success_sample_rate": 0.2883268482490272,
+      "problems_with_success": 128,
+      "problem_success_rate": 0.4980544747081712,
+      "category_counts": {
+        "wrong_output": 1005,
+        "runtime_error": 286,
+        "syntax_error": 536,
+        "success": 741,
+        "timeout": 2
+      }
+    },
+    {
+      "label": "decoding_robustness__qwen25_coder_05b__mbpp__standard",
+      "tasks": 257,
+      "samples_per_task_min": 10,
+      "samples_per_task_max": 10,
+      "total_samples": 2570,
+      "success_samples": 488,
+      "success_sample_rate": 0.18988326848249026,
+      "problems_with_success": 141,
+      "problem_success_rate": 0.5486381322957199,
+      "category_counts": {
+        "syntax_error": 937,
+        "wrong_output": 856,
+        "runtime_error": 283,
+        "timeout": 6,
+        "success": 488
+      }
+    }
+  ]
+}

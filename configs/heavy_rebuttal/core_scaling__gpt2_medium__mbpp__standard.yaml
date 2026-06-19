@@ -1,0 +1,45 @@
+project:
+  name: bottleneck_heavy_rebuttal
+  version: 0.2.0
+  phase: core_scaling
+paths:
+  data_dir: data
+  raw_data: data/raw
+  models_dir: models
+  outputs_dir: outputs
+  results_dir: data/results_heavy_rebuttal/core_scaling/core_scaling__gpt2_medium__mbpp__standard
+hardware:
+  device: cuda
+  max_memory_gb: 12
+model:
+  max_length: 512
+  name: gpt2-medium
+  pretrained_path: gpt2-medium
+  temperature: 0.8
+  top_p: 0.95
+  family: gpt2
+  parameter_millions: 355
+  role: general_scaling
+dataset:
+  name: mbpp
+  seed: 42
+  mbpp_prompt_style: signature_stub
+  use_mbpp_challenge_tests: false
+generation:
+  batch_size: 1
+  max_new_tokens: 128
+  do_sample: true
+  max_time_seconds: 30
+  repetition_penalty: 1.05
+execution:
+  timeout_seconds: 5
+feasibility_check:
+  num_problems: 257
+  num_samples_per_problem: 20
+  decision_threshold: 0.7
+heavy_rebuttal:
+  phase: core_scaling
+  model_key: gpt2_medium
+  benchmark_key: mbpp
+  decoding_key: standard
+  humaneval_prompt_style: canonical

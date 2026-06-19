@@ -1,0 +1,45 @@
+project:
+  name: bottleneck_heavy_rebuttal
+  version: 0.2.0
+  phase: livecodebench_stress
+paths:
+  data_dir: data
+  raw_data: data/raw
+  models_dir: models
+  outputs_dir: outputs
+  results_dir: data/results_heavy_rebuttal/livecodebench_stress/livecodebench_stress__gpt2_medium__livecodebench__standard
+hardware:
+  device: cuda
+  max_memory_gb: 12
+model:
+  max_length: 512
+  name: gpt2-medium
+  pretrained_path: gpt2-medium
+  temperature: 0.8
+  top_p: 0.95
+  family: gpt2
+  parameter_millions: 355
+  role: general_scaling
+dataset:
+  name: livecodebench
+  seed: 42
+  version_tag: release_v2
+  livecodebench_prompt_style: comment_plus_starter
+generation:
+  batch_size: 1
+  max_new_tokens: 128
+  do_sample: true
+  max_time_seconds: 30
+  repetition_penalty: 1.05
+execution:
+  timeout_seconds: 5
+feasibility_check:
+  num_problems: 511
+  num_samples_per_problem: 10
+  decision_threshold: 0.7
+heavy_rebuttal:
+  phase: livecodebench_stress
+  model_key: gpt2_medium
+  benchmark_key: livecodebench
+  decoding_key: standard
+  humaneval_prompt_style: canonical

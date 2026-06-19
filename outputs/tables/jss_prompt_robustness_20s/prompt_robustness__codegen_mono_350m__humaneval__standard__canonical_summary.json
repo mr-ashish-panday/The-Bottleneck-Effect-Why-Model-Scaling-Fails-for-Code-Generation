@@ -1,0 +1,18 @@
+{
+  "label": "prompt_robustness__codegen_mono_350m__humaneval__standard__canonical",
+  "tasks": 164,
+  "samples_per_task_min": 20,
+  "samples_per_task_max": 20,
+  "total_samples": 3280,
+  "success_samples": 1841,
+  "success_sample_rate": 0.561280487804878,
+  "problems_with_success": 164,
+  "problem_success_rate": 1.0,
+  "category_counts": {
+    "syntax_error": 1317,
+    "success": 1841,
+    "wrong_output": 6,
+    "runtime_error": 111,
+    "timeout": 5
+  }
+}

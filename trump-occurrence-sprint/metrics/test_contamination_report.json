@@ -1,0 +1,250 @@
+{
+  "continuation_words": 180,
+  "exact_span_recall_flag_threshold": 0.2,
+  "flagged_transcript_ids": [],
+  "generator_error": null,
+  "longest_ngram_flag_threshold": 18,
+  "max_new_tokens": 120,
+  "method": "local_deterministic_generation",
+  "model": "distilgpt2",
+  "n_checked": 26,
+  "n_flagged": 0,
+  "p0_deviation": false,
+  "prefix_words": 160,
+  "rows": [
+    {
+      "date": "2026-04-12",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 1,
+      "source_url": "https://www.rev.com/transcripts/trtump-gaggle-1-11-26",
+      "title": "Trump Gaggle 4/11/26",
+      "transcript_id": "rev_6c6b141dd243"
+    },
+    {
+      "date": "2026-04-14",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 2,
+      "source_url": "https://www.rev.com/transcripts/trump-gets-delivery-and-speaks-to-press-2",
+      "title": "Trump Gets Delivery and Speaks to Press",
+      "transcript_id": "rev_157526be421a"
+    },
+    {
+      "date": "2026-04-20",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 1,
+      "source_url": "https://www.rev.com/transcripts/trump-speaks-at-tpusa-event",
+      "title": "Trump Speaks at TPUSA Event",
+      "transcript_id": "rev_062b781d2c6a"
+    },
+    {
+      "date": "2026-04-20",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 3,
+      "source_url": "https://www.rev.com/transcripts/tax-day-roundtable",
+      "title": "Tax Day Roundtable",
+      "transcript_id": "rev_0df89b6175a3"
+    },
+    {
+      "date": "2026-04-22",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 3,
+      "source_url": "https://www.rev.com/transcripts/ncaa-champions-at-the-white-house",
+      "title": "NCAA Champions at the White House",
+      "transcript_id": "rev_ae7b66bb6d0d"
+    },
+    {
+      "date": "2026-04-26",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 2,
+      "source_url": "https://www.rev.com/transcripts/israel-lebanon-ceasefire-extension",
+      "title": "Israel/Lebanon Ceasefire Extension",
+      "transcript_id": "rev_69316f7ec61f"
+    },
+    {
+      "date": "2026-04-26",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 4,
+      "source_url": "https://www.rev.com/transcripts/trump-speaks-after-whcd-shooting",
+      "title": "Trump Speaks After WHCD Shooting",
+      "transcript_id": "rev_c3168700ca11"
+    },
+    {
+      "date": "2026-04-27",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 2,
+      "source_url": "https://www.rev.com/transcripts/60-minutes-trump-interview-on-whcd-shooting",
+      "title": "60 Minutes Trump Interview on WHCD Shooting",
+      "transcript_id": "rev_5d1472a3ea6e"
+    },
+    {
+      "date": "2026-04-30",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 1,
+      "source_url": "https://www.rev.com/transcripts/artemis-ii-crew-visits-white-house",
+      "title": "Artemis II Crew Visits White House",
+      "transcript_id": "rev_4e82d04a22e7"
+    },
+    {
+      "date": "2026-05-03",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 2,
+      "source_url": "https://www.rev.com/transcripts/retirement-account-executive-order",
+      "title": "Retirement Account Executive Order",
+      "transcript_id": "rev_0d3ac2e0fbd5"
+    },
+    {
+      "date": "2026-05-04",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 2,
+      "source_url": "https://www.rev.com/transcripts/trump-event-in-florida",
+      "title": "Trump Event in Florida",
+      "transcript_id": "rev_483a097edd72"
+    },
+    {
+      "date": "2026-05-05",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 3,
+      "source_url": "https://www.rev.com/transcripts/white-house-small-business-summit",
+      "title": "White House Small Business Summit",
+      "transcript_id": "rev_c2866635e907"
+    },
+    {
+      "date": "2026-05-06",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 3,
+      "source_url": "https://www.rev.com/transcripts/presidential-fitness-test-award",
+      "title": "Presidential Fitness Test Award",
+      "transcript_id": "rev_6cca643669ba"
+    },
+    {
+      "date": "2026-05-07",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 3,
+      "source_url": "https://www.rev.com/transcripts/whiote-house-military-mothers-day-event",
+      "title": "White House Military Mother's Day Event",
+      "transcript_id": "rev_1f1576ee4b90"
+    },
+    {
+      "date": "2026-05-07",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 2,
+      "source_url": "https://www.rev.com/transcripts/oval-office-ufc-announcement",
+      "title": "Oval Office UFC Announcement",
+      "transcript_id": "rev_7e7a1c13f4c0"
+    },
+    {
+      "date": "2026-05-10",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 2,
+      "source_url": "https://www.rev.com/transcripts/trump-speaks-to-angel-and-gold-star-moms",
+      "title": "Trump Speaks to Angel and Gold Star Moms",
+      "transcript_id": "rev_9c2455b82a88"
+    },
+    {
+      "date": "2026-05-12",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 2,
+      "source_url": "https://www.rev.com/transcripts/indiana-hoosiers-visit-the-white-house",
+      "title": "Indiana Hoosiers Visit the White House",
+      "transcript_id": "rev_055ea88c5572"
+    },
+    {
+      "date": "2026-05-12",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 3,
+      "source_url": "https://www.rev.com/transcripts/white-house-maternal-healthcare-event",
+      "title": "White House Maternal Healthcare Event",
+      "transcript_id": "rev_5e96a4dba67d"
+    },
+    {
+      "date": "2026-05-19",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 2,
+      "source_url": "https://www.rev.com/transcripts/healthcare-affordability-event",
+      "title": "Healthcare Affordability Event",
+      "transcript_id": "rev_22d80f9f94f3"
+    },
+    {
+      "date": "2026-05-20",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 2,
+      "source_url": "https://www.rev.com/transcripts/white-house-ballroom-site-tour",
+      "title": "White House Ballroom Site Tour",
+      "transcript_id": "rev_a34384440d0a"
+    },
+    {
+      "date": "2026-05-21",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 1,
+      "source_url": "https://www.rev.com/transcripts/u-s-coast-guard-academy-commencement-address",
+      "title": "U.S. Coast Guard Academy Commencement Address",
+      "transcript_id": "rev_555ccd6ea38b"
+    },
+    {
+      "date": "2026-05-24",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 0,
+      "source_url": "https://www.rev.com/transcripts/fed-chair-kevin-warshs-swearing-in-ceremony",
+      "title": "Fed Chair Kevin Warsh's Swearing-In Ceremony",
+      "transcript_id": "rev_6573f0406d3a"
+    },
+    {
+      "date": "2026-05-24",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 1,
+      "source_url": "https://www.rev.com/transcripts/epa-annoucement-on-refrigerant-regulations",
+      "title": "EPA Annoucement on Refrigerant Regulations",
+      "transcript_id": "rev_f852ec110530"
+    },
+    {
+      "date": "2026-05-26",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 1,
+      "source_url": "https://www.rev.com/transcripts/memorial-day-at-arlington",
+      "title": "Memorial Day at Arlington",
+      "transcript_id": "rev_cbb2b01bb7e1"
+    },
+    {
+      "date": "2026-05-28",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 1,
+      "source_url": "https://www.rev.com/transcripts/white-house-cabinet-meeting-5-27-26",
+      "title": "White House Cabinet Meeting 5/27/26",
+      "transcript_id": "rev_f5407340514b"
+    },
+    {
+      "date": "2026-06-07",
+      "exact_span_recall_5gram": 0.0,
+      "flagged": false,
+      "longest_common_ngram": 1,
+      "source_url": "https://www.rev.com/transcripts/coal-industry-announcement",
+      "title": "Coal Industry Announcement",
+      "transcript_id": "rev_7c7ff522762e"
+    }
+  ]
+}

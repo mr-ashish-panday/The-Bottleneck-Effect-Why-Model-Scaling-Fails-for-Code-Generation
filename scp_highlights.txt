@@ -1,0 +1,7 @@
+Highlights
+
+- Evaluates small-model code generation across HumanEval, MBPP, EvalPlus, and LiveCodeBench.
+- Shows GPT-2 Medium does not reliably improve over GPT-2 Small for executable code.
+- Compares GPT-2 with similarly sized CodeGen checkpoints and a fixed-scale CodeGen ladder.
+- Uses layer ablation, graded intervention, error analysis, and sparse steering controls.
+- Frames code-generation reliability as a product of model, prompt, decoding, and tests.

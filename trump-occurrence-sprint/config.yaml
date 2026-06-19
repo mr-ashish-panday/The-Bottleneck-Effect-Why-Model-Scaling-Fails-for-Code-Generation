@@ -1,0 +1,81 @@
+seed: 20260614
+
+scrape:
+  category_url: "https://www.rev.com/category/donald-trump"
+  sitemap_url: "https://www.rev.com/sitemap.xml"
+  min_transcripts: 60
+  target_transcripts: 110
+  max_candidate_pages: 180
+  request_timeout_seconds: 25
+  user_agent: "Mozilla/5.0 (compatible; occurrence-forecast-benchmark/0.1)"
+
+cleaning:
+  min_words: 150
+  near_duplicate_jaccard_threshold: 0.96
+  prefer_donald_trump_speaker: true
+  dominant_speaker_min_share: 0.35
+
+matching:
+  split_hyphens: true
+  strip_possessive: true
+
+splits:
+  train_frac: 0.70
+  val_frac: 0.15
+  test_frac: 0.15
+
+targets:
+  high_unigrams: 40
+  mid_unigrams: 40
+  rare_unigrams: 40
+  phrases: 30
+  cold: 30
+  min_token_len: 3
+  max_phrase_len: 3
+  cold_max_train_transcripts: 3
+
+checkpoints:
+  grid_pct: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
+
+evaluation:
+  ece_bins: 10
+  bootstrap_reps_dev: 200
+  bootstrap_reps_final: 1000
+
+baselines:
+  smoothing_alpha: 5.0
+  logistic_c: 1.0
+  max_iter: 1000
+  calibration_method: "isotonic"
+
+challenger:
+  trailing_window_words: 300
+  full_prefix_window_words: 900
+  cooccurrence_window_words: 80
+  max_features: 8
+  embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
+  fallback_vectorizer: "tfidf_svd"
+  l2: 1.0
+  selected_features:
+    - adjacency_prefix_score
+    - adjacency_trailing_score
+    - adjacency_prefix_density
+    - adjacency_trailing_density
+    - adjacency_trailing_max
+    - log_expected_remaining_words
+  nonnegative_features:
+    - log_expected_remaining_words
+  fixed_duration_gamma: 0.3
+
+contamination:
+  prefix_words: 160
+  continuation_words: 180
+  max_new_tokens: 120
+  local_model: "distilgpt2"
+  longest_ngram_flag_threshold: 18
+  exact_span_recall_flag_threshold: 0.20
+  max_transcripts_for_generation: 120
+
+duration_sensitivity:
+  sample_rows: 500
+  multipliers: [0.5, 1.0, 2.0]

@@ -1,0 +1,18 @@
+{
+  "label": "decoding_robustness__codegen_mono_350m__mbpp__low_temp",
+  "tasks": 257,
+  "samples_per_task_min": 10,
+  "samples_per_task_max": 10,
+  "total_samples": 2570,
+  "success_samples": 371,
+  "success_sample_rate": 0.14435797665369648,
+  "problems_with_success": 79,
+  "problem_success_rate": 0.30739299610894943,
+  "category_counts": {
+    "syntax_error": 814,
+    "wrong_output": 1004,
+    "runtime_error": 379,
+    "success": 371,
+    "timeout": 2
+  }
+}

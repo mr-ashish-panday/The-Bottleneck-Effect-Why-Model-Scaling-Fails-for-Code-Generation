@@ -1,0 +1,161 @@
+{
+  "run": "jss_prompt_robustness_20s",
+  "jobs": 9,
+  "summaries": [
+    {
+      "label": "prompt_robustness__codegen_mono_350m__humaneval__standard__canonical",
+      "tasks": 164,
+      "samples_per_task_min": 20,
+      "samples_per_task_max": 20,
+      "total_samples": 3280,
+      "success_samples": 1841,
+      "success_sample_rate": 0.561280487804878,
+      "problems_with_success": 164,
+      "problem_success_rate": 1.0,
+      "category_counts": {
+        "syntax_error": 1317,
+        "success": 1841,
+        "wrong_output": 6,
+        "runtime_error": 111,
+        "timeout": 5
+      }
+    },
+    {
+      "label": "prompt_robustness__codegen_mono_350m__humaneval__standard__comment_plus_signature",
+      "tasks": 164,
+      "samples_per_task_min": 20,
+      "samples_per_task_max": 20,
+      "total_samples": 3280,
+      "success_samples": 2334,
+      "success_sample_rate": 0.7115853658536585,
+      "problems_with_success": 164,
+      "problem_success_rate": 1.0,
+      "category_counts": {
+        "syntax_error": 784,
+        "success": 2334,
+        "runtime_error": 155,
+        "timeout": 5,
+        "wrong_output": 2
+      }
+    },
+    {
+      "label": "prompt_robustness__codegen_mono_350m__humaneval__standard__signature_only",
+      "tasks": 164,
+      "samples_per_task_min": 20,
+      "samples_per_task_max": 20,
+      "total_samples": 3280,
+      "success_samples": 1398,
+      "success_sample_rate": 0.42621951219512194,
+      "problems_with_success": 164,
+      "problem_success_rate": 1.0,
+      "category_counts": {
+        "success": 1398,
+        "syntax_error": 1628,
+        "runtime_error": 243,
+        "timeout": 6,
+        "wrong_output": 5
+      }
+    },
+    {
+      "label": "prompt_robustness__gpt2_medium__humaneval__standard__canonical",
+      "tasks": 164,
+      "samples_per_task_min": 20,
+      "samples_per_task_max": 20,
+      "total_samples": 3280,
+      "success_samples": 69,
+      "success_sample_rate": 0.02103658536585366,
+      "problems_with_success": 48,
+      "problem_success_rate": 0.2926829268292683,
+      "category_counts": {
+        "syntax_error": 3205,
+        "success": 69,
+        "runtime_error": 6
+      }
+    },
+    {
+      "label": "prompt_robustness__gpt2_medium__humaneval__standard__comment_plus_signature",
+      "tasks": 164,
+      "samples_per_task_min": 20,
+      "samples_per_task_max": 20,
+      "total_samples": 3280,
+      "success_samples": 35,
+      "success_sample_rate": 0.010670731707317074,
+      "problems_with_success": 33,
+      "problem_success_rate": 0.20121951219512196,
+      "category_counts": {
+        "syntax_error": 3244,
+        "success": 35,
+        "runtime_error": 1
+      }
+    },
+    {
+      "label": "prompt_robustness__gpt2_medium__humaneval__standard__signature_only",
+      "tasks": 164,
+      "samples_per_task_min": 20,
+      "samples_per_task_max": 20,
+      "total_samples": 3280,
+      "success_samples": 63,
+      "success_sample_rate": 0.01920731707317073,
+      "problems_with_success": 53,
+      "problem_success_rate": 0.3231707317073171,
+      "category_counts": {
+        "syntax_error": 3217,
+        "success": 63
+      }
+    },
+    {
+      "label": "prompt_robustness__qwen25_coder_05b__humaneval__standard__canonical",
+      "tasks": 164,
+      "samples_per_task_min": 20,
+      "samples_per_task_max": 20,
+      "total_samples": 3280,
+      "success_samples": 1364,
+      "success_sample_rate": 0.41585365853658535,
+      "problems_with_success": 164,
+      "problem_success_rate": 1.0,
+      "category_counts": {
+        "success": 1364,
+        "syntax_error": 1828,
+        "runtime_error": 67,
+        "wrong_output": 20,
+        "timeout": 1
+      }
+    },
+    {
+      "label": "prompt_robustness__qwen25_coder_05b__humaneval__standard__comment_plus_signature",
+      "tasks": 164,
+      "samples_per_task_min": 20,
+      "samples_per_task_max": 20,
+      "total_samples": 3280,
+      "success_samples": 1795,
+      "success_sample_rate": 0.5472560975609756,
+      "problems_with_success": 164,
+      "problem_success_rate": 1.0,
+      "category_counts": {
+        "success": 1795,
+        "syntax_error": 1384,
+        "runtime_error": 92,
+        "wrong_output": 6,
+        "timeout": 3
+      }
+    },
+    {
+      "label": "prompt_robustness__qwen25_coder_05b__humaneval__standard__signature_only",
+      "tasks": 164,
+      "samples_per_task_min": 20,
+      "samples_per_task_max": 20,
+      "total_samples": 3280,
+      "success_samples": 1614,
+      "success_sample_rate": 0.4920731707317073,
+      "problems_with_success": 164,
+      "problem_success_rate": 1.0,
+      "category_counts": {
+        "success": 1614,
+        "syntax_error": 1413,
+        "runtime_error": 239,
+        "timeout": 8,
+        "wrong_output": 6
+      }
+    }
+  ]
+}

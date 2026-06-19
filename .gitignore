@@ -26,6 +26,7 @@ saved_models/
 
 # Large data files
 *.csv
+!JSS_UPLOAD_FILE_MANIFEST.csv
 *.parquet
 *.feather
 data/
@@ -66,3 +67,10 @@ datasets/
 
 # Temporary sync workspace
 tmp_remote_sync/
+.gstack/
+
+# Local scratch and recovered chat exports
+tmp/
+docs/chat_recovery/
+docs/RECOVERED_EXAM_THREAD_CHAT.md
+fable_chat.md

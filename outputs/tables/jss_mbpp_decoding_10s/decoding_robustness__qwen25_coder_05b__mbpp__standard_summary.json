@@ -1,0 +1,18 @@
+{
+  "label": "decoding_robustness__qwen25_coder_05b__mbpp__standard",
+  "tasks": 257,
+  "samples_per_task_min": 10,
+  "samples_per_task_max": 10,
+  "total_samples": 2570,
+  "success_samples": 488,
+  "success_sample_rate": 0.18988326848249026,
+  "problems_with_success": 141,
+  "problem_success_rate": 0.5486381322957199,
+  "category_counts": {
+    "syntax_error": 937,
+    "wrong_output": 856,
+    "runtime_error": 283,
+    "timeout": 6,
+    "success": 488
+  }
+}

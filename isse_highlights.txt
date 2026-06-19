@@ -1,0 +1,7 @@
+Highlights
+
+- Small-model code generation is evaluated as an executable-code reliability problem.
+- GPT-2 scaling alone does not reliably improve HumanEval or MBPP success.
+- Code-specialized pretraining explains more of the reliability gap than parameter count.
+- Layer ablations and failure modes reveal brittle versus residual code-support patterns.
+- Prompt and decoding controls show that generation protocol changes reliability outcomes.

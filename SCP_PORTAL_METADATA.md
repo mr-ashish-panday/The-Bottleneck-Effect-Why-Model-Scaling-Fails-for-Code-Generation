@@ -1,0 +1,54 @@
+# SCP Portal Metadata
+
+Target journal: Science of Computer Programming.
+
+Transfer source: Elsevier Transfer Your Manuscript recommendation from `JSSOFTWARE-D-26-01113`, previously submitted to Journal of Systems and Software.
+
+Transfer status: confirmed on June 1, 2026.
+
+## Article Type
+
+Original research article.
+
+## Title
+
+The Bottleneck Effect: When Small-Model Scaling Fails for Code Generation
+
+## Abstract
+
+Code generation is an execution-constrained software-engineering task: generated programs must parse, run, and satisfy tests. This paper studies whether small-model code generation improves with parameter scaling, code-specialized pretraining, and more distributed layerwise computation. Across HumanEval, MBPP, EvalPlus HumanEval+/MBPP+, and LiveCodeBench release v2, GPT-2 Medium (355M) does not reliably improve over GPT-2 Small (124M): the HumanEval gap is not statistically significant, and both GPT-2 variants reach 0.0% success on full-coverage MBPP. In contrast, similarly sized CodeGen checkpoints retain substantially stronger executable-code behavior on HumanEval and MBPP. A fixed-scale CodeGen-350M NL->Multi->Mono ladder further shows that later code- and Python-focused continued pretraining improves the strongest checkpoint, especially on MBPP. To examine where these differences arise, we combine full-layer ablation, graded ablation, failure-mode analysis, and sparse activation steering. GPT-2 Medium is globally brittle under layer removal, while CodeGen retains residual success across several layers. A compact GPT-2 Medium layer-12 probe captures most of the success-vs.-syntax signal, but matched controls make the steering result suggestive rather than definitive. Overall, the results support a software-engineering reliability view: in this small-model regime, useful code behavior depends less on parameter count alone than on code-specific pretraining, generation protocol, and the distribution of execution-relevant computation across depth.
+
+## Keywords
+
+- Code generation
+- Empirical software engineering
+- Large language models
+- Program synthesis
+- Model evaluation
+- Software reliability
+
+## Author
+
+- Ashish Pandey
+- ORCID: 0009-0004-7085-7373
+- Department of Computer and Electronics Engineering, Khwopa College of Engineering, Nepal
+- Corresponding email: ashishpanday9818@gmail.com
+
+## Declarations
+
+Competing interests: The author declares no competing interests.
+
+Funding: This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.
+
+Data availability: The processed result tables, plotting scripts, benchmark summaries, saved result artifacts, configuration files, source code, and claim-to-artifact audit used in this manuscript are available in the supplementary artifact archive submitted with this manuscript. Large model checkpoints and raw model caches are not redistributed; all experiments use public pretrained checkpoints and regenerate derived outputs from the provided scripts and configuration files.
+
+AI-assisted technologies: During the preparation of this work, the author used OpenAI Codex to assist with manuscript editing, code execution orchestration, artifact organization, and formatting. After using this tool, the author reviewed and edited the content as needed and takes full responsibility for the content of the submitted manuscript.
+
+## Current Files To Upload When Completion Link Arrives
+
+- Manuscript PDF: `bottleneck.pdf`
+- LaTeX/source package: `submission_scp_20260601/scp_source_package.zip`
+- Supplementary artifact: `submission_scp_20260601/scp_supplement_artifact_full.zip`
+- Cover letter: `scp_cover_letter.txt`
+- Highlights, if requested: `scp_highlights.txt`
+- Declaration file, if requested: `scp_declaration_of_interest.txt`

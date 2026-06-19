@@ -1,0 +1,44 @@
+project:
+  name: bottleneck_heavy_rebuttal
+  version: 0.2.0
+  phase: core_scaling
+paths:
+  data_dir: data
+  raw_data: data/raw
+  models_dir: models
+  outputs_dir: outputs
+  results_dir: data/results_heavy_rebuttal/core_scaling/core_scaling__pythia_160m__humaneval__standard__canonical
+hardware:
+  device: cuda
+  max_memory_gb: 12
+model:
+  max_length: 512
+  name: EleutherAI/pythia-160m
+  pretrained_path: EleutherAI/pythia-160m
+  temperature: 0.8
+  top_p: 0.95
+  family: pythia
+  parameter_millions: 160
+  role: general_scaling_control
+dataset:
+  name: humaneval
+  seed: 42
+  humaneval_prompt_style: canonical
+generation:
+  batch_size: 1
+  max_new_tokens: 128
+  do_sample: true
+  max_time_seconds: 30
+  repetition_penalty: 1.05
+execution:
+  timeout_seconds: 5
+feasibility_check:
+  num_problems: 164
+  num_samples_per_problem: 100
+  decision_threshold: 0.7
+heavy_rebuttal:
+  phase: core_scaling
+  model_key: pythia_160m
+  benchmark_key: humaneval
+  decoding_key: standard
+  humaneval_prompt_style: canonical

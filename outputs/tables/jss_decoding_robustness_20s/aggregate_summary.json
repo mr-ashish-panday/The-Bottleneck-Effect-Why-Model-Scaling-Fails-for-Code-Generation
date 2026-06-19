@@ -1,0 +1,161 @@
+{
+  "run": "jss_decoding_robustness_20s",
+  "jobs": 9,
+  "summaries": [
+    {
+      "label": "decoding_robustness__codegen_mono_350m__humaneval__high_temp__canonical",
+      "tasks": 164,
+      "samples_per_task_min": 20,
+      "samples_per_task_max": 20,
+      "total_samples": 3280,
+      "success_samples": 1763,
+      "success_sample_rate": 0.5375,
+      "problems_with_success": 164,
+      "problem_success_rate": 1.0,
+      "category_counts": {
+        "syntax_error": 1380,
+        "success": 1763,
+        "runtime_error": 131,
+        "timeout": 1,
+        "wrong_output": 5
+      }
+    },
+    {
+      "label": "decoding_robustness__codegen_mono_350m__humaneval__low_temp__canonical",
+      "tasks": 164,
+      "samples_per_task_min": 20,
+      "samples_per_task_max": 20,
+      "total_samples": 3280,
+      "success_samples": 1563,
+      "success_sample_rate": 0.4765243902439024,
+      "problems_with_success": 156,
+      "problem_success_rate": 0.9512195121951219,
+      "category_counts": {
+        "syntax_error": 1645,
+        "success": 1563,
+        "runtime_error": 69,
+        "wrong_output": 2,
+        "timeout": 1
+      }
+    },
+    {
+      "label": "decoding_robustness__codegen_mono_350m__humaneval__standard__canonical",
+      "tasks": 164,
+      "samples_per_task_min": 20,
+      "samples_per_task_max": 20,
+      "total_samples": 3280,
+      "success_samples": 1841,
+      "success_sample_rate": 0.561280487804878,
+      "problems_with_success": 164,
+      "problem_success_rate": 1.0,
+      "category_counts": {
+        "syntax_error": 1317,
+        "success": 1841,
+        "wrong_output": 6,
+        "runtime_error": 111,
+        "timeout": 5
+      }
+    },
+    {
+      "label": "decoding_robustness__gpt2_medium__humaneval__high_temp__canonical",
+      "tasks": 164,
+      "samples_per_task_min": 20,
+      "samples_per_task_max": 20,
+      "total_samples": 3280,
+      "success_samples": 101,
+      "success_sample_rate": 0.030792682926829268,
+      "problems_with_success": 78,
+      "problem_success_rate": 0.47560975609756095,
+      "category_counts": {
+        "syntax_error": 3161,
+        "success": 101,
+        "runtime_error": 18
+      }
+    },
+    {
+      "label": "decoding_robustness__gpt2_medium__humaneval__low_temp__canonical",
+      "tasks": 164,
+      "samples_per_task_min": 20,
+      "samples_per_task_max": 20,
+      "total_samples": 3280,
+      "success_samples": 67,
+      "success_sample_rate": 0.020426829268292684,
+      "problems_with_success": 39,
+      "problem_success_rate": 0.23780487804878048,
+      "category_counts": {
+        "syntax_error": 3209,
+        "success": 67,
+        "runtime_error": 4
+      }
+    },
+    {
+      "label": "decoding_robustness__gpt2_medium__humaneval__standard__canonical",
+      "tasks": 164,
+      "samples_per_task_min": 20,
+      "samples_per_task_max": 20,
+      "total_samples": 3280,
+      "success_samples": 69,
+      "success_sample_rate": 0.02103658536585366,
+      "problems_with_success": 48,
+      "problem_success_rate": 0.2926829268292683,
+      "category_counts": {
+        "syntax_error": 3205,
+        "success": 69,
+        "runtime_error": 6
+      }
+    },
+    {
+      "label": "decoding_robustness__qwen25_coder_05b__humaneval__high_temp__canonical",
+      "tasks": 164,
+      "samples_per_task_min": 20,
+      "samples_per_task_max": 20,
+      "total_samples": 3280,
+      "success_samples": 1280,
+      "success_sample_rate": 0.3902439024390244,
+      "problems_with_success": 164,
+      "problem_success_rate": 1.0,
+      "category_counts": {
+        "success": 1280,
+        "syntax_error": 1916,
+        "runtime_error": 69,
+        "wrong_output": 14,
+        "timeout": 1
+      }
+    },
+    {
+      "label": "decoding_robustness__qwen25_coder_05b__humaneval__low_temp__canonical",
+      "tasks": 164,
+      "samples_per_task_min": 20,
+      "samples_per_task_max": 20,
+      "total_samples": 3280,
+      "success_samples": 1385,
+      "success_sample_rate": 0.4222560975609756,
+      "problems_with_success": 148,
+      "problem_success_rate": 0.9024390243902439,
+      "category_counts": {
+        "success": 1385,
+        "syntax_error": 1836,
+        "runtime_error": 50,
+        "wrong_output": 9
+      }
+    },
+    {
+      "label": "decoding_robustness__qwen25_coder_05b__humaneval__standard__canonical",
+      "tasks": 164,
+      "samples_per_task_min": 20,
+      "samples_per_task_max": 20,
+      "total_samples": 3280,
+      "success_samples": 1364,
+      "success_sample_rate": 0.41585365853658535,
+      "problems_with_success": 164,
+      "problem_success_rate": 1.0,
+      "category_counts": {
+        "success": 1364,
+        "syntax_error": 1828,
+        "runtime_error": 67,
+        "wrong_output": 20,
+        "timeout": 1
+      }
+    }
+  ]
+}

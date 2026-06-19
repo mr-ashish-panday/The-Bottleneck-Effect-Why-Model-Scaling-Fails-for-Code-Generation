@@ -1,0 +1,12 @@
+{
+  "baseline_model_sha256": "4b7100641a8eca19b07434083e3ebb81d64a3f75de24814e336dcf397d8de7a0",
+  "challenger_model_sha256": "64406b6d9e472e9aee90acaa7d7f048b7e14648c56b1550433d327e74c38e9d1",
+  "config_sha256": "0f424a06e0b5465b72c67ae64f7d777319243f2dcbf724d2feea55148209f781",
+  "corpus_sha256": "b4af8725015cc2b918da592bd43734ba1aeb5fcb6eec6dbe5343113225f2aebf",
+  "created_at_utc": "2026-06-14T18:36:09.393410+00:00",
+  "note": "Written before loading test checkpoint labels in this script.",
+  "phase3_val_metrics_sha256": "bddcc74464e2100f80e3e5923e76c8090402904a46a3e60cd8eae4800ca7f642",
+  "protocol": "single_locked_test_pass",
+  "splits_sha256": "67a01ddedc01d45cd2a356e93b0566275da9f60fbd8c1c9b422db3b5710997be",
+  "targets_sha256": "2e3f82485296cd262823d0b07820241d324240e9ba5594aeaddbfe50095eb9a6"
+}

@@ -1,0 +1,15 @@
+{
+  "api_dollars": 0.0,
+  "feature_kind": "tfidf_svd",
+  "plausible_at_benchmark_scale": true,
+  "seconds_per_validation_prediction": 0.0008900926848446351,
+  "tokens_per_prediction": null,
+  "total_calls": 0,
+  "train_fit_seconds": 530.9693239000007,
+  "validation_prediction_seconds": 35.09190409999974,
+  "validation_rows": 39425,
+  "window_words_per_prediction": {
+    "full_prefix_window_words": 900,
+    "trailing_window_words": 300
+  }
+}

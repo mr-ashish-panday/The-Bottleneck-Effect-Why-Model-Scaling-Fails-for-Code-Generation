@@ -88,7 +88,7 @@ for i, category in enumerate(categories):
 
 ax.set_xlabel('Model', fontsize=14, fontweight='bold')
 ax.set_ylabel('Percentage of Syntax Errors (%)', fontsize=14, fontweight='bold')
-ax.set_title('Syntax Error Type Distribution Across Models\n(Breakdown shows different failure patterns from pretraining)', 
+ax.set_title('Syntax Error Type Distribution Across Models\n(Distinct failure profiles across evaluated checkpoints)', 
              fontsize=16, fontweight='bold', pad=20)
 ax.set_xticks(x)
 ax.set_xticklabels(model_names, fontsize=12, fontweight='bold')
@@ -105,5 +105,5 @@ output_dir = Path("outputs/figures")
 plt.savefig(output_dir / "figure3_error_distribution.png", dpi=300, bbox_inches='tight')
 plt.savefig(output_dir / "figure3_error_distribution.pdf", bbox_inches='tight')
 
-print(f"\n✅ Figure 3 saved")
+print("\nFigure 3 saved")
 plt.close()

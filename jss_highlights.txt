@@ -1,0 +1,7 @@
+Highlights
+
+- Small-model code generation does not improve reliably with parameter scaling alone.
+- Code-specialized pretraining explains much more than GPT-2 scale in this regime.
+- Layer ablations expose distinct syntax, runtime, and residual robustness profiles.
+- Prompt format and decoding choices substantially change code-generation reliability.
+- Reproducible artifacts link benchmark claims to saved outputs, logs, and scripts.

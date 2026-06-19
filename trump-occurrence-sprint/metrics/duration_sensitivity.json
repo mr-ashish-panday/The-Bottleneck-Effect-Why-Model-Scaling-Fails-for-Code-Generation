@@ -1,0 +1,11 @@
+{
+  "mean_sensitivity_high_minus_low": 0.07487557485793067,
+  "median_sensitivity_high_minus_low": 0.0,
+  "monotonic_fraction": 0.766,
+  "multipliers": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "sample_rows": 500
+}

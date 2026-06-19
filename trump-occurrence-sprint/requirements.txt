@@ -1,0 +1,13 @@
+requests
+beautifulsoup4
+pandas
+pyarrow
+numpy
+scipy
+scikit-learn
+pyyaml
+pytest
+tqdm
+transformers==4.46.3
+tokenizers
+torch

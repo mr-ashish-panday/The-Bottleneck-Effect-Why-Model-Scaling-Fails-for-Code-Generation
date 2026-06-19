@@ -1,40 +1,52 @@
-% The Bottleneck Effect: Why Model Scaling Fails for Code Generation
-% COMPLETE INTEGRATED LaTeX Document - Ready to Compile Directly
+% The Bottleneck Effect: When Small-Model Scaling Fails for Code Generation
+% Elsevier / SCP transfer build
 
-\documentclass[11pt,twocolumn]{article}
+\documentclass[preprint,12pt,authoryear]{elsarticle}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
 \graphicspath{{outputs/figures/}}
-\usepackage{hyperref}
+\usepackage{url}
 \usepackage{booktabs}
-\usepackage{caption}
-\usepackage{subcaption}
 \usepackage{tabularx}
-\usepackage[numbers]{natbib}
+\usepackage{float}
+\usepackage[protrusion=true,expansion=false]{microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\submissionartifact}{curated supplementary artifact archive}
+\emergencystretch=4em
 
-\title{The Bottleneck Effect: Why Model Scaling Fails for Code Generation}
-\author{Ashish Pandey\\
-Department of Computer and Electronics Engineering \\
-Khwopa College of Engineering, Nepal\\
-\texttt{ashishpanday9818@gmail.com}\\
-\href{https://github.com/mr-ashish-panday/The-Bottleneck-Effect-Why-Model-Scaling-Fails-for-Code-Generation.git}{https://github.com/mr-ashish-panday/The-Bottleneck-Effect}}
-\date{}
+\journal{Science of Computer Programming}
 
 \begin{document}
 
-\maketitle
+\begin{frontmatter}
+
+\title{The Bottleneck Effect: When Small-Model Scaling Fails for Code Generation}
+
+\author[inst1]{Ashish Pandey}
+\ead{ashishpanday9818@gmail.com}
+
+\affiliation[inst1]{
+  organization={Department of Computer and Electronics Engineering, Khwopa College of Engineering},
+  country={Nepal}
+}
 
 \begin{abstract}
-Scaling language models from 124M to 355M parameters improves performance across natural language tasks~\cite{kaplan2020scaling}, yet we observe the opposite for code generation: GPT-2 Medium (355M) achieves only 4.8\% success on HumanEval compared to 5.2\% for GPT-2 Small (124M), while the similarly sized CodeGen-350M achieves 37.4\% success. Problem-level bootstrap intervals show that the GPT-2 Small / Medium gap is not statistically reliable (+0.37 percentage points, 95\% CI $[-0.70, 1.36]$, $p=0.49$), whereas both models trail CodeGen by more than 30 points with $p=0.0002$. This pattern transfers to a second benchmark: on the full MBPP test split (257 tasks, 20 samples per task), both GPT-2 variants achieve 0.0\% success, whereas CodeGen reaches 7.39\% success and 22.96\% pass@5. A stricter HumanEval+ re-evaluation on the first five saved samples per task preserves the same ordering: GPT-2 Small and GPT-2 Medium both remain at 0.0\% pass@1, while CodeGen retains 2.1\% pass@1. On the official MBPP+ benchmark in EvalPlus (378 tasks, Base+Extra), GPT-2 Small and GPT-2 Medium again remain at 0.0\% pass@1/pass@10, while CodeGen retains 1.1\%/6.4\%. On the contamination-aware LiveCodeBench release\_v2 code-generation benchmark (511 tasks, 10 samples per task), GPT-2 Small and GPT-2 Medium again remain at 0.0\% pass@1/pass@5/pass@10, while CodeGen retains only 0.02\%/0.10\%/0.20\%, indicating that all three small models are near-zero on the harder benchmark even though code-specialized pretraining still preserves the only nonzero signal. To partially reduce the family-comparison objection, we also evaluate the CodeGen-350M NL$\rightarrow$Multi$\rightarrow$Mono continued-pretraining ladder. Mono is strongest on both benchmarks, and MBPP is cleanly monotone (0.02\%$\rightarrow$1.23\%$\rightarrow$2.76\%), showing that added code- and Python-specific continued pretraining changes performance even when architecture and parameter count are held fixed. Through systematic layer-wise ablation experiments across 16,300-16,400 HumanEval code generation attempts, we find that both GPT-2 variants are globally brittle under full-layer zeroing, whereas CodeGen retains partial residual performance in a small subset of layers. GPT-2 Medium never preserves successful generations under ablation, but ablation of layer index 12 uniquely shifts failures from pure syntax collapse to a mixed 76.1\% syntax / 23.9\% runtime regime, suggesting a distinctive mid-depth execution-relevant checkpoint. A follow-up scaled-ablation pilot on layer 12 shows that intermediate attenuation first worsens syntax (2.0\% success at 0.5 scale; 0.0\% at 0.25), while only full zeroing reopens the runtime-error regime (28.0\%), reinforcing the view that layer 12 marks a thresholded execution-relevant stage rather than a smooth redundancy basin. A corresponding CodeGen layer-13 pilot retains 28-30\% success under partial attenuation and still preserves 24\% success under full zeroing while shifting 24\% of samples into runtime errors, indicating broader residual support for executable code. A balanced linear probe on 200 saved layer-12 activation vectors identifies five dimensions that distinguish successful from syntactically invalid generations with 72.5\% held-out accuracy, compared with 75.0\% for a full-layer probe. Constructive steering along this learned five-dimensional direction doubles subset success from 6.0\% to 12.0\%; against 20 matched sparse random controls, the learned vector beats 19 while one control reaches 14.0\% (control mean 6.2\%, empirical $p \le 0.095$). These results suggest that code-pretrained models distribute useful computation across depth more effectively than similarly sized general-language models, and that failure-mode shifts provide a more reliable mechanistic signal than success alone.
+Code generation is an execution-constrained software-engineering task: generated programs must parse, run, and satisfy tests. This paper studies whether small-model code generation improves with parameter scaling, code-specialized pretraining, and more distributed layerwise computation. Across HumanEval, MBPP, EvalPlus HumanEval+/MBPP+, and LiveCodeBench release v2, GPT-2 Medium (355M) does not reliably improve over GPT-2 Small (124M): the HumanEval gap is not statistically significant, and both GPT-2 variants reach 0.0\% success on full-coverage MBPP. In contrast, similarly sized CodeGen checkpoints retain substantially stronger executable-code behavior on HumanEval and MBPP. A fixed-scale CodeGen-350M NL$\rightarrow$Multi$\rightarrow$Mono ladder further shows that later code- and Python-focused continued pretraining improves the strongest checkpoint, especially on MBPP. To examine where these differences arise, we combine full-layer ablation, graded ablation, failure-mode analysis, and sparse activation steering. GPT-2 Medium is globally brittle under layer removal, while CodeGen retains residual success across several layers. A compact GPT-2 Medium layer-12 probe captures most of the success-vs.-syntax signal, but matched controls make the steering result suggestive rather than definitive. Overall, the results support a software-engineering reliability view: in this small-model regime, useful code behavior depends less on parameter count alone than on code-specific pretraining, generation protocol, and the distribution of execution-relevant computation across depth.
 \end{abstract}
+
+\begin{keyword}
+code generation \sep empirical software engineering \sep large language models \sep model evaluation \sep mechanistic interpretability \sep software reliability
+\end{keyword}
+
+\end{frontmatter}
 
 \section{Introduction}
 
-The dominant paradigm in neural language modeling assumes that larger models produce better results. Scaling laws~\cite{kaplan2020scaling,hoffmann2022training} demonstrate consistent improvement as parameters increase from millions to billions, leading to the widespread belief that ``bigger is better''. However, this assumption breaks down dramatically for code generation tasks.
+Neural language-model scaling reliably improves average loss~\cite{kaplan2020scaling,hoffmann2022training}, and larger code models can improve program-synthesis benchmarks~\cite{austin2021program}. But code generation is not only a next-token prediction problem: a completion must parse, execute, and satisfy tests. It is therefore not obvious that modest parameter scaling within a general-language model family should improve execution reliability once code-specific pretraining and layerwise organization differ.
 
-We present a striking empirical observation: when evaluated on the HumanEval Python programming benchmark~\cite{chen2021humaneval}, GPT-2 Medium (355M parameters) achieves \textbf{4.8\% success}, performing \emph{worse} than GPT-2 Small (124M parameters) at \textbf{5.2\% success}. Yet CodeGen-350M~\cite{nijkamp2022codegen}---with nearly identical parameter count to GPT-2 Medium---achieves \textbf{37.4\% success}, a 7.8$\times$ improvement. The same direction persists on the full MBPP test split: both GPT-2 models fall to \textbf{0.0\% success}, while CodeGen still reaches \textbf{7.39\% success}. Under stricter EvalPlus re-scores, both GPT-2 variants remain at \textbf{0.0\% pass@1} on HumanEval+ and \textbf{0.0\% pass@1/pass@10} on MBPP+, while CodeGen retains \textbf{2.1\% pass@1} on HumanEval+ and \textbf{1.1\%/6.4\%} on MBPP+. A contamination-aware LiveCodeBench stress test is harsher for all three small models: GPT-2 Small and GPT-2 Medium both remain at \textbf{0.0\%} pass@1/pass@5/pass@10, while CodeGen is only marginally nonzero at \textbf{0.02\%/0.10\%/0.20\%}. Finally, a within-family CodeGen-350M continued-pretraining ladder (NL$\rightarrow$Multi$\rightarrow$Mono) shows that Mono is best on both HumanEval and MBPP, with MBPP becoming cleanly monotone under continued code pretraining. This scaling paradox contradicts our intuitions about model capacity and raises a fundamental question: \emph{What architectural properties enable some models to generate code effectively while others fail despite having more parameters?}
+We study that gap in the small-model regime. On the HumanEval Python programming benchmark~\cite{chen2021humaneval}, GPT-2 Medium (355M parameters) reaches \textbf{4.8\% success}, statistically indistinguishable from GPT-2 Small (124M parameters) at \textbf{5.2\% success}. Yet CodeGen-350M~\cite{nijkamp2022codegen}---with nearly identical parameter count to GPT-2 Medium---reaches \textbf{37.4\% success}, a 7.8$\times$ improvement. The same ordering persists on the full MBPP test split: both GPT-2 models fall to \textbf{0.0\% success}, while CodeGen still reaches \textbf{7.39\% success}. Under stricter EvalPlus re-scores, both GPT-2 variants remain at \textbf{0.0\% pass@1} on HumanEval+ and \textbf{0.0\% on pass@1 and pass@10} on MBPP+, while CodeGen retains \textbf{2.1\% pass@1} on HumanEval+ and \textbf{1.1\% / 6.4\%} on MBPP+. A contamination-aware LiveCodeBench stress test is harsher for all three small models: GPT-2 Small and GPT-2 Medium both remain at \textbf{0.0\%} on pass@1, pass@5, and pass@10, while CodeGen is only marginally nonzero at \textbf{0.02\%, 0.10\%, and 0.20\%}. Finally, a within-family CodeGen-350M continued-pretraining ladder (NL$\rightarrow$Multi$\rightarrow$Mono) shows that Mono is best on both HumanEval and MBPP, with MBPP becoming cleanly monotone and HumanEval remaining mixed at the intermediate Multi checkpoint. These results motivate a narrower question than whether scale helps in general: \emph{when models are similarly small, what architectural properties let some of them organize executable-code behavior more effectively than larger general-language baselines?}
 
 \subsection{The Bottleneck Hypothesis}
 
@@ -42,12 +54,33 @@ We hypothesize that code generation performance depends not on parameter count b
 
 To test this hypothesis, we conduct systematic layer-wise ablation experiments: for each layer in each model, we zero out all activations and measure the impact on code generation success. This intervention reveals which layers are especially damaging when removed and how the resulting failure modes differ across architectures.
 
+\subsection{Research Questions and Evidence Map}
+
+We organize the study around four research questions. This framing is useful because code generation quality is not a single scalar property: the same model can differ in benchmark success, strict-test robustness, failure mode, and intervention sensitivity.
+
+\begin{table}[H]
+\centering
+\caption{Research Questions, Evidence, and Main Takeaways}
+\label{tab:rq_map}
+\scriptsize
+\begin{tabularx}{\columnwidth}{@{}>{\raggedright\arraybackslash}p{0.23\columnwidth}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{0.30\columnwidth}@{}}
+\toprule
+\textbf{Question} & \textbf{Evidence Used} & \textbf{Takeaway} \\
+\midrule
+RQ1: Does GPT-2 scaling help? & HumanEval, MBPP, EvalPlus, LiveCodeBench & No reliable GPT-2 Small$\rightarrow$Medium gain. \\
+RQ2: Does code pretraining matter? & GPT-2 vs. CodeGen; CodeGen ladder & Yes; code-specialized checkpoints are stronger. \\
+RQ3: What changes under intervention? & Full/graded ablation and failure modes & GPT-2 Medium is brittle; CodeGen is more distributed. \\
+RQ4: Is there a compact control signal? & Layer-12 probe and matched-control steering & Locally useful, but not yet definitive. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
 \subsection{Key Findings}
 
-Through ablation of all 56 layers across three models (GPT-2 Small: 12 layers, Medium: 24 layers, CodeGen: 20 layers) evaluated on 16300-16,400 code generation attempts, we discover:
+Through ablation of all 56 layers across three models (GPT-2 Small: 12 layers, Medium: 24 layers, CodeGen: 20 layers) evaluated on 16{,}300--16{,}400 code generation attempts, we find:
 
 \begin{enumerate}
-\item \textbf{The GPT-2 scaling gap is numerically small on HumanEval and disappears on MBPP}: GPT-2 Small exceeds GPT-2 Medium by only 0.37 percentage points on HumanEval (95\% CI $[-0.70, 1.36]$, $p=0.49$), while both score 0.0\% on full-coverage MBPP.
+\item \textbf{The GPT-2 scaling gap is numerically small on HumanEval and disappears on MBPP}: GPT-2 Small exceeds GPT-2 Medium by only 0.37 percentage points on HumanEval (95\% CI $[-0.73, 1.37]$, $p=0.50$), while both score 0.0\% on full-coverage MBPP.
 
 \item \textbf{GPT-2 Medium is globally fragile but has a distinctive mid-depth failure mode}: every GPT-2 Medium layer ablation reduces success to 0\%, but ablating layer 12 uniquely converts 23.9\% of failures from syntax errors into runtime errors, indicating a special role in producing executable-but-incorrect code.
 
@@ -59,11 +92,13 @@ Through ablation of all 56 layers across three models (GPT-2 Small: 12 layers, M
 
 \item \textbf{Constructive steering is useful but only suggestively specific}: steering GPT-2 Medium along the learned top-5 layer-12 vector raises subset success from 6.0\% to 12.0\% at $\alpha=2.0$. Against 20 matched sparse random controls, the learned vector beats 19 and exceeds the control mean (6.2\%), but one control reaches 14.0\%, so the specificity evidence is promising rather than definitive.
 
-\item \textbf{The scaling failure transfers across benchmarks and stricter tests}: on full-coverage MBPP (257 tasks, 20 samples each), both GPT-2 variants remain at 0.0\% success, whereas CodeGen reaches 7.39\% success and 22.96\% pass@5 with highly significant pairwise gaps ($p=0.0001$). Under a stricter HumanEval+ re-score on the first five saved samples per task, both GPT-2 variants stay at 0.0\% pass@1 while CodeGen retains 2.1\%. On contamination-aware LiveCodeBench release\_v2~\cite{jain2024livecodebench}, both GPT-2 variants remain at 0.0\% pass@1/pass@5/pass@10 and CodeGen remains only marginally nonzero, showing that all three small models are near-zero on a substantially harder modern benchmark.
+\item \textbf{The scaling failure transfers across benchmarks and stricter tests}: on full-coverage MBPP (257 tasks, 20 samples each), both GPT-2 variants remain at 0.0\% success, whereas CodeGen reaches 7.39\% success and 22.96\% pass@5 with highly significant pairwise gaps ($p=0.0001$). Under a stricter HumanEval+ re-score on the first five saved samples per task, both GPT-2 variants stay at 0.0\% pass@1 while CodeGen retains 2.1\%. On contamination-aware LiveCodeBench release v2~\cite{jain2024livecodebench}, both GPT-2 variants remain at 0.0\% on pass@1, pass@5, and pass@10 and CodeGen remains only marginally nonzero, showing that all three small models are near-zero on a substantially harder modern benchmark.
 
-\item \textbf{A within-family CodeGen ladder strengthens the pretraining argument}: in the 350M CodeGen NL$\rightarrow$Multi$\rightarrow$Mono continued-pretraining ladder, Mono is strongest on both benchmarks. On HumanEval it reaches 37.76\% success, significantly above both NL (30.60\%) and Multi (28.46\%), although Multi trails NL slightly. On MBPP the ladder is cleanly monotone (0.02\%$\rightarrow$1.23\%$\rightarrow$2.76\%), with significant NL$<$Multi and Multi$<$Mono improvements. We therefore interpret the ladder as evidence about continued-pretraining plus curriculum effects rather than a perfectly factorized distribution-only ablation.
+\item \textbf{A within-family CodeGen ladder strengthens the pretraining argument}: in the 350M CodeGen NL$\rightarrow$Multi$\rightarrow$Mono continued-pretraining ladder, Mono is strongest on both benchmarks. On full-coverage HumanEval it reaches 39.0\% success, significantly above both NL (31.60\%) and Multi (30.66\%), while NL vs.\ Multi is not significant. On MBPP the ladder is cleanly monotone (0.02\%$\rightarrow$1.23\%$\rightarrow$2.76\%), with significant NL$<$Multi and Multi$<$Mono improvements. We therefore interpret the ladder as evidence about continued-pretraining plus curriculum effects rather than a perfectly factorized distribution-only ablation.
 
-\item \textbf{Error patterns reveal architectural differences}: GPT-2 models produce 28.7\% indentation errors and 8.1\% keyword errors, while CodeGen produces 21.8\% bracket errors and 6.9\% indentation errors, reflecting different learned syntactic priors from pretraining data distribution.
+\item \textbf{Prompt and decoding controls expose systems-level bottlenecks}: targeted robustness controls show that prompt format and decoding temperature can change success substantially without changing model size. On HumanEval, CodeGen-Mono moves from 42.6\% success under signature-only prompts to 71.2\% under comment-plus-signature prompts. On MBPP, low temperature increases successful samples for both CodeGen-Mono and Qwen2.5-Coder, but reduces distinct-task coverage relative to standard decoding.
+
+\item \textbf{Error profiles differ across checkpoints}: GPT-2 models produce 28.7\% indentation errors and 8.1\% keyword errors, while CodeGen produces 23.1\% bracket errors and 7.4\% indentation errors, revealing a distinct syntax-error profile without isolating the source of that difference.
 \end{enumerate}
 
 \subsection{Contributions}
@@ -71,16 +106,16 @@ Through ablation of all 56 layers across three models (GPT-2 Small: 12 layers, M
 This work makes four primary contributions:
 
 \begin{enumerate}
-\item \textbf{Empirical}: We document and explain the scaling paradox in code generation through comprehensive evaluation on HumanEval, strict HumanEval+ and MBPP+ re-scoring with EvalPlus~\cite{liu2023evalplus}, full-coverage MBPP, and a contamination-aware LiveCodeBench stress test across three model scales.
+\item \textbf{Empirical}: We document a negative small-model scaling result in code generation through evaluation on HumanEval, strict HumanEval+ and MBPP+ re-scoring with EvalPlus~\cite{liu2023evalplus}, full-coverage MBPP, and a contamination-aware LiveCodeBench stress test across three model scales.
 
 \item \textbf{Methodological}: We combine sample-level evaluation with problem-level bootstrap confidence intervals, paired permutation tests, hard layer ablation, graded ablation, and matched-control activation steering to study code-generation failures from both statistical and mechanistic angles.
 
 \item \textbf{Mechanistic}: We identify a compact layer-12 activation subspace that captures most of the linear probe performance, show that graded weakening of layer 12 reproduces the same execution-relevant transition seen under full ablation, and show that constructive steering along this subspace improves execution while yielding suggestive, but not yet definitive, evidence of specificity over matched sparse random controls.
 
-\item \textbf{Architectural}: We provide evidence-based design principles for code-generating models: distributed processing across multiple critical layers prevents brittleness and enables graceful degradation, while code-specialized models preserve useful computation under graded interventions more effectively than general-language models. A within-family CodeGen continued-pretraining ladder further shows that architecture-matched checkpoints can still diverge substantially as code- and Python-specific pretraining accumulates.
+\item \textbf{Software-engineering reliability}: We show that reported code-generation reliability depends on more than checkpoint size: code-specific pretraining, the distribution of executable-code behavior across depth, prompt format, decoding policy, and task-level coverage all affect whether generated programs actually run and pass tests. A within-family CodeGen continued-pretraining ladder further shows that architecture-matched checkpoints can still diverge substantially as code- and Python-specific pretraining accumulates.
 \end{enumerate}
 
-These findings challenge the assumption that parameter scaling alone improves code generation, suggesting that architectural choices during pretraining---particularly how computation is distributed across layers---matter more than model size.
+These findings challenge the assumption that parameter scaling alone improves code generation, suggesting that in this small-model regime pretraining specialization and the distribution of execution-relevant computation across layers are more informative than model size alone.
 
 \section{Related Work}
 
@@ -90,17 +125,23 @@ Recent progress in neural code generation follows from scaling language models t
 
 However, these works focus on maximizing performance through scale, ensembling, and test-time compute, rather than understanding the internal mechanisms of code generation. Our work differs by investigating \emph{why} some architectures succeed where others fail, even at comparable scale.
 
+\subsection{Evaluation Robustness in Code Generation}
+
+Functional-correctness benchmarks can overstate code quality when their tests are too sparse. EvalPlus addresses this by augmenting HumanEval and MBPP with much larger generated test suites, showing that stronger tests can expose previously accepted but incorrect programs and even change model rankings~\cite{liu2023evalplus}. LiveCodeBench addresses a complementary threat: contamination and benchmark aging. By continuously collecting newer contest problems, it provides a harder time-aware evaluation surface beyond static suites such as HumanEval and MBPP~\cite{jain2024livecodebench}.
+
+These benchmark developments motivate two design choices in our study. First, we retain the classical benchmarks because they support dense, reproducible mechanistic analysis and direct comparison with prior code-generation work~\cite{chen2021humaneval,austin2021program}. Second, we add strict EvalPlus re-scoring and contamination-aware LiveCodeBench validation so the main ranking is not interpreted only through historically permissive tests or older static problems. Our contribution is not a new benchmark; it is a mechanistic account whose empirical claims are checked across increasingly strict evaluation surfaces.
+
 \subsection{Layer-wise Analysis of Transformers}
 
-Understanding which layers perform which computations has been studied extensively for natural language tasks. Clark et al.~\cite{clark2019what} showed that different layers encode different linguistic properties, with early layers capturing syntax and later layers capturing semantics. Voita et al.~\cite{voita2019analyzing} demonstrated that layer representations can be interpreted through linear projections, revealing compositional structure.
+Understanding which layers perform which computations has been studied extensively for natural language tasks. \citet{clark2019what} showed that different layers encode different linguistic properties, with early layers capturing syntax and later layers capturing semantics. \citet{voita2019analyzing} demonstrated that layer representations can be interpreted through linear projections, revealing compositional structure.
 
-For code models specifically, prior work analyzed attention patterns in CodeBERT, finding that early layers attend to syntactic structure while late layers attend to variable relationships. However, these analyses are observational (measuring what layers \emph{do}) rather than interventional (measuring what layers are \emph{necessary for}), limiting causal conclusions.
+For code models specifically, \citet{ma2024unveiling} probe seven pretrained code models, including CodeBERT, and report that syntax is captured more consistently than semantics across the family. However, these analyses are observational (measuring what layers \emph{do}) rather than interventional (measuring what layers are \emph{necessary for}), limiting causal conclusions.
 
 Our ablation methodology extends this line of work by using interventions (zeroing layer activations) to establish which layers are causally necessary for successful generation, revealing bottlenecks invisible to observational analysis.
 
 \subsection{Mechanistic Interpretability}
 
-The mechanistic interpretability research program~\cite{olsson2022in,conmy2023towards} aims to reverse-engineer neural networks into human-understandable algorithms. Meng et al.~\cite{meng2022locating} identified specific attention heads and MLP layers responsible for factual recall, enabling targeted interventions. Vig and Belinkov~\cite{vig2020causal} formalized methods for attributing model behavior to specific components through counterfactual interventions.
+The mechanistic interpretability research program~\cite{olsson2022in,conmy2023towards} aims to reverse-engineer neural networks into human-understandable algorithms. \citet{meng2022locating} identified specific attention heads and MLP layers responsible for factual recall, enabling targeted interventions. \citet{vig2020causal} formalized methods for attributing model behavior to specific components through counterfactual interventions.
 
 The circuits thread in mechanistic interpretability has successfully reverse-engineered small vision models, identifying exact algorithms for tasks like curve detection. For language models, prior work has identified induction heads (responsible for in-context learning)~\cite{olsson2022in} and factual recall mechanisms~\cite{meng2022locating}.
 
@@ -108,9 +149,9 @@ Our work applies mechanistic interpretability to code generation, identifying no
 
 \subsection{Scaling Laws and Their Limits}
 
-Neural scaling laws~\cite{kaplan2020scaling,hoffmann2022training} predict that loss decreases smoothly with model size, dataset size, and compute. However, these laws are typically validated on perplexity---a measure of next-token prediction---rather than downstream task success.
+Neural scaling laws~\cite{kaplan2020scaling,hoffmann2022training} predict that loss decreases smoothly with model size, dataset size, and compute. Program-synthesis work also reports broad scaling trends: \citet{austin2021program} find log-linear performance growth across 244M--137B models on MBPP. Those results establish that scale can help, but they do not imply that every modest within-family increase will improve execution reliability under every pretraining regime.
 
-Recent work has identified task-specific deviations from scaling laws. Wei et al.~\cite{wei2022emergent} showed that some reasoning tasks exhibit inverse scaling (worse performance as models grow), contradicting the universal scaling assumption. Our work provides mechanistic evidence for why scaling can fail: as models grow, they may develop deeper bottlenecks rather than more distributed processing.
+Recent work has also identified task-specific deviations from simple scaling narratives. \citet{wei2022emergent} showed that some reasoning tasks exhibit inverse scaling, contradicting a universal ``larger is always better'' assumption. Our study addresses a narrower regime: similarly small decoder-only models, where the key empirical contrast is not frontier-scale failure but the interaction between pretraining specialization and how executable-code behavior is distributed across depth.
 
 \section{Methodology}
 
@@ -138,17 +179,17 @@ We evaluate on three benchmark families. The first is \textbf{HumanEval}~\cite{c
 
 The second benchmark is the sanitized \textbf{MBPP} test split~\cite{austin2021program}, which contains 257 short Python programming tasks with reference tests derived from natural-language specifications. We use HumanEval for the full mechanistic study and MBPP for external validation of the central scaling claim.
 
-For HumanEval, we generate 100 candidate solutions per problem using temperature sampling (temp=0.8, top-p=0.95), yielding 16,300-16,400 total generation attempts per model. For the full MBPP validation, we generate 20 samples per task, yielding 5,140 attempts per model. This sampling strategy balances diversity (avoiding repetition) with quality (avoiding random text) while staying within the single-GPU compute budget.
+For HumanEval, we generate 100 candidate solutions per problem using temperature sampling (temp=0.8, top-p=0.95), yielding 16,400 intended completions per fully saved run. In the synced main CodeGen artifact, however, \texttt{HumanEval/129} still has no saved completions, so the scored sample count is 16,300 for that one condition. For the full MBPP validation, we generate 20 samples per task, yielding 5,140 attempts per model. This sampling strategy balances diversity (avoiding repetition) with quality (avoiding random text) while staying within the single-GPU compute budget.
 
 As a stricter robustness check, we also re-score the first five saved HumanEval samples per problem with the HumanEval+ test augmentation distributed by EvalPlus~\cite{liu2023evalplus}. We treat this as a completion-level pass@1 robustness check rather than a replacement for our main sample-level evaluation, because the stricter suite is used only on a capped subset of saved generations.
 
 We additionally evaluate \textbf{MBPP+} with the official EvalPlus `mbpp' evaluator~\cite{liu2023evalplus}. We treat this as a separate versioned benchmark derived from MBPP-sanitized rather than as ``MBPP with more tests,'' and we report the Base+Extra score as the primary strict result. Our clean MBPP+ run uses 378 EvalPlus tasks and 20 samples per task.
 
-Our third benchmark family is the \textbf{LiveCodeBench} release\_v2 code-generation benchmark~\cite{jain2024livecodebench}. We use its default `code\_generation\_lite' configuration with 511 scored tasks and 10 samples per task as a contamination-aware stress test. Unlike HumanEval and MBPP, which are static curated Python suites, LiveCodeBench draws newer contest problems and is designed to make benchmark contamination harder. We therefore use it primarily to test whether the paper's cross-model ordering survives on a modern harder benchmark, not to replace the mechanistic HumanEval analysis.
+Our third benchmark family is the \textbf{LiveCodeBench} release v2 code-generation benchmark~\cite{jain2024livecodebench}. We use its default code-generation-lite configuration with 511 scored tasks and 10 samples per task as a contamination-aware stress test. Unlike HumanEval and MBPP, which are static curated Python suites, LiveCodeBench draws newer contest problems and is designed to make benchmark contamination harder. We therefore use it primarily to test whether the cross-model ordering survives on a modern harder benchmark, not to replace the mechanistic HumanEval analysis.
 
 To partially separate pretraining-distribution effects from family differences, we also evaluate the \textbf{CodeGen-350M NL$\rightarrow$Multi$\rightarrow$Mono continued-pretraining ladder}~\cite{nijkamp2022codegen}. This keeps architecture and parameter count fixed while changing the added pretraining corpus and curriculum. We interpret it as a strong within-family control, but not as a matched-compute causal ablation, because later checkpoints receive additional tokens and optimization steps.
 
-\begin{table}[h]
+\begin{table}[t]
 \centering
 \caption{Experimental Scope by Benchmark Family}
 \label{tab:scope}
@@ -158,12 +199,12 @@ To partially separate pretraining-distribution effects from family differences, 
 \toprule
 \textbf{Setting} & \textbf{Tasks} & \textbf{Samples / Task} & \textbf{Primary Role} \\
 \midrule
-HumanEval main & 164 (GPT-2), 163 (CodeGen) & 100 & core comparison / pass@k \\
+HumanEval main & 164 (GPT-2), 163 scored (CodeGen) & 100 & core comparison / pass@k \\
 HumanEval+ strict & 164 & 5 & stronger test-suite check \\
 MBPP full & 257 & 20 & external validation \\
 MBPP+ strict & 378 & 20 & versioned strict validation \\
 LiveCodeBench v2 & 511 & 10 & contamination-aware stress test \\
-CodeGen ladder (HumanEval) & 142--147 & 100 & partial within-family control \\
+CodeGen ladder (HumanEval) & 164 & 100 & within-family control \\
 CodeGen ladder (MBPP) & 257 & 20 & within-family control \\
 Mechanistic pilots & 10 & 5 & causal intervention tests \\
 \bottomrule
@@ -171,6 +212,8 @@ Mechanistic pilots & 10 & 5 & causal intervention tests \\
 \hspace{0pt}%
 }
 \end{table}
+
+\noindent\textbf{Coverage note}: In the synced artifacts, the main CodeGen HumanEval file still contains a zero-sample \texttt{HumanEval/129} entry. We therefore report sample-level main results over 163 scored CodeGen tasks, while the saved bootstrap summary retains the empty entry as a zero-success task when forming 164-task problem-level intervals.
 
 \subsection{Layer Ablation Protocol}
 
@@ -228,7 +271,7 @@ This distinction matters for the scaling claim. The raw success rates differ onl
 
 \subsection{Reproducibility and Compute Constraints}
 
-All experiments use fixed pretrained checkpoints, fixed decoding hyperparameters (temperature $0.8$, top-$p$ $0.95$), and deterministic seed schedules tied to the problem index and intervention condition. The main HumanEval sweeps are evaluated from saved JSON outputs, while the graded-ablation and activation-steering pilots are rerun directly under the same executor and timeout settings. The repository includes the benchmark configs, figure-generation scripts, and saved artifact summaries used to regenerate every reported table and figure in this draft.
+All experiments use fixed pretrained checkpoints, fixed decoding hyperparameters (temperature $0.8$, top-$p$ $0.95$), and deterministic seed schedules tied to the problem index and intervention condition. The main HumanEval sweeps are evaluated from saved JSON outputs, while the graded-ablation and activation-steering pilots are rerun directly under the same executor and timeout settings. The curated supplementary artifact archive includes the benchmark configs, figure-generation scripts, and saved artifact summaries used to regenerate every reported table and figure in this manuscript, with the main CodeGen HumanEval coverage caveat noted above.
 
 The mechanistic follow-up experiments are intentionally smaller because they run with batch size 1 on a single 12~GB consumer GPU. For that reason, we treat the 10-problem / 5-sample intervention studies as targeted causal probes rather than replacements for the full benchmark. All tables and figures in this paper are generated from saved artifacts rather than manually transcribed counts.
 
@@ -277,23 +320,23 @@ This analysis tests both whether a compact linear readout exists in the layer's 
 
 \subsection{The Scaling Paradox: Medium Performs Worse Than Small}
 
-\begin{figure}[h]
+\begin{figure*}[t]
 \centering
-\includegraphics[width=0.9\columnwidth]{figure1_model_comparison.pdf}
-\caption{Code generation success rates across three models. Despite having 2.9$\times$ more parameters, GPT-2 Medium (4.8\% success) performs worse than GPT-2 Small (5.2\% success). CodeGen-350M achieves 37.4\% success with comparable parameters to Medium, demonstrating that pretraining distribution---not parameter count---determines code generation capability.}
-\label{fig:model_comparison}
-\end{figure}
+\includegraphics[width=\textwidth]{figure10_cross_benchmark_map.pdf}
+\caption{Benchmark-wide comparison across classical, strict, and contamination-aware evaluations. HumanEval and MBPP show the main scale-versus-pretraining gap: GPT-2 Small and GPT-2 Medium remain close, while CodeGen is far stronger. Stricter benchmarks preserve the ranking but compress all three models sharply toward zero.}
+\label{fig:benchmark_map}
+\end{figure*}
 
-Table~\ref{tab:performance} presents full results across all error categories:
+Figure~\ref{fig:benchmark_map} summarizes the benchmark-wide pattern, while Table~\ref{tab:performance} presents the full HumanEval error-category totals:
 
 
 \begin{table*}[t]
 \centering
-\caption{Model Performance on HumanEval (100 samples per problem, 16,300--16,400 total attempts; CodeGen scored on 163 tasks)}
+\caption{Model Performance on HumanEval (100 samples per problem; GPT-2 totals 16,400 attempts, while CodeGen has 16,300 scored attempts because \texttt{HumanEval/129} has no saved completions)}
 \label{tab:performance}
 \begin{tabular}{@{}lccccc@{}}
 \toprule
-\textbf{Model} & \textbf{Parameters} & \textbf{Success \%} & \textbf{Syntax \%} & \textbf{Runtime \%} & \textbf{Timeout \%} \\
+\textbf{Model} & \textbf{Params} & \textbf{Success} & \textbf{Syntax} & \textbf{Runtime} & \textbf{Timeout} \\
 \midrule
 GPT-2 Small & 124M & 5.2 & 94.4 & 0.4 & 0.0 \\
 GPT-2 Medium & 355M & 4.8 & 94.9 & 0.3 & 0.0 \\
@@ -305,11 +348,11 @@ CodeGen-350M & 350M & 37.4 & 61.1 & 1.1 & 0.3 \\
 \textbf{Key observations:}
 
 \begin{enumerate}
-\item \textbf{Scaling hurts performance}: GPT-2 Medium (355M parameters) achieves 4.8\% success---\emph{worse} than GPT-2 Small (124M parameters) at 5.2\% success. This 8\% relative degradation contradicts standard scaling laws~\cite{kaplan2020scaling}.
+\item \textbf{Scaling does not yield a reliable gain}: GPT-2 Medium (355M parameters) achieves 4.8\% success versus GPT-2 Small (124M parameters) at 5.2\% success. This small numerical reversal is not statistically reliable, but it does contradict the simple expectation that added parameters should monotonically improve code-generation success.
 
-\item \textbf{Pretraining matters more than scale}: CodeGen-350M has nearly identical parameter count to GPT-2 Medium but achieves 7.8$\times$ higher success (37.4\% vs. 4.8\%), demonstrating that training distribution dominates architectural capacity~\cite{nijkamp2022codegen}.
+\item \textbf{Pretraining explains more than scale in this comparison}: CodeGen-350M has nearly identical parameter count to GPT-2 Medium but achieves 7.8$\times$ higher success (37.4\% vs. 4.8\%), showing that parameter count alone does not explain the gap and that pretraining regime is the stronger explanation in this comparison~\cite{nijkamp2022codegen}.
 
-\item \textbf{Failure modes differ by pretraining}: GPT-2 models fail almost entirely on syntax (94.4-94.9\% of all generations), while CodeGen leaves a larger fraction of generations executable enough to surface runtime errors and occasional timeouts, suggesting more structured code representations.
+\item \textbf{Failure modes differ across checkpoints}: GPT-2 models fail almost entirely on syntax (94.4-94.9\% of all generations), while CodeGen leaves a larger fraction of generations executable enough to surface runtime errors and occasional timeouts, suggesting a different executable-code profile in this comparison.
 
 \item \textbf{Both GPT-2 scales fail similarly}: The near-identical error distributions between Small (94.4\% syntax) and Medium (94.9\% syntax) suggest they learned similar---and similarly inadequate---code representations despite 2.9$\times$ parameter difference.
 \end{enumerate}
@@ -318,7 +361,7 @@ CodeGen-350M & 350M & 37.4 & 61.1 & 1.1 & 0.3 \\
 
 The raw percentages in Table~\ref{tab:performance} could still reflect task-level sampling noise, especially for the narrow 5.2\% vs. 4.8\% GPT-2 comparison. We therefore summarize problem-level bootstrap intervals and HumanEval pass@10 estimates in Table~\ref{tab:significance}.
 
-\begin{table}[h]
+\begin{table}[t]
 \centering
 \caption{Problem-Level Statistical Validation}
 \label{tab:significance}
@@ -328,23 +371,30 @@ The raw percentages in Table~\ref{tab:performance} could still reflect task-leve
 \toprule
 \textbf{Model} & \textbf{Success \% [95\% CI]} & \textbf{pass@10 [95\% CI]} \\
 \midrule
-GPT-2 Small & 5.15 [4.48, 5.84] & 37.17 [33.65, 40.82] \\
-GPT-2 Medium & 4.79 [3.96, 5.74] & 33.09 [29.57, 36.77] \\
-CodeGen-350M & 37.40 [35.71, 39.12] & 97.89 [97.37, 98.35] \\
+GPT-2 Small & 5.15 [4.49, 5.84] & 37.17 [33.50, 40.83] \\
+GPT-2 Medium & 4.79 [3.94, 5.77] & 33.09 [29.55, 36.79] \\
+CodeGen-350M & 37.42 [35.77, 39.13] & 97.90 [97.41, 98.36] \\
 \bottomrule
 \end{tabular}
 }
 \end{table}
 
-\textbf{Finding}: The GPT-2 Small vs. GPT-2 Medium difference is not statistically reliable at the problem level (+0.37 percentage points, 95\% CI $[-0.70, 1.36]$, $p=0.4907$). By contrast, both GPT-2 models differ dramatically from CodeGen: GPT-2 Small vs. CodeGen is $-32.23$ points (95\% CI $[-34.04, -30.45]$, $p=0.0002$), and GPT-2 Medium vs. CodeGen is $-32.63$ points (95\% CI $[-34.53, -30.75]$, $p=0.0002$).
+\textbf{Finding}: The GPT-2 Small vs. GPT-2 Medium difference is not statistically reliable at the problem level (+0.37 percentage points, 95\% CI $[-0.73, 1.37]$, $p=0.5001$). By contrast, both GPT-2 models differ dramatically from CodeGen: GPT-2 Small vs. CodeGen is $-32.27$ points (95\% CI $[-34.06, -30.47]$, $p=0.0001$), and GPT-2 Medium vs. CodeGen is $-32.63$ points (95\% CI $[-34.57, -30.68]$, $p=0.0001$).
 
-\textbf{Interpretation}: The scaling paradox within the GPT-2 family is therefore best understood as a \emph{failure to improve}, not as a confidently estimated reversal in favor of GPT-2 Small. The code-pretraining gap, however, is large, stable, and statistically unambiguous.
+\textbf{Interpretation}: The scaling paradox within the GPT-2 family is therefore best understood as a \emph{failure to improve}, not as a confidently estimated reversal in favor of GPT-2 Small. The code-pretraining gap, however, is large, stable, and statistically unambiguous. Figure~\ref{fig:bootstrap_forest} makes the same contrast visible across both HumanEval and MBPP. For transparency, the saved bootstrap summary keeps all 164 CodeGen task IDs by treating the empty \texttt{HumanEval/129} entry as zero success, whereas the sample-level table above is based on the 163 tasks with scored completions; Appendix Figure~\ref{fig:coverage_audit} shows the final scored-vs-intended completion counts and the pre-sync repair burden for the repaired HumanEval artifacts.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figure11_bootstrap_forest.pdf}
+\caption{Bootstrap confidence intervals and pairwise success-rate deltas for the main HumanEval and MBPP comparisons. The GPT-2 Small / Medium gap overlaps zero on both benchmarks, whereas both GPT-2 models are cleanly separated from CodeGen.}
+\label{fig:bootstrap_forest}
+\end{figure*}
 
 \subsection{External Validation on MBPP}
 
 To test whether the scaling paradox is specific to HumanEval, we reran all three models on the full sanitized MBPP test split, using all 257 tasks and 20 samples per task. This gives a second benchmark with different prompt style and shorter programming tasks, while keeping the same Python execution setting.
 
-\begin{table}[h]
+\begin{table}[t]
 \centering
 \caption{Full-Coverage MBPP Validation}
 \label{tab:mbpp_validation}
@@ -364,13 +414,13 @@ CodeGen-350M & 7.39 [5.88, 8.97] & 22.96 [18.95, 27.09] & 39.88 & 16.11 \\
 
 \textbf{Finding}: The scaling failure transfers cleanly. On MBPP, GPT-2 Small and GPT-2 Medium are tied at 0.0\% success, while CodeGen reaches 7.39\% success and 22.96\% pass@5. The pairwise bootstrap differences against CodeGen remain highly significant for both GPT-2 Small and GPT-2 Medium ($-7.39$ points in each case, $p=0.0001$), whereas GPT-2 Small vs. GPT-2 Medium is exactly 0.0 points ($p=1.0$).
 
-\textbf{Interpretation}: This external validation matters because it shows the paper's central claim is not a HumanEval artifact. Across both benchmarks, scaling the general-language GPT-2 family fails to produce useful code-generation gains, while code-specific pretraining continues to produce a qualitatively different failure profile. MBPP makes this difference even starker: the GPT-2 models collapse almost entirely to syntax errors, whereas CodeGen preserves a much larger executable regime with mixed wrong-output and runtime failures.
+\textbf{Interpretation}: This external validation matters because it shows that the central claim is not a HumanEval artifact. Across both benchmarks, scaling the general-language GPT-2 family fails to produce useful code-generation gains, while code-specific pretraining continues to produce a qualitatively different failure profile. MBPP makes this difference even starker: the GPT-2 models collapse almost entirely to syntax errors, whereas CodeGen preserves a much larger executable regime with mixed wrong-output and runtime failures.
 
 \subsection{Strict Re-Evaluation on HumanEval+}
 
 To test whether the main HumanEval ranking survives a stronger unit-test suite, we re-scored the first five saved HumanEval samples per task with HumanEval+, using the EvalPlus test augmentation. This gives a stricter completion-level pass@1 estimate without rerunning the full generation pipeline.
 
-\begin{table}[h]
+\begin{table}[t]
 \centering
 \caption{Strict HumanEval Re-scoring with HumanEval+}
 \label{tab:humaneval_plus}
@@ -396,7 +446,7 @@ CodeGen-350M & 2.90 & 2.10 \\
 
 We next evaluate MBPP+ with the official EvalPlus `mbpp' evaluator, reporting the Base+Extra score as our primary strict metric. Because MBPP+ is a versioned benchmark derived from MBPP-sanitized rather than the original MBPP split, we report it separately from Table~\ref{tab:mbpp_validation} and do not compare it directly to legacy MBPP numbers.
 
-\begin{table}[h]
+\begin{table}[t]
 \centering
 \caption{Strict MBPP+ Re-scoring with EvalPlus}
 \label{tab:mbpp_plus}
@@ -420,11 +470,11 @@ CodeGen-350M & 378 & 1.10 & 6.40 \\
 
 \subsection{Contamination-Aware Validation on LiveCodeBench}
 
-To test whether the same ranking survives on a newer contamination-aware benchmark, we evaluated all three models on LiveCodeBench release\_v2~\cite{jain2024livecodebench} in its default `code\_generation\_lite' setting, using 10 samples per task. This benchmark is substantially harder than HumanEval or MBPP for models in the 124M--355M range.
+To test whether the same ranking survives on a newer contamination-aware benchmark, we evaluated all three models on LiveCodeBench release v2~\cite{jain2024livecodebench} in its default code-generation-lite setting, using 10 samples per task. This benchmark is substantially harder than HumanEval or MBPP for models in the 124M--355M range.
 
-\begin{table}[h]
+\begin{table}[t]
 \centering
-\caption{LiveCodeBench release\_v2 Validation}
+\caption{LiveCodeBench release v2 Validation}
 \label{tab:livecodebench_validation}
 \scriptsize
 \resizebox{\columnwidth}{!}{%
@@ -442,15 +492,15 @@ CodeGen-350M & 511 & 0.02 & 0.10 & 0.20 \\
 
 \textbf{Finding}: The relative ordering is preserved, but the absolute performance landscape changes sharply. GPT-2 Small and GPT-2 Medium remain exactly at zero, while CodeGen is only marginally nonzero. For GPT-2 Small, one task did not yield a valid scored record under the custom export path, so pass@k is reported over 510 scored tasks; the other two models are scored over the full 511 tasks.
 
-\textbf{Interpretation}: LiveCodeBench is therefore best read as a calibration result rather than a new positive benchmark win. It strengthens the paper's negative claim that scale alone does not induce useful code generation in small general-language models, while also showing that a 350M code-pretrained model is still far from practically capable on a harder contamination-aware benchmark. The main positive CodeGen advantage is strongest on the classical Python benchmarks (HumanEval and MBPP), not on this harsher stress test.
+\textbf{Interpretation}: LiveCodeBench is therefore best read as a calibration result rather than a new positive benchmark win. It strengthens the negative claim that scale alone does not induce useful code generation in small general-language models, while also showing that a 350M code-pretrained model is still far from practically capable on a harder contamination-aware benchmark. The main positive CodeGen advantage is strongest on the classical Python benchmarks (HumanEval and MBPP), not on this harsher stress test. Appendix Figure~\ref{fig:strictness_cascade} shows the same compression as a pass@1 cascade across benchmark families.
 
 \subsection{Within-Family Continued-Pretraining Control in CodeGen}
 
-To reduce the objection that GPT-2 versus CodeGen is ``just a family difference,'' we evaluate the CodeGen-350M NL$\rightarrow$Multi$\rightarrow$Mono checkpoint ladder described by Nijkamp et al.~\cite{nijkamp2022codegen}. This comparison holds architecture and parameter count fixed while changing the added continued-pretraining corpus. We treat it as a strong within-family control, not as a pure distribution-only isolation, because later checkpoints also receive additional optimization steps and tokens.
+To reduce the objection that GPT-2 versus CodeGen is ``just a family difference,'' we evaluate the CodeGen-350M NL$\rightarrow$Multi$\rightarrow$Mono checkpoint ladder described by \citet{nijkamp2022codegen}. This comparison holds architecture and parameter count fixed while changing the added continued-pretraining corpus. We treat it as a strong within-family control, not as a pure distribution-only isolation, because later checkpoints also receive additional optimization steps and tokens.
 
-\begin{table}[h]
+\begin{table}[t]
 \centering
-\caption{CodeGen-350M Continued-Pretraining Ladder (partial HumanEval coverage)}
+\caption{CodeGen-350M Continued-Pretraining Ladder}
 \label{tab:codegen_ladder}
 \scriptsize
 \resizebox{\columnwidth}{!}{%
@@ -458,29 +508,56 @@ To reduce the objection that GPT-2 versus CodeGen is ``just a family difference,
 \toprule
 \textbf{Checkpoint} & \textbf{HumanEval tasks} & \textbf{HumanEval success \%} & \textbf{MBPP success \%} \\
 \midrule
-CodeGen-NL & 142 & 30.60 & 0.02 \\
-CodeGen-Multi & 147 & 28.46 & 1.23 \\
-CodeGen-Mono & 147 & 37.76 & 2.76 \\
+CodeGen-NL & 164 & 31.60 & 0.02 \\
+CodeGen-Multi & 164 & 30.66 & 1.23 \\
+CodeGen-Mono & 164 & 39.00 & 2.76 \\
 \bottomrule
 \end{tabular}
 }
 \end{table}
 
-\textbf{Finding}: Mono is strongest on both benchmarks, but the ladder behaves differently across them. On HumanEval, the comparison is only partial because the committed runs score 142 tasks for NL and 147 for Multi and Mono. Over the shared scored subsets, Mono significantly exceeds both NL (37.76\% vs.\ 30.60\%, $p=0.0001$) and Multi (37.76\% vs.\ 28.46\%, $p=0.0001$), while Multi trails NL slightly (28.46\% vs.\ 30.60\%, $p=0.0443$). On MBPP, the ladder becomes cleanly monotone: NL reaches 0.02\%, Multi 1.23\%, and Mono 2.76\%, with significant improvements from NL to Multi ($p=0.0001$) and Multi to Mono ($p=0.0157$).
+\textbf{Finding}: Mono is strongest on both benchmarks, but the ladder behaves differently across them. On full-coverage HumanEval, Mono significantly exceeds both NL (39.00\% vs.\ 31.60\%, $p=0.0001$) and Multi (39.00\% vs.\ 30.66\%, $p=0.0001$), while NL vs.\ Multi is small and not significant (31.60\% vs.\ 30.66\%, $p=0.4421$). On MBPP, the ladder remains cleanly monotone: NL reaches 0.02\%, Multi 1.23\%, and Mono 2.76\%, with significant improvements from NL to Multi ($p=0.0001$) and Multi to Mono ($p=0.0157$).
 
-\textbf{Interpretation}: This is still strong evidence against a pure family-comparison objection, but the HumanEval portion should be read conservatively because it is not a clean 164-task within-family sweep. Even within a single 350M architecture family, additional code- and Python-specific continued pretraining changes performance substantially. The HumanEval ladder is both partial and mixed because Multi underperforms NL, so we do not treat the ladder as a matched-compute law. The MBPP result is cleaner and supports the narrower claim that continued-pretraining plus curriculum effects materially improve small-model code generation within a single family.
+\textbf{Interpretation}: This is now stronger within-family evidence because the HumanEval ladder is full-coverage rather than OOM-truncated. Even so, the HumanEval ladder is still mixed at the intermediate checkpoint because Multi does not improve over NL, and the checkpoints still differ in additional compute and curriculum. We therefore use the ladder to support a continued-pretraining plus curriculum claim, not a matched-compute law. The MBPP result is cleaner and supports the narrower claim that continued-pretraining plus curriculum effects materially improve small-model code generation within a single family.
 
 As an auxiliary diagnostic, prompt perplexity on the ladder prompts is lowest for Mono on both HumanEval (4.87) and MBPP (4.46), intermediate for NL (4.93 and 4.64), and highest for Multi (5.54 and 5.23). Following CodeGen, we interpret these numbers only as prompt--checkpoint compatibility diagnostics, not as direct explanations of functional gains, so they remain secondary evidence rather than a main result.
+
+Figure~\ref{fig:codegen_ladder_benchmarks} visualizes the key asymmetry: HumanEval only improves decisively at the final Mono stage, whereas MBPP improves throughout the ladder.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figure12_codegen_ladder_benchmarks.pdf}
+\caption{Within-family CodeGen ladder performance on HumanEval and MBPP. Mono is best on both benchmarks, but only MBPP is cleanly monotone at the intermediate Multi checkpoint. HumanEval improves decisively only at the final Mono stage.}
+\label{fig:codegen_ladder_benchmarks}
+\end{figure*}
+
+\subsection{Prompt and Decoding Robustness Controls}
+
+The preceding results show that parameter count and pretraining distribution are not interchangeable. We next ask a more systems-oriented question: how much of the observed reliability depends on the surrounding generation protocol? We therefore ran targeted robustness controls on the three most informative small models: GPT-2 Medium, CodeGen-Mono 350M, and Qwen2.5-Coder 0.5B. These controls are not intended to replace the larger 100-sample main sweeps; they are sensitivity analyses using fixed saved artifacts, 20 samples per HumanEval task, and 10 samples per MBPP task.
+
+Figure~\ref{fig:targeted_robustness_controls} summarizes the result. Prompt format has a large effect on HumanEval for code-specialized models: CodeGen-Mono moves from 42.6\% sample success under signature-only prompting to 71.2\% under comment-plus-signature prompting, while Qwen2.5-Coder moves from 41.6\% under canonical prompting to 54.7\% under comment-plus-signature prompting. GPT-2 Medium remains weak across all prompt styles, ranging only from 1.1\% to 2.1\% sample success, so prompt format does not rescue the general-language model's syntax bottleneck.
+
+Decoding temperature has a different profile. On HumanEval, GPT-2 Medium improves slightly at high temperature (3.1\% vs.\ 2.1\% standard), but remains far below the code-specialized models. CodeGen-Mono is strongest at standard temperature (56.1\% sample success), and Qwen2.5-Coder is slightly strongest at low temperature (42.2\%) but loses distinct-task coverage relative to standard decoding. On MBPP, low temperature improves sample success for both CodeGen-Mono (14.4\% vs.\ 8.6\% standard) and Qwen2.5-Coder (28.8\% vs.\ 19.0\% standard), but it reduces distinct-task coverage: CodeGen-Mono falls from 34.2\% covered tasks under standard decoding to 30.7\% under low temperature, and Qwen2.5-Coder falls from 54.9\% to 49.8\%.
+
+\textbf{Interpretation}: These controls strengthen the systems framing. The bottleneck is not parameter count alone, and not even pretraining alone. Code-generation reliability also depends on prompt interface, decoding policy, benchmark distribution, and the metric chosen to summarize output. MBPP makes the tradeoff especially clear: an intervention can increase the number of successful samples while reducing the number of distinct problems for which the model finds any solution.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figure15_targeted_robustness_controls.pdf}
+\caption{Targeted prompt and decoding robustness controls. Prompt format strongly changes HumanEval sample success for CodeGen-Mono and Qwen2.5-Coder while leaving GPT-2 Medium near zero. Decoding temperature is model- and benchmark-specific. On MBPP, low temperature increases repeated sample success but reduces distinct-task coverage, showing that aggregate success and reliability across tasks can move in opposite directions.}
+\label{fig:targeted_robustness_controls}
+\end{figure*}
 
 \subsection{Scaled Follow-Ups on CodeGen Ladder Signature Layers}
 
 To test whether the ladder's signature layers also show graded behavior, we ran a final 20-problem / 10-sample scaled-ablation follow-up on CodeGen-NL layer 11, CodeGen-Multi layer 7, and CodeGen-Mono layer 13 using scales $\{0.75, 0.5, 0.25, 0.0\}$.
 
-\begin{table}[h]
+\begin{table}[t]
 \centering
 \caption{Scaled Follow-Ups on CodeGen Ladder Signature Layers}
 \label{tab:codegen_ladder_scaled}
 \scriptsize
+\resizebox{\columnwidth}{!}{%
 \begin{tabular}{@{}lcccc@{}}
 \toprule
 \textbf{Checkpoint} & \textbf{Layer} & \textbf{Baseline} & \textbf{0.25 scale} & \textbf{0.0 scale} \\
@@ -490,16 +567,17 @@ CodeGen-Multi & 7 & 41.0 & 1.0 & 61.5 \\
 CodeGen-Mono & 13 & 31.0 & 2.0 & 29.0 \\
 \bottomrule
 \end{tabular}
+}
 \end{table}
 
 \textbf{Finding}: Two of the three ladder follow-ups are mechanistically useful. In CodeGen-NL, layer 11 degrades in the expected direction under attenuation (25.5\% $\rightarrow$ 22.5\% $\rightarrow$ 16.0\% $\rightarrow$ 8.5\%), indicating that the earlier checkpoint relies on a comparatively brittle syntactic support layer. In CodeGen-Mono, layer 13 preserves 33.5\% success at scale 0.75, falls to 2.0\% at scale 0.25, and still retains 29.0\% success under full zeroing while shifting 22.5\% of outputs into runtime errors, reinforcing the main claim that later code-pretrained checkpoints retain a broader executable-code regime. CodeGen-Multi is less clean: layer 7 behaves plausibly under partial attenuation, but full zeroing unexpectedly improves success to 61.5\%, so we treat that leg as anomalous and exclude it from the mechanistic claim.
 
-\textbf{Interpretation}: These follow-ups strengthen the ladder story without making it artificially cleaner than the evidence. The NL checkpoint looks more like a syntax-dependent intermediate stage, while the Mono checkpoint again shows the mixed residual/runtime behavior that marks distributed executable-code support in the main CodeGen analysis. The anomalous Multi zero-ablation result prevents us from claiming a simple monotone mechanistic progression across the whole ladder, but it does not erase the broader pattern that later continued-pretraining stages can change both benchmark performance and the layerwise failure geometry of code generation.
+\textbf{Interpretation}: These follow-ups strengthen the ladder interpretation without making it artificially cleaner than the evidence. The NL checkpoint looks more like a syntax-dependent intermediate stage, while the Mono checkpoint again shows the mixed residual/runtime behavior that marks distributed executable-code support in the main CodeGen analysis. The anomalous Multi zero-ablation result prevents us from claiming a simple monotone mechanistic progression across the whole ladder, but it does not erase the broader pattern that later continued-pretraining stages can change both benchmark performance and the layerwise failure geometry of code generation.
 
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figure8_codegen_ladder_followups.pdf}
-\caption{Scaled follow-up interventions on signature layers from the CodeGen continued-pretraining ladder. CodeGen-NL layer 11 degrades toward syntax collapse under attenuation, CodeGen-Mono layer 13 preserves a mixed executable/runtime regime under full zeroing, and CodeGen-Multi layer 7 behaves anomalously at 0.0 scale. We therefore treat the NL and Mono legs as the clean mechanistic evidence and the Multi leg as exploratory.}
+\caption{Scaled follow-up interventions on signature layers from the CodeGen continued-pretraining ladder. CodeGen-NL layer 11 degrades toward syntax collapse under attenuation, CodeGen-Mono layer 13 reopens a mixed executable/runtime regime under full zeroing, and CodeGen-Multi layer 7 is anomalous at 0.0 scale. We therefore use the NL and Mono legs as the clean within-family mechanistic evidence.}
 \label{fig:codegen_ladder_followups}
 \end{figure*}
 
@@ -507,10 +585,10 @@ CodeGen-Mono & 13 & 31.0 & 2.0 & 29.0 \\
 
 To understand \emph{why} scaling fails for GPT-2 but succeeds for CodeGen, we ablate each layer individually and measure the impact on code generation success.
 
-\begin{figure}[h]
+\begin{figure}[t]
 \centering
 \includegraphics[width=0.9\columnwidth]{figure2_ablation_heatmap.png}
-\caption{Success rates when each layer is ablated (zeroed out). Rows represent models, columns represent layer positions (normalized to 0-100\% depth). Dark red indicates catastrophic failure (0\% success), yellow indicates partial survival. GPT-2 Medium reaches 0\% success under every ablation, with layer 12 standing out because it uniquely shifts failures toward runtime errors. CodeGen still shows severe sensitivity, but several layers retain partial survival, indicating broader residual robustness than either GPT-2 variant. Layer positions are normalized to enable cross-model comparison.}
+\caption{Single-layer zeroing across the three models. GPT-2 Medium falls to 0\% success for every layer, with layer 12 standing out only through a runtime-error shift, whereas CodeGen retains several nonzero layers. The contrast is narrow brittleness versus broader residual support, not robustness versus no effect.}
 \label{fig:ablation_heatmap}
 \end{figure}
 
@@ -548,15 +626,15 @@ CodeGen-350M & 20 & Layers 5, 7, 13, 18 & 11.7\%, 4.6\%, 29.5\%, 0.1\% & Mostly 
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figure9_ablation_depth_profiles.pdf}
-\caption{Normalized-depth ablation profiles across GPT-2 Small, GPT-2 Medium, and CodeGen. Left: residual success under full-layer zeroing. Right: runtime-error shift under the same intervention. The comparison makes the core mechanistic contrast clearer than the heatmap alone: GPT-2 Medium collapses to zero success everywhere but shows a narrow runtime-shift spike at layer 12, while CodeGen retains broader residual support and a later mixed executable regime centered on layer 13.}
+\caption{Normalized-depth view of the same ablations. GPT-2 Medium shows a narrow mid-depth runtime-shift spike without residual success, while CodeGen preserves both later residual success and a mixed executable/runtime regime centered on layer 13. This view isolates the mechanistic contrast more clearly than the heatmap alone.}
 \label{fig:ablation_depth_profiles}
 \end{figure*}
 
-\subsection{Syntax Error Breakdown Reveals Different Learned Representations}
+\subsection{Syntax Error Breakdown Reveals Distinct Failure Profiles}
 
-To understand how pretraining shapes syntactic understanding, we categorize the types of syntax errors each model produces.
+To compare syntax-error profiles across checkpoints, we categorize the types of syntax errors each model produces.
 
-\begin{table}[h]
+\begin{table}[t]
 \centering
 \caption{Syntax Error Distribution by Type (\% of all syntax errors)}
 \label{tab:syntax_errors}
@@ -568,30 +646,30 @@ To understand how pretraining shapes syntactic understanding, we categorize the 
 \midrule
 GPT-2 Small & 22.0 & 6.5 & 7.9 & 8.6 & 0.3 & 54.4 \\
 GPT-2 Medium & 28.7 & 3.0 & 8.0 & 8.1 & 0.3 & 51.7 \\
-CodeGen-350M & 6.9 & 21.8 & 5.1 & 2.1 & 4.4 & 59.7 \\
+CodeGen-350M & 7.4 & 23.1 & 5.3 & 2.4 & 4.7 & 57.0 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\begin{figure}[h]
+\begin{figure}[t]
 \centering
 \includegraphics[width=0.9\columnwidth]{figure3_error_distribution.png}
-\caption{Distribution of syntax error types across models. GPT-2 models struggle primarily with indentation (22-29\%), reflecting Python's whitespace-sensitive syntax. CodeGen fails most often on brackets (21.8\%), suggesting it learned bracket-heavy languages (Java, C++) during code pretraining. The ``Other'' category includes rare errors like invalid operators and malformed imports.}
+\caption{Syntax-error profile by model. GPT-2 errors are dominated by indentation, whereas CodeGen shifts toward bracket mismatches. The difference is consistent with distinct syntactic priors across the evaluated checkpoints, but the error profile alone does not identify the training-data cause.}
 \label{fig:error_distribution}
 \end{figure}
 
 \textbf{Key patterns:}
 
 \begin{enumerate}
-\item \textbf{GPT-2 struggles with indentation}: Both GPT-2 models produce 22-29\% indentation errors---far more than CodeGen (6.9\%). Python's whitespace sensitivity is not well-represented in general web text, leading to inadequate indentation models.
+\item \textbf{GPT-2 struggles with indentation}: Both GPT-2 models produce 22-29\% indentation errors---far more than CodeGen (7.4\%). This pattern is consistent with weaker indentation handling in the two GPT-2 checkpoints under our evaluation, but our experiments do not isolate why that difference arises.
 
-\item \textbf{Medium's indentation errors increase with scale}: GPT-2 Medium (28.7\%) produces more indentation errors than Small (22.0\%), suggesting that scaling amplifies existing failure modes rather than correcting them.
+\item \textbf{Medium's indentation errors increase with scale}: GPT-2 Medium (28.7\%) produces more indentation errors than Small (22.0\%), showing that the larger GPT-2 checkpoint does not reduce this failure mode in our setting.
 
-\item \textbf{CodeGen fails on brackets}: CodeGen produces 21.8\% bracket errors---7$\times$ more than GPT-2 Medium (3.0\%). This likely reflects its training on bracket-heavy languages (Java: 35.5\% of training data, C++: 8.2\%)~\cite{nijkamp2022codegen}, where matching brackets is critical. The model overgeneralizes this constraint to Python, which uses brackets less frequently.
+\item \textbf{CodeGen fails on brackets}: CodeGen produces 23.1\% bracket errors---more than 7$\times$ GPT-2 Medium's 3.0\%. One plausible interpretation is that its broader code pretraining, which includes substantial Java and C++ proportions~\cite{nijkamp2022codegen}, shapes this profile. Our experiments, however, do not isolate training-data composition as the cause of the bracket-error gap.
 
-\item \textbf{Keyword and quote errors are similar}: All models produce 5-8\% quote errors and 2-9\% keyword errors, suggesting these are universally difficult syntactic constructs independent of pretraining.
+\item \textbf{Keyword and quote errors are similar}: All models produce 5-8\% quote errors and 2-9\% keyword errors, suggesting that these categories are not the main source of the observed cross-model contrast in this sample.
 
-\item \textbf{`Other'' errors dominate}: 52--60\% of syntax errors fall outside our six main categories, indicating long-tailed failure modes (invalid operators, malformed imports, incorrect statement structure) that no current model handles well.
+\item \textbf{`Other'' errors dominate}: 52--60\% of syntax errors fall outside our six main categories, indicating long-tailed failure modes (invalid operators, malformed imports, incorrect statement structure) that remain outside this coarse taxonomy.
 \end{enumerate}
 
 \subsection{Activation Analysis: A Compact Probe Signal at Layer 12}
@@ -606,7 +684,7 @@ To understand the mechanistic basis of GPT-2 Medium's distinctive layer-12 failu
 
 \textbf{Finding}: The strongest probe dimensions are 121, 346, 615, 820, and 169. A logistic regression probe on these five coordinates reaches 72.5\% held-out accuracy, compared with 75.0\% for the full-layer probe and 67.5\% for the top-two-dimensional projection used in Figure~\ref{fig:activation_projection}.
 
-\begin{table}[h]
+\begin{table}[t]
 \centering
 \caption{Top Discriminative Dimensions in Layer 12}
 \label{tab:dimensions}
@@ -640,10 +718,10 @@ To understand the mechanistic basis of GPT-2 Medium's distinctive layer-12 failu
 \item \textbf{The 2D view is only partially separable}: The top-two-dimensional projection reaches 67.5\% held-out accuracy with a class-mean separation of 6.39, so Figure~\ref{fig:activation_projection} should be read as substantial but incomplete linear structure rather than a perfect boundary.
 \end{enumerate}
 
-\begin{figure}[h]
+\begin{figure}[t]
 \centering
 \includegraphics[width=0.9\columnwidth]{figure4_activation_projection_real.png}
-\caption{Layer-12 activations projected to the top two discriminative dimensions (121, 346) using real samples. Green points are successful generations and red points are syntax errors. The dashed line is a fitted linear boundary. A held-out probe on these two dimensions achieves 67.5\% accuracy, while the top-five-dimensional probe reaches 72.5\%, indicating substantial but incomplete separability.}
+\caption{GPT-2 Medium layer-12 activations projected onto the top two discriminative coordinates (121, 346). Success and syntax-failure samples are partially separable, but not cleanly so: the 2D probe reaches 67.5\% accuracy versus 72.5\% for the top-5 probe. The figure should be read as a compact readout, not a full mechanistic decomposition.}
 \label{fig:activation_projection}
 \end{figure}
 
@@ -658,7 +736,7 @@ To compare the three models more conservatively, we summarize the most informati
 \setlength{\tabcolsep}{5pt}
 \begin{tabular}{@{}lccc@{}}
 \toprule
-\textbf{Model} & \textbf{Signature Layer / Depth} & \textbf{Residual Success} & \textbf{Failure Signature} \\
+\textbf{Model} & \textbf{Signature layer} & \textbf{Residual success} & \textbf{Failure mode} \\
 \midrule
 GPT-2 Small & Layer 2 / 17\% & 1.8\% & 98.2\% syntax \\
 GPT-2 Medium & Layer 12 / 50\% & 0.0\% & 76.1\% syntax, 23.9\% runtime \\
@@ -675,7 +753,7 @@ CodeGen & Layer 13 / 65\% & 29.5\% & 51.6\% syntax, 18.9\% runtime \\
 
 Full zeroing establishes that layer 12 is special, but it does not reveal whether the layer degrades smoothly under weaker interventions. We therefore ran a smaller graded-ablation pilot on GPT-2 Medium layer 12 using 10 HumanEval problems and 5 samples per problem, scaling the layer output by $\{0.75, 0.5, 0.25, 0.0\}$.
 
-\begin{table}[h]
+\begin{table}[t]
 \centering
 \caption{Scaled Ablation Pilot for GPT-2 Medium Layer 12}
 \label{tab:scaled_layer12}
@@ -701,11 +779,12 @@ Baseline & 6.0 & 94.0 & 0.0 \\
 
 The probe results identify a compact readout, but a stronger mechanistic question is whether the same subspace can be used constructively during generation. We therefore steer GPT-2 Medium layer 12 with the top-5 contrast vector $v=P_5(\mu_{\mathrm{success}}-\mu_{\mathrm{syntax}})$ and compare the result against matched sparse random controls that preserve sparsity and coefficient magnitudes but use different dimensions.
 
-\begin{table}[h]
+\begin{table}[t]
 \centering
 \caption{Layer-12 Steering and Matched-Control Pilot}
 \label{tab:steering_controls}
 \scriptsize
+\resizebox{\columnwidth}{!}{%
 \begin{tabular}{@{}lccc@{}}
 \toprule
 \textbf{Condition} & \textbf{Success \%} & \textbf{Syntax \%} & \textbf{Runtime \%} \\
@@ -719,23 +798,24 @@ Random mean ($n=20$) & 6.2 & 92.9 & 0.7 \\
 Random max & 14.0 & --- & --- \\
 \bottomrule
 \end{tabular}
+}
 \end{table}
 
 \textbf{Finding}: The best learned steering condition ($\alpha=2.0$) doubles subset success from 6.0\% to 12.0\%. Under an expanded set of 20 matched sparse random controls, the control mean remains near baseline at 6.2\%, and the learned vector beats 19 of 20 controls, but one control reaches 14.0\%. We therefore treat the constructive effect as real on this subset while treating the specificity evidence as suggestive rather than conclusive.
 
 \textbf{Interpretation}: The sign pattern is not perfectly monotonic: $\alpha=-2.0$ also improves success to 10.0\%, while $\alpha=-1.0$ introduces a small runtime regime. We therefore interpret the top-5 vector as a \emph{locally useful intervention axis} rather than a globally linear notion of correctness. The strongest supported claim is that the identified subspace is not merely diagnostic, because targeted intervention along it can improve execution. The control comparison still points in the same direction, but with empirical $p \le 0.095$ it does not yet justify a stronger claim of clean subspace specificity.
 
-\begin{figure}[h]
+\begin{figure}[t]
 \centering
 \includegraphics[width=0.9\columnwidth]{figure5_activation_steering_response.png}
-\caption{GPT-2 Medium layer-12 steering response on the 10-problem / 5-sample subset. The learned top-5 steering vector changes execution outcomes nontrivially, with the best positive setting ($\alpha=2.0$) doubling success from 6.0\% to 12.0\%. The non-monotonic curve indicates that the discovered subspace is intervention-sensitive but not a simple scalar ``correctness knob.''}
+\caption{GPT-2 Medium layer-12 steering on the 10-problem / 5-sample subset. The best positive condition doubles success from 6.0\% to 12.0\%, but the response is non-monotonic and strong negative steering also helps. The subspace is therefore intervention-useful without behaving like a single signed correctness axis.}
 \label{fig:steering_response}
 \end{figure}
 
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figure6_steering_controls.pdf}
-\caption{Constructive steering with matched-control context. Left: GPT-2 Medium layer-12 steering response across target intervention strengths. Right: distribution over 20 matched sparse random controls, with the learned target conditions overlaid. The learned vector improves over baseline and exceeds the control mean, but one random control attains a slightly higher success rate, so the result is best read as a useful local intervention rather than definitive subspace specificity.}
+\caption{Learned steering versus matched sparse controls. The learned vector beats the control mean and 19 of 20 controls, but one random control still reaches 14.0\% success. This supports a useful local intervention more than a clean specificity claim.}
 \label{fig:steering_controls_distribution}
 \end{figure*}
 
@@ -743,7 +823,7 @@ Random max & 14.0 & --- & --- \\
 
 To test whether the more robust code-specialized model also shows a graded signature, we ran the same 10-problem / 5-sample attenuation study on CodeGen's strongest residual layer (layer 13).
 
-\begin{table}[h]
+\begin{table}[t]
 \centering
 \caption{Scaled Ablation Pilot for CodeGen Layer 13}
 \label{tab:scaled_layer13_codegen}
@@ -763,49 +843,38 @@ Baseline & 40.0 & 60.0 & 0.0 \\
 
 \textbf{Finding}: Unlike GPT-2 Medium, CodeGen does not collapse immediately under partial attenuation. Layer 13 retains 28-30\% success at scales 0.75 and 0.5, collapses to 2.0\% success only at scale 0.25, and still preserves 24.0\% success under full zeroing while shifting 24.0\% of completions into runtime errors.
 
-\textbf{Interpretation}: This is the paper's clearest graded cross-model contrast. GPT-2 Medium layer 12 acts like a brittle thresholded checkpoint, whereas CodeGen layer 13 behaves like a partially redundant execution stage. Even when layer 13 is fully removed, surrounding layers still support a meaningful fraction of executable completions. That is stronger evidence for distributed code-relevant computation than the full-zero ablation table alone.
+\textbf{Interpretation}: This is the clearest graded cross-model contrast. GPT-2 Medium layer 12 acts like a brittle thresholded checkpoint, whereas CodeGen layer 13 behaves like a partially redundant execution stage. Even when layer 13 is fully removed, surrounding layers still support a meaningful fraction of executable completions. That is stronger evidence for distributed code-relevant computation than the full-zero ablation table alone.
 
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figure7_scaled_ablation_comparison.pdf}
-\caption{Direct graded-ablation comparison between GPT-2 Medium layer 12 and CodeGen layer 13 on matched pilot subsets. GPT-2 Medium collapses toward syntax failure under moderate attenuation and only reopens a runtime regime after full zeroing, whereas CodeGen retains substantial success at 0.75 and 0.5 scale and still preserves a mixed executable/runtime regime at 0.0. This is the sharpest visual contrast between a brittle checkpoint and a more distributed execution stage in the paper.}
+\caption{Matched graded-ablation comparison of GPT-2 Medium layer 12 and CodeGen layer 13. GPT-2 Medium behaves like a thresholded bottleneck: moderate attenuation drives syntax collapse and only full removal reopens runtime errors. CodeGen retains substantial success under partial attenuation and a mixed success/runtime regime even at zero, consistent with more distributed executable-code support.}
 \label{fig:scaled_ablation_comparison}
 \end{figure*}
+\clearpage
 \section{Analysis and Discussion}
 
 \subsection{Why Does Scaling Fail for GPT-2?}
 
-Our ablation results suggest that GPT-2 Medium's failure is not a single isolated point of failure in the strict sense. Under full-layer zeroing, every block ablation reduces success to 0\%. The new MBPP validation strengthens the broader empirical claim: the lack of improvement from GPT-2 Small to GPT-2 Medium is not confined to HumanEval. What distinguishes layer 12 is therefore not benchmark-specific residual success, but its HumanEval failure signature.
+Our ablation results argue against a simple ``larger GPT-2 should inherit more of the same computation'' picture. GPT-2 Medium does not gain broader fault tolerance from added depth: every single-layer ablation drives success to 0\%. Relative to GPT-2 Small, scaling from 12 to 24 layers adds capacity without adding distributed robustness, since Small still retains 1.8\% success at one early layer while Medium retains none anywhere.
 
-When layer 12 is removed, 23.9\% of completions become runtime errors instead of collapsing entirely to syntax errors. No other GPT-2 Medium layer shows this pattern. This makes layer 12 the model's clearest execution-relevant checkpoint: a place where partially coherent programs are still formed even though they no longer pass tests.
+What changes is not residual success but the presence of a narrow execution-relevant checkpoint at layer 12. When that layer is removed, 23.9\% of completions become runtime errors rather than collapsing entirely to syntax errors. No other GPT-2 Medium layer shows that behavior. The most plausible interpretation is that the medium model can assemble partially executable programs, but that computation is not distributed strongly enough across neighboring layers to survive a hard intervention.
 
-Relative to GPT-2 Small, scaling from 12 to 24 layers does not create broader residual robustness. GPT-2 Small at least retains 1.8\% success when layer 2 is ablated, whereas GPT-2 Medium never retains success under any single-layer ablation.
-
-A plausible interpretation is that general-language pretraining gives GPT-2 Medium enough mid-depth structure to produce executable code fragments, but not enough distributed code-specific computation to make that structure fault tolerant. Layer 12 appears to aggregate syntax into executable program form, while the surrounding layers do not preserve the computation under hard ablation.
-
-The graded pilot sharpens this picture. When layer 12 is attenuated to 0.5 and 0.25 strength, syntax errors rise to 98.0\% and 100.0\% with no runtime errors. Only at 0.0 scale do runtime errors jump to 28.0\%. We therefore read the runtime regime as a threshold effect rather than a smooth linear degradation: weakening layer 12 hurts syntax first, while completely removing it reveals partially executable but wrong code.
+The graded pilot sharpens the claim. Attenuating layer 12 to 0.5 or 0.25 drives the model toward near-pure syntax collapse, while only full removal reopens a 28.0\% runtime-error regime. We therefore interpret layer 12 as a thresholded assembly stage for executable program structure rather than a redundant contributor that degrades smoothly.
 
 \subsection{How Does CodeGen Achieve Robustness?}
 
-CodeGen's superior performance does not mean it is immune to layer ablation. Many CodeGen ablations still reduce success to 0\%, so the intervention is severe for all three models. The difference is that CodeGen shows a broader set of layers with residual nonzero success and more varied failure signatures than either GPT-2 variant.
+CodeGen's advantage is not that ablations stop mattering. Many single-layer zeroings still reduce success to 0\%, so the intervention remains severe. The difference is structural: useful behavior survives in several layers rather than at one narrow checkpoint. Layers 5 and 7 retain nonzero success, suggesting that early syntactic support is partially distributed, and layer 13 combines the largest residual success (29.5\%) with 18.9\% runtime errors, marking a later executable-code regime.
 
-\textbf{Layer 5 (25\% depth)}: retains 11.7\% success under ablation, suggesting that early syntactic support is somewhat distributed rather than tied to a single block.
-
-\textbf{Layer 7 (35\% depth)}: retains 4.6\% success, again indicating partial resilience rather than total collapse.
-
-\textbf{Layer 13 (65\% depth)}: preserves 29.5\% success and 18.9\% runtime errors, the strongest evidence that later code-relevant computation can survive even after a full-block intervention.
-
-The graded layer-13 pilot sharpens this picture. At scales 0.75 and 0.5, CodeGen still retains 28-30\% success, so moderate attenuation reduces performance without destroying useful computation. Only at scale 0.25 does the layer collapse almost entirely into syntax errors (98.0\%), while full zeroing reopens a mixed regime with 24.0\% success and 24.0\% runtime errors.
-
-Taken together, these layers suggest a more distributed code-generation pipeline than in GPT-2. We interpret this as \emph{partial} redundancy: enough to preserve useful behavior in a subset of ablations, but not enough to make the model robust to arbitrary block removal.
+The graded layer-13 pilot makes the cross-model contrast concrete. At scales 0.75 and 0.5, CodeGen still retains 28--30\% success; only strong attenuation at 0.25 collapses nearly everything into syntax errors, and full zeroing reopens a mixed 24.0\% success / 24.0\% runtime regime. The most economical interpretation is \emph{partial} redundancy: code-relevant computation is spread across neighboring layers even though the model remains vulnerable to severe interventions.
 
 \subsection{What the CodeGen Ladder Adds}
 
-The within-family CodeGen ladder tightens the paper's central comparative claim. GPT-2 versus CodeGen alone leaves open the objection that different families, tokenizers, or implementation choices drive the entire result. The NL$\rightarrow$Multi$\rightarrow$Mono comparison weakens that objection because architecture and parameter count are held fixed while continued pretraining changes the data mix and curriculum.
+The within-family CodeGen ladder removes the strongest family-difference objection. GPT-2 versus CodeGen alone leaves open tokenization, optimizer, and implementation confounds; NL$\rightarrow$Multi$\rightarrow$Mono keeps architecture and parameter count fixed while changing continued-pretraining data and curriculum.
 
-The ladder does \emph{not} support an overclean story. On HumanEval, Multi is slightly worse than NL, so the result is not a perfectly monotone progression. We therefore avoid claiming that pretraining distribution alone, under matched compute, is sufficient to explain every improvement. What the ladder does support is a narrower and stronger statement: once a fixed 350M architecture receives additional code-focused and then Python-focused continued pretraining, the best checkpoint (Mono) is clearly stronger than the earlier ones, and MBPP shows a fully monotone NL$<$Multi$<$Mono trend.
+The ladder still does \emph{not} support an overclean law. HumanEval is not monotone because Multi is slightly worse than NL, so we do not claim a matched-compute or data-only rule. The supported claim is narrower and stronger: within a fixed 350M architecture, later code- and Python-focused continued pretraining materially improves the best checkpoint, and MBPP shows a fully monotone NL$<$Multi$<$Mono progression.
 
-An exploratory reduced ablation sweep across the ladder also suggests that the signature layer shifts with continued pretraining: NL's strongest surviving layer is 11, Multi's is 7, and Mono's is 13. The final scaled follow-up makes this more concrete for NL and Mono: NL layer 11 weakens roughly monotonically into syntax collapse, while Mono layer 13 again reopens a mixed runtime regime under full zeroing. We treat the Multi follow-up as inconclusive because its zero-ablation condition behaves anomalously. So the safest claim is not that the ladder yields a clean mechanistic law, but that continued pretraining changes both where residual support appears and how that support fails under intervention.
+The scaled follow-up strengthens that interpretation without pretending the whole ladder is mechanistically tidy. NL layer 11 behaves like brittle syntax support, Mono layer 13 reopens the mixed runtime regime seen in the main CodeGen model, and Multi remains anomalous under full zeroing. The safest conclusion is therefore that continued pretraining changes both benchmark performance and the geometry of residual code support, even if it does not induce a simple monotone law at every intermediate checkpoint.
 
 \subsection{Implications for Model Design}
 
@@ -815,45 +884,71 @@ Our findings suggest three architectural principles for robust code generation:
 
 \textbf{2. Track failure-mode transitions, not just success collapse}: Layer 12 in GPT-2 Medium is informative precisely because it changes the balance of syntax vs. runtime errors. The new scaled-ablation pilot suggests that this transition is thresholded: syntax collapses first, and the runtime regime appears only after complete removal.
 
-\textbf{3. Code-specific continued pretraining is necessary}: General language pretraining (WebText) does not teach models how to organize code validation across depth. Code-specific pretraining (The Pile + GitHub)~\cite{gao2021pile,nijkamp2022codegen} appears to produce broader residual robustness under the same intervention, and the within-family CodeGen ladder shows that later code- and Python-focused continued-pretraining stages can improve behavior even without changing architecture or parameter count.
+\textbf{3. Code-specific continued pretraining matters}: The GPT-2 checkpoints trained on WebText do not show the same residual robustness profile as CodeGen under our interventions. Code-specific pretraining (The Pile + GitHub)~\cite{gao2021pile,nijkamp2022codegen} is consistent with broader residual robustness under the same intervention, and the within-family CodeGen ladder shows that later code- and Python-focused continued-pretraining stages can improve behavior even without changing architecture or parameter count.
+
+\subsection{Implications for Evaluation Practice}
+
+The targeted robustness controls add a practical lesson for empirical studies of code models: benchmark scores are partly properties of the surrounding generation protocol, not only of the checkpoint. In our saved-artifact controls, prompt format substantially changes HumanEval sample success for the code-specialized models, and MBPP low-temperature decoding increases repeated successful samples while reducing the number of distinct tasks solved at least once.
+
+For software-engineering evaluations, this argues for reporting more than a single aggregate pass rate whenever the goal is reliability. Prompt form, strict-test sensitivity, and task-level coverage should be documented alongside sample-level success so that an apparent gain is not mistaken for broader problem coverage or stronger executable correctness.
 
 \subsection{What the LiveCodeBench Result Changes}
 
-LiveCodeBench sharpens the scope of our claim. On HumanEval and MBPP, CodeGen's advantage over GPT-2 is large and practically meaningful. On LiveCodeBench release\_v2, however, all three small models are near-zero, with CodeGen retaining only a marginal nonzero signal. That means the paper should not be framed as evidence that small code-pretrained models are broadly strong programmers. The better-supported statement is narrower: in the small-model regime, code-specific pretraining materially improves performance on classical Python synthesis benchmarks and changes the internal organization of code-relevant computation, but it does not close the gap to modern contamination-aware coding tasks.
+LiveCodeBench sharpens the scope of our claim more than the ranking itself. On HumanEval and MBPP, CodeGen's advantage over GPT-2 is large and practically meaningful. On LiveCodeBench release\_v2, all three small models are near-zero, with CodeGen retaining only a marginal nonzero signal. The right framing is therefore not that small code-pretrained models are broadly strong programmers, but that code-specific pretraining improves classical Python synthesis performance and internal robustness without closing the gap to harder modern coding tasks.
 
-This harsher benchmark is still useful scientifically. It makes the negative part of the paper stronger. GPT-2 Small and GPT-2 Medium remain indistinguishable at zero, so the failure of scale-alone generalization survives even when the benchmark changes substantially. At the same time, the compression of all three models toward zero warns against overgeneralizing from HumanEval or MBPP alone.
+This harsher benchmark is still scientifically useful. It reinforces the negative result because GPT-2 Small and GPT-2 Medium remain indistinguishable at zero, while also preventing us from overclaiming from HumanEval or MBPP alone.
 
 \subsection{Why a Small Probe Still Works}
 
-The five-dimensional probe is informative because it captures most of the linear separability available in this layer: 72.5\% held-out accuracy versus 75.0\% for the full 1024-dimensional linear probe. In that operational sense, a small coordinate set provides a compact readout of success vs. syntax failure.
+The five-dimensional probe works because it captures most of the linear separability available in this layer: 72.5\% held-out accuracy versus 75.0\% for the full 1024-dimensional probe. In that operational sense, a very small coordinate set is enough for a strong readout of success versus syntax failure.
 
-However, this does \emph{not} mean that only five neurons implement correctness. The top five dimensions account for just 2.51\% of the total absolute mean shift across the layer, indicating that many weaker coordinates also move between successful and failed generations.
+That does \emph{not} mean that five neurons implement correctness. The top five dimensions account for only 2.51\% of the total absolute mean shift, so the broader representation remains distributed.
 
-The constructive steering results refine this interpretation. The best positive steering setting doubles success from 6.0\% to 12.0\%. Against 20 matched sparse random controls, this intervention exceeds the control mean and beats 19 controls, but it is not the single best perturbation in the set. At the same time, the response curve is not monotonic: strong negative steering also improves success, while weaker negative steering produces a small runtime regime. That pattern is more consistent with a useful local intervention subspace than with a single signed ``correctness neuron'' explanation.
+The steering results sharpen the interpretation. The best positive condition doubles success, but one random control still does better and the response curve is non-monotonic. We therefore treat the top-5 subspace as a useful local handle on execution behavior rather than a complete mechanistic decomposition or a signed ``correctness-neuron'' explanation. These dimensions remain promising targets for monitoring and future interventions~\cite{meng2022locating}, but not a complete description of the underlying algorithm.
 
-We therefore interpret these dimensions as especially stable readout axes rather than a complete mechanistic decomposition. They are useful for monitoring and future causal interventions~\cite{meng2022locating}, but the broader representation remains distributed.
+\subsection{Threats to Validity}
+
+\textbf{Construct validity}: We evaluate executable correctness with benchmark tests. This is appropriate for studying code-generation reliability, but it does not measure maintainability, readability, security, or integration quality. We therefore frame the results as short-form Python synthesis and execution robustness, not as a complete theory of software engineering ability.
+
+\textbf{Internal validity}: The main comparisons depend on fixed decoding settings, saved artifacts, and executor behavior. We reduce this risk by reporting exact sample counts, using problem-level bootstrap tests, separating sample-level and task-level conclusions, and recording the \texttt{HumanEval/129} coverage caveat for the synced CodeGen artifact. The smaller intervention pilots are explicitly treated as causal probes rather than full-benchmark replacements.
+
+\textbf{External validity}: The study covers small decoder-only models, mostly Python tasks, and pretrained checkpoints. The conclusions should not be read as claims about frontier code models, instruction-tuned assistants, repository-level repair, or production deployment. The CodeGen ladder provides a stronger within-family control, but it is still not a matched-compute causal isolation of pretraining data.
+
+\textbf{Conclusion validity}: Several results are intentionally framed conservatively. The GPT-2 Small versus Medium HumanEval gap is numerically small and not statistically reliable. The steering result improves subset success, but one matched random control outperforms the learned vector, so we claim a locally useful intervention axis rather than a definitive sparse mechanism. This conservative framing is part of the evidentiary standard rather than a rhetorical limitation.
 
 \subsection{Limitations and Future Work}
 
-Our study has several limitations that future work should address:
+The validity threats above imply several direct extensions:
 
-\textbf{1. Benchmark scope is broader but still limited}: We now evaluate on HumanEval, HumanEval+, MBPP, MBPP+, and contamination-aware LiveCodeBench~\cite{chen2021humaneval,austin2021program,liu2023evalplus,jain2024livecodebench}, which is stronger than the earlier two-benchmark version of the paper, but all settings still emphasize short-form code-generation tasks rather than long-horizon repository-level software engineering.
+\textbf{1. Benchmark scope is broader but still limited}: We evaluate on HumanEval, HumanEval+, MBPP, MBPP+, and contamination-aware LiveCodeBench~\cite{chen2021humaneval,austin2021program,liu2023evalplus,jain2024livecodebench}, which is stronger than the earlier two-benchmark version, but all settings still emphasize short-form code-generation tasks rather than long-horizon repository-level software engineering.
 
 \textbf{2. Pretrained models only}: We do not evaluate fine-tuned models. While our goal was to isolate base architecture effects, fine-tuning could potentially repair GPT-2 Medium's bottleneck by redistributing computation across layers.
 
 \textbf{3. The CodeGen ladder is controlled but not matched-compute}: NL, Multi, and Mono hold architecture and parameter count fixed, but they also differ in additional tokens, optimization steps, and curriculum. The ladder therefore supports a strong within-family continued-pretraining claim, not a perfectly factorized causal isolation of data distribution alone.
 
-\textbf{4. Graded interventions remain limited}: We now include scaled-ablation pilots for GPT-2 Medium layer 12, CodeGen layer 13, and a final ladder follow-up on CodeGen-NL / Multi / Mono signature layers. Even so, these remain small targeted subsets rather than full benchmark sweeps, and one ladder leg (CodeGen-Multi layer 7) behaved anomalously under full zeroing. Broader graded sweeps remain necessary before claiming a general law of thresholded behavior.
+\textbf{4. Graded interventions remain limited}: We include scaled-ablation pilots for GPT-2 Medium layer 12, CodeGen layer 13, and a final ladder follow-up on CodeGen-NL / Multi / Mono signature layers. Even so, these remain small targeted subsets rather than full benchmark sweeps, and one ladder leg (CodeGen-Multi layer 7) behaved anomalously under full zeroing. Broader graded sweeps remain necessary before claiming a general law of thresholded behavior.
 
 \textbf{5. Limited semantic analysis}: We identify which layers validate syntax but do not deeply analyze which layers perform semantic reasoning (variable scoping, type consistency, algorithm correctness). Future work should extend our methods to semantic error detection.
 
-\textbf{6. Constructive intervention evidence is still small-scale}: We now observe positive rescue from learned steering on a subset, and the learned vector beats 19 of 20 matched sparse random controls, but one control does better and the empirical control test remains only suggestive ($p \le 0.095$). Larger control sets and cross-benchmark steering experiments are needed before treating the subspace as a robust causal handle.
+\textbf{6. Constructive intervention evidence is still small-scale}: We observe positive rescue from learned steering on a subset, and the learned vector beats 19 of 20 matched sparse random controls, but one control does better and the empirical control test remains only suggestive ($p \le 0.095$). Larger control sets and cross-benchmark steering experiments are needed before treating the subspace as a robust causal handle.
 
 Despite these limitations, our core finding is that code models differ not only in accuracy but in their layerwise failure profiles under intervention, providing actionable insight for model design and evaluation.
 
+\subsection{Reproducibility and Artifact Availability}
+
+This paper is intended to be artifact-traceable rather than narrative-only. The quantitative claims in the main text are backed by saved processed outputs under \texttt{outputs/tables/}, benchmark result files under \texttt{data/results\_*/}, figure-generation scripts under \texttt{scripts/}, and the claim-to-artifact audit included with the review package. In particular, the benchmark-summary figures are regenerated from saved bootstrap summaries, strict-evaluation summaries, LiveCodeBench summaries, and repaired CodeGen ladder artifacts rather than from hand-copied spreadsheet values.
+
+The intended submission package includes a supplementary archive containing the processed tables, benchmark result artifacts, analysis scripts, source code, configuration files, plotting scripts, figures, and audit reports needed to trace the reported numbers. Raw local execution logs are preserved in the working repository but are not required for the reviewer-facing package because the reported claims are checked against the structured summaries and artifacts. A public archival repository can be created from this curated archive after the review-facing version is accepted or explicitly requested. We keep the main-paper coverage note for \texttt{HumanEval/129} explicit because reproducibility includes honest accounting of what was and was not saved in the synced main CodeGen artifact.
+
+\subsection{Broader Impact}
+
+The immediate positive impact of this work is methodological. Better tools for diagnosing where code models fail can improve evaluation practice, reduce overclaiming from small benchmark gains, and help future systems distribute executable-code behavior more robustly across depth. The strongest practical message is not that small models are already good programmers, but that pretraining choices and failure-mode analysis deserve at least as much attention as raw scale in this regime.
+
+The main risk is dual use. Mechanistic insight into code-generation bottlenecks, especially if paired with constructive steering or future stronger interventions, could eventually be used to make automated code generation more capable for both beneficial and harmful ends, including insecure code production or malicious automation. We partially mitigate that risk by studying small openly available models, by emphasizing reliability analysis over deployment recipes, and by treating the steering results as limited scientific evidence rather than as a production-ready capability-improvement method.
+
 \section{Conclusion}
 
-We have shown that the conventional wisdom ``bigger models are better'' breaks down for code generation, with GPT-2 Medium (355M parameters) failing to improve meaningfully over GPT-2 Small (124M parameters) despite 2.9$\times$ more parameters.
+We show that, in this small-model regime, the conventional expectation that ``bigger models are better'' does not hold reliably for code generation: GPT-2 Medium (355M parameters) fails to improve meaningfully over GPT-2 Small (124M parameters) despite 2.9$\times$ more parameters.
 
 Problem-level bootstrap analysis makes this conclusion more precise: GPT-2 Small and GPT-2 Medium are statistically indistinguishable on HumanEval in our setting, whereas both remain more than 30 percentage points behind CodeGen-350M with highly significant pairwise differences.
 
@@ -863,9 +958,9 @@ A stricter HumanEval+ re-evaluation preserves the same ordering. On the first fi
 
 The same conclusion survives a separate strict MBPP+ evaluation with EvalPlus. On 378 tasks scored under the stronger Base+Extra metric, GPT-2 Small and GPT-2 Medium both remain at 0.0\% pass@1 and pass@10, whereas CodeGen-350M retains 1.1\% pass@1 and 6.4\% pass@10.
 
-The contamination-aware LiveCodeBench result narrows and strengthens the paper at the same time. GPT-2 Small and GPT-2 Medium remain at 0.0\% pass@1/pass@5/pass@10, while CodeGen-350M remains only marginally above zero (0.02\%/0.10\%/0.20\%). So the paper's strongest positive comparative result remains concentrated on HumanEval and MBPP, but the negative conclusion that scale alone is insufficient survives even under a much harder modern benchmark.
+The contamination-aware LiveCodeBench result narrows and strengthens the paper at the same time. GPT-2 Small and GPT-2 Medium remain at 0.0\% on pass@1, pass@5, and pass@10, while CodeGen-350M remains only marginally above zero (0.02\%, 0.10\%, and 0.20\%). Thus, the strongest positive comparative result remains concentrated on HumanEval and MBPP, but the negative conclusion that scale alone is insufficient survives even under a much harder modern benchmark.
 
-The within-family CodeGen ladder sharpens the paper further. At fixed 350M scale, CodeGen-Mono is strongest on both HumanEval and MBPP, while the MBPP ladder is cleanly monotone from NL to Multi to Mono. Because the HumanEval ladder is partial and mixed, and because the checkpoints receive additional compute and curriculum, we interpret this not as a pure data-only law but as strong within-family evidence that later code- and Python-focused continued pretraining materially improves small-model code generation.
+The within-family CodeGen ladder sharpens the paper further. At fixed 350M scale, CodeGen-Mono is strongest on both HumanEval and MBPP, while the MBPP ladder is cleanly monotone from NL to Multi to Mono and the HumanEval ladder is full-coverage but mixed at the intermediate Multi checkpoint. Because the checkpoints receive additional compute and curriculum, we interpret this not as a pure data-only law but as strong within-family evidence that later code- and Python-focused continued pretraining materially improves small-model code generation.
 
 Under full-layer ablation, GPT-2 Medium never preserves success; instead, layer 12 stands out because its removal uniquely shifts 23.9\% of failures into runtime errors while every other layer collapses almost entirely to syntax errors.
 
@@ -875,11 +970,49 @@ In contrast, CodeGen-350M~\cite{nijkamp2022codegen} still shows severe sensitivi
 
 Our activation analysis shows that a compact probe on five layer-12 dimensions (121, 346, 615, 820, 169) reaches 72.5\% held-out accuracy, close to the 75.0\% achieved by a full-layer linear probe. More importantly, constructive steering along this same sparse direction doubles subset success from 6.0\% to 12.0\%. The expanded random-control comparison is favorable but not decisive, so the safest conclusion is that this direction is a usable local control subspace rather than a purely descriptive probe.
 
+The targeted robustness controls add a systems-level caution to that mechanistic claim. Prompt format and decoding temperature can substantially change sample-level success, and on MBPP low-temperature decoding improves repeated sample success while reducing distinct-task coverage. Thus, the bottleneck is partly internal to the model and partly induced by the generation/evaluation protocol around it.
+
 These findings challenge the scaling-centric paradigm in neural code generation~\cite{kaplan2020scaling,wei2022emergent}. Parameter count alone does not determine capability. Across HumanEval, HumanEval+, MBPP, MBPP+, and a harsher contamination-aware LiveCodeBench stress test, the central predictor of useful code behavior in this small-model regime is not scale within the GPT-2 family, but whether pretraining has already distributed code-relevant computation across depth. The within-family CodeGen ladder makes this point harder to dismiss: even with architecture and parameter count held fixed, later continued-pretraining stages can materially change both performance and the layerwise organization of executable-code behavior. For practitioners, the main design lessons are to distribute code-relevant processing across depth, analyze failure-mode shifts under intervention, and use code-specific pretraining to build residual robustness.
 
 Future work should extend our mechanistic analysis to fine-tuned models, multilingual code generation, and semantic error detection, with the ultimate goal of reverse-engineering the complete algorithms by which neural networks generate syntactically and semantically correct programs.
 
-\bibliographystyle{plainnat}
+\section*{Data Availability}
+
+The processed result tables, plotting scripts, benchmark summaries, saved result artifacts, configuration files, source code, and claim-to-artifact audit used in this manuscript are available in the \submissionartifact{} submitted with this manuscript. Large model checkpoints and raw model caches are not redistributed; all experiments use public pretrained checkpoints and regenerate derived outputs from the provided scripts and configuration files.
+
+\section*{Declaration of Competing Interest}
+
+The author declares no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+\section*{Funding}
+
+This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.
+
+\section*{Declaration of Generative AI and AI-Assisted Technologies in the Manuscript Preparation Process}
+
+During the preparation of this work, the author used OpenAI Codex to assist with manuscript editing, code execution orchestration, artifact organization, and formatting. After using this tool, the author reviewed and edited the content as needed and takes full responsibility for the content of the submitted manuscript.
+
+\appendix
+
+\section{Supplementary Benchmark and Provenance Figures}
+
+The main paper emphasizes the benchmark-wide result map, bootstrap intervals, and within-family CodeGen ladder. We place two additional supporting figures here for transparency: a pass@1 strictness cascade across benchmark families and a provenance-oriented coverage audit for the repaired HumanEval artifacts.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figure13_strictness_cascade.pdf}
+\caption{Pass@1 cascade across benchmark families. CodeGen retains the only nonzero signal as evaluation becomes stricter, but the drop from classical benchmarks to HumanEval+/MBPP+ and LiveCodeBench is severe. GPT-2 Small and GPT-2 Medium remain indistinguishable at or near zero throughout.}
+\label{fig:strictness_cascade}
+\end{figure*}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figure14_coverage_audit.pdf}
+\caption{Coverage and repair audit for the final HumanEval artifacts. The repaired CodeGen ladder checkpoints return to full 16,400-completion coverage, while the synced main CodeGen HumanEval artifact still contains one empty task (\texttt{HumanEval/129}), leaving 16,300 scored completions. The right panel records the pre-sync repair burden that produced the final ladder artifacts.}
+\label{fig:coverage_audit}
+\end{figure*}
+
+\bibliographystyle{elsarticle-harv}
 \bibliography{references}
 
 \end{document} 
